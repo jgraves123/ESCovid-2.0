@@ -122,7 +122,7 @@ code {
   height: auto;
   width: 100%;
   padding: 0;
-  padding-bottom: 60%;
+  padding-bottom: 40%;
 }
 .scaling-svg {
   position: absolute;
@@ -141,7 +141,20 @@ code {
   stroke-opacity:1;
 }
 
+.clickable-done {
+  fill:blue;
+  stroke:pink;
+  stroke-width:5;
+  fill-opacity:0;
+  stroke-opacity:0;
+}
+
 .clickable:hover {
+  fill: red;
+  fill-opacity:.5;
+}
+
+.clickable-done:hover {
   fill: red;
   fill-opacity:.5;
 }
@@ -175,9 +188,9 @@ button:hover {
 .modal_content {
   background-color: white;
   position: absolute;
-  top: 20%;
-  left: 30%;
-  width: 40%;
+  top: 10%;
+  left: 20%;
+  width: 60%;
   padding: 20px;
   border-radius: 5px;
   border: 2px solid black;
@@ -191,4 +204,68 @@ button:hover {
 .close:hover {
   color: cyan;
   cursor: pointer;
+}
+
+/** Rocket
+ */
+
+#top_block {
+  background-position: 50% 100%;
+  min-width: 100%;
+  height: 800px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.rocket {
+  position: relative;
+  z-index: 3;
+  top: 40px;
+  left: 30%;
+  width: 30%;
+  opacity: 1;
+}
+.rocket img {
+  max-height: 400px;
+  min-width: 50px;
+}
+
+@-webkit-keyframes blastOff {
+  from {
+    opacity: 1;
+    top: 40px;
+  }
+  65% {
+    opacity: 1;
+    top: 40px;
+  }
+  75% {
+    opacity: 1;
+    top: 240px;
+  }
+  80% {
+    opacity: 0;
+    top: -1000px;
+  }
+  87% {
+    opacity: 0;
+    top: 1000px;
+  }
+  95% {
+    opacity: 1;
+    top: 40px;
+  }
+  to {
+    opacity: 1;
+    top: 40px;
+  }
+}
+.blastOff {
+  -webkit-animation-name: blastOff;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
 }

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import PopUp from "./PopUp";
+import GliesePopUp from "./GliesePopUp";
+import TrappistPopUp from "./TrappistPopUp";
+import HoverPopUp from "./HoverPopUp";
 import ReactDOM from 'react-dom';
 import './index.css';
 import Decision from "./decision";
@@ -7,15 +9,26 @@ import Confetti from 'react-confetti'
 
 
 
+
+
 class Home extends Component {
     state = {
-        seen: false
+        seen: false,
+        hover: false
     };
+
 
     togglePop = () => {
         console.log("I'm here")
         this.setState({
             seen: !this.state.seen
+        });
+    };
+
+    toggleHoverPop = () => {
+        console.log("I'm here")
+        this.setState({
+            hover: !this.state.hover
         });
     };
 
@@ -58,19 +71,20 @@ class Home extends Component {
                 {/*    </map>*/}
                 {/*    </div></section>*/}
                 <div height="400">
-                    <div className="btn" onClick={this.togglePop}>
-                        <button>New User?</button>
-                    </div>
-                    {this.state.seen ? <PopUp toggle={this.togglePop} /> : null}
+                    {this.state.seen ? <GliesePopUp toggle={this.togglePop} /> : null}
+                    {this.state.hover ? <TrappistPopUp toggle={this.toggleHoverPop} /> : null}
                 </div>
                 <section>
                     <div className="scaling-svg-container">
                         <svg className="scaling-svg" viewBox="0 0 1600 900"> {/* Needs auto
                          updating*/}
-                            <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/escovid/master/control.jpg?raw=true"/>
+                            <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
                             <rect x="900" y="20" width="150" height="150" className="clickable" onClick={this.togglePop}/>
-                            {this.state.seen ? <PopUp toggle={this.togglePop} /> : null}
+                            {/*{this.state.seen ? <PopUp toggle={this.togglePop} /> : null}*/}
                             <rect x="50" y="20" width="150" height="150" className="clickable" onClick={this.openDecision}/>
+                            <rect x="250" y="220" width="150" height="150" className="clickable" onClick={this.toggleHoverPop} onMouseLeave={this.toggleHoverPop}/>
+                            {/*{this.state.hover ? <HoverPopUp toggle={this.toggleHoverPop} /> : null}*/}
+                            {/*<PopUp/>*/}
                         </svg>
                     </div>
                 </section>
