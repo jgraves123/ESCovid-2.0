@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import "./App.css";
 import Confetti from 'react-confetti'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import ReactAudioPlayer from 'react-audio-player';
+import music from './end.mp3'
+//...
+
 
 // Render a YouTube video player
 
@@ -19,8 +23,10 @@ class Decision extends Component {
         //send drum beats played
 
         return(
+
             <div>
                 <body>
+                <ReactAudioPlayer src={music} autoPlay="true"/>
                 <Confetti/>
                 <header id="main-header">
                     <div className="container">
@@ -28,7 +34,7 @@ class Decision extends Component {
                     </div>
                 </header>
                 <div align="center">
-                <ReactPlayer url='https://www.youtube.com/watch?v=fhYMh6KTJMQ' playing="true" volume="null" muted="true"/>
+                <ReactPlayer url='https://www.youtube.com/watch?v=fhYMh6KTJMQ' playing="true" loop="true" volume="null" muted="true"/>
                 </div>
                 {/*<section><div className="container"><img src={ship} className="image" usemap="#wayout" alt=""/>*/}
                 {/*    <map name="wayout">*/}
@@ -38,9 +44,10 @@ class Decision extends Component {
                 <div height="400">
                 </div>
 
-                <section id="showcase"><div className="container" align="center">
-                    <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
-                </div></section>
+                <div align="center">
+                    <h2>You have successfully set course for TRAPPIST-1! <br/> The fate of the world is in your hands.</h2>
+                    <button className="button"><h2>Join the Leaderboard</h2></button>
+                </div>
                 </body>
                 {/*<footer id="main-footer">*/}
                 {/*    <h3>Contact info?</h3>*/}

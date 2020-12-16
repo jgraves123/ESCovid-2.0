@@ -28,6 +28,10 @@ code {
   monospace;
 }
 
+h2 {
+  color: white;
+}
+
 .switch {
   margin: 0;
   position: absolute;
@@ -122,7 +126,7 @@ code {
   height: auto;
   width: 100%;
   padding: 0;
-  padding-bottom: 60%;
+  padding-bottom: 55%;
 }
 .scaling-svg {
   position: absolute;
@@ -237,7 +241,7 @@ button:hover {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

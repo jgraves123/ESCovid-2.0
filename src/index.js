@@ -61,7 +61,7 @@ class Home extends Component {
                 {/*<Confetti/>*/}
                 <header id="main-header">
                     <div className="container">
-                        <h1 align='center'>Setting off on a Voyage</h1>
+                        <h1 align='center'>Choose your Target Destination</h1>
                     </div>
                 </header>
                 {/*<nav id="navbar">*/}
@@ -97,9 +97,9 @@ class Home extends Component {
                     </div>
                 </section>
                 <div align="center">
-                    <h2>Time to make your decision:</h2>
-                    <button className="button" onClick={this.openDecision}>TRAPPIST-1</button>
-                    <button className="button" onClick={this.openDecision}>Gliese 876</button>
+                    <h2>Time to make your decision. Where will you travel to?</h2>
+                    <button className="button" onClick={this.openDecision}><h3>TRAPPIST-1</h3></button>
+                    <button className="button" onClick={this.openDecision}><h3>Gliese 876</h3></button>
                 </div>
                 <section id="showcase"><div className="container">
                     <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
