@@ -16,7 +16,7 @@ function home(){
 }
 
 
-class Decision extends Component {
+class Trappist extends Component {
 
 
     render(){
@@ -57,4 +57,4 @@ class Decision extends Component {
     }
 }
 
-export default Decision;
+export default Trappist;

@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import GliesePopUp from "./GliesePopUp";
 import TrappistPopUp from "./TrappistPopUp";
 import ComparePopUp from "./ComparePopUp";
-import HoverPopUp from "./HoverPopUp";
 import ReactDOM from 'react-dom';
 import './index.css';
-import Decision from "./decision";
-// import Confetti from 'react-confetti'
+import Trappist from "./trappist";
+import Gliese from "./gliese";
 
 
 
@@ -41,11 +40,21 @@ class Home extends Component {
         });
     };
 
-    openDecision = () => {
+    trappist = () => {
         console.log("why")
         ReactDOM.render(
             <React.StrictMode>
-                <Decision />
+                <Trappist />
+            </React.StrictMode>,
+            document.getElementById('root')
+        );
+    }
+
+    gliese = () => {
+        console.log("why")
+        ReactDOM.render(
+            <React.StrictMode>
+                <Gliese />
             </React.StrictMode>,
             document.getElementById('root')
         );
@@ -98,8 +107,8 @@ class Home extends Component {
                 </section>
                 <div align="center">
                     <h2>Time to make your decision. Where will you travel to?</h2>
-                    <button className="button" onClick={this.openDecision}><h3>TRAPPIST-1</h3></button>
-                    <button className="button" onClick={this.openDecision}><h3>Gliese 876</h3></button>
+                    <button className="button" onClick={this.trappist}><h3>TRAPPIST-1</h3></button>
+                    <button className="button" onClick={this.gliese}><h3>Gliese 876</h3></button>
                 </div>
                 <section id="showcase"><div className="container">
                     <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
