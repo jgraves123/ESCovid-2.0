@@ -16,6 +16,8 @@ function home(){
 }
 
 
+
+
 class Gliese extends Component {
 
 
@@ -26,7 +28,6 @@ class Gliese extends Component {
 
             <div>
                 <body>
-                <ReactAudioPlayer src={music} autoPlay="true"/>
                 <Confetti/>
                 <header id="main-header">
                     <div className="container">
@@ -47,6 +48,9 @@ class Gliese extends Component {
                 <div align="center">
                     <h2>You have successfully set course for Gliese 876! <br/> The fate of the world is in your hands.</h2>
                     <button className="button"><h2>Join the Leaderboard</h2></button>
+                </div>
+                <div align="center">
+                <ReactAudioPlayer id="audio" src={music} autoPlay="true" controls="true" volume={"0.5"}/>
                 </div>
                 </body>
                 {/*<footer id="main-footer">*/}
