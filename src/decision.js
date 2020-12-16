@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./App.css";
-import Confetti from 'react-confetti'
+// import Confetti from 'react-confetti'
 
 function home(){
     console.log("here too?")
@@ -17,7 +17,7 @@ class Decision extends Component {
         return(
             <div>
                 <body>
-                <Confetti/>
+                {/*<Confetti/>*/}
                 <header id="main-header">
                     <div className="container">
                         <h1 align='center'>Setting off on a Voyage</h1>
