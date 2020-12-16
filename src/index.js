@@ -98,8 +98,8 @@ class Home extends Component {
                 </section>
                 <div align="center">
                     <h2>Time to make your decision:</h2>
-                    <button className="button">TRAPPIST-1</button>
-                    <button className="button">Gliese 876</button>
+                    <button className="button" onClick={this.openDecision}>TRAPPIST-1</button>
+                    <button className="button" onClick={this.openDecision}>Gliese 876</button>
                 </div>
                 <section id="showcase"><div className="container">
                     <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
