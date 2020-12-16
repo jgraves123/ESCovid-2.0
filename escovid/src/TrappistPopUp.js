@@ -1,15 +1,37 @@
 import React, { Component } from "react";
 
-export default class GliesePopUp extends Component {
+export default class TrappistPopUp extends Component {
     state = {
         seen: false,
         hover: false,
         text: "Click to learn about Gliese",
-        b: "info about gliese b",
-        c: "info about gliese c",
-        ad: "info about gliese a and d"
+        e: "info about trappist e",
+        fg: "info about trappist f and g",
+        cdh: "info about trappist c, d and h",
+        b: "info about trappist b"
     };
 
+
+    togglePopE = () => {
+        console.log("I'm here")
+        this.setState({
+            text: this.state.e
+        });
+    };
+
+    togglePopFG = () => {
+        console.log("I'm here")
+        this.setState({
+            text: this.state.fg
+        });
+    };
+
+    togglePopCDH = () => {
+        console.log("I'm here")
+        this.setState({
+            text: this.state.cdh
+        });
+    };
 
     togglePopB = () => {
         console.log("I'm here")
@@ -17,22 +39,6 @@ export default class GliesePopUp extends Component {
             text: this.state.b
         });
     };
-
-    togglePopC = () => {
-        console.log("I'm here")
-        this.setState({
-            text: this.state.c
-        });
-    };
-
-    togglePopAD = () => {
-        console.log("I'm here")
-        this.setState({
-            text: this.state.ad
-        });
-    };
-
-
 
     toggleHoverPop = () => {
         console.log("I'm here")
@@ -55,14 +61,17 @@ export default class GliesePopUp extends Component {
             &times;
           </span>
                     <h3>Register!</h3>
-                    <div className="scaling-svg-container" style={{paddingBottom: "50%"}}>
-                        <svg className="scaling-svg" viewBox="0 0 1200 675"> {/* Needs auto
+                    <div className="scaling-svg-container" style={{paddingBottom: "45%"}}>
+                        <svg className="scaling-svg" viewBox="0 0 1190 554"> {/* Needs auto
                          updating*/}
                             <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/trappist_sys.jpg?raw=true"/>
-                            <circle cx="1480" cy="1600" r="150" className="clickable-done" onMouseEnter={this.togglePopAD}/>
-                            <circle cx="4170" cy="1630" r="250" className="clickable-done" onMouseEnter={this.togglePopB}/>
-                            <circle cx="6040" cy="1700" r="300" className="clickable-done" onMouseEnter={this.togglePopC}/>
-                            <circle cx="8310" cy="1590" r="180" className="clickable-done" onMouseEnter={this.togglePopAD}/>
+                            <circle cx="130" cy="335" r="75" className="clickable-done" onMouseEnter={this.togglePopB}/>
+                            <circle cx="295" cy="335" r="70" className="clickable-done" onMouseEnter={this.togglePopCDH}/>
+                            <circle cx="465" cy="335" r="53" className="clickable-done" onMouseEnter={this.togglePopCDH}/>
+                            <circle cx="630" cy="335" r="62" className="clickable-done" onMouseEnter={this.togglePopE}/>
+                            <circle cx="798" cy="334" r="70" className="clickable-done" onMouseEnter={this.togglePopFG}/>
+                            <circle cx="964" cy="333" r="76" className="clickable-done" onMouseEnter={this.togglePopFG}/>
+                            <circle cx="1132" cy="333" r="50" className="clickable-done" onMouseEnter={this.togglePopCDH}/>
 
 
                         </svg>

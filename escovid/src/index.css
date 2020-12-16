@@ -122,7 +122,7 @@ code {
   height: auto;
   width: 100%;
   padding: 0;
-  padding-bottom: 40%;
+  padding-bottom: 60%;
 }
 .scaling-svg {
   position: absolute;
@@ -233,39 +233,15 @@ button:hover {
   min-width: 50px;
 }
 
-@-webkit-keyframes blastOff {
-  from {
-    opacity: 1;
-    top: 40px;
-  }
-  65% {
-    opacity: 1;
-    top: 40px;
-  }
-  75% {
-    opacity: 1;
-    top: 240px;
-  }
-  80% {
-    opacity: 0;
-    top: -1000px;
-  }
-  87% {
-    opacity: 0;
-    top: 1000px;
-  }
-  95% {
-    opacity: 1;
-    top: 40px;
-  }
-  to {
-    opacity: 1;
-    top: 40px;
-  }
-}
-.blastOff {
-  -webkit-animation-name: blastOff;
-  -webkit-animation-duration: 4000ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
