@@ -58,7 +58,7 @@ class Home extends Component {
         return(
             <div>
                 <body>
-                {/*<Confetti/>*/}
+                <Confetti/>
                 <header id="main-header">
                     <div className="container">
                         <h1 align='center'>Setting off on a Voyage</h1>
