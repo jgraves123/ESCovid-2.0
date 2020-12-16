@@ -12,7 +12,7 @@ export default class GliesePopUp extends Component {
         c: "Gliese 876 c is similarly in the habitable zone but has similar risks to Gliese 876" +
             " b given its size. Scientists estimate this planet has roughly a 15% chance of" +
             " being habitable.",
-        ad: "Gliese 876 a and d are not in the habitable zone and have negligible chances of" +
+        de: "Gliese 876 a and d are not in the habitable zone and have negligible chances of" +
             " being habitable."
     };
 
@@ -38,10 +38,10 @@ togglePopB = () => {
         });
     };
 
-    togglePopAD = () => {
+    togglePopDE = () => {
         console.log("I'm here")
         this.setState({
-            text: this.state.ad
+            text: this.state.de
         });
     };
 
@@ -73,10 +73,10 @@ togglePopB = () => {
                         <svg className="scaling-svg" viewBox="0 0 8830 2884"> {/* Needs auto
                          updating*/}
                             <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gliese_sys.png?raw=true"/>
-                            <circle cx="1480" cy="1600" r="150" className="clickable-done" onMouseEnter={this.togglePopAD}/>
-                            <circle cx="4170" cy="1630" r="250" className="clickable-done" onMouseEnter={this.togglePopB}/>
-                            <circle cx="6040" cy="1700" r="300" className="clickable-done" onMouseEnter={this.togglePopC}/>
-                            <circle cx="8310" cy="1590" r="180" className="clickable-done" onMouseEnter={this.togglePopAD}/>
+                            <circle cx="1480" cy="1600" r="150" className="clickable-done" onMouseEnter={this.togglePopDE}/>
+                            <circle cx="4170" cy="1630" r="250" className="clickable-done" onMouseEnter={this.togglePopC}/>
+                            <circle cx="6040" cy="1700" r="300" className="clickable-done" onMouseEnter={this.togglePopB}/>
+                            <circle cx="8310" cy="1590" r="180" className="clickable-done" onMouseEnter={this.togglePopDE}/>
 
 
                         </svg>
