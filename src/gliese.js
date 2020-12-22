@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import "./App.css";
+import "./index.css";
 import Confetti from 'react-confetti'
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
 import music from './end.mp3'
+import ReactDOM from "react-dom";
+import Leaderboard from "./leaderboard.js"
 //...
 
 
@@ -20,6 +22,15 @@ function home(){
 
 class Gliese extends Component {
 
+    leaderboard = () => {
+        console.log("leaderboard")
+        ReactDOM.render(
+            <React.StrictMode>
+                <Leaderboard />
+            </React.StrictMode>,
+            document.getElementById('root')
+        );
+    }
 
     render(){
         //send drum beats played
@@ -47,7 +58,7 @@ class Gliese extends Component {
 
                 <div align="center">
                     <h2>You have successfully set course for Gliese 876! <br/> The fate of the world is in your hands.</h2>
-                    <button className="button"><h2>Join the Leaderboard</h2></button>
+                    <button className="button" onClick={this.leaderboard}><h2>Join the Leaderboard</h2></button>
                 </div>
                 <div align="center">
                 <ReactAudioPlayer id="audio" src={music} autoPlay="true" controls="true" volume={"0.5"}/>

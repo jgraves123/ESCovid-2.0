@@ -18,7 +18,6 @@ class Home extends Component {
         compare: false
     };
 
-
     GliesePop = () => {
         console.log("I'm here")
         this.setState({
@@ -73,33 +72,19 @@ class Home extends Component {
                         <h1 align='center'>Choose your Target Destination</h1>
                     </div>
                 </header>
-                {/*<nav id="navbar">*/}
-                {/*    <div className="container">*/}
-                {/*        <ul align='center'>*/}
-                {/*            <li><a onClick = "window.location.reload();">Home</a></li>*/}
-                {/*            <li><a onClick = "window.location.reload();">Gliese 876</a></li>*/}
-                {/*            <li><a onClick = "window.location.reload();">TRAPPIST-1</a></li>*/}
-                {/*        </ul>*/}
-                {/*    </div>*/}
-                {/*</nav>*/}
-
-                {/*<section><div className="container"><img src={ship} className="image" usemap="#wayout" alt=""/>*/}
-                {/*    <map name="wayout">*/}
-                {/*        <area shape="polygon" coords="1, 1, 20vw, 1, 20vw, 20vw, 1, 20vw" title="View" href="gliese876.html"></area>*/}
-                {/*    </map>*/}
-                {/*    </div></section>*/}
                 <div height="400">
+                    {/*if state is true, do this pop-up*/}
                     {this.state.gliese ? <GliesePopUp toggle={this.GliesePop} /> : null}
                     {this.state.trappist ? <TrappistPopUp toggle={this.TrappistPop} /> : null}
                     {this.state.compare ? <ComparePopUp toggle={this.ComparePop} /> : null}
                 </div>
                 <section>
                     <div className="scaling-svg-container">
+                        {/*resizing*/}
                         <svg className="scaling-svg" viewBox="0 0 1600 900"> {/* Needs auto
                          updating*/}
                             <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
                             <rect x="1005" y="200" width="380" height="400" className="clickable-done" onClick={this.GliesePop}/>
-                            {/*{this.state.seen ? <PopUp toggle={this.togglePop} /> : null}*/}
                             <rect x="590" y="200" width="410" height="400" className="clickable-done" onClick={this.ComparePop}/>
                             <rect x="220" y="200" width="360" height="400" className="clickable-done" onClick={this.TrappistPop}/>
                         </svg>
