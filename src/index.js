@@ -4,9 +4,7 @@ import TrappistPopUp from "./TrappistPopUp";
 import ComparePopUp from "./ComparePopUp";
 import ReactDOM from 'react-dom';
 import './index.css';
-import Trappist from "./trappist";
-import Gliese from "./gliese";
-
+import Congrats from "./congrats"
 
 
 
@@ -43,7 +41,7 @@ class Home extends Component {
         console.log("why")
         ReactDOM.render(
             <React.StrictMode>
-                <Trappist />
+                <Congrats planet="TRAPPIST-1"/>
             </React.StrictMode>,
             document.getElementById('root')
         );
@@ -53,7 +51,7 @@ class Home extends Component {
         console.log("why")
         ReactDOM.render(
             <React.StrictMode>
-                <Gliese />
+                <Congrats planet="Gliese 876" />
             </React.StrictMode>,
             document.getElementById('root')
         );
