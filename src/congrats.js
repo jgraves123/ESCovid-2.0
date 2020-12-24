@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
 import music from './end.mp3'
 import ReactDOM from "react-dom";
-import Leaderboard from "./leaderboard";
+import Leader from "./leaderboard";
 //...
 
 
@@ -18,14 +18,13 @@ function home(){
 }
 
 
-
 class Congrats extends Component {
 
     leaderboard = () => {
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform")
         ReactDOM.render(
             <React.StrictMode>
-                <Leaderboard/>
+                <Leader/>
             </React.StrictMode>,
             document.getElementById('root')
         );
