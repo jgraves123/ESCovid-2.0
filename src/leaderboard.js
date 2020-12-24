@@ -8,7 +8,20 @@ function home(){
 }
 
 class Leaderboard extends Component {
-
+    render() {
+        return(
+            <div id={"showcase"}>
+                <table>
+                    <h1>ESCovid-19</h1>
+                    <tr>
+                        <th>Place</th>
+                        <th>Group Name</th>
+                        <th>Time</th>
+                    </tr>
+                </table>
+            </div>
+        )
+    }
 }
 
 export default Leaderboard;

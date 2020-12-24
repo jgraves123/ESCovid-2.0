@@ -4,6 +4,8 @@ import Confetti from 'react-confetti'
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';
 import music from './end.mp3'
+import ReactDOM from "react-dom";
+import Leaderboard from "./leaderboard";
 //...
 
 
@@ -15,8 +17,19 @@ function home(){
     window.location.reload();
 }
 
+
+
 class Congrats extends Component {
 
+    leaderboard = () => {
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform")
+        ReactDOM.render(
+            <React.StrictMode>
+                <Leaderboard/>
+            </React.StrictMode>,
+            document.getElementById('root')
+        );
+    }
 
     render(){
         //send drum beats played
@@ -45,7 +58,7 @@ class Congrats extends Component {
 
                 <div align="center">
                     <h2>You have successfully set course for {this.props.planet}! <br/> The fate of the world is in your hands.</h2>
-                    <button className="button"><h2>Join the Leaderboard</h2></button>
+                    <button className="button" onClick = {this.leaderboard}><h2>Join the Leaderboard</h2></button>
                 </div>
                 </body>
                 {/*<footer id="main-footer">*/}
