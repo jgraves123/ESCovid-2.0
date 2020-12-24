@@ -10,6 +10,10 @@ import Congrats from "./congrats"
 
 
 class Home extends Component {
+    componentDidMount(){
+        document.title = "ESCovid: Last Step!"
+    }
+
     state = {
         gliese: false,
         trappist: false,

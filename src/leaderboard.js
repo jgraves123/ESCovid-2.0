@@ -23,8 +23,9 @@ class Leader extends Component {
                 <div className="container" align={"center"} width={"50%"}>
                     <h2>ESCovid-19 Leaderboard</h2>
                 </div>
-
-                <Table margin={"30px"}>
+            <div align="center">
+                <div style={{width: "60%"}}>
+                <Table margin={"30px"} width={"50%"}>
                     <Thead>
                         <Tr>
                             <Th>Team</Th>
@@ -40,7 +41,6 @@ class Leader extends Component {
                         </Tr>
                     </Tbody>
                 </Table>
-                <div className="container" align={"center"} width={"50%"}>
                     <h2>ESCovid-20 Leaderboard</h2>
                     <Table>
                         <Thead>
@@ -59,6 +59,7 @@ class Leader extends Component {
                         </Tbody>
                     </Table>
                 </div>
+            </div>
                 {/* griddle = more customizable */}
                 <div className="container" align={"center"}>
                     <Griddle data={this.data.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>

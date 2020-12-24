@@ -12,11 +12,6 @@ import Leader from "./leaderboard";
 // Render a YouTube video player
 
 
-function home(){
-    console.log("here too?")
-    window.location.reload();
-}
-
 
 class Congrats extends Component {
 
