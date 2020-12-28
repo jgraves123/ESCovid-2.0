@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import "./index.css";
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import Griddle, {plugins} from 'griddle-react';
-//npm install react-super-responsive-table --save
 //npm install --save griddle-react, http://griddlegriddle.github.io/Griddle/
 
 
 class Leader extends Component {
-    data = [
+    data19 = [
         { Team: 'Woba Boba Baby Yodas', Time:115, Hints:5 },
         { Team: 'Fake team', Time: 130, Hints:2}
+    ];
+
+    data20 = [
+        { Team: 'GIV Winners?', Time:135, Hints:2},
     ];
 
     sortProperties = [
@@ -22,47 +23,9 @@ class Leader extends Component {
             <section>
                 <div className="container" align={"center"} width={"50%"}>
                     <h2>ESCovid-19 Leaderboard</h2>
-                </div>
-            <div align="center">
-                <div style={{width: "60%"}}>
-                <Table margin={"30px"} width={"50%"}>
-                    <Thead>
-                        <Tr>
-                            <Th>Team</Th>
-                            <Th>Time (minutes)</Th>
-                            <Th>Hints</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>Woba Boba Baby Yodas</Td>
-                            <Td>115</Td>
-                            <Td>5</Td>
-                        </Tr>
-                    </Tbody>
-                </Table>
+                    <Griddle data={this.data19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     <h2>ESCovid-20 Leaderboard</h2>
-                    <Table>
-                        <Thead>
-                            <Tr>
-                                <Th>Team</Th>
-                                <Th>Time (minutes)</Th>
-                                <Th>Hints</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            <Tr>
-                                <Td>No one yet!</Td>
-                                <Td>0</Td>
-                                <Td>0</Td>
-                            </Tr>
-                        </Tbody>
-                    </Table>
-                </div>
-            </div>
-                {/* griddle = more customizable */}
-                <div className="container" align={"center"}>
-                    <Griddle data={this.data.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    <Griddle data={this.data20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                 </div>
             </section>
         )

@@ -86,7 +86,7 @@ class Home extends Component {
                         <svg className="scaling-svg" viewBox="0 0 1600 900"> {/* Needs auto
                          updating*/}
                             <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
-                            <rect x="1005" y="200" width="380" height="400" className="clickable-done" onClick={this.GliesePop}/>
+                            <rect x="1010" y="200" width="375" height="400" className="clickable-done" onClick={this.GliesePop}/>
                             <rect x="590" y="200" width="410" height="400" className="clickable-done" onClick={this.ComparePop}/>
                             <rect x="220" y="200" width="360" height="400" className="clickable-done" onClick={this.TrappistPop}/>
                         </svg>
