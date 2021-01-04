@@ -5,6 +5,7 @@ import ComparePopUp from "./ComparePopUp";
 import ReactDOM from 'react-dom';
 import './index.css';
 import Congrats from "./congrats"
+import Escovid, {Post} from "./escovid"
 
 
 
@@ -61,8 +62,14 @@ class Home extends Component {
         );
     }
 
-
-
+    escovid = () => {
+        ReactDOM.render(
+            <React.StrictMode>
+                <Escovid level = {20} part = "tumblr1"/>
+            </React.StrictMode>,
+            document.getElementById('root')
+        );
+    }
 
     render() {
         return(
@@ -96,7 +103,9 @@ class Home extends Component {
                     <h2>Time to make your decision. Where will you travel to?</h2>
                     <button className="button" onClick={this.trappist}><h3>TRAPPIST-1</h3></button>
                     <button className="button" onClick={this.gliese}><h3>Gliese 876</h3></button>
+                    <button className="button" onClick={this.escovid}><h3>testing</h3></button>
                 </div>
+                <Post title={"Testing"} caption={"This can work on any page!"}/>
                 <section id="showcase"><div className="container">
                     <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
                 </div></section>
