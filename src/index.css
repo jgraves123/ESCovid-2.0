@@ -371,37 +371,18 @@ td.text-right {
   text-align: right;
 }
 
-
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
-}
-
-.article-title {
-  color: #444444;
-}
-
-a.article-title:hover {
-  color: #428bca;
-  text-decoration: none;
-}
-
-.article-content {
-  white-space: pre-line;
-}
-
-.article-img {
-  height: 65px;
-  width: 65px;
-  margin-right: 16px;
+  width: 60%;
 }
 
 .FancyBorder {
-  padding: 10px 10px;
-  border: 10px solid;
+  padding: 10px 10%;
+  border: 0px;
 }
 
 .FancyBorder-blue {

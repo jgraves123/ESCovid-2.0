@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 //showing how to use another generic component I guess (this is composition not inheritance apparently)
 function FancyBorder(props) {
     return (
-        <div className={'FancyBorder FancyBorder-' + props.color}>
+        <div className={'FancyBorder FancyBorder-' + props.color} align={"center"}>
             {props.children}
         </div>
     );
