@@ -388,3 +388,7 @@ td.text-right {
 .FancyBorder-blue {
   border-color: blue;
 }
+
+.content-section:focus {
+  transform: scale(1.5);
+}

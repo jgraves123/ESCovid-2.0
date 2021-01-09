@@ -9,7 +9,7 @@ function Contact() {
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
+              src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/IMG_1521.JPG?raw=true"
               alt=""
             />
           </div>

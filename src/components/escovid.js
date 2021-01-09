@@ -2,10 +2,11 @@ import React, {Component, Fragment} from 'react';
 import "./index.css";
 import ReactPlayer from "react-player";
 
+
 //showing how to use another generic component I guess (this is composition not inheritance apparently)
 function FancyBorder(props) {
     return (
-        <div className={'FancyBorder FancyBorder-' + props.color} align={"center"}>
+        <div className={'FancyBorder'} align={"center"}>
             {props.children}
         </div>
     );
@@ -14,8 +15,8 @@ function FancyBorder(props) {
 //Post has the basic structure, generic component
 export function Post(props){
     return(
-        <FancyBorder color={"blue"}>
-            <div className = "container content-section">
+        <FancyBorder>
+            <div className = "container content-section" tabindex="0">
                 <h1 className="article-title">{props.title}</h1>
                 {props.children}
                 <p className="article-content">{props.caption}</p>
