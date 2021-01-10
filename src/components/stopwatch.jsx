@@ -15,6 +15,7 @@ class Stopwatch extends Component {
             }}
             onCallback={() => console.log('Finish')}
             render={({formatted, hours, minutes, seconds}) => {
+
                 return (
                     <div>
                         Formatted: {formatted}

@@ -13,6 +13,13 @@ import {Link} from "react-router-dom";
 
 
 class Congrats extends Component {
+    componentDidMount(){
+        document.title = "ESCovid: Last Step!"
+        console.log("hello my fine fellow")
+        if (!this.props.finished) {
+        this.props.finishNow()
+        }
+    }
 
     leaderboard = () => {
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform")

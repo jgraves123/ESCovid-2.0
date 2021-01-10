@@ -12,15 +12,15 @@ function Navigation() {
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Link href="/about">About Us</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
-            <NavDropdown title="Games" id="basic-nav-dropdown">
+            <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown">
               <NavDropdown.Item href="/escovid">ESCovid19</NavDropdown.Item>
               <NavDropdown.Item href="/escovid">ESCovid20</NavDropdown.Item>
               <NavDropdown.Item href="/final">Other</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/contact">Suggestions</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

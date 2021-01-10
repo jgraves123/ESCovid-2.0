@@ -1,6 +1,7 @@
 import React from "react";
 
 function Home() {
+  localStorage.clear()
   return (
     <div className="home">
       <div class="container">
