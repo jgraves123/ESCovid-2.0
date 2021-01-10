@@ -14,13 +14,12 @@ function Contact() {
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">Contact</h1>
+            <h1 class="font-weight-light">Contact Us</h1>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Email us at mlagerq@emory.edu and john_graves@brown.edu. We are happy to answer any questions!
             </p>
+            <br/>
+            <p>Tried one of our escape games? Fill out the feedback form here:</p><a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>ESCovid</a>
           </div>
         </div>
       </div>
