@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 import "./index.css";
 import "./posts.css";
 import ReactPlayer from "react-player";
-import Home from "./Final.js";
 import {Link} from "react-router-dom";
 
 function Instructions(){
