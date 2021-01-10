@@ -3,7 +3,7 @@ import GliesePopUp from "./GliesePopUp";
 import TrappistPopUp from "./TrappistPopUp";
 import ComparePopUp from "./ComparePopUp";
 import './index.css';
-import Escovid, {Post} from "./escovid"
+import Escovid, {Post, Progress} from "./escovid"
 import {Link} from "react-router-dom";
 
 
@@ -45,6 +45,7 @@ class Home extends Component {
     render() {
         return(
             <div>
+                <Progress p={75}/>
                 <body>
                 {/*<Confetti/>*/}
                 <header id="main-header" style={{padding: 10}}>
@@ -72,7 +73,7 @@ class Home extends Component {
                 </section>
                 <div align="center">
                     <h2>Time to make your decision. Where will you travel to?</h2>
-                    <Link to="/gliesepop">
+                    <Link to="/trappist">
                         <button className="button"><h3>TRAPPIST-1</h3></button>
                     </Link>
                     <Link to="/gliese">

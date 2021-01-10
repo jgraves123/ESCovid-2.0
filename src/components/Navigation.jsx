@@ -7,7 +7,7 @@ import Stopwatch from "./stopwatch";
 function Navigation() {
   return (
     <div className="navigation">
-      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+      <Navbar className={"navbar navbar-dark bg-primary"} expand="lg" sticky="top">
         <Navbar.Brand href="/">Escape Games</Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
