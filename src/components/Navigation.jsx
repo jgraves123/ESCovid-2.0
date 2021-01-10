@@ -1,59 +1,29 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import { Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
+import Stopwatch from "./stopwatch";
 
-function Navigation(props) {
+
+function Navigation() {
   return (
     <div className="navigation">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <Link class="navbar-brand" to="/">
-            Escape Games
-          </Link>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/">
-                  Home
-                  <span class="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/contact" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+        <Navbar.Brand href="/">Escape Games</Navbar.Brand>
+        <Navbar.Toggle/>
+        <Navbar.Collapse className="justify-content-end">
+          <Nav>
+            <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <NavDropdown title="Games" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/final">ESCovid19</NavDropdown.Item>
+              <NavDropdown.Item href="final">ESCovid20</NavDropdown.Item>
+              <NavDropdown.Item href="/final">Other</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/contact">Suggestions</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   );
 }
