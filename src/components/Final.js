@@ -3,7 +3,6 @@ import GliesePopUp from "./GliesePopUp";
 import TrappistPopUp from "./TrappistPopUp";
 import ComparePopUp from "./ComparePopUp";
 import './index.css';
-import Congrats from "./congrats"
 import Escovid, {Post} from "./escovid"
 import {Link} from "react-router-dom";
 
@@ -80,12 +79,10 @@ class Home extends Component {
                         <button className="button" ><h3>Gliese 876</h3></button>
                     </Link>
                     <Link to="/testing">
-                        <button className="button"><h3>testing</h3></button>
+                        <button className="button"><h3>Testing</h3></button>
                     </Link>
                 </div>
                 <Post title={"Testing"} caption={"This can work on any page!"}/>
-                <Post title={"Testing"} caption={"This can work on any page!"}/>
-                <Escovid />
                 <section id="showcase"><div className="container">
                     <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
                 </div></section>

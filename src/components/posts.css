@@ -1,0 +1,21 @@
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.FancyBorder {
+    padding: 10px 10%;
+    border: 0px;
+}
+
+.FancyBorder-blue {
+    border-color: blue;
+}
+
+.content-section:focus {
+    transform: scale(1.5);
+}
