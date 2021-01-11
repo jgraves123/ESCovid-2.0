@@ -18,19 +18,16 @@ class App extends Component {
             <Navigation />
             <Switch>
               <Route path="/" exact component={() => <Home />} />
-              <Route path="/gliesepop" exact component={() => <GliesePopUp toggle="" />} />
-              <Route path="/escovid" exact component={() => <Escovid page={"start"} />} />
-              <Route path="/escovid/gform" exact component={() => <Escovid page={"gform"} />} />
-              <Route path="/escovid/tumblr" exact component={() => <Escovid page={"tumblr"} phase={1} level={19}/>} />
-              <Route path="/escovid/auth" exact component={() => <Escovid page={"tumblr"} phase={2} level={19} />} />
-              <Route path="/escovid/final" exact component={() => <Final/>}/>
-              <Route path="/final" exact component={() => <Game startTime={this.state.startTime}/>} />
+              <Route path="/escovid" exact component={() => <Game />} />
+              <Route path="/escovid/gform" exact component={() => <Game />} />
+              <Route path="/escovid/auth" exact component={() => <Game />} />
+              <Route path="/escovid/tumblr" exact component={() => <Game />} />
+              <Route path="/escovid/final" exact component={() => <Game />} />
+              <Route path="/escovid/trappist" exact component={() => <Game />} />
+              <Route path="/escovid/gliese" exact component={() => <Game />} />
+              <Route path="/escovid/leaderboard" exact component={() => <Game />} />
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
-              <Route path="/trappist" exact component={() => <Game />} />
-              <Route path="/gliese" exact component={() => <Game />} />
-              <Route path="/testing" exact component={() => <Game />} />
-              <Route path="/leaderboard" exact component={() => <Leader />} />
             </Switch>
             <Footer />
           </Router>

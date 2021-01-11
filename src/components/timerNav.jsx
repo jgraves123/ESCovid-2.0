@@ -46,7 +46,7 @@ class TimerNav extends Component {
                     seconds={this.state.seconds}
                     minutes={this.state.minutes}
                     hours={this.state.hours}
-                    limit={this.props.finish ? this.state.formatted : "10:00:00"}
+                    limit={"10:00:00"}
                     onChange={({hours, minutes, seconds}) => {
                         localStorage.setItem( 'seconds', seconds );
                         localStorage.setItem( 'minutes', minutes );
@@ -62,8 +62,6 @@ class TimerNav extends Component {
                     onCallback={() => console.log("done")}
                     render={({formatted, hours, minutes, seconds}) => {
                         this.state.formatted = formatted;
-                        console.log("AAA")
-                        console.log(formatted)
                         return (
                             <div style={{color: "white"}}>
                                 Time: {formatted}

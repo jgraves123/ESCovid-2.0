@@ -16,9 +16,6 @@ class Congrats extends Component {
     componentDidMount(){
         document.title = "ESCovid: Last Step!"
         console.log("hello my fine fellow")
-        if (!this.props.finished) {
-        this.props.finishNow()
-        }
     }
 
     leaderboard = () => {
@@ -52,7 +49,7 @@ class Congrats extends Component {
 
                 <div align="center">
                     <h2>You have successfully set course for {this.props.planet}! <br/> The fate of the world is in your hands.</h2>
-                    <Link to="/leaderboard">
+                    <Link to="/escovid/leaderboard">
                     <button className="button" onClick = {this.leaderboard}><h2>Join the Leaderboard</h2></button>
                     </Link>
                 </div>

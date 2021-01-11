@@ -3,6 +3,7 @@ import "./index.css";
 import "./posts.css";
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
+import Post from "./post";
 
 function Instructions(){
     return(
@@ -20,7 +21,6 @@ function Instructions(){
 function Gform(props){
     return(
         <div align="center">
-            <Progress p={0}/>
             <h1>Google forms page</h1>
             <Link to="/escovid/tumblr">
                 <button className="button"><h3>Continue</h3></button>
@@ -29,87 +29,88 @@ function Gform(props){
     )
 }
 
-function Tumblr(props){
-    if (props.phase === 1){
-        if (props.level === 19){
+class Tumblr extends Component{
+
+    state = {
+        value: "",
+    }
+
+    handleChange = (event) => {
+        console.log(event)
+        this.setState({
+            value: event.target.value
+        });
+    }
+
+    check = (event) => {
+        event.preventDefault();
+        this.temp = ("launch" === this.state.value)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
+        else {
+            window.location.assign("/escovid/auth");
+        }
+        this.setState({
+            value: ""
+        });
+    }
+
+    render() {
+        if (this.props.phase === 1){
+            if (this.props.level === 19){
+                return (
+                    <div>
+                        <h1>ESCovid-19 Tumblr1</h1>
+                                <form id="path-answer" onSubmit={this.check}>
+                                    <label>
+                                        <input type="text" placeholder="Password" onChange={this.handleChange} />
+                                    </label>
+                                    <input type="submit" value="Submit"/>
+                                </form>
+                    </div>
+                )
+            }
+            else if (this.props.level === 20){
+                return (
+                    <div>
+                        <h1>ESCovid-20 Tumblr1</h1>
+                        <Link to="/escovid/auth">
+                            <button className="button"><h3>Continue</h3></button>
+                        </Link>
+                    </div>
+                )
+            }
+        }
+        if (this.props.level === 19){
             return (
                 <div>
-                    <Progress p={25}/>
-                    <h1>ESCovid-19 Tumblr1</h1>
-                    <Link to="/escovid/auth">
+                    <h1>ESCovid-19 Tumblr Auth</h1>
+                    <Link to="/escovid/final">
                         <button className="button"><h3>Continue</h3></button>
                     </Link>
                 </div>
             )
         }
-        else if (props.level === 20){
+        else if (this.props.level === 20){
             return (
                 <div>
-                    <Progress p={25}/>
-                    <h1>ESCovid-20 Tumblr1</h1>
-                    <Link to="/escovid/auth">
+                    <h1>ESCovid-20 Tumblr Auth</h1>
+                    <Link to="/escovid/final">
                         <button className="button"><h3>Continue</h3></button>
                     </Link>
                 </div>
             )
         }
     }
-    if (props.level === 19){
-        return (
-            <div>
-                <Progress p={50}/>
-                <h1>ESCovid-19 Tumblr Auth</h1>
-                <Link to="/escovid/final">
-                    <button className="button"><h3>Continue</h3></button>
-                </Link>
-            </div>
-        )
     }
-    else if (props.level === 20){
-        return (
-            <div>
-                <Progress p={50}/>
-                <h1>ESCovid-20 Tumblr Auth</h1>
-                <Link to="/escovid/final">
-                    <button className="button"><h3>Continue</h3></button>
-                </Link>
-            </div>
-        )
-    }
-}
 
-export function Progress(props){
-    return(
-        <div>
-            <div className="progress">
-                <div className="progress-bar" role="progressbar" style={{width: props.p + "%"}} aria-valuenow={props.p}
-                     aria-valuemin="0" aria-valuemax="100"/>
-            </div>
-        </div>
-        )
-}
 
-//showing how to use another generic component I guess (this is composition not inheritance apparently)
-function FancyBorder(props) {
-    return (
-        <div className={'FancyBorder'} align={"center"}>
-            {props.children}
-        </div>
-    );
-}
 
-//Post has the basic structure, generic component
-export function Post(props){
-    return(
-        <FancyBorder>
-            <div className = "container content-section" tabindex="0">
-                <h1 className="article-title">{props.title}</h1>
-                {props.children}
-                <p className="article-content">{props.caption}</p>
-            </div>
-        </FancyBorder>
-    )
-}
+
+
+
+
 
 class Escovid extends Component {
 
