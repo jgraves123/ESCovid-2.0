@@ -24,7 +24,7 @@ function getState(props) {
     let time = localStorage.getItem('time');
 
     if (game_name == null) {
-        game_name = props.game_name;
+        game_name = "escovid19"//props.game_name;
     }
     if (hints == null) {
         hints = 0;
@@ -83,17 +83,13 @@ class Game extends Component {
         localStorage.setItem('timing', run)
     }
 
-    time = (sec, min, hrs) => {
-        this.setState({time: sec})
-    }
-
 
     render() {
         return (
             <div className="App">
                 <Router>
                     <Progress p={(this.state.stage * 100)/this.state.total_stages}/>
-                    <TimerNav change_time={this.change_time} count_time={this.state.timing} finish={this.state.finished} time={this.time} current/>
+                    <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage}/>
                     <Switch>
                         <Route path="/escovid" exact component={() => <Escovid page={"start"} />} />
                         <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time}/>} />
