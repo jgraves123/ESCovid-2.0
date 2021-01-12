@@ -33,7 +33,7 @@ function getState(props) {
         stage = 0;
     }
     if (total_stages == null) {
-        total_stages = props.total_stages;
+        total_stages = 3;//props.total_stages;
     }
     if (timing == "true") {
         timing = true;

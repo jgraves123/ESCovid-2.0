@@ -13,6 +13,7 @@ class Home extends Component {
 
     componentDidMount(){
         document.title = "ESCovid: Last Step!"
+        console.log(this.props.curr_stage)
         if (this.props.curr_stage != 3) {
             this.props.stage(3)
         }

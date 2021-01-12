@@ -65,11 +65,6 @@ class TimerNav extends Component {
                         }
 
 
-                        console.log("final" + localStorage.getItem('final_formatted'))
-
-                        console.log("final2" + this.state.final_formatted)
-
-
                         // console.log("final" + this.state.final_formatted)
 
                         // if (!this.props.finish) {
