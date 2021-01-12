@@ -22,6 +22,12 @@ class Congrats extends Component {
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform")
     }
 
+    state = {
+        sec: parseInt(localStorage.getItem('seconds')),
+        min: parseInt(localStorage.getItem('minutes')),
+        hrs: parseInt(localStorage.getItem('hours'))
+    }
+
     render(){
         //send drum beats played
 
@@ -46,6 +52,7 @@ class Congrats extends Component {
                 {/*    </div></section>*/}
                 <div height="400">
                 </div>
+                <p> CONGRATS!!!! Hrs: {this.state.hrs} Min: {this.state.min} Sec: {this.state.sec}</p>
 
                 <div align="center">
                     <h2>You have successfully set course for {this.props.planet}! <br/> The fate of the world is in your hands.</h2>

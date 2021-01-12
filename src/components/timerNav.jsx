@@ -8,6 +8,10 @@ function getTime() {
     let sec = localStorage.getItem('seconds');
     let min = localStorage.getItem('minutes');
     let hr = localStorage.getItem('hours');
+    let final_formatted = localStorage.getItem('final_formatted');
+
+    console.log("wowwoow")
+    console.log(final_formatted)
 
     if (sec == null) {
         sec = 0;
@@ -18,10 +22,14 @@ function getTime() {
     if (hr == null) {
         hr = 0;
     }
-    return [parseInt(sec), parseInt(min), parseInt(hr)]
+    if (final_formatted == null) {
+        final_formatted = "00:00:00";
+    }
+
+
+    return [parseInt(sec), parseInt(min), parseInt(hr), final_formatted]
 };
 
-function getComplete() {}
 
 class TimerNav extends Component {
 
@@ -31,9 +39,8 @@ class TimerNav extends Component {
         seconds: this.time[0],
         minutes: this.time[1],
         hours: this.time[2],
-        finish: false,
-        formatted: "00:00:01",
-        final_formatted: "00:00:01",
+        formatted: null,
+        final_formatted: this.time[3],
     };
 
 
@@ -47,15 +54,29 @@ class TimerNav extends Component {
                     minutes={this.state.minutes}
                     hours={this.state.hours}
                     limit={"10:00:00"}
+                    autoStart={true}
                     onChange={({hours, minutes, seconds}) => {
-                        localStorage.setItem( 'seconds', seconds );
-                        localStorage.setItem( 'minutes', minutes );
-                        localStorage.setItem( 'hours', hours );
+                        if (this.props.count_time) {
+                            localStorage.setItem( 'seconds', seconds );
+                            localStorage.setItem( 'minutes', minutes );
+                            localStorage.setItem( 'hours', hours );
+                            this.state.final_formatted = this.state.formatted
+                            localStorage.setItem('final_formatted', this.state.final_formatted)
+                        }
+
+
+                        console.log("final" + localStorage.getItem('final_formatted'))
+
+                        console.log("final2" + this.state.final_formatted)
+
+
+                        // console.log("final" + this.state.final_formatted)
+
                         // if (!this.props.finish) {
                         //     this.props.time(this.state.seconds, this.state.minutes, this.state.hours)
                         //     this.state.final_format = this.state.formatted
                         //
-                        //     console.log(this.props.finish)
+                        //     console.log(this.props.count_time)
                         //     console.log(this.state.formatted)
                         // }
                     }}
@@ -64,7 +85,7 @@ class TimerNav extends Component {
                         this.state.formatted = formatted;
                         return (
                             <div style={{color: "white"}}>
-                                Time: {formatted}
+                                Time: {this.props.count_time ? formatted : this.state.final_formatted}
                             </div>
                         );
                     }}
