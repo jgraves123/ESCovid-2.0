@@ -8,7 +8,7 @@ export default class Instructions extends Component{
 
     state = {
         value: "",
-        showAlert: false
+        showAlert: this.props.name != null
     }
 
     handleChange = (event) => {
@@ -24,21 +24,14 @@ export default class Instructions extends Component{
             alert("Invalid team name.")
         }
         else {
-            //needs work
-            this.state.showAlert = true;
-            this.setState({
-                value:""
-            })
             this.props.setName(this.state.value)
         }
-        console.log(this.state.showAlert);
-        console.log(this.state.value);
     }
 
     render(){
         return(
             <div align="center">
-                <h1>Welcome to ESCovid</h1>
+                <h1>Welcome to ESCovid {this.props.name}</h1>
                 <h2>A space-and-math-themed escape game!</h2>
                 {/*<Carousel style={{height: "500px"}}>*/}
                 {/*    <Carousel.Item>*/}
@@ -124,14 +117,13 @@ export default class Instructions extends Component{
                     </form>
                 </div>
                 <Alert show={this.state.showAlert} variant="success">
-                    <p>Success</p>
+                    <p>{this.props.name}</p>
                 </Alert>
-                {this.state.showAlert ? <h1> HKLDLFJSDKL</h1> : null}
                 <Link to="/escovid/gform">
                     <button className="button"><h3>Begin ESCovid-19</h3></button>
                 </Link>
                 <Link to="/escovid/gform">
-                    <button className="button"><h3>Begin ESCovid-20</h3></button>
+                    <button className="button" ><h3>Begin ESCovid-20</h3></button>
                 </Link>
             </div>
         )}

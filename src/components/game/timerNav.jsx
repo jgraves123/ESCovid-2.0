@@ -33,7 +33,7 @@ function DefaultDropdown(props) {
     let toReturn = [];
     for (let key of Object.keys(props.hints)){
         for (const [index, val] of props.hints[key].entries()) {
-            toReturn.push(<NavDropdown.Item><DefaultPop text={index+1 + ": " + key} hint={val}/></NavDropdown.Item>);
+            toReturn.push(<DefaultPop take_hint={props.take_hint} text={index+1 + ": " + key} hint={val}/>);
         }
         toReturn.push(<NavDropdown.Divider />)
     }
@@ -56,7 +56,7 @@ function DefaultPop(props) {
                 placement={'left'}
                 overlay={
                     <Popover id={`popover-positioned-left'}`}
-                             style={{position: "fixed"}}>
+                             style={{position: "fixed"}} >
                         <Popover.Title><strong>{props.text}</strong></Popover.Title>
                         <Popover.Content>
                             {props.hint}
@@ -64,7 +64,7 @@ function DefaultPop(props) {
                     </Popover>
                 }
             >
-                <NavDropdown.Item varient="secondary">{props.text}</NavDropdown.Item>
+                <NavDropdown.Item onClick={props.take_hint} varient="secondary">{props.text}</NavDropdown.Item>
             </OverlayTrigger>
         )
 
@@ -142,15 +142,18 @@ class TimerNav extends Component {
                     }}
                 />
                 </Navbar.Collapse>
+                <div style={{color: "white"}}>
+                    {this.props.name}
+                </div>
                 <Navbar.Collapse className="justify-content-end">
                 <Nav>
                     <NavDropdown title="Hint" menuAlign="right" id="basic-nav-dropdown" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
-                        <DefaultDropdown closeMenu={this.closeMenu} hints={this.state.hint[this.props.game][this.props.stage]}/>
+                        <DefaultDropdown closeMenu={this.closeMenu} hints={this.state.hint[this.props.game][this.props.stage]} take_hint={this.props.use_hint}/>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
                 <div style={{color: "white"}}>
-                Hints Used: 0
+                Hints Used: {this.props.num_hint}
                 </div>
                 {/*<Hint />*/}
             </Navbar>

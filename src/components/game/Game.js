@@ -23,6 +23,7 @@ function getState(props) {
     let total_stages = localStorage.getItem('total_stages');
     let timing = localStorage.getItem('timing');
     let time = localStorage.getItem('time');
+    let used_hints = localStorage.getItem('used_hints');
 
     if (game_name == null) {
         game_name = "escovid19"//props.game_name;
@@ -41,7 +42,13 @@ function getState(props) {
     } else {
         timing = false;
     }
-    return [game_name, team_name, parseInt(hints), parseInt(stage), parseInt(total_stages), timing, time]
+    if (used_hints == null) {
+        used_hints = [];
+    } else {
+        console.log(used_hints)
+        used_hints = JSON.parse(used_hints)
+    }
+    return [game_name, team_name, parseInt(hints), parseInt(stage), parseInt(total_stages), timing, time, used_hints]
 };
 
 class Game extends Component {
@@ -61,17 +68,25 @@ class Game extends Component {
         total_stages: this.saved[4],
         timing: this.saved[5],
         time: this.saved[6],
+        used_hints: this.saved[7],
     }
 
-    use_hint = () => {
-        const new_hints = this.state.hints + 1;
-        this.setState({hints: new_hints});
-        localStorage.setItem('hints', new_hints)
+    use_hint = (event) => {
+        const name = event.target.textContent;
+        if (!this.state.used_hints.includes(name)) {
+            const new_hints = this.state.hints + 1;
+            this.state.used_hints.push(name)
+            this.state.hints = new_hints;
+            localStorage.setItem('hints', new_hints)
+            localStorage.setItem('used_hints', JSON.stringify(this.state.used_hints))
+        }
     }
 
     set_team_name = (name) => {
-        this.setState({team_name: name});
-        localStorage.setItem('team_name', name);
+        if (this.state.team_name != name) {
+            this.setState({team_name: name});
+            localStorage.setItem('team_name', name);
+        }
         console.log(this.state.team_name);
     }
 
@@ -91,9 +106,9 @@ class Game extends Component {
             <div className="App">
                 <Router>
                     <Progress p={(this.state.stage * 100)/this.state.total_stages}/>
-                    <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage}/>
+                    <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage} name={this.state.team_name} num_hint={this.state.hints} use_hint={this.use_hint}/>
                     <Switch>
-                        <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.team_name}/>} />
+                        <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
                         <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time}/>} />
                         <Route path="/escovid/tumblr" exact component={() => <Tumblr1 game_name={this.state.game_name}/>} />
