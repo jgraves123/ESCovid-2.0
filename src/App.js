@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Footer, Home, Final, About, Contact, Congrats, Escovid, Leader, Game } from "./components";
-import GliesePopUp from "./components/GliesePopUp";
+import GliesePopUp from "./components/escovid/GliesePopUp";
 import moment from "moment";
 
 class App extends Component {

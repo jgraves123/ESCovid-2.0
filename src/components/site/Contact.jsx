@@ -1,5 +1,5 @@
 import React from "react";
-import GliesePopUp from "./GliesePopUp";
+import GliesePopUp from "../escovid/GliesePopUp";
 
 function Contact() {
   return (

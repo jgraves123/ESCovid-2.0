@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import { Link, withRouter } from "react-router-dom";
 import {Navbar, Nav, Button, OverlayTrigger, Popover, NavDropdown} from 'react-bootstrap';
-import Stopwatch from "./stopwatch";
 import {hints} from "./hint"
 import ReactStopwatch from "react-stopwatch";
 

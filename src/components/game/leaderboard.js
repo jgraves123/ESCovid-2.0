@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./index.css";
+import "../index.css";
 import "./leaderboard.css";
 import Griddle, {plugins} from 'griddle-react';
 //npm install --save griddle-react, http://griddlegriddle.github.io/Griddle/

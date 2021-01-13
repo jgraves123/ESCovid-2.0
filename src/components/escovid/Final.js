@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import GliesePopUp from "./GliesePopUp";
 import TrappistPopUp from "./TrappistPopUp";
 import ComparePopUp from "./ComparePopUp";
-import './index.css';
-import Post from "./post"
+import '../index.css';
+import {Post} from "../game"
 import {Link} from "react-router-dom";
 
 
