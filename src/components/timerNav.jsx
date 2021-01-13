@@ -52,14 +52,15 @@ function DefaultPop(props) {
 
             <OverlayTrigger
                 trigger="click"
+                rootClose
                 key={'bottom'}
                 placement={'bottom'}
                 overlay={
                     <Popover id={`popover-positioned-bottom'}`}
                              style={{top: 50, zIndex: 1, position: "fixed"}}>
-                        <Popover.Title as="h6">{`Popover bottom`}</Popover.Title>
+                        <Popover.Title><strong>{props.text}</strong></Popover.Title>
                         <Popover.Content>
-                            <strong>{props.text}</strong> {props.hint}
+                            {props.hint}
                         </Popover.Content>
                     </Popover>
                 }
