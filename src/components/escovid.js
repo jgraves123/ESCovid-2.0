@@ -4,10 +4,41 @@ import "./posts.css";
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
 import Post from "./post";
-import { Carousel} from 'react-bootstrap';
+import { Carousel, Alert} from 'react-bootstrap';
 
 
-function Instructions(){
+class Instructions extends Component{
+
+    state = {
+        value: "",
+        showAlert: false
+    }
+
+    handleChange = (event) => {
+        console.log(event)
+        this.setState({
+            value: event.target.value
+        });
+    }
+
+    check = (event) => {
+        event.preventDefault();
+        if (this.state.value === "") {
+            alert("Invalid team name.")
+        }
+        else {
+            //needs work
+            this.state.showAlert = true;
+            this.setState({
+                value:""
+            })
+            this.props.setName(this.state.value)
+        }
+        console.log(this.state.showAlert);
+        console.log(this.state.value);
+    }
+
+    render(){
     return(
         <div align="center">
             <h1>Welcome to ESCovid</h1>
@@ -88,13 +119,17 @@ function Instructions(){
                 <strong>Good luck!</strong>
             </div>
             <div>
-                <form id="group-name" onSubmit={console.log("would save group name")}>
+                <form id="group-name" onSubmit={this.check}>
                     <label>
-                        <input type="text" placeholder="Group Name" />
+                        <input type="text" placeholder="Group Name" onChange={this.handleChange}/>
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
             </div>
+            <Alert show={this.state.showAlert} variant="success">
+                <p>Success</p>
+            </Alert>
+            {this.state.showAlert ? <h1> HKLDLFJSDKL</h1> : null}
             <Link to="/escovid/gform">
                 <button className="button"><h3>Begin ESCovid-19</h3></button>
             </Link>
@@ -102,7 +137,7 @@ function Instructions(){
                 <button className="button"><h3>Begin ESCovid-20</h3></button>
             </Link>
         </div>
-    )
+    )}
 }
 export class Gform extends Component {
 
@@ -191,12 +226,12 @@ class Tumblr extends Component{
                 return (
                     <div>
                         <h1>ESCovid-19 Tumblr1</h1>
-                                <form id="path-answer" onSubmit={this.check}>
-                                    <label>
-                                        <input type="text" placeholder="Password" onChange={this.handleChange} />
-                                    </label>
-                                    <input type="submit" value="Submit"/>
-                                </form>
+                            <form id="path-answer" onSubmit={this.check}>
+                                <label>
+                                    <input type="text" placeholder="Password" onChange={this.handleChange} />
+                                </label>
+                                <input type="submit" value="Submit"/>
+                            </form>
                     </div>
                 )
             }
@@ -232,7 +267,7 @@ class Tumblr extends Component{
             )
         }
     }
-    }
+}
 
 
 
@@ -246,19 +281,19 @@ class Escovid extends Component {
     render() { //specific posts render more generic post structure
         if (this.props.page === "start"){
             return (
-                <div><Instructions/></div>
+                <div><Instructions setName={this.props.setName} name={this.props.name}/></div>
             )
         }
         else if (this.props.page === "gform"){
             return (
-                <div>
+                <div align="center">
                     <Gform/>
                 </div>
             )
         }
         else if (this.props.page === "tumblr"){
             return (
-                <div>
+                <div align="center">
                     <Tumblr level={this.props.level} phase={this.props.phase}/>
                 </div>
             )

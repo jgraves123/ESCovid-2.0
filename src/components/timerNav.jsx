@@ -40,6 +40,7 @@ function DefaultDropdown(props) {
         toReturn.push(<NavDropdown.Divider />)
     }
     toReturn.push(<NavDropdown.Item href="/contact">Still Confused?</NavDropdown.Item>)
+    toReturn.push(<NavDropdown.Item onClick={props.closeMenu}>Close Menu</NavDropdown.Item>)
     return(
         toReturn
     )
@@ -53,11 +54,11 @@ function DefaultPop(props) {
             <OverlayTrigger
                 trigger="click"
                 rootClose
-                key={'bottom'}
-                placement={'bottom'}
+                key={'left'}
+                placement={'left'}
                 overlay={
-                    <Popover id={`popover-positioned-bottom'}`}
-                             style={{top: 50, zIndex: 1, position: "fixed"}}>
+                    <Popover id={`popover-positioned-left'}`}
+                             style={{position: "fixed"}}>
                         <Popover.Title><strong>{props.text}</strong></Popover.Title>
                         <Popover.Content>
                             {props.hint}
@@ -83,13 +84,25 @@ class TimerNav extends Component {
         formatted: null,
         final_formatted: this.time[3],
         hint: hints,
-        hint1: {"stage 1 Type 1": ["stage 1 Type 1 Hint 1", "Stage 1" +
-            " Type 1 Hint 2"], "stage 1 Type 2": ["stage 1 Type 1 Hint 1"]}
+        showDrop: false
+    };
+
+    showDropdown = () => {
+        if (!this.state.showDrop){
+            this.setState({
+                showDrop: true
+            })
+        }
+    };
+
+    closeMenu = () => {
+        this.setState({
+            showDrop: false
+        });
     };
 
 
     render() {
-        console.log(this.state.hint2)
         return (
         <div className="navigation">
             <Navbar bg="dark" variant="dark" expand="lg">
@@ -133,8 +146,8 @@ class TimerNav extends Component {
                 </Navbar.Collapse>
                 <Navbar.Collapse className="justify-content-end">
                 <Nav>
-                    <NavDropdown title="Hint" menuAlign="right" id="basic-nav-dropdown" drop={'left'}>
-                        <DefaultDropdown hints={this.state.hint[this.props.game][this.props.stage]}/>
+                    <NavDropdown title="Hint" menuAlign="right" id="basic-nav-dropdown" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
+                        <DefaultDropdown closeMenu={this.closeMenu} hints={this.state.hint[this.props.game][this.props.stage]}/>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>

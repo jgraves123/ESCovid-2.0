@@ -63,14 +63,15 @@ class Game extends Component {
     }
 
     use_hint = () => {
-        const new_hints = this.state.hints + 1
-        this.setState({hints: new_hints})
+        const new_hints = this.state.hints + 1;
+        this.setState({hints: new_hints});
         localStorage.setItem('hints', new_hints)
     }
 
     set_team_name = (name) => {
-        this.setState({team_name: name})
-        localStorage.setItem('team_name', name)
+        this.setState({team_name: name});
+        localStorage.setItem('team_name', name);
+        console.log(this.state.team_name);
     }
 
     update_stage(stage) {
@@ -91,7 +92,7 @@ class Game extends Component {
                     <Progress p={(this.state.stage * 100)/this.state.total_stages}/>
                     <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage}/>
                     <Switch>
-                        <Route path="/escovid" exact component={() => <Escovid page={"start"} />} />
+                        <Route path="/escovid" exact component={() => <Escovid page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />
                         <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time}/>} />
                         <Route path="/escovid/tumblr" exact component={() => <Escovid page={"tumblr"} phase={1} level={19}/>} />
                         <Route path="/escovid/auth" exact component={() => <Escovid page={"tumblr"} phase={2} level={19} />} />
