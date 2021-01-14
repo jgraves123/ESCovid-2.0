@@ -35,7 +35,6 @@ class Congrats extends Component {
 
             <div>
                 <body>
-                <ReactAudioPlayer src={music} autoPlay="true"/>
                 <Confetti/>
                 <header id="main-header">
                     <div className="container">
@@ -60,10 +59,10 @@ class Congrats extends Component {
                     <button className="button" onClick = {this.leaderboard}><h2>Join the Leaderboard</h2></button>
                     </Link>
                 </div>
+                <div align={"center"}>
+                <ReactAudioPlayer src={music} autoPlay="true" controls/>
+                </div>
                 </body>
-                {/*<footer id="main-footer">*/}
-                {/*    <h3>Contact info?</h3>*/}
-                {/*</footer>*/}
             </div>
         )
     }
