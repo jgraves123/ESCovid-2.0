@@ -8,7 +8,7 @@ class App extends Component {
   time = moment().format('h:mm:ss a');
 
   state = {
-    startTime: this.time
+    startTime: this.time,
   };
 
   render() {

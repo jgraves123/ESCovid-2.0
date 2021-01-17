@@ -7,7 +7,7 @@ import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "
 export function Progress(props){
     return(
         <div>
-            <div className="progress">
+            <div className="progress" style={{backgroundColor: "black"}}>
                 <div className="progress-bar" role="progressbar" style={{width: props.p + "%"}} aria-valuenow={props.p}
                      aria-valuemin="0" aria-valuemax="100"/>
             </div>
@@ -110,9 +110,9 @@ class Game extends Component {
                     <Switch>
                         <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
-                        <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time} name={this.state.team_name}/>} />
-                        <Route path="/escovid/tumblr" exact component={() => <Tumblr1 game_name={this.state.game_name}/>} />
-                        <Route path="/escovid/auth" exact component={() => <Tumblr2 game_name={this.state.game_name}/>} />
+                        <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/escovid/tumblr" exact component={() => <Tumblr1 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/escovid/auth" exact component={() => <Tumblr2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/escovid/final" exact component={() => <Final curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
                         <Route path="/escovid/trappist" exact
                                component={() => <Congrats planet="TRAPPIST-1" />}/>

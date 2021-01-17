@@ -1,10 +1,11 @@
 import React from "react";
-import {Carousel} from 'react-bootstrap'
+import {Carousel, Navbar, Image} from 'react-bootstrap'
 
 function Home() {
   localStorage.clear()
   return (
     <div className="home">
+      {/*<Navbar className={"navbar navbar-dark bg-primary"} expand="lg" style={{paddingBottom: "50px"}}/>*/}
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
@@ -46,7 +47,14 @@ function Home() {
             </Carousel>
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-normal" ><span style={{color: "#ed6a5a"}}>V</span>irtually <span style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <span style={{color: "#ed6a5a"}}>E</span>scape <span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
+            <div align='center'>
+                <Image className="d-block w-50"
+                       src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake.png?raw=true"
+                       alt="Third slide" roundedCircle />
+            </div>
+            <h1 className="font-weight-normal"><span style={{color: "#ed6a5a"}}>V</span>irtually <span
+                style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <span
+                style={{color: "#ed6a5a"}}>E</span>scape <span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
