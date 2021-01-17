@@ -7,7 +7,7 @@ function Navigation() {
   return (
     <div className="navigation">
       <Navbar className={"navbar navbar-dark bg-primary"} expand="lg">
-        <Navbar.Brand href="/">Escape Games</Navbar.Brand>
+        <Navbar.Brand href="/">viper games</Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
           <Nav>
