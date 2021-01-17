@@ -8,7 +8,8 @@ export default class Instructions extends Component{
 
     state = {
         value: "",
-        showAlert: this.props.name != null
+        showAlert: this.props.name != null,
+        showFailure: false,
     }
 
     handleChange = (event) => {
@@ -21,7 +22,9 @@ export default class Instructions extends Component{
     check = (event) => {
         event.preventDefault();
         if (this.state.value === "") {
-            alert("Invalid team name.")
+            this.setState({
+                showFailure: true
+            });
         }
         else {
             this.props.setName(this.state.value)
@@ -30,8 +33,8 @@ export default class Instructions extends Component{
 
     render(){
         return(
-            <div align="center">
-                <h1>Welcome to ESCovid {this.props.name}</h1>
+            <div align="center" >
+                <h1>Welcome to ESCovid</h1>
                 <h2>A space-and-math-themed escape game!</h2>
                 {/*<Carousel style={{height: "500px"}}>*/}
                 {/*    <Carousel.Item>*/}
@@ -116,9 +119,8 @@ export default class Instructions extends Component{
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>
-                <Alert show={this.state.showAlert} variant="success">
-                    <p>{this.props.name}</p>
-                </Alert>
+                <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
+                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.</Alert>
                 <Link to="/escovid/gform">
                     <button className="button"><h3>Begin ESCovid-19</h3></button>
                 </Link>

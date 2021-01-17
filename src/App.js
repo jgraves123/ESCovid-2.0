@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, Final, About, Contact, Congrats, Escovid, Leader, Game } from "./components";
+import { Navigation, Home, Final, About, Contact, Congrats, Escovid, Leader, Game } from "./components";
 import GliesePopUp from "./components/escovid/GliesePopUp";
 import moment from "moment";
 
@@ -29,7 +29,6 @@ class App extends Component {
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
             </Switch>
-            <Footer />
           </Router>
         </div>
     )

@@ -12,8 +12,7 @@ function Navigation() {
         <Navbar.Collapse className="justify-content-end">
           <Nav>
             <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/escovid">ESCovid19</NavDropdown.Item>
-              <NavDropdown.Item href="/escovid">ESCovid20</NavDropdown.Item>
+              <NavDropdown.Item href="/escovid">ESCovid</NavDropdown.Item>
               <NavDropdown.Item href="/final">Other</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/contact">Suggestions</NavDropdown.Item>

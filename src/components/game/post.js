@@ -13,12 +13,10 @@ function FancyBorder(props) {
 //Post has the basic structure, generic component
 export default function Post(props){
     return(
-        <FancyBorder>
             <div className = "container content-section" tabindex="0">
                 <h1 className="article-title">{props.title}</h1>
                 {props.children}
                 <p className="article-content">{props.caption}</p>
             </div>
-        </FancyBorder>
     )
 }
