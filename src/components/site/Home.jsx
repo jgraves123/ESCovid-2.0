@@ -1,15 +1,15 @@
 import React from "react";
-import {Carousel, Navbar, Image} from 'react-bootstrap'
+import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap'
 
 function Home() {
   localStorage.clear()
   return (
     <div className="home">
       {/*<Navbar className={"navbar navbar-dark bg-primary"} expand="lg" style={{paddingBottom: "50px"}}/>*/}
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <Carousel>
+      <div className="container" align={"left"}>
+        <div className="row align-items-center my-5">
+          <div className="col-lg-7">
+            <Carousel style={{marginLeft: "30px"}}>
               <Carousel.Item align='center'>
                 <img
                     className="d-block w-100"
@@ -46,24 +46,44 @@ function Home() {
               </Carousel.Item>
             </Carousel>
           </div>
-          <div class="col-lg-5">
-            <div align='center'>
-                <Image className="d-block w-50"
-                       src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake.png?raw=true"
-                       alt="Third slide" roundedCircle />
-            </div>
-            <h1 className="font-weight-normal"><span style={{color: "#ed6a5a"}}>V</span>irtually <span
-                style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <span
-                style={{color: "#ed6a5a"}}>E</span>scape <span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+          <div class="col-lg-5" style={{paddingLeft:"50px"}}>
+            <h1 className="font-weight-normal white" style={{fontSize:"70px", fontFamily: "copperplate gothic", padding: "20px"}}><span style={{color: "#ed6a5a"}}>V</span>irtually <br/><span
+                style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <br/><span
+                style={{color: "#ed6a5a"}}>E</span>scape <br/><span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
+            {/*<br/><span style={{color: "#0b6e4f"}}>Games</span>*/}
           </div>
         </div>
       </div>
+      <Container align='left' style={{padding: "40px"}} >
+        <Row>
+            <div className={'container'} align='left'>
+              <h1 className="font-weight-normal" style={{fontFamily: "copperplate gothic"}}>What is a virtual escape game?</h1>
+            </div>
+        </Row>
+        <Row>
+          <Col xs={6} md={3}>
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+          </Col>
+          <Col>
+            <h2>Difficulty</h2>
+          </Col>
+          <Col/>
+        </Row>
+        <Row>
+          <Col xs={6} md={3}>
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+          </Col>
+          <Col><h2>Players</h2></Col>
+          <Col/>
+        </Row>
+        <Row>
+          <Col xs={6} md={3}>
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+          </Col>
+          <Col><h2>Time to Play</h2></Col>
+          <Col/>
+        </Row>
+      </Container>
     </div>
   );
 }

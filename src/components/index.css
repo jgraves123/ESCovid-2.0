@@ -67,6 +67,10 @@ nh {
   overflow: hidden;
 }
 
+.white{
+  background-color: white;
+}
+
 #main-header{
   background-color: rgba(18,79,157,0.79);
   color: #fff;
