@@ -62,7 +62,7 @@ function Home() {
         </Row>
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true" thumbnail />
           </Col>
           <Col>
             <h2>Difficulty</h2>
@@ -71,14 +71,14 @@ function Home() {
         </Row>
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true" thumbnail />
           </Col>
           <Col><h2>Players</h2></Col>
           <Col/>
         </Row>
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clockicon.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic.png?raw=true" thumbnail />
           </Col>
           <Col><h2>Time to Play</h2></Col>
           <Col/>
