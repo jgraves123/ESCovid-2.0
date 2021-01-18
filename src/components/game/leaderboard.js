@@ -8,15 +8,18 @@ import Griddle, {plugins} from 'griddle-react';
 class Leader extends Component {
     data19 = [
         { Team: 'Woba Boba Baby Yodas', Time:115, Hints:5 },
-        { Team: 'Fake team', Time: 130, Hints:2}
+        { Team: 'READ', Time: 60, Hints:0},
+        { Team: 'Galileo', Time: 90, Hints:0},
     ];
 
     data20 = [
-        { Team: 'GIV Winners?', Time:135, Hints:2},
+        { Team: 'The Numbnuts', Time: 90, Hints:0},
+        { Team: 'GROGU', Time: 90, Hints:1},
     ];
 
     sortProperties = [
-        { id: 'Time', sortAscending: true }
+        { id: 'Time', sortAscending: true },
+        { id: 'Hints', sortAscending: true }
     ];
 
     render() {
