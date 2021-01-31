@@ -53,7 +53,6 @@ export default class Tumblr2 extends Component{
                     <Link to="/escovid/final">
                         <button className="button"><h3>Continue</h3></button>
                     </Link>
-                    <button className="button" onClick = {this.handleSubmit}><h2>Send Email</h2></button>
                     {this.props.game_name == "escovid19" ? <h1>Escovid19</h1> : <h1> ESCovid20</h1>}
                 </div>
             )
