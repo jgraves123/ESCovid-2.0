@@ -4,6 +4,13 @@ import "../game/posts.css";
 
 export default class Tumblr1 extends Component{
 
+    componentDidMount() {
+        document.title = "ESCovid: Last Step!"
+        if (this.props.curr_stage != 1) {
+            this.props.stage(1)
+        }
+    }
+
     state = {
         value: "",
     }

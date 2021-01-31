@@ -24,6 +24,7 @@ function getState(props) {
     let timing = localStorage.getItem('timing');
     let time = localStorage.getItem('time');
     let used_hints = localStorage.getItem('used_hints');
+    let track = localStorage.getItem('track');
 
     if (game_name == null) {
         game_name = "escovid19"//props.game_name;
@@ -48,7 +49,12 @@ function getState(props) {
         console.log(used_hints)
         used_hints = JSON.parse(used_hints)
     }
-    return [game_name, team_name, parseInt(hints), parseInt(stage), parseInt(total_stages), timing, time, used_hints]
+    if (track == "true") {
+        track = true;
+    } else {
+        track = false;
+    }
+    return [game_name, team_name, parseInt(hints), parseInt(stage), parseInt(total_stages), timing, time, used_hints, track]
 };
 
 class Game extends Component {
@@ -69,6 +75,7 @@ class Game extends Component {
         timing: this.saved[5],
         time: this.saved[6],
         used_hints: this.saved[7],
+        track: this.saved[8],
     }
 
     use_hint = (event) => {
@@ -82,17 +89,21 @@ class Game extends Component {
         }
     }
 
-    set_team_name = (name) => {
-        if (this.state.team_name != name) {
-            this.setState({team_name: name});
+    set_team_name = (name, track) => {
+        if (this.state.team_name !== name || this.state.track !== track) {
+            this.setState({team_name: name,
+            track: track});
             localStorage.setItem('team_name', name);
+            localStorage.setItem('track', track);
         }
         console.log(this.state.team_name);
     }
 
     update_stage(stage) {
-        this.setState({stage: stage});
+        this.state.stage = stage;
+        // this.setState({stage: stage});
         localStorage.setItem('stage', stage)
+        window.location.reload()
     }
 
     change_time = (run) => {
@@ -118,7 +129,7 @@ class Game extends Component {
                                component={() => <Congrats planet="TRAPPIST-1" />}/>
                         <Route path="/escovid/gliese" exact
                                component={() => <Congrats planet="Gliese 876"/>}/>
-                        <Route path="/escovid/leaderboard" exact component={() => <Leader />}/>
+                        <Route path="/escovid/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
                     </Switch>
                 </Router>
             </div>)

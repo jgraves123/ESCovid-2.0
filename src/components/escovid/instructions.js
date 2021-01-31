@@ -8,6 +8,7 @@ export default class Instructions extends Component{
 
     state = {
         value: "",
+        check: false,
         showAlert: this.props.name != null,
         showFailure: false,
     }
@@ -19,6 +20,13 @@ export default class Instructions extends Component{
         });
     }
 
+    handleCheck = (event) => {
+        console.log(event)
+        this.setState({
+            check: event.target.checked
+        })
+    }
+
     check = (event) => {
         event.preventDefault();
         if (this.state.value === "") {
@@ -27,7 +35,7 @@ export default class Instructions extends Component{
             });
         }
         else {
-            this.props.setName(this.state.value)
+            this.props.setName(this.state.value, this.state.check)
         }
     }
 
@@ -116,17 +124,18 @@ export default class Instructions extends Component{
                         <label>
                             <input type="text" placeholder="Group Name" onChange={this.handleChange}/>
                         </label>
+                        <input type="checkbox" id="scales" name="scales" onChange={this.handleCheck}/>
+                            <label htmlFor="scales"> Join Leaderboard? </label>
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
-                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.</Alert>
-                <Link to="/escovid/gform">
+                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">
                     <button className="button"><h3>Begin ESCovid-19</h3></button>
                 </Link>
-                <Link to="/escovid/gform">
-                    <button className="button" ><h3>Begin ESCovid-20</h3></button>
-                </Link>
+                    <Link to="/escovid/gform">
+                        <button className="button" ><h3>Begin ESCovid-20</h3></button>
+                    </Link></Alert>
             </div>
         )}
 }
