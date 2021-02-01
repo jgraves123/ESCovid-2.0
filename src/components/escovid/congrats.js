@@ -20,16 +20,6 @@ class Congrats extends Component {
     }
 
     leaderboard = () => {
-            // const templateId = 'template_2ggiung';
-            // const templateParams = {team_name: "team 1", game_name: "escovid19", hours: 1, minutes: 26, seconds: 45, hints: 4}
-            // emailjs.init("user_oJTXXccIGB7j0VtXCQBjm");
-            // emailjs.send(
-            //     'default_service', templateId, templateParams).then(res => {
-            //     console.log('Email successfully sent!')
-            // })
-            //     // Handle errors here however you like, or use a React error boundary
-            //     .catch(err => console.error('Oh well, you failed. Here some thoughts on the error' +
-            //         ' that occured:', err))
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform")
     }
 

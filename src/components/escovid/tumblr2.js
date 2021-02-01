@@ -8,8 +8,8 @@ export default class Tumblr2 extends Component{
 
     componentDidMount() {
         document.title = "ESCovid: Last Step!"
-        if (this.props.curr_stage != 1) {
-            this.props.stage(1)
+        if (this.props.curr_stage != 2) {
+            this.props.stage(2)
         }
     }
 

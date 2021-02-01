@@ -119,6 +119,13 @@ export default class Instructions extends Component{
                     </ul>
                     <strong>Good luck!</strong>
                 </div>
+                <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
+                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">
+                    <button className="button"><h3>Begin ESCovid-19</h3></button>
+                </Link>
+                    <Link to="/escovid/gform">
+                        <button className="button" ><h3>Begin ESCovid-20</h3></button>
+                    </Link></Alert>
                 <div>
                     <form id="group-name" onSubmit={this.check}>
                         <label>
@@ -129,13 +136,13 @@ export default class Instructions extends Component{
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>
-                <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
-                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">
-                    <button className="button"><h3>Begin ESCovid-19</h3></button>
-                </Link>
-                    <Link to="/escovid/gform">
-                        <button className="button" ><h3>Begin ESCovid-20</h3></button>
-                    </Link></Alert>
+                {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
+                {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}
+                {/*    <button className="button"><h3>Begin ESCovid-19</h3></button>*/}
+                {/*</Link>*/}
+                {/*    <Link to="/escovid/gform">*/}
+                {/*        <button className="button" ><h3>Begin ESCovid-20</h3></button>*/}
+                {/*    </Link></Alert>*/}
             </div>
         )}
 }
