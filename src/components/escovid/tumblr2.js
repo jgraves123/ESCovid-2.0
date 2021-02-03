@@ -3,6 +3,9 @@ import {Link} from "react-router-dom";
 import "../index.css";
 import "../game/posts.css";
 import emailjs from 'emailjs-com';
+import {Post} from "../game";
+import audio from "./Escape_1.mp3";
+import ReactAudioPlayer from "react-audio-player";
 
 export default class Tumblr2 extends Component{
 
@@ -24,37 +27,57 @@ export default class Tumblr2 extends Component{
         });
     }
 
-    handleSubmit (event) {
-        const templateId = 'template_2ggiung';
-        const templateParams = {team_name: "team 1", game_name: "escovid19", hours: 1, minutes: 26, seconds: 45, hints: 4}
-        emailjs.init("user_oJTXXccIGB7j0VtXCQBjm");
-        emailjs.send(
-            'default_service', templateId, templateParams).then(res => {
-            console.log('Email successfully sent!')
-        })
-            // Handle errors here however you like, or use a React error boundary
-            .catch(err => console.error('Oh well, you failed. Here some thoughts on the error' +
-                ' that occured:', err))
+    check = (event) => {
+        event.preventDefault();
+        this.temp = ("merak" === this.state.value)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
+        else {
+            window.location.assign("/escovid/final");
+        }
+        this.setState({
+            value: ""
+        });
     }
 
-    // sendFeedback (templateId, templateParams) {
-    //     emailjs.send(
-    //         'user_oJTXXccIGB7j0VtXCQBjm', templateId, templateParams).then(res => {
-    //         console.log('Email successfully sent!')
-    //     })
-    //         // Handle errors here however you like, or use a React error boundary
-    //         .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
-    // }
-
     render() {
-            return (
-                <div align={"center"}>
-                    <h1>ESCovid-19 Tumblr Auth</h1>
-                    <Link to="/escovid/final">
-                        <button className="button"><h3>Continue</h3></button>
-                    </Link>
-                    {this.props.game_name == "escovid19" ? <h1>Escovid19</h1> : <h1> ESCovid20</h1>}
-                </div>
-            )
+        return (
+            <div align={"center"}>
+                <h1>Password:</h1>
+                <form id="path-answer" onSubmit={this.check}>
+                    <label>
+                        <input type="text" placeholder="Password" onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Submit"/>
+                </form>
+                <ReactAudioPlayer src={audio} autoPlay="false" controls/>
+                <Post title={"Title"} caption={"Caption"}>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/stargridpuzzle.jpg?raw=true"/>
+                </Post>
+                <Post title={"Title"} caption={"Caption"}>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/card.png?raw=true"/>
+                </Post>
+                <Post title={"Title"} caption={"Caption"}>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
+                </Post>
+                <Post title={"Title"} caption={"Caption"}>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
+                </Post>
+                <Post title={"Title"} caption={"Caption"}>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/tictactoe.PNG?raw=true"/>
+                </Post>
+                {this.props.game_name == "escovid20" ?
+                    <div>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
+                        </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <p style={{color: "white"}}>riddle</p>
+                        </Post>
+                    </div> :
+                    null}
+            </div>
+        )
     }
 }

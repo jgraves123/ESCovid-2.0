@@ -124,7 +124,7 @@ export default class Instructions extends Component{
                     <button className="button"><h3>Begin ESCovid-19</h3></button>
                 </Link>
                     <Link to="/escovid/gform">
-                        <button className="button" ><h3>Begin ESCovid-20</h3></button>
+                        <button className="button"><h3>Begin ESCovid-20</h3></button>
                     </Link></Alert>
                 <div>
                     <form id="group-name" onSubmit={this.check}>

@@ -41,13 +41,14 @@ export default class Tumblr1 extends Component{
                 return (
                     <div align={"center"}>
                         {this.props.game_name == "escovid19" ?
-                            <div>
                             <Post title={"Title"} caption={"Caption"}>
                                 <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
                             </Post>
-                                <h1>Password:</h1>
-                            </div>
-                        : <h1> ESCovid20</h1>}
+                        : <Post title={"Title"} caption={"Caption"}>
+                                <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
+                            </Post>
+                        }
+                        <h1>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
@@ -66,14 +67,20 @@ export default class Tumblr1 extends Component{
                         <Post title={"Title"} caption={"Caption"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
                         </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/tictactoe.PNG?raw=true"/>
+                        </Post>
                         {this.props.game_name == "escovid20" ?
                             <div>
-                        <Post title={"Title"} caption={"Caption"}>
-                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
-                        </Post>
-                        <Post title={"Title"} caption={"Caption"}>
-                            <p style={{color: "white"}}>riddle</p>
-                        </Post>
+                                <Post title={"Title"} caption={"Caption"}>
+                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cards.png?raw=true"/>
+                                </Post>
+                                <Post title={"Title"} caption={"Caption"}>
+                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
+                                </Post>
+                                <Post title={"Title"} caption={"Caption"}>
+                                    <p style={{color: "white"}}>riddle</p>
+                                </Post>
                             </div> :
                             null}
                     </div>

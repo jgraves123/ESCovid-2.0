@@ -27,7 +27,7 @@ function getState(props) {
     let track = localStorage.getItem('track');
 
     if (game_name == null) {
-        game_name = "escovid19"//props.game_name;
+        game_name = "escovid20"//props.game_name;
     }
     if (hints == null) {
         hints = 0;
@@ -87,6 +87,14 @@ class Game extends Component {
             localStorage.setItem('hints', new_hints)
             localStorage.setItem('used_hints', JSON.stringify(this.state.used_hints))
         }
+    }
+
+    set_game_name = (name) => {
+        if (this.state.game_name !== name) {
+            this.setState({game_name: name});
+            localStorage.setItem('game_name', name);
+        }
+        console.log(this.state.team_name);
     }
 
     set_team_name = (name, track) => {
