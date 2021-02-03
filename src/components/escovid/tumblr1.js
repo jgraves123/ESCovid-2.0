@@ -64,7 +64,7 @@ export default class Tumblr1 extends Component{
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/newspaper.JPG?raw=true"/>
                         </Post>
                         <Post title={"Title"} caption={"Caption"}>
-                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path%20.PNG?raw=true"/>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
                         </Post>
                         <Post title={"Title"} caption={"Caption"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
