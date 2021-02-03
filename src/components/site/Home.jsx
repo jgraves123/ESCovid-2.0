@@ -4,32 +4,39 @@ import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap'
 function Home() {
   localStorage.clear()
   return (
-    <div className="home" style={{backgroundColor: "white"}}>
+    <div className="home">
       {/*<Navbar className={"navbar navbar-dark bg-primary"} expand="lg" style={{paddingBottom: "50px"}}/>*/}
       {/*<div className="container" align={"left"}>*/}
         {/*<div className="row align-items-center my-5">*/}
-          <div align={"center"} style={{backgroundColor: "#0b0e12"}}>
-            <div style={{width: "60%"}}>
+          <div align={"center"} style={{marginTop: "20px"}}>
+            <div style={{width: "90%"}}>
             <Carousel>
               <Carousel.Item align='center'>
-                <img
-                    className="d-block w-100"
-                    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper.png?raw=true"
-                    alt="First slide"
-                />
+                <div style={{width: "75%", float: "right"}}>
+                  <img
+                      className="d-block w-100"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper.png?raw=true"
+                      alt="First slide"
+                  />
+                </div>
+                <div style={{width: "25%", height: "577px", float: "left", backgroundColor: "#fcc81a"}}>
+                  <h1>Description here</h1>
+                  <p>Welcome to VIPER games</p>
+                  <p>We are happy to have you.</p>
+                </div>
               </Carousel.Item>
               <Carousel.Item align='center'>
-                <img
-                    className="d-block w-100"
-                    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true"
-                    alt="First slide"
-                />
-                {/*<div className = "para" align='center' style={{width: "60%"}}>*/}
-                {/*  <p><strong>Levels and Estimated Time: </strong>Choose the level that’s right for your group!*/}
-                {/*    (Either way, this is a difficult and lengthy escape room, so try not to get demoralized if it is taking awhile. Feel free to do it in multiple sittings!!!)*/}
-                {/*    <br/><em>Challenging:</em> ESCovid-19 is guaranteed to challenge you in new ways, just as Covid-19 has challenged us all. 1-2 hours estimated.*/}
-                {/*    <br/><em>Very Challenging:</em> Now, imagine a mutated version that has evolved to withstand your best problem-solving skills, and voila: ESCovid-20! 2-3 hours estimated.</p>*/}
-                {/*</div>*/}
+                <div style={{width: "75%", float: "left"}}>
+                  <img
+                      className="d-block w-100"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true"
+                      alt="First slide"
+                  />
+                </div>
+                <div style={{width: "25%", height: "577px", float: "right", backgroundColor: "#fcc81a"}}>
+                  <h1>A math-and-space themed escape game</h1>
+                  <p>Escape covid on a rocketship yay</p>
+                </div>
               </Carousel.Item>
               <Carousel.Item>
                 <img
@@ -37,9 +44,6 @@ function Home() {
                     src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true"
                     alt="Third slide"
                 />
-
-                <Carousel.Caption>
-                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
@@ -55,12 +59,12 @@ function Home() {
             </Carousel>
             </div>
           </div>
-          <div class="col-lg-5" style={{paddingLeft:"50px"}}>
-            <h1 className="font-weight-normal white" style={{fontSize:"70px", fontFamily: "copperplate gothic", padding: "20px"}}><span style={{color: "#ed6a5a"}}>V</span>irtually <br/><span
-                style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <br/><span
-                style={{color: "#ed6a5a"}}>E</span>scape <br/><span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
-            {/*<br/><span style={{color: "#0b6e4f"}}>Games</span>*/}
-          </div>
+          {/*<div class="col-lg-5" style={{paddingLeft:"50px"}}>*/}
+          {/*  <h1 className="font-weight-normal white" style={{fontSize:"70px", fontFamily: "copperplate gothic", padding: "20px"}}><span style={{color: "#ed6a5a"}}>V</span>irtually <br/><span*/}
+          {/*      style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <br/><span*/}
+          {/*      style={{color: "#ed6a5a"}}>E</span>scape <br/><span style={{color: "#ed6a5a"}}>R</span>ooms</h1>*/}
+          {/*  /!*<br/><span style={{color: "#0b6e4f"}}>Games</span>*!/*/}
+          {/*</div>*/}
         {/*</div>*/}
       {/*</div>*/}
       <Container align='left' style={{padding: "40px"}} >
