@@ -6,7 +6,7 @@ import { Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap';
 function Navigation() {
   return (
     <div className="navigation">
-      {/*"#72EA80", "#15b40d", "#d8a707" */}
+      {/*"#72EA80", "#15b40d", "#fcc81a", "0fd145"*/}
       <Navbar className={"navbar"}style={{backgroundColor: "white"}} expand="lg">
         <Navbar.Brand href="/" style={{padding: 0, margin: 0}}>
           {/*<table style={{padding: 0, margin: 0}}>*/}
