@@ -8,9 +8,16 @@ function Home() {
       {/*<Navbar className={"navbar navbar-dark bg-primary"} expand="lg" style={{paddingBottom: "50px"}}/>*/}
       {/*<div className="container" align={"left"}>*/}
         {/*<div className="row align-items-center my-5">*/}
-          <div align={"center"} style={{backgroundColor: "black"}}>
+          <div align={"center"} style={{backgroundColor: "#0b0e12"}}>
             <div style={{width: "60%"}}>
             <Carousel>
+              <Carousel.Item align='center'>
+                <img
+                    className="d-block w-100"
+                    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper.png?raw=true"
+                    alt="First slide"
+                />
+              </Carousel.Item>
               <Carousel.Item align='center'>
                 <img
                     className="d-block w-100"

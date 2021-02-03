@@ -6,8 +6,8 @@ import { Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap';
 function Navigation() {
   return (
     <div className="navigation">
-      {/*"#72EA80", */}
-      <Navbar className={"navbar"}style={{backgroundColor: "#72EA80"}} expand="lg">
+      {/*"#72EA80", "#15b40d", "#d8a707" */}
+      <Navbar className={"navbar"}style={{backgroundColor: "white"}} expand="lg">
         <Navbar.Brand href="/" style={{padding: 0, margin: 0}}>
           {/*<table style={{padding: 0, margin: 0}}>*/}
           {/*  <tr>*/}
@@ -23,7 +23,7 @@ function Navigation() {
             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/logo.png?raw=true"/>
           </div>
             <div style={{width: "50%", float: "left", marginLeft: 10}}>
-              <p style={{color: "green", margin: 0, lineHeight: 1, fontSize: 30}}>
+              <p style={{color: "#15b40d", margin: 0, lineHeight: 1, fontSize: 30}}>
                 <strong>
                   VIPER
                 </strong>

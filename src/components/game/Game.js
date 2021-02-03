@@ -7,8 +7,8 @@ import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "
 export function Progress(props){
     return(
         <div>
-            <div className="progress" style={{backgroundColor: "black"}}>
-                <div className="progress-bar" role="progressbar" style={{width: props.p + "%"}} aria-valuenow={props.p}
+            <div className="progress" style={{backgroundColor: "white", borderWidth: 1, borderColor: "black", borderStyle: "solid"}}>
+                <div className="progress-bar" role="progressbar" style={{width: props.p + "%", backgroundColor: "#d8a707"}} aria-valuenow={props.p}
                      aria-valuemin="0" aria-valuemax="100"/>
             </div>
         </div>
