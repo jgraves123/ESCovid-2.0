@@ -51,33 +51,18 @@ export default class Tumblr2 extends Component{
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
-                <ReactAudioPlayer src={audio} autoPlay="false" controls/>
+                <ReactAudioPlayer src={audio} controls/>
                 <Post title={"Title"} caption={"Caption"}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/stargridpuzzle.jpg?raw=true"/>
                 </Post>
                 <Post title={"Title"} caption={"Caption"}>
-                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/card.png?raw=true"/>
+                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cards.png?raw=true"/>
                 </Post>
                 <Post title={"Title"} caption={"Caption"}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
-                <Post title={"Title"} caption={"Caption"}>
-                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
-                </Post>
-                <Post title={"Title"} caption={"Caption"}>
-                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/tictactoe.PNG?raw=true"/>
-                </Post>
-                {this.props.game_name == "escovid20" ?
-                    <div>
-                        <Post title={"Title"} caption={"Caption"}>
-                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
-                        </Post>
-                        <Post title={"Title"} caption={"Caption"}>
-                            <p style={{color: "white"}}>riddle</p>
-                        </Post>
-                    </div> :
-                    null}
             </div>
+
         )
     }
 }
