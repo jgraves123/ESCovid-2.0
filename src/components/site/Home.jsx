@@ -4,12 +4,13 @@ import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap'
 function Home() {
   localStorage.clear()
   return (
-    <div className="home">
+    <div className="home" style={{backgroundColor: "white"}}>
       {/*<Navbar className={"navbar navbar-dark bg-primary"} expand="lg" style={{paddingBottom: "50px"}}/>*/}
-      <div className="container" align={"left"}>
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
-            <Carousel style={{marginLeft: "30px"}}>
+      {/*<div className="container" align={"left"}>*/}
+        {/*<div className="row align-items-center my-5">*/}
+          <div align={"center"} style={{backgroundColor: "black"}}>
+            <div style={{width: "60%"}}>
+            <Carousel>
               <Carousel.Item align='center'>
                 <img
                     className="d-block w-100"
@@ -45,6 +46,7 @@ function Home() {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
+            </div>
           </div>
           <div class="col-lg-5" style={{paddingLeft:"50px"}}>
             <h1 className="font-weight-normal white" style={{fontSize:"70px", fontFamily: "copperplate gothic", padding: "20px"}}><span style={{color: "#ed6a5a"}}>V</span>irtually <br/><span
@@ -52,8 +54,8 @@ function Home() {
                 style={{color: "#ed6a5a"}}>E</span>scape <br/><span style={{color: "#ed6a5a"}}>R</span>ooms</h1>
             {/*<br/><span style={{color: "#0b6e4f"}}>Games</span>*/}
           </div>
-        </div>
-      </div>
+        {/*</div>*/}
+      {/*</div>*/}
       <Container align='left' style={{padding: "40px"}} >
         <Row>
             <div className={'container'} align='left'>

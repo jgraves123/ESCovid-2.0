@@ -6,10 +6,32 @@ import { Navbar,Nav,NavDropdown,Form,FormControl,Button} from 'react-bootstrap';
 function Navigation() {
   return (
     <div className="navigation">
-      <Navbar className={"navbar navbar-dark"} style={{backgroundColor: "green"}} expand="lg">
-        <Navbar.Brand href="/">
-          <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
-          VIPER games</Navbar.Brand>
+      {/*"#72EA80", */}
+      <Navbar className={"navbar"}style={{backgroundColor: "#72EA80"}} expand="lg">
+        <Navbar.Brand href="/" style={{padding: 0, margin: 0}}>
+          {/*<table style={{padding: 0, margin: 0}}>*/}
+          {/*  <tr>*/}
+          {/*    <td style={{padding: 0}}>*/}
+          {/*      <img width="15%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/logo.png?raw=true"/>*/}
+          {/*    </td>*/}
+          {/*    <td style={{padding: 0}}>*/}
+          {/*      <h2 style={{display: "inline"}}>VIPER games</h2>*/}
+          {/*    </td>*/}
+          {/*  </tr>*/}
+          {/*</table>*/}
+          <div style={{width: "12%", float: "left"}}>
+            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/logo.png?raw=true"/>
+          </div>
+            <div style={{width: "50%", float: "left", marginLeft: 10}}>
+              <p style={{color: "green", margin: 0, lineHeight: 1, fontSize: 30}}>
+                <strong>
+                  VIPER
+                </strong>
+                <br/>Games
+              </p>
+            </div>
+
+        </Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
           <Nav>
