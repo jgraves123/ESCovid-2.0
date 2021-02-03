@@ -66,9 +66,16 @@ export default class Tumblr1 extends Component{
                         <Post title={"Title"} caption={"Caption"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
                         </Post>
+                        {this.props.game_name == "escovid20" ?
+                            <div>
                         <Post title={"Title"} caption={"Caption"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
                         </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <p style={{color: "white"}}>riddle</p>
+                        </Post>
+                            </div> :
+                            null}
                     </div>
                 )
         }
