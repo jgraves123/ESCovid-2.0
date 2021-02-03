@@ -12,6 +12,31 @@ export default class Gform extends Component {
         }
     }
 
+    state = {
+        value: "",
+    }
+
+    handleChange = (event) => {
+        console.log(event)
+        this.setState({
+            value: event.target.value
+        });
+    }
+
+    check = (event) => {
+        event.preventDefault();
+        this.temp = ("spaceship" === this.state.value)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
+        else {
+            window.location.assign("/escovid/tumblr");
+        }
+        this.setState({
+            value: ""
+        });
+    }
+
     render(){
         return(
             <div align="center">
@@ -73,9 +98,12 @@ export default class Gform extends Component {
                     </Card>
                 </Accordion>
                 <br/>
-                <Link to="/escovid/tumblr">
-                    <button className="button"><h3>Continue</h3></button>
-                </Link>
+                <form id="path-answer" onSubmit={this.check}>
+                    <label>
+                        <input type="text" placeholder="Password" onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Submit"/>
+                </form>
             </div>
         )
     }
