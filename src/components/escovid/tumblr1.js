@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "../index.css";
 import "../game/posts.css";
+import {Post} from "../game";
 
 export default class Tumblr1 extends Component{
 
@@ -39,14 +40,35 @@ export default class Tumblr1 extends Component{
     render() {
                 return (
                     <div align={"center"}>
-                        <h1>ESCovid-19 Tumblr1</h1>
+                        {this.props.game_name == "escovid19" ?
+                            <div>
+                            <Post title={"Title"} caption={"Caption"}>
+                                <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
+                            </Post>
+                                <h1>Password:</h1>
+                            </div>
+                        : <h1> ESCovid20</h1>}
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
                             </label>
                             <input type="submit" value="Submit"/>
                         </form>
-                        {this.props.game_name == "escovid19" ? <h1>Escovid19</h1> : <h1> ESCovid20</h1>}
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gliese-intro.png?raw=true"/>
+                        </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cipher.jpg?raw=true"/>
+                        </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/newspaper.JPG?raw=true"/>
+                        </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path%20.PNG?raw=true"/>
+                        </Post>
+                        <Post title={"Title"} caption={"Caption"}>
+                            <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
+                        </Post>
                     </div>
                 )
         }

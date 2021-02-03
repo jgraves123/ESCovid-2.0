@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 import "../index.css";
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
-import Post from "../game";
 import Instructions from "./instructions";
 
 
