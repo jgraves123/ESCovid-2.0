@@ -76,18 +76,12 @@ function Home() {
             </Carousel>
             </div>
           </div>
-          {/*<div class="col-lg-5" style={{paddingLeft:"50px"}}>*/}
-          {/*  <h1 className="font-weight-normal white" style={{fontSize:"70px", fontFamily: "copperplate gothic", padding: "20px"}}><span style={{color: "#ed6a5a"}}>V</span>irtually <br/><span*/}
-          {/*      style={{color: "#ed6a5a"}}>I</span>m<span style={{color: "#ed6a5a"}}>P</span>ossible <br/><span*/}
-          {/*      style={{color: "#ed6a5a"}}>E</span>scape <br/><span style={{color: "#ed6a5a"}}>R</span>ooms</h1>*/}
-          {/*  /!*<br/><span style={{color: "#0b6e4f"}}>Games</span>*!/*/}
-          {/*</div>*/}
-        {/*</div>*/}
-      {/*</div>*/}
-      <Container align='left' style={{padding: "40px"}} >
+    <br/>
+    <br/>
+      <Container align='left' style={{width: "90%"}} >
         <Row>
-            <div className={'container'} align='left'>
-              <h1 className="font-weight-normal" style={{fontFamily: "copperplate gothic"}}>What is a virtual escape game?</h1>
+            <div align='left'>
+              <h1>What is a virtual escape game?</h1>
             </div>
         </Row>
         <Row>
