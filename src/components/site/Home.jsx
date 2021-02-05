@@ -30,7 +30,7 @@ function Home() {
                   <img
                       className="d-block w-100"
                       src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true"
-                      alt="First slide"
+                      alt="escovid"
                   />
                 </div>
                 <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
@@ -45,8 +45,8 @@ function Home() {
                 <div style={{width: "75%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic.png?raw=true"
-                      alt="Third slide"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true"
+                      alt="Dreamscape"
                   />
                 </div>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
@@ -61,8 +61,8 @@ function Home() {
                 <div style={{width: "75%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true"
-                      alt="Third slide"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic.png?raw=true"
+                      alt="dropped comic"
                   />
                 </div>
                 <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
