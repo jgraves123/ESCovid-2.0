@@ -1,0 +1,20 @@
+{/*this is not connected for some reason*/}
+
+body {
+    color: black;
+}
+
+h1 {
+    color: black;
+}
+
+.sideContent {
+    width: 25%;
+    height: 577px;
+    float: right;
+}
+
+.sideText {
+    margin: 20px 20px 20px 60px;
+    text-align: right;
+}

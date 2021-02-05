@@ -266,3 +266,15 @@ button:hover {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.sideContent {
+  width: 25%;
+  height: 577px;
+  float: right;
+}
+
+.sideText {
+  color: black;
+  margin: 50px;
+  text-align: right;
+}
