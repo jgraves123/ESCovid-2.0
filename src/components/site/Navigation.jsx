@@ -7,7 +7,7 @@ function Navigation() {
   return (
     <div className="navigation">
           {/*"#72EA80", "#15b40d", "#fcc81a", "0fd145"*/}
-      <Navbar className={"navbar"}style={{backgroundColor: "#f6f6f6"}} expand="lg">
+      <Navbar className={"navbar"} style={{backgroundColor: "#e9e9e9"}} expand="lg">
         <Navbar.Brand href="/" style={{padding: 0, margin: 0}}>
           {/*<table style={{padding: 0, margin: 0}}>*/}
           {/*  <tr>*/}
