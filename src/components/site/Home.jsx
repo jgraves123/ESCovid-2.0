@@ -9,14 +9,7 @@ function Home() {
             <div style={{width: "90%"}}>
             <Carousel>
               <Carousel.Item align='center'>
-                <div style={{width: "75%", float: "left"}}>
-                  <img
-                      className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper.png?raw=true"
-                      alt="First slide"
-                  />
-                </div>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
+                <div className="sideContent" style={{backgroundColor: "#fcc81a", width: "30%", height: "535px"}}>
                   <div className="sideText">
                     <h1>Welcome</h1>
                     <br/>
@@ -24,15 +17,15 @@ function Home() {
                       but you can never leave...</p>
                   </div>
                 </div>
-              </Carousel.Item>
-              <Carousel.Item align='center'>
-                <div style={{width: "75%", float: "left"}}>
+                <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true"
-                      alt="escovid"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper12.png?raw=true"
+                      alt="First slide"
                   />
                 </div>
+              </Carousel.Item>
+              <Carousel.Item align='center'>
                 <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
                   <div className="sideText">
                     <h1>Play now!</h1>
@@ -40,15 +33,15 @@ function Home() {
                     <p>Space + math + world crisis. <br/>What more do you need?</p>
                   </div>
                 </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div style={{width: "75%", float: "left"}}>
+                <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true"
-                      alt="Dreamscape"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid12.png?raw=true"
+                      alt="escovid"
                   />
                 </div>
+              </Carousel.Item>
+              <Carousel.Item>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
                   <div className="sideText">
                     <h1>Coming Soon!</h1>
@@ -56,21 +49,28 @@ function Home() {
                     <p>Wouldn't it be funny if were actually trapped in here?</p>
                   </div>
                 </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div style={{width: "75%", float: "left"}}>
+                <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic.png?raw=true"
-                      alt="dropped comic"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape12.png?raw=true"
+                      alt="Dreamscape"
                   />
                 </div>
-                <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
                   <div className="sideText">
                     <h1>Coming Soon!</h1>
                     <br/>
                     <p>See if you can *dream* a way out of this one!</p>
                   </div>
+                </div>
+                <div style={{width: "70%", float: "left"}}>
+                  <img
+                      className="d-block w-100"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/droppedcomic12.png?raw=true"
+                      alt="dropped comic"
+                  />
                 </div>
               </Carousel.Item>
             </Carousel>
