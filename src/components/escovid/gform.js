@@ -10,6 +10,9 @@ export default class Gform extends Component {
         if (!this.props.counting) {
             this.props.start(true)
         }
+        if (this.props.curr_stage != 0) {
+            this.props.stage(0)
+        }
     }
 
     state = {

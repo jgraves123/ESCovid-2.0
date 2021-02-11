@@ -9,8 +9,8 @@ h1 {
 
 .sideContent {
     width: 30%;
-    height: 535px;
-    float: left;
+    height: 100%;
+    float: right;
 }
 
 .sideText {

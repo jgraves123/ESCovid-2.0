@@ -7,9 +7,9 @@ function Home() {
     <div>
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
-            <Carousel>
-              <Carousel.Item align='center'>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a", width: "30%", height: "535px"}}>
+            <Carousel interval={50000} pause={"false"} style={{height: "100%"}}>
+              <Carousel.Item align='center' style={{backgroundColor: "#fcc81a"}}>
+                <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
                   <div className="sideText">
                     <h1>Welcome</h1>
                     <br/>
@@ -25,7 +25,7 @@ function Home() {
                   />
                 </div>
               </Carousel.Item>
-              <Carousel.Item align='center'>
+              <Carousel.Item align='center' style={{backgroundColor: "#0fd145"}}>
                 <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
                   <div className="sideText">
                     <h1>Play now!</h1>
@@ -41,7 +41,7 @@ function Home() {
                   />
                 </div>
               </Carousel.Item>
-              <Carousel.Item>
+              <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
                   <div className="sideText">
                     <h1>Coming Soon!</h1>
@@ -57,8 +57,8 @@ function Home() {
                   />
                 </div>
               </Carousel.Item>
-              <Carousel.Item>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
+              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
+                <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
                   <div className="sideText">
                     <h1>Coming Soon!</h1>
                     <br/>
@@ -68,7 +68,7 @@ function Home() {
                 <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/droppedcomic12.png?raw=true"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic12.png?raw=true"
                       alt="dropped comic"
                   />
                 </div>

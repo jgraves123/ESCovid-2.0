@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Navbar, Nav, Button, OverlayTrigger, Popover, NavDropdown} from 'react-bootstrap';
 import {hints} from "./hint"
-import ReactStopwatch from "react-stopwatch";
+import ReactStopwatch from "./stopwatch";
 
 function getTime() {
     let sec = localStorage.getItem('seconds');
@@ -11,6 +11,7 @@ function getTime() {
 
     console.log("wowwoow")
     console.log(final_formatted)
+    console.log(sec)
 
     if (sec == null) {
         sec = 0;
@@ -74,6 +75,7 @@ function DefaultPop(props) {
 class TimerNav extends Component {
 
     time = getTime();
+
 
     state = {
         seconds: this.time[0],
