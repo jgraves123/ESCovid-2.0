@@ -4,8 +4,12 @@ body {
 
 h1 {
     color: black;
+    font-size: 4vw;
 }
 
+p {
+    font-size: 1.25vw;
+}
 
 .sideContent {
     width: 30%;
@@ -14,6 +18,6 @@ h1 {
 }
 
 .sideText {
-    margin: 50px;
+    margin: 3vw;
     text-align: right;
 }
