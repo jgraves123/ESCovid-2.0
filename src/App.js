@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Home, Final, About, Contact, Congrats, Escovid, Leader, Game } from "./components";
+import "./components/site/home.css";
 import GliesePopUp from "./components/escovid/GliesePopUp";
 import moment from "moment";
 

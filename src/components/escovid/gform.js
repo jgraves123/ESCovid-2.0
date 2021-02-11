@@ -46,11 +46,20 @@ export default class Gform extends Component {
                     <h3>Mission control has left you two clues about the departure location - you may wish to divide and conquer, but you will need to solve both of them to move on.</h3>
                 </div>
                 <br/>
-                <Accordion style={{width: "60%"}}>
-                    <Card>
+                <div>
+                    <form id="path-answer" onSubmit={this.check}>
+                        <label>
+                            <input type="text" placeholder="Password" onChange={this.handleChange} />
+                        </label>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+            <br/>
+                <Accordion style={{width: "80%"}}>
+                    <Card style={{float: "left", width: "48%"}}>
                         <Card.Header>
                             Missive I
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="0" style={{backgroundColor: "#007FFF"}}/>
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="0" style={{backgroundColor: "#fcc81a"}}/>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>
@@ -72,11 +81,10 @@ export default class Gform extends Component {
                             </Card.Body>
                         </Accordion.Collapse>
                     </Card>
-                    <br/>
-                    <Card>
+                    <Card style={{float: "right", width: "48%"}}>
                         <Card.Header>
                             Missive II
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="1" style={{backgroundColor: "#007FFF"}}/>
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="1" style={{backgroundColor: "#fcc81a"}}/>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
                             <Card.Body>
@@ -98,12 +106,6 @@ export default class Gform extends Component {
                     </Card>
                 </Accordion>
                 <br/>
-                <form id="path-answer" onSubmit={this.check}>
-                    <label>
-                        <input type="text" placeholder="Password" onChange={this.handleChange} />
-                    </label>
-                    <input type="submit" value="Submit"/>
-                </form>
             </div>
         )
     }

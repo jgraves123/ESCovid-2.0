@@ -44,39 +44,6 @@ export default class Instructions extends Component{
             <div align="center" >
                 <h1>Welcome to ESCovid</h1>
                 <h2>A space-and-math-themed escape game!</h2>
-                {/*<Carousel style={{height: "500px"}}>*/}
-                {/*    <Carousel.Item>*/}
-                {/*        <h3>Overview</h3>*/}
-                {/*        <div className = "para">*/}
-                {/*            <p><strong>Levels and Estimated Time: </strong>Choose the level that’s right for your group!*/}
-                {/*                (Either way, this is a difficult and lengthy escape room, so try not to get demoralized if it is taking awhile. Feel free to do it in multiple sittings!!!)*/}
-                {/*                <br/><em>Challenging:</em> ESCovid-19 is guaranteed to challenge you in new ways, just as Covid-19 has challenged us all. 1-2 hours estimated.*/}
-                {/*                <br/><em>Very Challenging:</em> Now, imagine a mutated version that has evolved to withstand your best problem-solving skills, and voila: ESCovid-20! 2-3 hours estimated.</p>*/}
-                {/*        </div>*/}
-                {/*        <div className = "para">*/}
-                {/*            <p><strong>Intended Audience: </strong>teens and adults who enjoy math and puzzles (originally created for a high school math camp).</p>*/}
-                {/*        </div>*/}
-                {/*        <div className = "para">*/}
-                {/*            <p><strong>Group size: </strong>4-6 players recommended, but can be done with less.</p>*/}
-                {/*        </div>*/}
-                {/*        <Carousel.Caption>*/}
-                {/*            <h3>First slide label</h3>*/}
-                {/*            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>*/}
-                {/*        </Carousel.Caption>*/}
-                {/*    </Carousel.Item>*/}
-                {/*    <Carousel.Item>*/}
-                {/*        <Carousel.Caption>*/}
-                {/*            <h3>Second slide label</h3>*/}
-                {/*            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>*/}
-                {/*        </Carousel.Caption>*/}
-                {/*    </Carousel.Item>*/}
-                {/*    <Carousel.Item>*/}
-                {/*        <Carousel.Caption>*/}
-                {/*            <h3>Third slide label</h3>*/}
-                {/*            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>*/}
-                {/*        </Carousel.Caption>*/}
-                {/*    </Carousel.Item>*/}
-                {/*</Carousel>*/}
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Overview</h3>
                     <div className = "para">
@@ -120,20 +87,21 @@ export default class Instructions extends Component{
                     <strong>Good luck!</strong>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
-                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">
-                    <button className="button"><h3>Begin ESCovid-19</h3></button>
-                </Link>
+                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
+                    <Link to="/escovid/gform">
+                        <button className="button"><h3>Begin ESCovid-19</h3></button>
+                    </Link>
                     <Link to="/escovid/gform">
                         <button className="button"><h3>Begin ESCovid-20</h3></button>
                     </Link></Alert>
-                <div>
+                <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>
-                        <label>
+                        <label style={{margin: "5px"}}>
                             <input type="text" placeholder="Group Name" onChange={this.handleChange}/>
                         </label>
                         <input type="checkbox" id="scales" name="scales" onChange={this.handleCheck}/>
-                            <label htmlFor="scales"> Join Leaderboard? </label>
-                        <input type="submit" value="Submit"/>
+                            <label htmlFor="scales" style={{margin: "5px"}}> Join Leaderboard? </label>
+                        <input type="submit" value="Submit" style={{margin: "5px"}}/>
                     </form>
                 </div>
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
