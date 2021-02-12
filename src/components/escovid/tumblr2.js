@@ -43,6 +43,7 @@ export default class Tumblr2 extends Component{
 
     render() {
         return (
+            <html style={{backgroundColor: "#3e6094"}}>
             <div align={"center"}>
                 <h1>Password:</h1>
                 <form id="path-answer" onSubmit={this.check}>
@@ -62,7 +63,7 @@ export default class Tumblr2 extends Component{
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
             </div>
-
+            </html>
         )
     }
 }

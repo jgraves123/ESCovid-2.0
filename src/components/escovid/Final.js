@@ -55,7 +55,7 @@ class Home extends Component {
     render() {
         return(
             <div>
-                <body>
+                <body style={{backgroundColor: "#7ec8de"}}>
                 {/*<Confetti/>*/}
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
@@ -66,9 +66,9 @@ class Home extends Component {
                 <section>
                     <div className="scaling-svg-container">
                         {/*resizing*/}
-                        <svg className="scaling-svg" viewBox="0 0 1600 900"> {/* Needs auto
+                        <svg className="scaling-svg" viewBox="0 0 1600 733"> {/* Needs auto
                          updating*/}
-                            <image width="100%" height="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
+                            <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/ship.jpg?raw=true"/>
                             <rect x="1010" y="200" width="375" height="400" className="clickable-done" onClick={this.GliesePop}/>
                             <rect x="590" y="200" width="410" height="400" className="clickable-done" onClick={this.ComparePop}/>
                             <rect x="220" y="200" width="360" height="400" className="clickable-done" onClick={this.TrappistPop}/>
@@ -82,9 +82,6 @@ class Home extends Component {
                     </Link>
                     <Link to="/escovid/gliese">
                         <button className="button"><h3>Gliese 876</h3></button>
-                    </Link>
-                    <Link to="/escovid/testing">
-                        <button className="button"><h3>Testing</h3></button>
                     </Link>
                 </div>
                 <Post title={"Testing"} caption={"This can work on any page!"}/>

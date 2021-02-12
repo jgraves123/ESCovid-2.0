@@ -82,7 +82,7 @@ export default class Gform extends Component {
 
     render(){
         return(
-                <div style={{margin: "1vw 10vw", bgColor: "pink"}}>
+                <body style={{margin: "1vw 10vw", bgColor: "pink"}}>
                     <div>
                         <div className="card" >
                             <div className="row g-0">
@@ -280,7 +280,7 @@ export default class Gform extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </body>
         )}
 
 }
