@@ -82,9 +82,9 @@ export default class Gform extends Component {
 
     render(){
         return(
-                <div className="content" style={{margin: "1vw 10vw"}}>
+                <div style={{margin: "1vw 10vw", bgColor: "pink"}}>
                     <div>
-                        <div className="card">
+                        <div className="card" >
                             <div className="row g-0">
                                 <div className="col-12 col-lg-5 col-xl-3 border-right">
 

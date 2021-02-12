@@ -57,11 +57,6 @@ class Home extends Component {
             <div>
                 <body>
                 {/*<Confetti/>*/}
-                <header id="main-header" style={{padding: 10}}>
-                    <div className="container">
-                        <h1 align='center'>Choose your Target Destination</h1>
-                    </div>
-                </header>
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
                     {this.state.gliese ? <GliesePopUp toggle={this.GliesePop} /> : null}

@@ -41,7 +41,7 @@ export default class Instructions extends Component{
 
     render(){
         return(
-            <div align="center" >
+            <div align="center" style={{backgroundColor: "pink"}}>
                 <h1>Welcome to ESCovid</h1>
                 <h2>A space-and-math-themed escape game!</h2>
                 <div className="content-section container" align="left" style={{width: "60%"}}>

@@ -39,7 +39,7 @@ export default class Tumblr1 extends Component{
 
     render() {
                 return (
-                    <div align={"center"}>
+                    <div align={"center"} style={{backgroundColor: "#f2d3d0"}}>
                         <h1>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
