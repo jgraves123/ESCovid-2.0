@@ -44,10 +44,10 @@ class Leader extends Component {
                 .catch(err => console.error('Oh well, you failed. Here some thoughts on the error' +
                     ' that occured:', err))
 
-            if (this.props.game == "escovid19") {
+            if (this.props.game === "escovid19") {
                 this.data19.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
             }
-            if (this.props.game == "escovid20") {
+            if (this.props.game === "escovid20") {
                 this.data20.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
             }
         }
@@ -61,15 +61,19 @@ class Leader extends Component {
 
 
 
-
     render() {
         return(
             <section>
-                <div className="container" align={"center"} width={"50%"}>
+                <div className="container" align={"center"} style={{width: "70%"}}>
+                    <h1>Leaderboards</h1>
+                    <div style={{float: "left"}}>
                     <h2>ESCovid-19 Leaderboard</h2>
                     <Griddle data={this.data19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    </div>
+                    <div style={{float: "right"}}>
                     <h2>ESCovid-20 Leaderboard</h2>
                     <Griddle data={this.data20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    </div>
                 </div>
             </section>
         )

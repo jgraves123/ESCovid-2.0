@@ -1,5 +1,6 @@
 import React from "react";
-import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap'
+import Leader from "../game/leaderboard";
+import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap';
 
 function Home() {
   localStorage.clear()
@@ -78,12 +79,11 @@ function Home() {
           </div>
     <br/>
     <br/>
+    <div align='left' style={{backgroundColor: "#fcc81a", margin: "10vw 0", padding: "5vw 5vw", width: "90%"}}>
+      <h1>What is a virtual escape game?</h1>
+    </div>
+      <div>
       <Container align='left' style={{width: "90%"}} >
-        <Row>
-            <div align='left'>
-              <h1>What is a virtual escape game?</h1>
-            </div>
-        </Row>
         <Row>
           <Col xs={6} md={3}>
             <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true" thumbnail />
@@ -108,6 +108,11 @@ function Home() {
           <Col/>
         </Row>
       </Container>
+        <div align='right' style={{backgroundColor: "#fcc81a", margin: "10vw 0", padding: "5vw 5vw", width: "90%"}}>
+          <h1>Some other question?</h1>
+        </div>
+    </div>
+      <Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>
     </div>
   );
 }

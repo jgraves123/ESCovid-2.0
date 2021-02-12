@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Text from "./text";
+import Delayed from "../game/delayed";
 
 export default class Gform extends Component {
 
@@ -19,7 +20,7 @@ export default class Gform extends Component {
     state = {
         value: "",
         chat: 0,
-        wrong: false,
+        wrong:-1,
         attempt: "",
         hr: 2,
         minute: 40,
@@ -62,7 +63,7 @@ export default class Gform extends Component {
         this.temp = ("spaceship" === this.state.value);
         if (!this.temp) {
             this.setState({
-                wrong: true
+                wrong: this.state.chat
             });
         }
         else {
@@ -122,7 +123,9 @@ export default class Gform extends Component {
                                         </div>
                                     </a>
                                     <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo2}>
+                                        <Delayed waitBeforeShow={5000}>
                                         <div className="badge bg-success float-right">3</div>
+                                        </Delayed>
                                         <div className="d-flex align-items-start">
                                             <img src={this.avatars[2]}
                                                  className="rounded-circle mr-1" alt="Vanessa Tucker" width="40"
@@ -145,21 +148,46 @@ export default class Gform extends Component {
                                             </div>
                                             <div className="flex-grow-1 pl-3">
                                                 <strong>{this.chatNames[this.state.chat]}</strong>
-                                                <div className="text-muted small"><em>Typing...</em></div>
                                             </div>
                                         </div>
                                     </div>
                                     {this.state.chat===0 ?
                                         <div className="position-relative">
                                             <div className="chat-messages p-4">
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
                                                 <Text character="Mission Control" timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
                                                     Initiating Phase I...</Text>
+                                                <Delayed waitBeforeShow={4000}>
                                                 <Text character="Mission Control" timesent="2:35 am" myavatar={this.avatars[this.state.chat]}>
-                                                    Our agents have sent you two clues about the departure location - you may wish to divide and conquer,
+                                                    Our agents are sending you two clues about the departure location - you may wish to divide and conquer,
                                                     but you will need to solve both of them to move on.</Text>
+                                                </Delayed>
+                                                <Delayed waitBeforeShow={12000}>
                                                 <Text character="Mission Control" timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
                                                         Reply with the password to move forward.
                                                 </Text>
+                                                </Delayed>
+                                                {this.state.wrong===0 ?
+                                                    <div>
+                                                        <div className="chat-message-right pb-4">
+                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                                 className="rounded-circle mr-1" alt="You" width="40"
+                                                                 height="40"/>
+                                                        </div>
+                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                            <div className="font-weight-bold mb-1">You</div>
+                                                            {this.state.attempt}
+                                                        </div>
+                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                            Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                    </div>
+                                                    : null
+                                                }
                                             </div>
                                             <div className="flex-grow-0 py-3 px-4 border-top">
                                                 <div className="input-group">
@@ -183,6 +211,22 @@ export default class Gform extends Component {
                                                 <Text character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
+                                                {this.state.wrong===1 ?
+                                                    <div>
+                                                        <div className="chat-message-right pb-4">
+                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                                 className="rounded-circle mr-1" alt="You" width="40"
+                                                                 height="40"/>
+                                                        </div>
+                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                            <div className="font-weight-bold mb-1">You</div>
+                                                            {this.state.attempt}
+                                                        </div>
+                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                            Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                    </div>
+                                                    : null
+                                                }
                                             </div>
                                             <div className="flex-grow-0 py-3 px-4 border-top">
                                                 <div className="input-group">
@@ -206,13 +250,12 @@ export default class Gform extends Component {
                                                 <Text character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
-                                                {this.state.wrong===true ?
+                                                {this.state.wrong===2 ?
                                                     <div>
                                                         <div className="chat-message-right pb-4">
                                                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                                                  className="rounded-circle mr-1" alt="You" width="40"
                                                                  height="40"/>
-                                                            <div className="text-muted small text-nowrap mt-2">{this.state.hr + ":" + this.state.minute + "am"}</div>
                                                         </div>
                                                         <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
                                                             <div className="font-weight-bold mb-1">You</div>
@@ -223,11 +266,11 @@ export default class Gform extends Component {
                                                     </div>
                                                     : null
                                                 }
-                                            </div>
-                                            <div className="flex-grow-0 py-3 px-4 border-top">
-                                                <div className="input-group">
-                                                <input type="text" className="form-control" placeholder="Type your message" onChange={this.handleChange}/>
-                                                <button className="send" onClick={this.check}>Send</button>
+                                                <div className="flex-grow-0 py-3 px-4 border-top">
+                                                    <div className="input-group">
+                                                        <input type="text" className="form-control" placeholder="Type your message" onChange={this.handleChange}/>
+                                                        <button className="send" onClick={this.check}>Send</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
