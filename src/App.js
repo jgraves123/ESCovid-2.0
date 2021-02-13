@@ -1,6 +1,17 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Final, About, Contact, Congrats, Escovid, Leader, Game } from "./components";
+import {
+  Navigation,
+  Home,
+  Final,
+  About,
+  Contact,
+  Congrats,
+  Escovid,
+  Leader,
+  Game,
+  Footer
+} from "./components";
 import "./components/site/home.css";
 import "./components/escovid/gform.css"
 import GliesePopUp from "./components/escovid/GliesePopUp";
@@ -31,6 +42,7 @@ class App extends Component {
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
             </Switch>
+            <Footer/>
           </Router>
         </div>
     )

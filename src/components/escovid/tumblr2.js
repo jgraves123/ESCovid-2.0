@@ -43,16 +43,21 @@ export default class Tumblr2 extends Component{
 
     render() {
         return (
-            <html style={{backgroundColor: "#3e6094"}}>
-            <div align={"center"}>
-                <h1>Password:</h1>
+            <body style={{backgroundColor: "#3e6094", paddingBottom: "10px"}}>
+            <header>
+                <img width="100%" height="400px" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/instrumentpanel.png?raw=true"/>
+            </header>
+            <div align={"center"} style={{marginTop: "-190px"}}>
+                <h1 style={{color: "white"}}>Password:</h1>
                 <form id="path-answer" onSubmit={this.check}>
                     <label>
                         <input type="text" placeholder="Password" onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
+                <div style={{padding: "20px"}}>
                 <ReactAudioPlayer src={audio} controls/>
+                </div>
                 <Post title={"Title"} caption={"Caption"}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/stargridpuzzle.jpg?raw=true"/>
                 </Post>
@@ -63,7 +68,7 @@ export default class Tumblr2 extends Component{
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
             </div>
-            </html>
+            </body>
         )
     }
 }

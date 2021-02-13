@@ -40,12 +40,12 @@ export default class Tumblr1 extends Component{
     render() {
                 return (
                     <div>
-                    <body align={"center"} style={{backgroundColor: "#f2d3d0"}}>
-                    <header>
+                    <body align={"center"} style={{backgroundColor: "#f2d3d0", paddingBottom: "10px"}}>
+                    <header style={{overflow: "hidden"}}>
                         <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>
                     </header>
-                    <div align={"center"}>
-                        <h1>Password:</h1>
+                    <div align={"center"} style={{marginTop: "-350px"}}>
+                        <h1 style={{color: "white"}}>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
@@ -55,10 +55,10 @@ export default class Tumblr1 extends Component{
                         {this.props.game_name === "escovid19" ?
                             <Post title={"Title"} caption={"Someone seems to have left a few clues behind"}>
                                 <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
-                            </Post>
-                        : <Post title={"Title"} caption={"Caption"}>
-                                <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
-                            </Post>
+                            </Post> :
+                         // <Post title={""} caption={"Caption"}>
+                                <img width="50%" style={{padding: "50px"}} src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
+                            // </Post>
                         }
                         <Post title={"Title"} caption={"Caption"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gliese-intro.png?raw=true"/>

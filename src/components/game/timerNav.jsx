@@ -147,19 +147,19 @@ class TimerNav extends Component {
                 />
                 </Navbar.Collapse>
                 <div style={{color: "white"}}>
-                    {this.props.name}
+                    Welcome {this.props.name}!
                 </div>
+                <Navbar.Toggle/>
                 <Navbar.Collapse className="justify-content-end">
                 <div style={{color: "white"}}>
                     Hints Used: {this.props.num_hint}
                 </div>
                 <Nav>
-                    <NavDropdown title="Hint" menuAlign="right" id="basic-nav-dropdown" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
+                    <NavDropdown title="Hint" menuAlign="right" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
                         <DefaultDropdown closeMenu={this.closeMenu} hints={this.state.hint[this.props.game][this.props.stage]} take_hint={this.props.use_hint}/>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
-                {/*<Hint />*/}
             </Navbar>
         </div>)
     }
