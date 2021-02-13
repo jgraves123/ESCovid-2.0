@@ -42,7 +42,7 @@ export default class Tumblr1 extends Component{
                     <div>
                     <body align={"center"} style={{backgroundColor: "#f2d3d0"}}>
                     <header>
-                        <img width="100%" height="200" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>
+                        <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>
                     </header>
                     <div align={"center"}>
                         <h1>Password:</h1>
