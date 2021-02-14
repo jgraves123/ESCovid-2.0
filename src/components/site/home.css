@@ -21,3 +21,10 @@ p {
     margin: 3vw;
     text-align: right;
 }
+
+.sectiontitle {
+    background: #fcc81a;
+    margin: 10vw 0;
+    padding: 5vw 5vw;
+    width: 90%;
+}

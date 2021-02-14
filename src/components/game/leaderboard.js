@@ -3,6 +3,8 @@ import "../index.css";
 import "./leaderboard.css";
 import Griddle, {plugins} from 'griddle-react';
 import emailjs from "emailjs-com";
+import {dataesc19, dataesc20} from "../site/leaderdata";
+
 //npm install --save griddle-react, http://griddlegriddle.github.io/Griddle/
 
 
@@ -68,11 +70,11 @@ class Leader extends Component {
                     <h1>Leaderboards</h1>
                     <div style={{float: "left"}}>
                     <h2>ESCovid-19 Leaderboard</h2>
-                    <Griddle data={this.data19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     </div>
                     <div style={{float: "right"}}>
                     <h2>ESCovid-20 Leaderboard</h2>
-                    <Griddle data={this.data20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     </div>
                 </div>
             </section>

@@ -1,6 +1,8 @@
 import React from "react";
 import Leader from "../game/leaderboard";
 import {Carousel, Navbar, Image, Container, Row, Col} from 'react-bootstrap';
+import Griddle, {plugins} from "griddle-react";
+import {dataesc19, dataesc20, sortProperties} from "./leaderdata";
 
 function Home() {
   localStorage.clear()
@@ -79,14 +81,14 @@ function Home() {
           </div>
     <br/>
     <br/>
-    <div align='left' style={{backgroundColor: "#fcc81a", margin: "10vw 0", padding: "5vw 5vw", width: "90%"}}>
-      <h1>What is a virtual escape game?</h1>
-    </div>
+      <div align='left' className="sectiontitle">
+        <h1>What is a virtual escape room?</h1>
+      </div>
       <div>
       <Container align='left' style={{width: "90%"}} >
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/encryptedscreenshot.png?raw=true" thumbnail />
           </Col>
           <Col>
             <h2>Difficulty</h2>
@@ -95,24 +97,47 @@ function Home() {
         </Row>
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/audioscreenshot.png?raw=true" thumbnail />
           </Col>
           <Col><h2>Players</h2></Col>
           <Col/>
         </Row>
         <Row>
           <Col xs={6} md={3}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic.png?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/planetsscreenshot.png?raw=true" thumbnail />
           </Col>
           <Col><h2>Time to Play</h2></Col>
           <Col/>
         </Row>
       </Container>
-        <div align='right' style={{backgroundColor: "#fcc81a", margin: "10vw 0", padding: "5vw 5vw", width: "90%"}}>
-          <h1>Some other question?</h1>
+        <div align='right'>
+          <div align='left' className="sectiontitle">
+            <h1>Leaderboards</h1>
+          </div>
         </div>
     </div>
-      <Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>
+      <Container style={{width: "90%"}}>
+        <Row>
+          <Col sm>
+            <h2>ESCovid-19 Leaderboard</h2>
+            <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+          </Col>
+          <Col sm>
+            <h2>ESCovid-20 Leaderboard</h2>
+            <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+          </Col>
+          <Col sm>
+            <h2>Imaginary other Leaderboard</h2>
+            <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+          </Col>
+          <Col sm>
+            <h2>Imaginary other Leaderboard</h2>
+            <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+          </Col>
+        </Row>
+      </Container>
+      {/*<Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>*/}
+    <br/>
     </div>
   );
 }

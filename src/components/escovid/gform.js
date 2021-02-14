@@ -24,10 +24,10 @@ export default class Gform extends Component {
         attempt: "",
         hr: 2,
         minute: 40,
-    }
+    };
 
     handleChange = (event) => {
-        console.log(event)
+        console.log(event);
         this.setState({
             value: event.target.value
         });
