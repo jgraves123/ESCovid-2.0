@@ -83,6 +83,7 @@ function Home() {
         <div style={{width: "90%"}}>
       <div align='left' className="sectiontitle">
         <h1>What is a virtual escape room?</h1>
+        <h4>+Hover to read more+</h4>
       </div>
       <div align='left' style={{padding: "2vw"}} >
         <Row style={{padding: "2vw 0"}}>
@@ -91,11 +92,11 @@ function Home() {
           </Col>
           <Col xs={4}>
             <div className="container2">
-              <h2 className="text center">Story</h2>
+              <h2 className="text center">A Story</h2>
               <div className="overlay">
                 <div style={{padding: "2vw"}}>
-                  <h3>Navigate through a story in which you are an actor.
-                    At each stage, solve the clues to make the story advance.</h3>
+                  <h3>Navigate through a story in which you are the key actor(s).
+                    Each stage will present new challenges to advancing.</h3>
                 </div>
               </div>
             </div>
@@ -109,7 +110,7 @@ function Home() {
               <h2 className="text center">Multimedia Clues</h2>
               <div className="overlay">
                 <div style={{padding: "2vw"}}>
-                  <h3>You will interact with multimedia clues and puzzles along the way - we strive to engage everyone on the team!</h3>
+                  <h3>Engage with multimedia clues and puzzles along the way.</h3>
                 </div>
               </div>
             </div>
@@ -165,6 +166,7 @@ function Home() {
         <div style={{width: "90%"}}>
           <div align='left' className="sectiontitle">
             <h1>FAQs</h1>
+            <h4>+Click to expand+</h4>
           </div>
           <div align='left' style={{padding: "2vw"}} >
             <Accordion>
