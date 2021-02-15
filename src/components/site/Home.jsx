@@ -251,7 +251,6 @@ function Home() {
           </div>
         </div>
       </div>
-    <div style={{margin: "8vw 0"}}/>
     </div>
   );
 }

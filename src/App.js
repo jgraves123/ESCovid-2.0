@@ -26,8 +26,9 @@ class App extends Component {
 
   render() {
     return (
-        <div className="App">
+        <div className="App" style={{position: "relative", minHeight: "100vh"}}>
           <Router>
+            <div style={{paddingBottom: "50px"}}>
             <Navigation />
             <Switch>
               <Route path="/" exact component={() => <Home />} />
@@ -42,6 +43,7 @@ class App extends Component {
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
             </Switch>
+          </div>
             <Footer/>
           </Router>
         </div>
