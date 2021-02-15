@@ -86,27 +86,53 @@ function Home() {
       </div>
       <div align='left' style={{padding: "2vw"}} >
         <Row style={{padding: "2vw 0"}}>
-          <Col xs={8}>
+          <Col xs={6}>
             <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/password.gif?raw=true" thumbnail />
           </Col>
-          <Col xs={4}><h3>Our virtual escape rooms will take you through a story in which YOU are the main characters.
-          Each stage will put your intellect and craftiness to the test to put together the passkey to advance.</h3></Col>
+          <Col xs={4}>
+            <div className="container2">
+              <h2 className="text center">Story</h2>
+              <div className="overlay">
+                <div style={{padding: "2vw"}}>
+                  <h3>Navigate through a story in which you are an actor.
+                    At each stage, solve the clues to make the story advance.</h3>
+                </div>
+              </div>
+            </div>
+            </Col>
+          <Col xs={2}/>
+        </Row>
+        <Row style={{padding: "2vw 0"}}>
+          <Col xs={2}/>
+          <Col xs={4}>
+            <div className="container2">
+              <h2 className="text center">Multimedia Clues</h2>
+              <div className="overlay">
+                <div style={{padding: "2vw"}}>
+                  <h3>You will interact with multimedia clues and puzzles along the way - we strive to engage everyone on the team!</h3>
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col xs={6}>
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/audio.gif?raw=true" thumbnail />
+          </Col>
         </Row>
         <Row style={{padding: "2vw 0"}}>
           <Col xs={6}>
-            <h3>You will interact with multimedia clues and puzzles along the way - we strive to engage everyone on the team!</h3>
-          </Col>
-          <Col sm>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/video.gif?raw=true" thumbnail />
-          </Col>
-        </Row>
-        <Row style={{padding: "2vw 0"}}>
-          <Col sm>
             <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/annotate.gif?raw=true" thumbnail />
           </Col>
-          <Col xs={8}>
-            <h3>We recommend that teams video-conference throughout and share screens to have a cohesive experience.</h3>
+          <Col xs={4}>
+            <div className="container2">
+              <h2 className="text center">Virtual Teamwork</h2>
+              <div className="overlay">
+                <div style={{padding: "2vw"}}>
+                  <h3>We recommend that teams video-conference throughout and share screens to have a cohesive experience.</h3>
+                </div>
+              </div>
+            </div>
           </Col>
+          <Col xs={2}/>
         </Row>
       </div>
       </div>
