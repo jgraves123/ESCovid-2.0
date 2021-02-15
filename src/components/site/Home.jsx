@@ -243,6 +243,9 @@ function Home() {
                 </Accordion.Collapse>
               </Card>
               <br/>
+              <div>
+                <Image src="https://images.squarespace-cdn.com/content/v1/5fb68a6facdf9a5fdefdeb3d/1606863642198-8GR30AJQTKL99CBTRS4L/ke17ZwdGBToddI8pDm48kABpwtc0gFnh3kdg-HNAm9dZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGkx8TKNhVYC3tTexUASpsrum-jO_YfaVHIydTtJlPDAyb8BodarTVrzIWCp72ioWw/showcase_cropped.gif" thumbnail />
+              </div>
               <p>Don't see your question here? <a href="/contact">Contact us.</a></p>
             </Accordion>
           </div>
