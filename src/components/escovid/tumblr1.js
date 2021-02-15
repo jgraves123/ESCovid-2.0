@@ -53,38 +53,36 @@ export default class Tumblr1 extends Component{
                             <input type="submit" value="Submit"/>
                         </form>
                         {this.props.game_name === "escovid19" ?
-                            <Post title={"Title"} caption={"Someone seems to have left a few clues behind"}>
+                            <Post title={""} caption={"Someone seems to have left a few clues behind"}>
                                 <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
                             </Post> :
-                         // <Post title={""} caption={"Caption"}>
                                 <img width="50%" style={{padding: "50px"}} src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
-                            // </Post>
                         }
-                        <Post title={"Title"} caption={"Caption"}>
+                        <Post title={""} caption={"Promising news from one of our top researchers..."}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gliese-intro.png?raw=true"/>
                         </Post>
-                        <Post title={"Title"} caption={"Caption"}>
+                        <Post title={""} caption={"the wheels on the ship go round and round, round and round..."}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cipher.jpg?raw=true"/>
                         </Post>
-                        <Post title={"Title"} caption={"Caption"}>
+                        <Post title={""} caption={"travel far but read local :)"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/newspaper.JPG?raw=true"/>
                         </Post>
-                        <Post title={"Title"} caption={"Caption"}>
+                        <Post title={""} caption={"The orbital path model for the escape pod is in!! #thanksdesmos #srslyyoumayusedesmos"}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/path.PNG?raw=true"/>
                         </Post>
-                        <Post title={"Title"} caption={"Caption"}>
+                        <Post title={"10 years into a long voyage..."} caption={""}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/tictactoe.PNG?raw=true"/>
                         </Post>
                         {this.props.game_name === "escovid20" ?
                             <div>
-                                <Post title={"Title"} caption={"Caption"}>
+                                <Post title={""} caption={"Don't mind the letters just yet...they're A problem for future you, if you make it that far."}>
                                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cards.png?raw=true"/>
                                 </Post>
-                                <Post title={"Title"} caption={"Caption"}>
-                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
+                                <Post title={""} caption={""}>
+                                    <p style={{color: "white"}}>What has no beginning or end, never eats, but is always growing?</p>
                                 </Post>
-                                <Post title={"Title"} caption={"Caption"}>
-                                    <p style={{color: "white"}}>riddle</p>
+                                <Post title={""} caption={"Astronauts must not only be physically tough, but mentally sharp, too. Think you’re up to it?"}>
+                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
                                 </Post>
                             </div> :
                             null}
