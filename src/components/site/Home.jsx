@@ -86,23 +86,23 @@ function Home() {
       </div>
       <div align='left' style={{padding: "2vw"}} >
         <Row style={{padding: "2vw 0"}}>
-          <Col xs={4}>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/encryptedscreenshot.PNG?raw=true" thumbnail />
+          <Col xs={8}>
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/password.gif?raw=true" thumbnail />
           </Col>
-          <Col xs={8}><h3>Our virtual escape rooms will take you through a story in which YOU are the main characters.
+          <Col xs={4}><h3>Our virtual escape rooms will take you through a story in which YOU are the main characters.
           Each stage will put your intellect and craftiness to the test to put together the passkey to advance.</h3></Col>
         </Row>
         <Row style={{padding: "2vw 0"}}>
-          <Col xs={8}>
+          <Col xs={6}>
             <h3>You will interact with multimedia clues and puzzles along the way - we strive to engage everyone on the team!</h3>
           </Col>
           <Col sm>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/audioscreenshot.PNG?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/video.gif?raw=true" thumbnail />
           </Col>
         </Row>
         <Row style={{padding: "2vw 0"}}>
           <Col sm>
-            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/planetsscreenshot.PNG?raw=true" thumbnail />
+            <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/annotate.gif?raw=true" thumbnail />
           </Col>
           <Col xs={8}>
             <h3>We recommend that teams video-conference throughout and share screens to have a cohesive experience.</h3>

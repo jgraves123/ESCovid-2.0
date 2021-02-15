@@ -58,13 +58,13 @@ export default class Tumblr2 extends Component{
                 <div style={{padding: "20px"}}>
                 <ReactAudioPlayer src={audio} controls/>
                 </div>
-                <Post title={"Title"} caption={"Caption"}>
+                <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/stargridpuzzle.jpg?raw=true"/>
                 </Post>
-                <Post title={"Title"} caption={"Caption"}>
+                <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/cards.png?raw=true"/>
                 </Post>
-                <Post title={"Title"} caption={"Caption"}>
+                <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
             </div>
