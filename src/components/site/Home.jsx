@@ -23,7 +23,7 @@ function Home() {
                 <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper12.png?raw=true"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper2.png?raw=true"
                       alt="First slide"
                   />
                 </div>
