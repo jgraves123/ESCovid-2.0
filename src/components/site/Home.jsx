@@ -150,7 +150,7 @@ function Home() {
             <div align='left' className="sectiontitle">
               <h1>Leaderboards</h1>
             </div>
-            <div className="leaderboard-carousel">
+            <div className="leaderboard-carousel" align="center">
             <Carousel interval={100000} pause={"hover"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center'>
                 <h2>ESCovid-19 Leaderboard</h2>
