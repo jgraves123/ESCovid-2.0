@@ -107,7 +107,7 @@ class TimerNav extends Component {
         return (
         <div className="navigation">
             {/*bg="dark" variant="light" */}
-            <Navbar expand="lg" style={{backgroundColor: "#1e152a"}}>
+            <Navbar expand="lg" style={{backgroundColor: "#1e152a", height: 60}}>
                 <Navbar.Collapse>
                     <ReactStopwatch
                     seconds={this.state.seconds}
@@ -123,17 +123,6 @@ class TimerNav extends Component {
                             this.state.final_formatted = this.state.formatted
                             localStorage.setItem('final_formatted', this.state.final_formatted)
                         }
-
-
-                        // console.log("final" + this.state.final_formatted)
-
-                        // if (!this.props.finish) {
-                        //     this.props.time(this.state.seconds, this.state.minutes, this.state.hours)
-                        //     this.state.final_format = this.state.formatted
-                        //
-                        //     console.log(this.props.count_time)
-                        //     console.log(this.state.formatted)
-                        // }
                     }}
                     onCallback={() => console.log("done")}
                     render={({formatted, hours, minutes, seconds}) => {

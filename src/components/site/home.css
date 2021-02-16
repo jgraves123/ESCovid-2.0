@@ -38,7 +38,12 @@ p {
     overflow: auto;
     width: 0;
     height: 100%;
-    transition: .5s ease;
+    transition: 0s ease-out;
+}
+
+.overlay-text {
+    font-size: 2vw !important;
+    color: #0fd145;
 }
 
 .center {
@@ -67,6 +72,12 @@ p {
     flex: 1 1 auto;
 }
 
-.container2:hover .overlay {
+.container2:hover .overlay{
     width: 100%;
+    color: black;
+}
+
+.container2:hover .overlay-text{
+    width: 100%;
+    color: black;
 }

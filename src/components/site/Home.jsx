@@ -95,7 +95,7 @@ function Home() {
               <h2 className="text center">A Story</h2>
               <div className="overlay">
                 <div style={{padding: "2vw"}}>
-                  <h3>Navigate through a story in which you are the key actor(s).
+                  <h3 className="overlay-text center">Navigate through a story in which you are the key actor(s).
                     Each stage will present new challenges to advancing.</h3>
                 </div>
               </div>
@@ -110,7 +110,7 @@ function Home() {
               <h2 className="text center">Multimedia Clues</h2>
               <div className="overlay">
                 <div style={{padding: "2vw"}}>
-                  <h3>Engage with multimedia clues and puzzles along the way.</h3>
+                  <h3 className="overlay-text center">Engage with multimedia clues and puzzles along the way.</h3>
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@ function Home() {
               <h2 className="text center">Virtual Teamwork</h2>
               <div className="overlay">
                 <div style={{padding: "2vw"}}>
-                  <h3>We recommend that teams video-conference throughout and share screens to have a cohesive experience.</h3>
+                  <h3 className="overlay-text center">We recommend that teams video-conference throughout and share screens to have a cohesive experience.</h3>
                 </div>
               </div>
             </div>
@@ -271,9 +271,6 @@ function Home() {
                 </Accordion.Collapse>
               </Card>
               <br/>
-              <div>
-                <Image src="https://images.squarespace-cdn.com/content/v1/5fb68a6facdf9a5fdefdeb3d/1606863642198-8GR30AJQTKL99CBTRS4L/ke17ZwdGBToddI8pDm48kABpwtc0gFnh3kdg-HNAm9dZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGkx8TKNhVYC3tTexUASpsrum-jO_YfaVHIydTtJlPDAyb8BodarTVrzIWCp72ioWw/showcase_cropped.gif" thumbnail />
-              </div>
               <p>Don't see your question here? <a href="/contact">Contact us.</a></p>
             </Accordion>
           </div>

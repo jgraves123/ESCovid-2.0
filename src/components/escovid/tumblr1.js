@@ -3,7 +3,7 @@ import "../index.css";
 import "../game/posts.css";
 import {Post} from "../game";
 
-export default class Tumblr1 extends Component{
+export default class Tumblr1 extends Component {
 
     componentDidMount() {
         document.title = "ESCovid: Last Step!"
@@ -44,7 +44,7 @@ export default class Tumblr1 extends Component{
                     <header style={{overflow: "hidden"}}>
                         <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>
                     </header>
-                    <div align={"center"} style={{marginTop: "-350px"}}>
+                    <div align={"center"} style={{marginTop: "-10vw"}}>
                         <h1 style={{color: "white"}}>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>

@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TimerNav from "./timerNav";
 import Leader from "./leaderboard";
 import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "../escovid";
+import Headroom from 'react-headroom';
 
 export function Progress(props){
     return(
         <div>
-            <div className="progress" style={{backgroundColor: "white", borderWidth: 1, borderColor: "black", borderStyle: "solid"}}>
+            <div className="progress" style={{backgroundColor: "white", height: 20, borderWidth: 1, borderColor: "black", borderStyle: "solid"}}>
                 <div className="progress-bar" role="progressbar" style={{width: props.p + "%", backgroundColor: "#fcc81a"}} aria-valuenow={props.p}
                      aria-valuemin="0" aria-valuemax="100"/>
             </div>
@@ -124,8 +125,10 @@ class Game extends Component {
         return (
             <div className="App">
                 <Router>
+                    <Headroom>
                     <Progress p={(this.state.stage * 100)/this.state.total_stages}/>
                     <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage} name={this.state.team_name} num_hint={this.state.hints} use_hint={this.use_hint}/>
+                    </Headroom>
                     <Switch>
                         <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}

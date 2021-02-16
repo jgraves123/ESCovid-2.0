@@ -47,7 +47,7 @@ export default class Tumblr2 extends Component{
             <header>
                 <img width="100%" height="400px" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/instrumentpanel.png?raw=true"/>
             </header>
-            <div align={"center"} style={{marginTop: "-190px"}}>
+            <div align={"center"} style={{marginTop: "-14vw"}}>
                 <h1 style={{color: "white"}}>Password:</h1>
                 <form id="path-answer" onSubmit={this.check}>
                     <label>
