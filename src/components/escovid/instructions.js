@@ -12,6 +12,7 @@ export default class Instructions extends Component{
         check: false,
         showAlert: this.props.name != null,
         showFailure: false,
+        showPop: this.props.name == null,
     }
 
     handleChange = (event) => {
@@ -109,8 +110,9 @@ export default class Instructions extends Component{
                             <label htmlFor="scales" style={{margin: "5px"}}> Join Leaderboard? </label>
                         <input type="submit" value="Submit" style={{margin: "5px"}}/>
                     </form>
+                    <h6>* Please only one person per group join the leaderboard!</h6>
                 </div>
-                <Exit/>
+                <Exit show={this.state.showPop}/>
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
                 {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}
                 {/*    <button className="button"><h3>Begin ESCovid-19</h3></button>*/}
