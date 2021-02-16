@@ -1,14 +1,19 @@
 import React from "react";
+import {Navigation} from "../index";
+import Headroom from "react-headroom";
 
 function About() {
   return (
     <div className="about">
+      <Headroom>
+        <Navigation/>
+      </Headroom>
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/instrumentpanel.png?raw=true"
+              src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gaudi.JPG?raw=true"
               alt=""
             />
           </div>

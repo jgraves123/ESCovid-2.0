@@ -54,7 +54,7 @@ class Home extends Component {
 
     render() {
         return(
-            <div>
+            <div style={{paddingBottom: 10}}>
                 <body style={{backgroundColor: "#7ec8de"}}>
                 {/*<Confetti/>*/}
                 <div height="400">
@@ -84,10 +84,6 @@ class Home extends Component {
                         <button className="button"><h3>Gliese 876</h3></button>
                     </Link>
                 </div>
-                <Post title={"Testing"} caption={"This can work on any page!"}/>
-                <section id="showcase"><div className="container">
-                    <h3 align="center">Lift Off in &nbsp;&nbsp;3...&nbsp;&nbsp; 2...&nbsp;&nbsp; 1...</h3>
-                </div></section>
 
                 </body>
                 {/*<footer id="main-footer">*/}

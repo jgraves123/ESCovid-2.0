@@ -105,9 +105,9 @@ class TimerNav extends Component {
 
     render() {
         return (
-        <div className="navigation">
+        <div className="timer">
             {/*bg="dark" variant="light" */}
-            <Navbar expand="lg" style={{backgroundColor: "#1e152a", height: 60}}>
+            <Navbar expand="lg" style={{backgroundColor: "#1e152a"}}>
                 <Navbar.Collapse>
                     <ReactStopwatch
                     seconds={this.state.seconds}

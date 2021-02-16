@@ -4,11 +4,12 @@ import TimerNav from "./timerNav";
 import Leader from "./leaderboard";
 import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "../escovid";
 import Headroom from 'react-headroom';
+import {Navigation} from "../index";
 
 export function Progress(props){
     return(
         <div>
-            <div className="progress" style={{backgroundColor: "white", height: 20, borderWidth: 1, borderColor: "black", borderStyle: "solid"}}>
+            <div className="progress" style={{backgroundColor: "white", borderWidth: 1, borderColor: "black", borderStyle: "solid"}}>
                 <div className="progress-bar" role="progressbar" style={{width: props.p + "%", backgroundColor: "#fcc81a"}} aria-valuenow={props.p}
                      aria-valuemin="0" aria-valuemax="100"/>
             </div>
@@ -28,7 +29,7 @@ function getState(props) {
     let track = localStorage.getItem('track');
 
     if (game_name == null) {
-        game_name = "escovid20"//props.game_name;
+        game_name = "escovid19"//props.game_name;
     }
     if (hints == null) {
         hints = 0;
@@ -126,11 +127,12 @@ class Game extends Component {
             <div className="App">
                 <Router>
                     <Headroom>
+                    <Navigation/>
                     <Progress p={(this.state.stage * 100)/this.state.total_stages}/>
                     <TimerNav count_time={this.state.timing}  game={this.state.game_name} stage={this.state.stage} name={this.state.team_name} num_hint={this.state.hints} use_hint={this.use_hint}/>
                     </Headroom>
                     <Switch>
-                        <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name}/>} />
+                        <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
                         <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/escovid/tumblr" exact component={() => <Tumblr1 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />

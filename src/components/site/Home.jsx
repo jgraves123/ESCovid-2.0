@@ -3,14 +3,21 @@ import Leader from "../game/leaderboard";
 import {Carousel, Navbar, Image, Container, Row, Col, Accordion, Card, Button} from 'react-bootstrap';
 import Griddle, {plugins} from "griddle-react";
 import {dataesc19, dataesc20, sortProperties} from "./leaderdata";
+import Headroom from "react-headroom";
+import {Navigation} from "../index";
 
 function Home() {
   localStorage.clear()
   return (
-    <div>
+      <div>
+        <Headroom>
+          <Navigation/>
+        </Headroom>
+
+    <div style={{width: "100%"}}>
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
-            <Carousel interval={50000} pause={"false"} style={{height: "100%"}}>
+            <Carousel interval={50000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center' style={{backgroundColor: "#fcc81a"}}>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
                   <div className="sideText">
@@ -143,22 +150,38 @@ function Home() {
             <div align='left' className="sectiontitle">
               <h1>Leaderboards</h1>
             </div>
-            <div style={{margin: "0 2vw"}}>
-              <Row align='center'>
-                <Col sm>
-                  <h2>ESCovid-19 Leaderboard</h2>
-                  <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
-                </Col>
-                <Col sm>
-                  <h2>ESCovid-20 Leaderboard</h2>
-                  <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
-                </Col>
-                <Col sm>
-                  <h2>Imaginary other Leaderboard</h2>
-                  <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
-                </Col>
-              </Row>
+            <div className="leaderboard-carousel">
+            <Carousel interval={100000} pause={"hover"} style={{height: "100%", maxWidth: "1000px"}}>
+              <Carousel.Item align='center'>
+                <h2>ESCovid-19 Leaderboard</h2>
+                <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+              </Carousel.Item>
+              <Carousel.Item align='center'>
+                <h2>ESCovid-20 Leaderboard</h2>
+                <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+              </Carousel.Item>
+              <Carousel.Item align='center'>
+                <h2>Imaginary other Leaderboard</h2>
+                <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+              </Carousel.Item>
+            </Carousel>
             </div>
+            {/*<div style={{margin: "0 2vw"}}>*/}
+            {/*  <Row align='center'>*/}
+            {/*    <Col sm>*/}
+            {/*      <h2>ESCovid-19 Leaderboard</h2>*/}
+            {/*      <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
+            {/*    </Col>*/}
+            {/*    <Col sm>*/}
+            {/*      <h2>ESCovid-20 Leaderboard</h2>*/}
+            {/*      <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
+            {/*    </Col>*/}
+            {/*    <Col sm>*/}
+            {/*      <h2>Imaginary other Leaderboard</h2>*/}
+            {/*      <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
+            {/*    </Col>*/}
+            {/*  </Row>*/}
+            {/*</div>*/}
           </div>
         </div>
       {/*<Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>*/}
@@ -191,9 +214,9 @@ function Home() {
 
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
-                    Novice: This is your first escape room, or you have younger or less tech-savvy group members.<br/>
-                    Moderate: At least one person in your group has done an escape room before, and you have some experience with riddles in general.
-                    <br/>Expert: You've played many-an-escape game before - one might even call you an escape artist. These may also require special skills or knowledge, though no one is disqualified as long as they're willing to learn!
+                    <strong>Novice:</strong> This is your first escape room, or you have younger or less tech-savvy group members.<br/>
+                    <strong>Moderate:</strong> At least one person in your group has done an escape room before, and you have some experience with riddles in general.
+                    <br/><strong>Expert:</strong> You've played many-an-escape game before - one might even call you an escape artist. These may also require special skills or knowledge, though no one is disqualified as long as they're willing to learn!
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>
@@ -214,7 +237,7 @@ function Home() {
                 </Accordion.Toggle>
 
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body>Everything on our site is free! If you'd like to support our work, you can donate here.</Card.Body>
+                  <Card.Body>Everything on our site is <strong>free!</strong> If you'd like to support our work, you can donate here.</Card.Body>
                 </Accordion.Collapse>
               </Card>
 
@@ -224,7 +247,7 @@ function Home() {
                 </Accordion.Toggle>
 
                 <Accordion.Collapse eventKey="2">
-                  <Card.Body>It is absolutely fine to get stuck once in a while - in fact it's expected. There are hint buttons along the way for this very purpose, and if you're still stuck, you can reach out to us personally.</Card.Body>
+                  <Card.Body>It is absolutely fine to get stuck once in a while - in fact <i>it's expected.</i> There are <strong>hint buttons</strong> along the way for this very purpose, and if you're still stuck, you can reach out to us personally.</Card.Body>
                 </Accordion.Collapse>
               </Card>
 
@@ -263,7 +286,7 @@ function Home() {
 
               <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="5" style={{backgroundColor: "#0fd145"}}>
-                  When will my time be added to the leaderboard?
+                  When will my time be added to the official leaderboard?
                 </Accordion.Toggle>
 
                 <Accordion.Collapse eventKey="5">
@@ -277,6 +300,8 @@ function Home() {
         </div>
       </div>
     </div>
+      </div>
+
   );
 }
 

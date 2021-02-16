@@ -3,6 +3,7 @@ import {Carousel, Alert} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "../index.css";
 import "../game/posts.css";
+import Exit from "../game/exit";
 
 export default class Instructions extends Component{
 
@@ -25,6 +26,11 @@ export default class Instructions extends Component{
         this.setState({
             check: event.target.checked
         })
+    }
+
+    changeName = () => {
+        console.log("i didn't press it");
+        this.props.gameName("escovid20")
     }
 
     check = (event) => {
@@ -92,7 +98,7 @@ export default class Instructions extends Component{
                         <button className="button"><h3>Begin ESCovid-19</h3></button>
                     </Link>
                     <Link to="/escovid/gform">
-                        <button className="button"><h3>Begin ESCovid-20</h3></button>
+                        <button className="button" onClick={this.changeName}><h3>Begin ESCovid-20</h3></button>
                     </Link></Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>
@@ -104,6 +110,7 @@ export default class Instructions extends Component{
                         <input type="submit" value="Submit" style={{margin: "5px"}}/>
                     </form>
                 </div>
+                <Exit/>
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
                 {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}
                 {/*    <button className="button"><h3>Begin ESCovid-19</h3></button>*/}

@@ -171,13 +171,13 @@ nh {
   fill-opacity:.5;
 }
 
-.btn {
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 42%;
-  zoom: 1.5;
-}
+/*.btn {*/
+/*  text-align: center;*/
+/*  position: absolute;*/
+/*  top: 30%;*/
+/*  left: 42%;*/
+/*  zoom: 1.5;*/
+/*}*/
 
 button {
   border-radius: 10px;
@@ -246,7 +246,7 @@ button:hover {
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #0fd145; /* Green */
   border: none;
   color: white;
   padding: 5px 20px;
@@ -258,3 +258,7 @@ button:hover {
   cursor: pointer;
 }
 
+
+.timer .navbar-light .navbar-nav .nav-link {
+  color: #0fd145;
+}

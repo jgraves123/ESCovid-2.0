@@ -8,7 +8,6 @@ import Headroom from "react-headroom";
 
 function Navigation() {
   return (
-      <Headroom>
     <div className="navigation">
           {/*"#72EA80", "#15b40d", "#fcc81a", "0fd145"*/}
       {/*<Navbar className={"navbar"} style={{backgroundColor: "#f6f6f6"}} expand="lg">*/}
@@ -32,7 +31,7 @@ function Navigation() {
           <Nav>
             <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown">
               <NavDropdown.Item href="/escovid">ESCovid</NavDropdown.Item>
-              <NavDropdown.Item href="/final">Other</NavDropdown.Item>
+              <NavDropdown.Item href="/escovid/final">Other</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/contact">Suggestions</NavDropdown.Item>
             </NavDropdown>
@@ -42,7 +41,6 @@ function Navigation() {
         </Navbar.Collapse>
       </Navbar>
     </div>
-    </Headroom>
   );
 }
 

@@ -29,7 +29,6 @@ class App extends Component {
         <div className="App" style={{position: "relative", minHeight: "100vh"}}>
           <Router>
             <div style={{paddingBottom: "50px"}}>
-            <Navigation />
             <Switch>
               <Route path="/" exact component={() => <Home />} />
               <Route path="/escovid" exact component={() => <Game />} />

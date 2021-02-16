@@ -20,6 +20,7 @@
     "react-native-background-timer": "^2.4.1",
     "react-native-leaderboard": "^1.0.6",
     "react-player": "^2.7.2",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-stopwatch": "^2.0.4",

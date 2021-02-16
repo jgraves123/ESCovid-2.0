@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import "../index.css";
 import "../game/posts.css";
 import {Post} from "../game";
+import Exit from "../game/exit";
+import {Prompt} from 'react-router'
 
 export default class Tumblr1 extends Component {
 
@@ -10,6 +12,13 @@ export default class Tumblr1 extends Component {
         if (this.props.curr_stage != 1) {
             this.props.stage(1)
         }
+        window.addEventListener('beforeunload', function (e) {
+            // Cancel the event
+            console.log(document.activeElement.href);
+            e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+            // Chrome requires returnValue to be set
+            e.returnValue = 'Hello there';
+        });
     }
 
     state = {
