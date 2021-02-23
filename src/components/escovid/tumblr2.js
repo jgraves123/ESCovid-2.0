@@ -43,11 +43,8 @@ export default class Tumblr2 extends Component{
 
     render() {
         return (
-            <body style={{backgroundColor: "#3e6094", paddingBottom: "10px"}}>
-            <header>
-                <img width="100%" height="100%" style={{maxHeight: "400px"}} src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/instrumentpanel.png?raw=true"/>
-            </header>
-            <div align={"center"} style={{marginTop: "-16vw"}}>
+            <body align={"center"} style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/instrumentpanel.png?raw=true")', backgroundRepeat: "no-repeat", backgroundSize: "100%", backgroundColor: "#3e6094", paddingBottom: "10px"}}>
+            <div align={"center"} style={{paddingTop: "10vw", marginBottom: 10}}>
                 <h1 style={{color: "white"}}>Password:</h1>
                 <form id="path-answer" onSubmit={this.check}>
                     <label>

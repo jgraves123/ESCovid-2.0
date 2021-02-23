@@ -98,3 +98,17 @@ p {
 .carousel-indicators {
     display: none;
 }
+
+.HomeAccordion {
+    background-color: #e9e9e9;
+    border-color: #0fd145;
+    border-width: 1px;
+}
+
+.card {
+    border-width: thin;
+    border-color: #0fd145;
+    border-radius: 20px;
+    font-weight: 600;
+}
+

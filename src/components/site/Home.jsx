@@ -83,6 +83,38 @@ function Home() {
                   />
                 </div>
               </Carousel.Item>
+              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
+                <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
+                  <div className="sideText">
+                    <h1>Sign up for our Mailing List!</h1>
+                    <br/>
+                    <p>You won't regret it!!!</p>
+                  </div>
+                </div>
+                <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "4vw"}}>
+                  <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSfLVxy056zmmg7RoYSebwya80Iz2rUgpK7YilEK5JWx2KGIxA/viewform?embedded=true"
+                      width="540" height="400" frameBorder="0" marginHeight="0"
+                      marginWidth="0" scrolling="no">Loading…
+                  </iframe>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
+                <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
+                  <div className="sideText">
+                    <h1>Sign up for our Mailing List!</h1>
+                    <br/>
+                    <p>You won't regret it!!!</p>
+                  </div>
+                </div>
+                <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
+                  <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSfVPEhNr03lo9615mIsYnT1RimaFz6e8AmqNN3HAuozlzyhcg/viewform?embedded=true"
+                      width="540" height="380" frameBorder="0" marginHeight="0"
+                      marginWidth="0">Loading…
+                  </iframe>
+                </div>
+              </Carousel.Item>
             </Carousel>
             </div>
           </div>
@@ -198,7 +230,7 @@ function Home() {
               <h4 style={{paddingTop: "1vw"}}>Before</h4>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="-1" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="-1" className="HomeAccordion">
                   Is it actually impossible to escape?
                 </Accordion.Toggle>
 
@@ -208,7 +240,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="0" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="0" className="HomeAccordion">
                   What difficulty level is right for me?
                 </Accordion.Toggle>
 
@@ -222,7 +254,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="0.5" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="0.5" className="HomeAccordion">
                   Can I play with more (or less) than the recommended number of players?
                 </Accordion.Toggle>
 
@@ -232,7 +264,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="1" className="HomeAccordion">
                   How much does it cost?
                 </Accordion.Toggle>
 
@@ -242,7 +274,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="2" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="2" className="HomeAccordion">
                   What happens if we get stuck?
                 </Accordion.Toggle>
 
@@ -250,12 +282,14 @@ function Home() {
                   <Card.Body>It is absolutely fine to get stuck once in a while - in fact <i>it's expected.</i> There are <strong>hint buttons</strong> along the way for this very purpose, and if you're still stuck, you can reach out to us personally.</Card.Body>
                 </Accordion.Collapse>
               </Card>
+            </Accordion>
 
               <h4 style={{paddingTop: "1vw"}}>During & After</h4>
+            <Accordion>
 
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="3" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="3" className="HomeAccordion">
                   Where can I find the solutions?
                 </Accordion.Toggle>
 
@@ -265,7 +299,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="6" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="6" className="HomeAccordion">
                   I emailed you but got no response. What now?
                 </Accordion.Toggle>
 
@@ -275,7 +309,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="4" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="4" className="HomeAccordion">
                   How will I know when new escape rooms are out?
                 </Accordion.Toggle>
 
@@ -285,7 +319,7 @@ function Home() {
               </Card>
 
               <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="5" style={{backgroundColor: "#0fd145"}}>
+                <Accordion.Toggle as={Card.Header} eventKey="5" className="HomeAccordion">
                   When will my time be added to the official leaderboard?
                 </Accordion.Toggle>
 
