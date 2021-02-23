@@ -19,7 +19,7 @@ function Home() {
             <div style={{width: "90%"}}>
             <Carousel interval={50000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center'>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-big.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-mp4.mp4?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .3)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Welcome</h1>
@@ -66,7 +66,7 @@ function Home() {
                 <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-big.gif?raw=true"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-mp4.mp4?raw=true"
                       alt="Dreamscape"
                   />
                 </div>
