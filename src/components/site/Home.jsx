@@ -22,7 +22,7 @@ function Home() {
             <Carousel interval={50000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center'>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-gif.gif?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .6)"}}>
+                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Welcome</h1>
                     <br/>
@@ -40,8 +40,8 @@ function Home() {
                 </div>
               </Carousel.Item>
               <Carousel.Item align='center' style={{backgroundColor: "#0fd145"}}>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid-gif.gif?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .8)"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid-gif2.gif?raw=true")', backgroundSize: "cover"}}>
+                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Play now!</h1>
                     <br/>
