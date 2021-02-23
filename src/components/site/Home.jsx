@@ -18,37 +18,41 @@ function Home() {
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
             <Carousel interval={50000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
-              <Carousel.Item align='center' style={{backgroundColor: "#fcc81a"}}>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a"}}>
-                  <div className="sideText">
-                    <h1>Welcome</h1>
+              <Carousel.Item align='center'>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-big.gif?raw=true")', backgroundSize: "cover"}}>
+                <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .3)"}}>
+                  <div className="sideText" style={{color: "white"}}>
+                    <h1 style={{color: "white"}}>Welcome</h1>
                     <br/>
                     <p>You can check in anytime you like, <br/>
                       but you can never leave...</p>
                   </div>
                 </div>
-                <div style={{width: "70%", float: "left"}}>
-                  <img
-                      className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper2.png?raw=true"
-                      alt="First slide"
-                  />
+                <div style={{width: "70%", height: "47.32vw", float: "left"}}>
+                  {/*<img*/}
+                  {/*    className="d-block w-100"*/}
+                  {/*    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-big.png?raw=true"*/}
+                  {/*    alt="First slide" height="100%" style={{}}*/}
+                  {/*/>*/}
+                </div>
                 </div>
               </Carousel.Item>
               <Carousel.Item align='center' style={{backgroundColor: "#0fd145"}}>
-                <div className="sideContent" style={{backgroundColor: "#0fd145"}}>
-                  <div className="sideText">
-                    <h1>Play now!</h1>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid12.png?raw=true")', backgroundSize: "cover"}}>
+                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .8)"}}>
+                  <div className="sideText" style={{color: "white"}}>
+                    <h1 style={{color: "white"}}>Play now!</h1>
                     <br/>
                     <p>Space + math + world crisis. <br/>What more do you need?</p>
                   </div>
                 </div>
                 <div style={{width: "70%", float: "left"}}>
-                  <img
-                      className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid12.png?raw=true"
-                      alt="escovid"
-                  />
+                  {/*<img*/}
+                  {/*    className="d-block w-100"*/}
+                  {/*    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid12.png?raw=true"*/}
+                  {/*    alt="escovid"*/}
+                  {/*/>*/}
+                </div>
                 </div>
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
@@ -62,7 +66,7 @@ function Home() {
                 <div style={{width: "70%", float: "left"}}>
                   <img
                       className="d-block w-100"
-                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dreamscape12.png?raw=true"
+                      src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-big.gif?raw=true"
                       alt="Dreamscape"
                   />
                 </div>
