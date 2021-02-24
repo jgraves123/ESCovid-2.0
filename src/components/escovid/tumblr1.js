@@ -46,8 +46,9 @@ export default class Tumblr1 extends Component {
                     {/*<header style={{overflow: "hidden", zIndex: 0}}>*/}
                     {/*    <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>*/}
                     {/*</header>*/}
-                    <div align={"center"} style={{paddingTop: "1vw"}}>
-                        <h1 style={{color: "white"}}>Password:</h1>
+                    <div align={"center"}>
+                    <div align={"center"} className={"middle"}>
+                        <h1>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
@@ -88,6 +89,7 @@ export default class Tumblr1 extends Component {
                                 </Post>
                             </div> :
                             null}
+                    </div>
                     </div>
                     </body>
                     </div>

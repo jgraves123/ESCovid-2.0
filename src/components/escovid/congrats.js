@@ -31,12 +31,14 @@ class Congrats extends Component {
         return(
 
             <div>
-                <body style={{backgroundColor: "#3174e0"}}>
+                <body style={{backgroundColor: "#3174e0", padding: "10px"}}>
                 <Confetti/>
+                <div align={"center"}>
+                    <div align={"center"} className={"middle"} style={{width: "70%"}}>
                 <div align="center">
                     <h1 style={{color: "#fcc81a"}}>Congratulations!!</h1>
                     <h2 style={{color: "#fcc81a"}}>You finished in {this.state.hrs} hour(s), {this.state.min} minute(s), and {this.state.sec} second(s)</h2>
-                    <ReactPlayer url='https://www.youtube.com/watch?v=fhYMh6KTJMQ' playing="true" loop="true" volume="null" muted="true"/>
+                    <ReactPlayer url='https://www.youtube.com/watch?v=fhYMh6KTJMQ' playing="true" loop="true" volume="null" muted="true" width="95%"/>
                 </div>
                 {/*<section><div className="container"><img src={ship} className="image" usemap="#wayout" alt=""/>*/}
                 {/*    <map name="wayout">*/}
@@ -51,7 +53,7 @@ class Congrats extends Component {
                 </div>
                 <div align={"center"}>
                 <ReactAudioPlayer src={music} autoPlay="true" controls/>
-                    <div align={"center"} style={{maxHeight: "400px", overflow: "auto", width: "60%"}}>
+                    <div align={"center"} style={{maxHeight: "400px", overflow: "auto", width: "95%"}}>
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform?embedded=true"
                         width="640" height="2427" frameBorder="0" marginHeight="0"
@@ -62,6 +64,8 @@ class Congrats extends Component {
                     <Link to="/escovid/leaderboard">
                         <button className="button"><h2>Join the Leaderboard</h2></button>
                     </Link>
+                    </div>
+                </div>
                     </div>
                 </div>
                 </body>

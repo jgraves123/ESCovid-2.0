@@ -44,8 +44,9 @@ export default class Tumblr2 extends Component{
     render() {
         return (
             <body align={"center"} className={"bg"} style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/2.png?raw=true")'}}>
-            <div align={"center"} style={{paddingTop: "10vw", marginBottom: 10}}>
-                <h1 style={{color: "white"}}>Password:</h1>
+            <div align={"center"}>
+                <div align={"center"} className={"middle"}>
+                <h1>Password:</h1>
                 <form id="path-answer" onSubmit={this.check}>
                     <label>
                         <input type="text" placeholder="Password" onChange={this.handleChange} />
@@ -64,6 +65,7 @@ export default class Tumblr2 extends Component{
                 <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
+            </div>
             </div>
             </body>
         )

@@ -54,8 +54,8 @@ class Home extends Component {
 
     render() {
         return(
-            <div style={{paddingBottom: 10}}>
-                <body style={{backgroundColor: "#7ec8de"}}>
+            <div>
+                <body align={"center"} className={"bg"} style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/11.png?raw=true")'}}>
                 {/*<Confetti/>*/}
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
@@ -75,7 +75,8 @@ class Home extends Component {
                         </svg>
                     </div>
                 </section>
-                <div align="center">
+                <Post title={""} caption={""}>
+                    <div align={"center"}>
                     <h2>Time to make your decision. Where will you travel to?</h2>
                     <Link to="/escovid/trappist">
                         <button className="button"><h3>TRAPPIST-1</h3></button>
@@ -83,7 +84,8 @@ class Home extends Component {
                     <Link to="/escovid/gliese">
                         <button className="button"><h3>Gliese 876</h3></button>
                     </Link>
-                </div>
+                    </div>
+                </Post>
 
                 </body>
                 {/*<footer id="main-footer">*/}
