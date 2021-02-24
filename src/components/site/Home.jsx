@@ -59,8 +59,8 @@ function Home() {
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .8)"}}>
-                  <div className="sideText black">
+                <div className="sideContent" style={{backgroundColor: "rgb(6, 97, 32, .8)"}}>
+                  <div className="sideText">
                     <h1>Coming Soon!</h1>
                     <br/>
                     <p>See if you can *dream* a way out of this one!</p>
@@ -93,8 +93,8 @@ function Home() {
                 </div>
                 </div>
               </Carousel.Item>
-              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
+              <Carousel.Item style={{backgroundColor: "#4BB73A"}}>
+                <div className="sideContent" style={{backgroundColor: "#FFD23F", height: "47.32vw"}}>
                   <div className="sideText black">
                     <h1>Sign up for our Mailing List!</h1>
                     <br/>
@@ -109,8 +109,8 @@ function Home() {
                   </iframe>
                 </div>
               </Carousel.Item>
-              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
-                <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
+              <Carousel.Item style={{backgroundColor: "#4BB73A"}}>
+                <div className="sideContent" style={{backgroundColor: "#FFD23F", height: "47.32vw"}}>
                   <div className="sideText black">
                     <h1>Invite Your Friends!</h1>
                     <br/>

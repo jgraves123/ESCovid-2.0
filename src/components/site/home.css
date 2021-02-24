@@ -40,7 +40,7 @@ p {
 }
 
 .sectiontitle {
-    background: #fcc81a;
+    background: #FFD23F;
     margin-top: 8vw;
     margin-bottom: 2vw;
     padding: 4vw;
@@ -51,7 +51,7 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #0fd145;
+    background-color: #7E78D2;
     overflow: auto;
     width: 0;
     height: 100%;
