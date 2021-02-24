@@ -19,7 +19,7 @@ function Home() {
     <div style={{width: "100%"}}>
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
-            <Carousel interval={10000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
+            <Carousel interval={10000} pause={"false"} style={{height: "100%"}}>
               <Carousel.Item align='center'>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-viper.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
@@ -39,7 +39,7 @@ function Home() {
                 </div>
                 </div>
               </Carousel.Item>
-              <Carousel.Item align='center' style={{backgroundColor: "#0fd145"}}>
+              <Carousel.Item align='center'>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid-gif3.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
@@ -105,8 +105,8 @@ function Home() {
                 <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "4vw"}}>
                   <iframe
                       src="https://docs.google.com/forms/d/e/1FAIpQLSfLVxy056zmmg7RoYSebwya80Iz2rUgpK7YilEK5JWx2KGIxA/viewform?embedded=true"
-                      width="540" height="400" frameBorder="0" marginHeight="0"
-                      marginWidth="0" scrolling="no">Loading…
+                      style={{width: "50vw", height: "32vw"}} frameBorder="0" marginHeight="0"
+                      marginWidth="0">Loading…
                   </iframe>
                 </div>
                 </div>
@@ -123,7 +123,7 @@ function Home() {
                 <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
                   <iframe
                       src="https://docs.google.com/forms/d/e/1FAIpQLSfVPEhNr03lo9615mIsYnT1RimaFz6e8AmqNN3HAuozlzyhcg/viewform?embedded=true"
-                      width="540" height="380" frameBorder="0" marginHeight="0"
+                      style={{width: "50vw", height: "32vw"}} frameBorder="0" marginHeight="0"
                       marginWidth="0">Loading…
                   </iframe>
                 </div>
@@ -139,6 +139,7 @@ function Home() {
         <h4>+Hover to read more+</h4>
       </div>
       <div align='left' style={{padding: "2vw"}} >
+        <h3>A sentence or two overview.</h3>
         <Row style={{padding: "2vw 0"}}>
           <Col xs={6}>
             <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/password.gif?raw=true" thumbnail />
@@ -296,7 +297,7 @@ function Home() {
                   <Card.Body>It is absolutely fine to get stuck once in a while - in fact <i>it's expected.</i> There are <strong>hint buttons</strong> along the way for this very purpose, and if you're still stuck, you can reach out to us personally.</Card.Body>
                 </Accordion.Collapse>
               </Card>
-            </Accordion>
+            </Accordion><br/>
 
               <h4 style={{paddingTop: "1vw"}}>During & After</h4>
             <Accordion>
