@@ -24,6 +24,15 @@ p {
 .sideText {
     margin: 3vw;
     text-align: right;
+    color: white;
+}
+
+.sideText h1 {
+    color: white;
+}
+
+.black {
+    color: black !important;
 }
 
 .sectiontitle {
