@@ -42,11 +42,11 @@ export default class Tumblr1 extends Component {
     render() {
                 return (
                     <div>
-                    <body align={"center"} style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true")', backgroundRepeat: "no-repeat", backgroundSize: "100%", backgroundColor: "#f2d3d0", paddingBottom: "10px"}}>
+                    <body align={"center"} className="bg" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/4.png?raw=true")'}}>
                     {/*<header style={{overflow: "hidden", zIndex: 0}}>*/}
                     {/*    <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>*/}
                     {/*</header>*/}
-                    <div align={"center"} style={{paddingTop: "10vw"}}>
+                    <div align={"center"} style={{paddingTop: "1vw"}}>
                         <h1 style={{color: "white"}}>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
