@@ -35,6 +35,10 @@ p {
     color: black !important;
 }
 
+.black h1{
+    color: black !important;
+}
+
 .sectiontitle {
     background: #fcc81a;
     margin-top: 8vw;

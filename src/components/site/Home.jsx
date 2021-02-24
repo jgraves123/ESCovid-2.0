@@ -19,9 +19,9 @@ function Home() {
     <div style={{width: "100%"}}>
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
-            <Carousel interval={11400} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
+            <Carousel interval={10000} pause={"false"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center'>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper-gif.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-viper.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Welcome</h1>
@@ -58,7 +58,7 @@ function Home() {
                 </div>
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/dream-gif.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .8)"}}>
                   <div className="sideText black">
                     <h1>Coming Soon!</h1>
@@ -76,7 +76,7 @@ function Home() {
                 </div>
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#0fd145"}}>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic-gif.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-comic.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText">
                     <h1>Coming Soon!</h1>
@@ -95,7 +95,7 @@ function Home() {
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#0fd145"}}>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
-                  <div className="sideText">
+                  <div className="sideText black">
                     <h1>Sign up for our Mailing List!</h1>
                     <br/>
                     <p>You won't regret it!!!</p>
@@ -111,10 +111,10 @@ function Home() {
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#0fd145"}}>
                 <div className="sideContent" style={{backgroundColor: "#fcc81a", height: "47.32vw"}}>
-                  <div className="sideText">
-                    <h1>Sign up for our Mailing List!</h1>
+                  <div className="sideText black">
+                    <h1>Invite Your Friends!</h1>
                     <br/>
-                    <p>You won't regret it!!!</p>
+                    <p>Help them join the fun!!!</p>
                   </div>
                 </div>
                 <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
