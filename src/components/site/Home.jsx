@@ -93,8 +93,9 @@ function Home() {
                 </div>
                 </div>
               </Carousel.Item>
-              <Carousel.Item style={{backgroundColor: "#4BB73A"}}>
-                <div className="sideContent" style={{backgroundColor: "#FFD23F", height: "47.32vw"}}>
+              <Carousel.Item>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/lock.gif?raw=true")', backgroundSize: "cover"}}>
+                <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .7)"}}>
                   <div className="sideText black">
                     <h1>Sign up for our Mailing List!</h1>
                     <br/>
@@ -107,6 +108,7 @@ function Home() {
                       width="540" height="400" frameBorder="0" marginHeight="0"
                       marginWidth="0" scrolling="no">Loading…
                   </iframe>
+                </div>
                 </div>
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#4BB73A"}}>
