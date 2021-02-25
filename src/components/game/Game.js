@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TimerNav from "./timerNav";
 import Leader from "./leaderboard";
 import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "../escovid";
+import {Page1, Page2, Page3, Page4, Page5, Instructions2} from "../xmas";
 import Headroom from 'react-headroom';
 import {Navigation} from "../index";
 
@@ -143,6 +144,17 @@ class Game extends Component {
                         <Route path="/escovid/gliese" exact
                                component={() => <Congrats planet="Gliese 876"/>}/>
                         <Route path="/escovid/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
+
+                        <Route path="/xmas" exact component={() => <Instructions2 setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
+                        {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
+                        <Route path="/xmas/page1" exact component={() => <Page1 counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/xmas/page2" exact component={() => <Page2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/xmas/page3" exact component={() => <Page3 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/xmas/page4" exact component={() => <Page4 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>}/>
+                        <Route path="/xmas/page5" exact
+                               component={() => <Page5 curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
+                        <Route path="/xmas/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
+
                     </Switch>
                 </Router>
             </div>)
