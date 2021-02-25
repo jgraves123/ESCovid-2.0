@@ -55,7 +55,7 @@ class Home extends Component {
     render() {
         return(
             <div>
-                <body align={"center"} className={"bg"} style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/11.png?raw=true")'}}>
+                <body align={"center"} className={"bg"} style={{backgroundColor: "black"}}>
                 {/*<Confetti/>*/}
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
