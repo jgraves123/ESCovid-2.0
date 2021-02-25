@@ -6,6 +6,7 @@ import {dataesc19, dataesc20, sortProperties} from "./leaderdata";
 import Headroom from "react-headroom";
 import {Navigation} from "../index";
 
+
 function Home() {
   localStorage.clear()
   return (

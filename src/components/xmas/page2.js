@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PopUp from "./PopUp";
 import ReactDOM from 'react-dom';
-import './index.css';
+import './xmas.css';
 import {Link} from "react-router-dom";
 
 
