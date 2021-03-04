@@ -221,6 +221,7 @@ export default class Page2 extends Component {
                                     <rect x="20" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})}/>
                                     <text x="45" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide1]}</text>
+                                    <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/2.png?raw=true"/>
                                     <rect x="90" y="0" width="50" height="50" className="click" stroke="white"
                                           onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})}/>
                                     <text x="115" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide2]}</text>
