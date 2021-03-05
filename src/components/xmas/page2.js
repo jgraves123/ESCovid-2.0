@@ -133,94 +133,109 @@ export default class Page2 extends Component {
 
     render() {
         return(
-            <div>
+            <div style={{marginBottom: "10"}}>
                 <body>
-                {/*<Confetti/>*/}
-                <header id="main-header">
-                    <div className="container">
-                        <h1 align='center'>Thesis Defense</h1>
-                    </div>
-                </header>
-                <nav id="navbar">
-                    <div className="container">
-                        <ul>
-                            <li><a onClick={this.calPop}>Calendar</a></li>
-                            <li><a onClick={this.contactsPop}>Contacts</a></li>
-                            <li><a onClick={this.notesPop}>Notes</a></li>
-                            <li><a onClick={this.helpPop}>Help</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div height="400">
-                    {/*if state is true, do this pop-up*/}
-                    {this.state.cal_open ? <PopUp title="Decemeber 2020" x="1840" y="1130" width="100%" image={this.state.cal} padding="62%" toggle={this.calPop} /> : null}
-                    {this.state.contacts_open ? <PopUp title="Contact List" x="744" y="1164" width="60%" image={this.state.contacts} padding="96%" toggle={this.contactsPop} /> : null}
-                    {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}
-                    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}
+                {/*/!*<Confetti/>*!/*/}
+                {/*<header id="main-header">*/}
+                {/*    <div className="container">*/}
+                {/*        <h1 align='center'>Thesis Defense</h1>*/}
+                {/*    </div>*/}
+                {/*</header>*/}
+                {/*<nav id="navbar">*/}
+                {/*    <div className="container">*/}
+                {/*        <ul>*/}
+                {/*            <li><a onClick={this.calPop}>Calendar</a></li>*/}
+                {/*            <li><a onClick={this.contactsPop}>Contacts</a></li>*/}
+                {/*            <li><a onClick={this.notesPop}>Notes</a></li>*/}
+                {/*            <li><a onClick={this.helpPop}>Help</a></li>*/}
+                {/*        </ul>*/}
+                {/*    </div>*/}
+                {/*</nav>*/}
+                {/*<div height="400">*/}
+                {/*    /!*if state is true, do this pop-up*!/*/}
+                {/*    {this.state.cal_open ? <PopUp title="Decemeber 2020" x="1840" y="1130" width="100%" image={this.state.cal} padding="62%" toggle={this.calPop} /> : null}*/}
+                {/*    {this.state.contacts_open ? <PopUp title="Contact List" x="744" y="1164" width="60%" image={this.state.contacts} padding="96%" toggle={this.contactsPop} /> : null}*/}
+                {/*    {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}*/}
+                {/*    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}*/}
 
-                </div>
-                {!this.state.phone ?
-                    <div align="center">
-                        <div align="center" style={{width: "80%"}}>
-                            <h2 align="center" className="subheading">Finishing Presentation</h2>
-                            <h3 align="center" className="subheading">You need to finish up your
-                                presentation, but realize it isn't saved under your account. Why
-                                would that be?????</h3>
-                            <h3 align="center" className="subheading">You realize it's because
-                                you've been loaning a computer, but you don't have the password.
-                                You'll need to find the cell phone number of the computer's owner to
-                                find the computer's password.</h3>
-                            <form id="path-answer" onSubmit={this.check_phone}>
-                                <label>
-                                    <input type="text" value={this.state.pt2_value} ref="val"
-                                           placeholder={"Enter Phone Number"}
-                                           onChange={this.handleChangePhone}
-                                           style={{marginRight: 10, width: "40%"}}/>
-                                </label>
-                                <input type="submit" value="Submit"
-                                       style={{marginLeft: 10, width: "40%"}}/>
-                            </form>
-                        </div>
-                    </div>
-                    :
-                    <div>
-                        <h2 align="center" className="subheading">Decode Password</h2>
-                        <h3 align="center" className="subheading">Ali didn't want to send you her password directly, so she encrypted it below. See if you can crack it!</h3>
-                        <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>
-                            <svg className="scaling-svg" viewBox={"0 0 718 270"}> {/* Needs
-                         auto
+                {/*</div>*/}
+                {/*{!this.state.phone ?*/}
+                {/*    <div align="center">*/}
+                {/*        <div align="center" style={{width: "80%"}}>*/}
+                {/*            <h2 align="center" className="subheading">Finishing Presentation</h2>*/}
+                {/*            <h3 align="center" className="subheading">You need to finish up your*/}
+                {/*                presentation, but realize it isn't saved under your account. Why*/}
+                {/*                would that be?????</h3>*/}
+                {/*            <h3 align="center" className="subheading">You realize it's because*/}
+                {/*                you've been loaning a computer, but you don't have the password.*/}
+                {/*                You'll need to find the cell phone number of the computer's owner to*/}
+                {/*                find the computer's password.</h3>*/}
+                {/*            <form id="path-answer" onSubmit={this.check_phone}>*/}
+                {/*                <label>*/}
+                {/*                    <input type="text" value={this.state.pt2_value} ref="val"*/}
+                {/*                           placeholder={"Enter Phone Number"}*/}
+                {/*                           onChange={this.handleChangePhone}*/}
+                {/*                           style={{marginRight: 10, width: "40%"}}/>*/}
+                {/*                </label>*/}
+                {/*                <input type="submit" value="Submit"*/}
+                {/*                       style={{marginLeft: 10, width: "40%"}}/>*/}
+                {/*            </form>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    :*/}
+                {/*    <div>*/}
+                {/*        <h2 align="center" className="subheading">Decode Password</h2>*/}
+                {/*        <h3 align="center" className="subheading">Ali didn't want to send you her password directly, so she encrypted it below. See if you can crack it!</h3>*/}
+                {/*        <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>*/}
+                {/*            <svg className="scaling-svg" viewBox={"0 0 718 270"}> /!* Needs*/}
+                {/*         auto*/}
+                {/*         updating*!/*/}
+                {/*                <image x={.3*718} width={"40%"} href={this.state.password}/>*/}
+                {/*            </svg>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*}*/}
+                {/*{!this.state.computer ?*/}
+                {/*    <div align="center">*/}
+                {/*        <div algin="center" style={{margin: "10", paddingBottom: "3%", width: "40%"}}>*/}
+                {/*            <h3> Please enter Computer Password</h3>*/}
+                {/*            <form id="path-answer" onSubmit={this.check_pass}>*/}
+                {/*                <label>*/}
+                {/*                    <input type="text" value={this.state.pt2_value} placeholder="Password" onChange={this.handleChangePass} style={{width: "60%"}}/>*/}
+                {/*                </label>*/}
+                {/*                <input type="submit" value="Submit" style={{width: "60%"}}/>*/}
+                {/*            </form>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    :*/}
+                {/*    <div align={"center"} style={{paddingTop: "2%"}}>*/}
+                {/*        <button className="dull-button"><h3>Success</h3></button>*/}
+                {/*    </div>}*/}
+
+                <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
+                <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
-                                <image x={.3*718} width={"40%"} href={this.state.password}/>
-                            </svg>
-                        </div>
-                    </div>
-                }
-                {!this.state.computer ?
-                    <div align="center">
-                        <div algin="center" style={{margin: "10", paddingBottom: "3%", width: "40%"}}>
-                            <h3> Please enter Computer Password</h3>
-                            <form id="path-answer" onSubmit={this.check_pass}>
-                                <label>
-                                    <input type="text" value={this.state.pt2_value} placeholder="Password" onChange={this.handleChangePass} style={{width: "60%"}}/>
-                                </label>
-                                <input type="submit" value="Submit" style={{width: "60%"}}/>
-                            </form>
-                        </div>
-                    </div>
-                    :
-                    <div align={"center"} style={{paddingTop: "2%"}}>
-                        <button className="dull-button"><h3>Success</h3></button>
-                    </div>}
+                    <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/office.png?raw=true"/>
+                    <rect x="1450" y="35" width="250" height="70" className="clickable-done" onClick={this.GliesePop}/>
+                    <rect x="2630" y="0" width="370" height="270" className="clickable-done" onClick={this.ComparePop}/>
+                    <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.TrappistPop}/>
+                    <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.TrappistPop}/>
+                    <polygon points="1740,1425 1940,1348 2010,1430 1825,1520" className="clickable-done" onClick={this.TrappistPop}/>
+                    <polygon points="2040,1705 2195,1588 2272,1642 2130,1770" className="clickable-done" onClick={this.TrappistPop}/>
+                    <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.TrappistPop}/>
+
+                </svg>
+                </div>
                 <div align="center" >
-                    {!this.state.computer ?
-                        <div align="center">
-                            <table width="80%">
-                                <tr>
-                                    <td style={{textAlign: "center", padding: "10%"}}>Please enter computer password above :(</td>
-                                </tr>
-                            </table>
-                        </div>
-                        :
+                    {/*{!this.state.computer ?*/}
+                    {/*    <div align="center">*/}
+                    {/*        <table width="80%">*/}
+                    {/*            <tr>*/}
+                    {/*                <td style={{textAlign: "center", padding: "10%"}}>Please enter computer password above :(</td>*/}
+                    {/*            </tr>*/}
+                    {/*        </table>*/}
+                    {/*    </div>*/}
+                    {/*    :*/}
                         <>
                             <h2>Arrange your slides into the correct order:</h2>
                             <div className="scaling-svg-container" style={{paddingBottom: "15%"}}>
@@ -248,7 +263,8 @@ export default class Page2 extends Component {
                                 : <Link to="/xmas/page3">
                                     <button className="button"><h3>Continue</h3></button>
                                 </Link>}
-                        </>}
+                        </>
+                    {/*}*/}
                 </div>
 
                 </body>

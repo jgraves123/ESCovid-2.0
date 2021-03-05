@@ -12,8 +12,8 @@ export default class PopUp extends Component {
 
     render() {
         return (
-            <div className="modal">
-                <div className="modal_content">
+            <div className="modal2">
+                <div className="modal_content2">
                     <span className="close" onClick={this.handleClick}>
                         &times;
                     </span>
