@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PopUp from "./PopUp";
+import compPopUp from "./compPopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
@@ -9,17 +10,17 @@ import {Link} from "react-router-dom";
 
 export default class Page2 extends Component {
     state = {
-        cal_open: false,
-        contacts_open: false,
-        notes_open: false,
-        help_open: false,
-        cal: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/calendar.png?raw=true",
-        contacts: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/contacts.png?raw=true",
-        notes: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/notes.png?raw=true",
-        intro: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/intro-letter.png?raw=true",
-        path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
-        password: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/password.png?raw=true",
-        help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
+        map_open: false,
+        cs_pass_open: false,
+        map_math_open: false,
+        comp_open: false,
+        cell_open: false,
+        pics_open: false,
+        paths_open: false,
+        map: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/map.jpeg?raw=true",
+        cs_pass: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/password.png?raw=true",
+        map_math: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/map-math.png?raw=true",
+        paths: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/path.jpeg?raw=true",
         letters: ["https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/2.png?raw=true",
             "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/3.png?raw=true",
             "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/4.png?raw=true",
@@ -44,39 +45,45 @@ export default class Page2 extends Component {
     };
 
 
-    calPop = () => {
+    mapPop = () => {
         this.setState({
-            cal_open: !this.state.cal_open,
-            contacts_open: false,
-            notes_open: false,
-            help_open: false,
+            map_open: !this.state.map_open
         });
     };
 
-    contactsPop = () => {
+    csPassPop = () => {
         this.setState({
-            contacts_open: !this.state.contacts_open,
-            cal_open: false,
-            notes_open: false,
-            help_open: false,
+            cs_pass_open: !this.state.cs_pass_open
         });
     };
 
-    notesPop = () => {
+    mapMathPop = () => {
         this.setState({
-            notes_open: !this.state.notes_open,
-            cal_open: false,
-            contacts_open: false,
-            help_open: false,
+            map_math_open: !this.state.map_math_open
         });
     };
 
-    helpPop = () => {
+    picsPop = () => {
         this.setState({
-            help_open: !this.state.help_open,
-            cal_open: false,
-            contacts_open: false,
-            notes_open: false,
+            pics_open: !this.state.pics_open
+        });
+    };
+
+    compPop = () => {
+        this.setState({
+            comp_open: !this.state.comp_open
+        });
+    };
+
+    cellPop = () => {
+        this.setState({
+            cell_open: !this.state.cell_open
+        });
+    };
+
+    pathsPop = () => {
+        this.setState({
+            paths_open: !this.state.paths_open
         });
     };
 
@@ -211,18 +218,28 @@ export default class Page2 extends Component {
                 {/*    <div align={"center"} style={{paddingTop: "2%"}}>*/}
                 {/*        <button className="dull-button"><h3>Success</h3></button>*/}
                 {/*    </div>}*/}
+                <div height="400">
+                    {/*if state is true, do this pop-up*/}
+                    {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} padding="62%" toggle={this.mapPop} /> : null}
+                    {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
+                    {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
+                    {this.state.cell_open ? null : null}
+                    {this.state.comp_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.compPop} /> : null}
+                    {this.state.pics_open ? null : null}
+                    {this.state.paths_open ? <PopUp title="Help" x="3024" y="3860" width="70%" image={this.state.paths} padding="90%" toggle={this.pathsPop} /> : null}
 
+                </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
                     <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/office.png?raw=true"/>
-                    <rect x="1450" y="35" width="250" height="70" className="clickable-done" onClick={this.GliesePop}/>
-                    <rect x="2630" y="0" width="370" height="270" className="clickable-done" onClick={this.ComparePop}/>
-                    <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.TrappistPop}/>
-                    <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.TrappistPop}/>
-                    <polygon points="1740,1425 1940,1348 2010,1430 1825,1520" className="clickable-done" onClick={this.TrappistPop}/>
-                    <polygon points="2040,1705 2195,1588 2272,1642 2130,1770" className="clickable-done" onClick={this.TrappistPop}/>
-                    <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.TrappistPop}/>
+                    <rect x="1450" y="35" width="250" height="70" className="clickable-done" onClick={this.mapMathPop}/>
+                    <rect x="2630" y="0" width="370" height="270" className="clickable-done" onClick={this.mapPop}/>
+                    <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.picsPop}/>
+                    <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.csPassPop}/>
+                    <polygon points="1740,1425 1940,1348 2010,1430 1825,1520" className="clickable-done" onClick={this.pathsPop}/>
+                    <polygon points="2040,1705 2195,1588 2272,1642 2130,1770" className="clickable-done" onClick={this.cellPop}/>
+                    <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.compPop}/>
 
                 </svg>
                 </div>
