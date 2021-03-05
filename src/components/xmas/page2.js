@@ -20,7 +20,14 @@ export default class Page2 extends Component {
         path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
         password: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/password.png?raw=true",
         help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
-        letters: ["A", "B", "C", "D", "E", "F", "G", "H"],
+        letters: ["https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/2.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/3.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/4.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/5.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/6.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/7.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/8.png?raw=true",
+            "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/9.png?raw=true"],
         phone_number: "",
         phone: false,
         pass: "",
@@ -112,7 +119,7 @@ export default class Page2 extends Component {
     }
 
     check_slides = () => {
-        this.temp = (this.state.slide1 === 2) && ((this.state.slide2 === 6) || (this.state.slide2 === 7)) && ((this.state.slide3 === 6) || (this.state.slide3 === 7)) && (this.state.slide4 === 1) && (this.state.slide5 === 3) && (this.state.slide6 === 0) && (this.state.slide7 === 4) && (this.state.slide8 === 5)
+        this.temp = (this.state.slide1 === 4) && (this.state.slide2 === 2) && (this.state.slide3 === 6) && (this.state.slide4 === 7) && (this.state.slide5 === 3) && (this.state.slide6 === 8) && (this.state.slide7 === 1) && (this.state.slide8 === 5)
         if (!this.temp) {
             alert("Incorrect Code")
         }
@@ -218,31 +225,22 @@ export default class Page2 extends Component {
                             <h2>Arrange your slides into the correct order:</h2>
                             <div className="scaling-svg-container" style={{paddingBottom: "15%"}}>
                                 <svg className="scaling-svg" viewBox="-20 -20 620 100">
-                                    <rect x="20" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})}/>
-                                    <text x="45" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide1]}</text>
-                                    <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/2.png?raw=true"/>
-                                    <rect x="90" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})}/>
-                                    <text x="115" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide2]}</text>
-                                    <rect x="160" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide3: (this.state.slide3 + 1) % 8})}/>
-                                    <text x="185" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide3: (this.state.slide3 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide3]}</text>
-                                    <rect x="230" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide4: (this.state.slide4 + 1) % 8})}/>
-                                    <text x="255" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide4: (this.state.slide4 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide4]}</text>
-                                    <rect x="300" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide5: (this.state.slide5 + 1) % 8})}/>
-                                    <text x="325" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide5: (this.state.slide5 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide5]}</text>
-                                    <rect x="370" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide6: (this.state.slide6 + 1) % 8})}/>
-                                    <text x="395" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide6: (this.state.slide6 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide6]}</text>
-                                    <rect x="440" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide7: (this.state.slide7 + 1) % 8})}/>
-                                    <text x="465" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide7: (this.state.slide7 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide7]}</text>
-                                    <rect x="510" y="0" width="50" height="50" className="click" stroke="white"
-                                          onClick={() => this.setState({slide8: (this.state.slide8 + 1) % 8})}/>
-                                    <text x="535" y="25" fill="red" textAnchor="middle" onClick={() => this.setState({slide8: (this.state.slide8 + 1) % 8})} alignmentBaseline="central">{this.state.letters[this.state.slide8]}</text>
+                                    <image width="60" height="60" x="1" y="0" onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 8})} href={this.state.letters[this.state.slide1]}/>
+                                    <text x="31" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Aug 1995</text>
+                                    <image width="60" height="60" x="75" y="0" onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 8})} href={this.state.letters[this.state.slide2]}/>
+                                    <text x="105" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">June 1996</text>
+                                    <image width="60" height="60" x="149" y="0" onClick={() => this.setState({slide3: (this.state.slide3 + 1) % 8})} href={this.state.letters[this.state.slide3]}/>
+                                    <text x="179" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Sept 1997</text>
+                                    <image width="60" height="60" x="223" y="0" onClick={() => this.setState({slide4: (this.state.slide4 + 1) % 8})} href={this.state.letters[this.state.slide4]}/>
+                                    <text x="253" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Dec 1998</text>
+                                    <image width="60" height="60" x="297" y="0" onClick={() => this.setState({slide5: (this.state.slide5 + 1) % 8})} href={this.state.letters[this.state.slide5]}/>
+                                    <text x="327" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Aug 1999</text>
+                                    <image width="60" height="60" x="371" y="0" onClick={() => this.setState({slide6: (this.state.slide6 + 1) % 8})} href={this.state.letters[this.state.slide6]}/>
+                                    <text x="401" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Feb 2000</text>
+                                    <image width="60" height="60" x="445" y="0" onClick={() => this.setState({slide7: (this.state.slide7 + 1) % 8})} href={this.state.letters[this.state.slide7]}/>
+                                    <text x="475" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">July 2001</text>
+                                    <image width="60" height="60" x="519" y="0" onClick={() => this.setState({slide8: (this.state.slide8 + 1) % 8})} href={this.state.letters[this.state.slide8]}/>
+                                    <text x="549" y="68" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">Jan 2002</text>
                                 </svg>
                             </div>
                             {!this.state.slides ?
