@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
 import CompPopUp from "./compPopUp";
+import CarouselPopUp from "./CarouselPopUp";
+import PhonePopUp from "./PhonePopUp";
 
 
 
@@ -73,6 +75,12 @@ export default class Page2 extends Component {
         });
     };
 
+    carouselPop = () => {
+        this.setState({
+            pics_open: !this.state.pics_open
+        });
+    };
+
     cellPop = () => {
         this.setState({
             cell_open: !this.state.cell_open
@@ -85,43 +93,6 @@ export default class Page2 extends Component {
         });
     };
 
-
-
-    handleChangePhone = (event) => {
-        this.setState({
-            phone_number: event.target.value
-        });
-    }
-
-    handleChangePass = (event) => {
-        this.setState({
-            pass: event.target.value
-        });
-    }
-
-    check_phone = (event) => {
-        console.log(this.state.phone_number)
-        event.preventDefault();
-        this.temp = ("6179165316" === this.state.phone_number)
-        if (!this.temp) {
-            alert("Incorrect Code")
-        }
-        this.setState({
-            phone: this.temp,
-        });
-    }
-
-    check_pass = (event) => {
-        console.log(this.state.pass)
-        event.preventDefault();
-        this.temp = ("FAMILY" === this.state.pass) || ("family" === this.state.pass) || ("Family" === this.state.pass)
-        if (!this.temp) {
-            alert("Incorrect Code")
-        }
-        this.setState({
-            computer: this.temp,
-        });
-    }
 
     check_slides = () => {
         this.temp = (this.state.slide1 === 4) && (this.state.slide2 === 2) && (this.state.slide3 === 6) && (this.state.slide4 === 7) && (this.state.slide5 === 3) && (this.state.slide6 === 8) && (this.state.slide7 === 1) && (this.state.slide8 === 5)
@@ -185,9 +156,9 @@ export default class Page2 extends Component {
                     {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} padding="62%" toggle={this.mapPop} /> : null}
                     {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
                     {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
-                    {this.state.cell_open ? null : null}
-                    {this.state.comp_open ? <CompPopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.compPop} /> : null}
-                    {this.state.pics_open ? null : null}
+                    {this.state.cell_open ? <PhonePopUp toggle={this.cellPop} /> : null}
+                    {this.state.comp_open ? <CompPopUp toggle={this.compPop} /> : null}
+                    {this.state.pics_open ? <CarouselPopUp toggle={this.carouselPop} /> : null}
                     {this.state.paths_open ? <PopUp title="Help" x="3024" y="3860" width="70%" image={this.state.paths} padding="90%" toggle={this.pathsPop} /> : null}
 
                 </div>
