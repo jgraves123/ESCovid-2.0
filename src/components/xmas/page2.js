@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PopUp from "./PopUp";
-import compPopUp from "./compPopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
+import CompPopUp from "./compPopUp";
 
 
 
@@ -29,8 +29,6 @@ export default class Page2 extends Component {
             "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/7.png?raw=true",
             "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/8.png?raw=true",
             "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/life/9.png?raw=true"],
-        phone_number: "",
-        phone: false,
         pass: "",
         computer: false,
         slides: false,
@@ -165,43 +163,7 @@ export default class Page2 extends Component {
                 {/*    {this.state.notes_open ? <PopUp title="My Notes" x="1188" y="1422" width="80%" image={this.state.notes} padding="96%" toggle={this.notesPop} /> : null}*/}
                 {/*    {this.state.help_open ? <PopUp title="Help" x="1572" y="512" width="100%" image={this.state.help} padding="34%" toggle={this.helpPop} /> : null}*/}
 
-                {/*</div>*/}
-                {/*{!this.state.phone ?*/}
-                {/*    <div align="center">*/}
-                {/*        <div align="center" style={{width: "80%"}}>*/}
-                {/*            <h2 align="center" className="subheading">Finishing Presentation</h2>*/}
-                {/*            <h3 align="center" className="subheading">You need to finish up your*/}
-                {/*                presentation, but realize it isn't saved under your account. Why*/}
-                {/*                would that be?????</h3>*/}
-                {/*            <h3 align="center" className="subheading">You realize it's because*/}
-                {/*                you've been loaning a computer, but you don't have the password.*/}
-                {/*                You'll need to find the cell phone number of the computer's owner to*/}
-                {/*                find the computer's password.</h3>*/}
-                {/*            <form id="path-answer" onSubmit={this.check_phone}>*/}
-                {/*                <label>*/}
-                {/*                    <input type="text" value={this.state.pt2_value} ref="val"*/}
-                {/*                           placeholder={"Enter Phone Number"}*/}
-                {/*                           onChange={this.handleChangePhone}*/}
-                {/*                           style={{marginRight: 10, width: "40%"}}/>*/}
-                {/*                </label>*/}
-                {/*                <input type="submit" value="Submit"*/}
-                {/*                       style={{marginLeft: 10, width: "40%"}}/>*/}
-                {/*            </form>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    :*/}
-                {/*    <div>*/}
-                {/*        <h2 align="center" className="subheading">Decode Password</h2>*/}
-                {/*        <h3 align="center" className="subheading">Ali didn't want to send you her password directly, so she encrypted it below. See if you can crack it!</h3>*/}
-                {/*        <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>*/}
-                {/*            <svg className="scaling-svg" viewBox={"0 0 718 270"}> /!* Needs*/}
-                {/*         auto*/}
-                {/*         updating*!/*/}
-                {/*                <image x={.3*718} width={"40%"} href={this.state.password}/>*/}
-                {/*            </svg>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*}*/}
+
                 {/*{!this.state.computer ?*/}
                 {/*    <div align="center">*/}
                 {/*        <div algin="center" style={{margin: "10", paddingBottom: "3%", width: "40%"}}>*/}
@@ -224,7 +186,7 @@ export default class Page2 extends Component {
                     {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
                     {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
                     {this.state.cell_open ? null : null}
-                    {this.state.comp_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.compPop} /> : null}
+                    {this.state.comp_open ? <CompPopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.compPop} /> : null}
                     {this.state.pics_open ? null : null}
                     {this.state.paths_open ? <PopUp title="Help" x="3024" y="3860" width="70%" image={this.state.paths} padding="90%" toggle={this.pathsPop} /> : null}
 
