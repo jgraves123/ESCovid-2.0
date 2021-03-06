@@ -31,6 +31,7 @@ function Navigation() {
           <Nav>
             <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown">
               <NavDropdown.Item href="/escovid">ESCovid</NavDropdown.Item>
+              <NavDropdown.Item href="/xmas">XMAS</NavDropdown.Item>
               <NavDropdown.Item href="/escovid/final">Other</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/contact">Suggestions</NavDropdown.Item>
