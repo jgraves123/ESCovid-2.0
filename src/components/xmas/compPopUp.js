@@ -2,29 +2,36 @@ import React, { Component } from "react";
 
 export default class CompPopUp extends Component {
     state = {
-        phone_number: "",
-        phone: false,
+        password: "",
+        user: "SIBLING_NAME",
+        correct_pass: false,
     };
 
     handleClick = () => {
         this.props.toggle();
     };
 
-    handleChangePhone = (event) => {
+    handleChangePass = (event) => {
         this.setState({
-            phone_number: event.target.value
+            password: event.target.value
         });
     }
 
-    check_phone = (event) => {
-        console.log(this.state.phone_number)
+    handleChangeUser = (event) => {
+        this.setState({
+            user: event.target.value
+        });
+    }
+
+    check_pass = (event) => {
+        console.log(this.state.pass)
         event.preventDefault();
-        this.temp = ("6179165316" === this.state.phone_number)
+        this.temp = (("FAMILY" === this.state.password) || ("family" === this.state.password) || ("Family" === this.state.password)) && (this.state.user === "SIBLING_NAME")
         if (!this.temp) {
             alert("Incorrect Code")
         }
         this.setState({
-            phone: this.temp,
+            correct_pass: this.temp,
         });
     }
 
@@ -38,23 +45,26 @@ export default class CompPopUp extends Component {
                         &times;
                     </span>
 
-                {!this.state.phone ?
+                {!this.state.correct_pass ?
                     <div align="center">
-                        <div align="center" style={{width: "80%"}}>
-                            <h2 align="center" className="subheading">Finishing Presentation</h2>
-                            <h3 align="center" className="subheading">You need to finish up your
-                                presentation, but realize it isn't saved under your account. Why
-                                would that be?????</h3>
-                            <h3 align="center" className="subheading">You realize it's because
-                                you've been loaning a computer, but you don't have the password.
-                                You'll need to find the cell phone number of the computer's owner to
-                                find the computer's password.</h3>
-                            <form id="path-answer" onSubmit={this.check_phone}>
-                                <label>
+                        <div align="center" style={{width: "100%"}}>
+                            <img width={"100%"} src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/login.png?raw=true"} />
+                         {/*   <div className="scaling-svg-container" style={{paddingBottom: this.props.padding}}>*/}
+                         {/*       <svg className="scaling-svg" viewBox={"0 0 " + this.props.x + " " + this.props.y}> /!* Needs*/}
+                         {/*auto*/}
+                         {/*updating*!/*/}
+                         {/*           <image x={this.val*this.props.x} width={this.props.width} href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/login.png?raw=true"/>*/}
+                         {/*       </svg>*/}
+                         {/*   </div>*/}
+                            <form id="path-answer" onSubmit={this.check_pass}>
+                                <label width={"80%"}>
+                                    <input type="text" ref="val" value={this.state.user}
+                                           onChange={this.handleChangeUser}
+                                           style={{marginRight: 10, width: "45%"}}/>
                                     <input type="text" ref="val"
-                                           placeholder={"Enter Phone Number"}
-                                           onChange={this.handleChangePhone}
-                                           style={{marginRight: 10, width: "40%"}}/>
+                                           placeholder={"Enter Password"}
+                                           onChange={this.handleChangePass}
+                                           style={{marginRight: 10, width: "45%"}}/>
                                 </label>
                                 <input type="submit" value="Submit"
                                        style={{marginLeft: 10, width: "40%"}}/>
@@ -62,16 +72,17 @@ export default class CompPopUp extends Component {
                         </div>
                     </div>
                     :
-                    <div>
-                        <h2 align="center" className="subheading">Decode Password</h2>
-                        <h3 align="center" className="subheading">Ali didn't want to send you her password directly, so she encrypted it below. See if you can crack it!</h3>
-                        <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>
-                            {/*<svg className="scaling-svg" viewBox={"0 0 718 270"}> /!* Needs*/}
-                            {/*     auto*/}
-                            {/*     updating*!/*/}
-                            {/*    <image x={.3*718} width={"40%"} href={this.state.password}/>*/}
-                            {/*</svg>*/}
+                    <div style={{paddingBottom: "18%", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/path.jpeg?raw=true")'}}>
+                        <div className="scaling-svg-container" style={{display: "inline-block", width: "48%"}}>
+                            {/*resizing*/}
                         </div>
+                        <div className="scaling-svg-container" style={{display: "inline-block", width: "50%"}}>
+                            <svg className="scaling-svg" viewBox="0 0 3024 3860"> {/* Needs auto
+                         updating*/}
+                                <image x="0" width="100%" href={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/path.jpeg?raw=true"}/>
+                            </svg>
+                        </div>
+
                     </div>
                 }
 
