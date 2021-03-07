@@ -10,8 +10,8 @@ export default class PhonePopUp extends Component {
         this.props.toggle();
     };
 
-    chatNames = ["Mission Control", "Encrypted Message 329vu8", "Encrypted Message 9ga720"];
-    avatars = ["https://bootdey.com/img/Content/avatar/avatar3.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar5.png"]
+    chatNames = ["Random Person", "ur dad", "Other rando"];
+    avatars = ["https://bootdey.com/img/Content/avatar/avatar4.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar1.png"]
     state = {
         value: "",
         chat: 0,
@@ -118,14 +118,11 @@ export default class PhonePopUp extends Component {
                                             <div className="flex-grow-1 ml-3">
                                                 {this.chatNames[1]}
                                                 <div className="small"><span
-                                                    className="fas fa-circle chat-online">Online</span></div>
+                                                    className="fas fa-circle chat-offline">Offline</span></div>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo2}>
-                                        <Delayed waitBeforeShow={5000}>
-                                            <div className="badge bg-success float-right">3</div>
-                                        </Delayed>
                                         <div className="d-flex align-items-start">
                                             <img src={this.avatars[2]}
                                                  className="rounded-circle mr-1" alt="Vanessa Tucker" width="40"
@@ -154,40 +151,19 @@ export default class PhonePopUp extends Component {
                                     {this.state.chat===0 ?
                                         <div className="position-relative">
                                             <div className="chat-messages p-4">
-                                                <br/>
-                                                <br/>
-                                                <br/>
-                                                <br/>
-                                                <br/>
-                                                <br/>
-                                                <Text character="Mission Control" timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
-                                                    Initiating Phase I...</Text>
-                                                <Delayed waitBeforeShow={4000}>
-                                                    <Text character="Mission Control" timesent="2:35 am" myavatar={this.avatars[this.state.chat]}>
-                                                        Our agents are sending you two clues about the departure location - you may wish to divide and conquer,
-                                                        but you will need to solve both of them to move on.</Text>
-                                                </Delayed>
-                                                <Delayed waitBeforeShow={12000}>
-                                                    <Text character="Mission Control" timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
-                                                        Reply with the password to move forward.
-                                                    </Text>
-                                                </Delayed>
-                                                {this.state.wrong===0 ?
-                                                    <div>
-                                                        <div className="chat-message-right pb-4">
-                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                 className="rounded-circle mr-1" alt="You" width="40"
-                                                                 height="40"/>
-                                                        </div>
-                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                            <div className="font-weight-bold mb-1">You</div>
-                                                            {this.state.attempt}
-                                                        </div>
-                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
-                                                            Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                <Text character={this.chatNames[this.state.chat]} timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
+                                                    Hey Sarah! Can you take the boys to practice tomorrow?</Text>
+                                                <Text character={this.chatNames[this.state.chat]} timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
+                                                    So sorry for the late notice.</Text>
+                                                <div className="chat-message-right pb-4">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                         className="rounded-circle mr-1" alt="You" width="40"
+                                                         height="40"/>
+                                                    <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                        <div className="font-weight-bold mb-1">You</div>
+                                                        No problem!
                                                     </div>
-                                                    : null
-                                                }
+                                                </div>
                                             </div>
                                             <div className="flex-grow-0 py-3 px-4 border-top">
                                                 <div className="input-group">
@@ -240,32 +216,48 @@ export default class PhonePopUp extends Component {
                                     {this.state.chat===2 ?
                                         <div className="position-relative">
                                             <div className="chat-messages p-4">
-                                                <Text character={this.chatNames[2]} timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
-                                                    Uploading encrypted message...</Text>
-                                                <Text character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
-                                                    <img
-                                                        className="img-fluid rounded mb-4 mb-lg-0"
-                                                        src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/scales.PNG?raw=true"/>
-                                                </Text>
-                                                <Text character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
-                                                    You may reply to check your solution.
-                                                </Text>
-                                                {this.state.wrong===2 ?
-                                                    <div>
-                                                        <div className="chat-message-right pb-4">
-                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                 className="rounded-circle mr-1" alt="You" width="40"
-                                                                 height="40"/>
-                                                        </div>
-                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                            <div className="font-weight-bold mb-1">You</div>
-                                                            {this.state.attempt}
-                                                        </div>
-                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
-                                                            Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                <div className="chat-message-right pb-4">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                         className="rounded-circle mr-1" alt="You" width="40"
+                                                         height="40"/>
+                                                    <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                        <div className="font-weight-bold mb-1">You</div>
+                                                        SIBLING is asking me about his dad again...idk what to tell him.
                                                     </div>
-                                                    : null
-                                                }
+                                                </div>
+                                                <Text character={this.chatNames[2]} timesent="10:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                    Have you tried changing the subject to his grades?</Text>
+                                                <Text character={this.chatNames[2]} timesent="10:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                    Kidding. Not sure what to tell you. Be honest with him? He's almost an adult now...</Text>
+                                                <div className="chat-message-right pb-4">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                         className="rounded-circle mr-1" alt="You" width="40"
+                                                         height="40"/>
+                                                    <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                        <div className="font-weight-bold mb-1">You</div>
+                                                        Ha. I think he'd see through that.
+                                                    </div>
+                                                </div>
+                                                <div className="chat-message-right pb-4">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                         className="rounded-circle mr-1" alt="You" width="40"
+                                                         height="40"/>
+                                                    <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                        <div className="font-weight-bold mb-1">You</div>
+                                                        If I told him I found his dad's number he'd want to meet him, I'm sure of it. He's a tough kid, but you know how obsessed he gets about things. I just don't want him to be crushed if it turns out his dad isn't thrilled to find out he has a full grown child.
+                                                    </div>
+                                                </div>
+                                                <div className="chat-message-right pb-4">
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                                         className="rounded-circle mr-1" alt="You" width="40"
+                                                         height="40"/>
+                                                    <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                        <div className="font-weight-bold mb-1">You</div>
+                                                        Not to mention they'll both blame me.
+                                                    </div>
+                                                </div>
+                                                <Text character={this.chatNames[2]} timesent="10:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                    Don't beat yourself up Sal. () will understand you did your best at the time. And you don't have to tell him anything just yet.</Text>
                                                 <div className="flex-grow-0 py-3 px-4 border-top">
                                                     <div className="input-group">
                                                         <input type="text" className="form-control" placeholder="Type your message" onChange={this.handleChange}/>

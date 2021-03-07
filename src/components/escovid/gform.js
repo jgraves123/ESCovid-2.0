@@ -178,10 +178,10 @@ export default class Gform extends Component {
                                                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                                                  className="rounded-circle mr-1" alt="You" width="40"
                                                                  height="40"/>
-                                                        </div>
-                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                            <div className="font-weight-bold mb-1">You</div>
-                                                            {this.state.attempt}
+                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                                <div className="font-weight-bold mb-1">You</div>
+                                                                {this.state.attempt}
+                                                            </div>
                                                         </div>
                                                         <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
@@ -217,10 +217,10 @@ export default class Gform extends Component {
                                                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                                                  className="rounded-circle mr-1" alt="You" width="40"
                                                                  height="40"/>
-                                                        </div>
-                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                            <div className="font-weight-bold mb-1">You</div>
-                                                            {this.state.attempt}
+                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                                <div className="font-weight-bold mb-1">You</div>
+                                                                {this.state.attempt}
+                                                            </div>
                                                         </div>
                                                         <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
@@ -256,10 +256,10 @@ export default class Gform extends Component {
                                                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                                                  className="rounded-circle mr-1" alt="You" width="40"
                                                                  height="40"/>
-                                                        </div>
-                                                        <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                            <div className="font-weight-bold mb-1">You</div>
-                                                            {this.state.attempt}
+                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                                                <div className="font-weight-bold mb-1">You</div>
+                                                                {this.state.attempt}
+                                                            </div>
                                                         </div>
                                                         <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
