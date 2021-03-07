@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Text from "./text";
-import Delayed from "../game/delayed";
 
 export default class Gform extends Component {
 
@@ -15,8 +14,10 @@ export default class Gform extends Component {
         }
     }
 
+    sent = "chat-message-right pb-4";
+    received = "chat-message-left pb-4";
     chatNames = ["Mission Control", "Encrypted Message 329vu8", "Encrypted Message 9ga720"];
-    avatars = ["https://bootdey.com/img/Content/avatar/avatar3.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar5.png"]
+    avatars = ["https://bootdey.com/img/Content/avatar/avatar3.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar5.png", "https://bootdey.com/img/Content/avatar/avatar1.png"];
     state = {
         value: "",
         chat: 0,
@@ -98,7 +99,6 @@ export default class Gform extends Component {
                                     </div>
 
                                     <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo0}>
-                                        <div className="badge bg-success float-right"/>
                                         <div className="d-flex align-items-start">
                                             <img src={this.avatars[0]}
                                                  className="rounded-circle mr-1" alt="Sharon Lessman" width="40"
@@ -123,9 +123,7 @@ export default class Gform extends Component {
                                         </div>
                                     </a>
                                     <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo2}>
-                                        <Delayed waitBeforeShow={5000}>
                                         <div className="badge bg-success float-right">3</div>
-                                        </Delayed>
                                         <div className="d-flex align-items-start">
                                             <img src={this.avatars[2]}
                                                  className="rounded-circle mr-1" alt="Vanessa Tucker" width="40"
@@ -160,30 +158,20 @@ export default class Gform extends Component {
                                                 <br/>
                                                 <br/>
                                                 <br/>
-                                                <Text character="Mission Control" timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character="Mission Control" timesent="2:34 am" myavatar={this.avatars[this.state.chat]}>
                                                     Initiating Phase I...</Text>
-                                                <Delayed waitBeforeShow={4000}>
-                                                <Text character="Mission Control" timesent="2:35 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character="Mission Control" timesent="2:35 am" myavatar={this.avatars[this.state.chat]}>
                                                     Our agents are sending you two clues about the departure location - you may wish to divide and conquer,
                                                     but you will need to solve both of them to move on.</Text>
-                                                </Delayed>
-                                                <Delayed waitBeforeShow={12000}>
-                                                <Text character="Mission Control" timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character="Mission Control" timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
                                                         Reply with the password to move forward.
                                                 </Text>
-                                                </Delayed>
                                                 {this.state.wrong===0 ?
                                                     <div>
-                                                        <div className="chat-message-right pb-4">
-                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                 className="rounded-circle mr-1" alt="You" width="40"
-                                                                 height="40"/>
-                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                                <div className="font-weight-bold mb-1">You</div>
-                                                                {this.state.attempt}
-                                                            </div>
-                                                        </div>
-                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                        <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                            {this.state.attempt}
+                                                        </Text>
+                                                        <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
                                                     </div>
                                                     : null
@@ -201,28 +189,22 @@ export default class Gform extends Component {
                                     {this.state.chat===1 ?
                                         <div className="position-relative">
                                             <div className="chat-messages p-4">
-                                                <Text character={this.chatNames[1]} timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[1]} timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
                                                     Uploading encrypted message...</Text>
-                                                <Text character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                 <img
                                                     className="img-fluid rounded mb-4 mb-lg-0"
                                                     src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/Mastermind.PNG?raw=true"/>
                                                 </Text>
-                                                <Text character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
                                                 {this.state.wrong===1 ?
                                                     <div>
-                                                        <div className="chat-message-right pb-4">
-                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                 className="rounded-circle mr-1" alt="You" width="40"
-                                                                 height="40"/>
-                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                                <div className="font-weight-bold mb-1">You</div>
-                                                                {this.state.attempt}
-                                                            </div>
-                                                        </div>
-                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                        <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                            {this.state.attempt}
+                                                        </Text>
+                                                        <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
                                                     </div>
                                                     : null
@@ -240,28 +222,22 @@ export default class Gform extends Component {
                                     {this.state.chat===2 ?
                                         <div className="position-relative">
                                             <div className="chat-messages p-4">
-                                                <Text character={this.chatNames[2]} timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[2]} timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
                                                     Uploading encrypted message...</Text>
-                                                <Text character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     <img
                                                     className="img-fluid rounded mb-4 mb-lg-0"
                                                     src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/scales.PNG?raw=true"/>
                                                     </Text>
-                                                <Text character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
+                                                <Text myclass={this.received} character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
                                                 {this.state.wrong===2 ?
                                                     <div>
-                                                        <div className="chat-message-right pb-4">
-                                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                 className="rounded-circle mr-1" alt="You" width="40"
-                                                                 height="40"/>
-                                                            <div className="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                                <div className="font-weight-bold mb-1">You</div>
-                                                                {this.state.attempt}
-                                                            </div>
-                                                        </div>
-                                                        <Text character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                        <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                            {this.state.attempt}
+                                                        </Text>
+                                                        <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
                                                             Failed attempt. Deleting records for security in 10 ... 9 ... 8...</Text>
                                                     </div>
                                                     : null

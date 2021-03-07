@@ -2,8 +2,11 @@ import React, {Component} from "react";
 import "../index.css";
 import "../game/posts.css";
 import {Post} from "../game";
+import Overlay from "../game/overlay";
 import Exit from "../game/exit";
 import {Prompt} from 'react-router'
+
+let rand = () => Math.floor(Math.random() * 20) - 10;
 
 export default class Tumblr1 extends Component {
 
@@ -46,9 +49,9 @@ export default class Tumblr1 extends Component {
                     {/*<header style={{overflow: "hidden", zIndex: 0}}>*/}
                     {/*    <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>*/}
                     {/*</header>*/}
+                    <Overlay>Video from your fearless leader</Overlay>
                     <div align={"center"}>
                     <div align={"center"} className={"middle"}>
-                        <h1>Password:</h1>
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
