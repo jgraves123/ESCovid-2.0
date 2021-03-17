@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Text(props){
     return(
-        <div className="chat-message-left pb-4">
+        <div className={props.myclass}>
             <div>
                 <img src={props.myavatar}
                      className="rounded-circle mr-1" alt="Text message" width="40"
@@ -14,10 +14,5 @@ export default function Text(props){
                 {props.children}
             </div>
         </div>
-        // <div className = "container content-section" style={{width: "40%"}} tabindex="0">
-        //     <h1 className="article-title">{props.title}</h1>
-        //     {props.children}
-        //     <p className="article-content">{props.caption}</p>
-        // </div>
     )
 }
