@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Griddle, {plugins} from "griddle-react";
+import {contacts} from "./contacts";
 
 export default class CompPopUp extends Component {
     state = {
@@ -115,7 +117,11 @@ export default class CompPopUp extends Component {
                             backgroundColor: "pink"
                         }}>
                         {this.state.correct_email ?
-                            <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>
+                            // <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>
+                            <div className="inner">
+                                <h2>Contact List</h2>
+                                <Griddle data={contacts} plugins={[plugins.LocalPlugin]}/>
+                            </div>
                             :
                                     <div className={"inner"}>
 
