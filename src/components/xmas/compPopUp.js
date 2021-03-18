@@ -120,7 +120,13 @@ export default class CompPopUp extends Component {
                             // <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>
                             <div className="inner">
                                 <h2>Contact List</h2>
-                                <Griddle data={contacts} plugins={[plugins.LocalPlugin]}/>
+                                <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                                        <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                                            <Filter/>
+                                            <Table />
+                                            <Pagination/>
+                                        </div>
+                                    )}} data={contacts} plugins={[plugins.LocalPlugin]} useGriddleStyles={"false"} enableInfiniteScroll={true}/>
                             </div>
                             :
                                     <div className={"inner"}>

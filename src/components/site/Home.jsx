@@ -202,15 +202,33 @@ function Home() {
             <Carousel interval={100000} pause={"hover"} style={{height: "100%", maxWidth: "1000px"}}>
               <Carousel.Item align='center'>
                 <h2>ESCovid-19 Leaderboard</h2>
-                <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                      <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                        <Filter/>
+                        <Table />
+                        <Pagination/>
+                      </div>
+                  )}}  data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
               <Carousel.Item align='center'>
                 <h2>ESCovid-20 Leaderboard</h2>
-                <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                      <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                        <Filter/>
+                        <Table />
+                        <Pagination/>
+                      </div>
+                  )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
               <Carousel.Item align='center'>
                 <h2>Imaginary other Leaderboard</h2>
-                <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                      <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                        <Filter/>
+                        <Table />
+                        <Pagination/>
+                      </div>
+                  )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
             </Carousel>
             </div>

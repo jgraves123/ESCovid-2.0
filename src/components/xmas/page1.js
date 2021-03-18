@@ -23,7 +23,7 @@ export default class Page1 extends Component {
         cal: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/calendar.png?raw=true",
         contacts: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/contacts.png?raw=true",
         notes: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/notes.png?raw=true",
-        intro: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/intro-letter.png?raw=true",
+        intro: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/email.png?raw=true",
         path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
         help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
         colors: ["red", "blue", "green", "yellow", "orange", "purple", "white", "black"],
@@ -34,6 +34,7 @@ export default class Page1 extends Component {
         part1: false,
         pt2_value: "",
         part2: false,
+        attachment: false,
     };
 
     check_part1 = () => {
@@ -53,20 +54,28 @@ export default class Page1 extends Component {
         return(
             <div>
                 <body>
-                {/*<Confetti/>*/}
-                <h2 align="center" className="subheading">Hello Chris, First we need to confirm your identity. </h2>
-                <h3 align="center" className="subheading">Please read the documents provided and enter our two factor authorization to continue.</h3>
                 <section>
-                    <div align={"center"}>
+                    <div align={"center"} style={{margin: "10px"}}>
                         {/*resizing*/}
-                        <img src={this.state.intro} width={"20%"}/>
+                        <img src={this.state.intro} width={"80%"}/>
                     </div>
 
                 </section>
-                <h2 align="center">Two Factor Identification</h2>
                 <div align={"center"}>
                     <div className="scaling-svg-container" align="center" style={{paddingBottom: "0%", display: "inline-block", width: "42%"}}>
-                        {!this.state.part1 ?
+                        {!this.state.attachment ?
+                            <div align="center">
+                                <br/>
+                                <table width="100%">
+                                    <tr>
+                                        <td style={{textAlign: "center", padding: "10%"}} onClick={() => this.setState({attachment: true})}>Attachment</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                            </div>
+                            :
+                            <div>
+                            {!this.state.part1 ?
                             <>
                                 <div className="scaling-svg-container" style={{paddingBottom: "20%"}}>
                                     <svg className="scaling-svg" viewBox="-20 -20 600 150">
@@ -84,11 +93,14 @@ export default class Page1 extends Component {
                                                 onClick={() => this.setState({cir4: (this.state.cir4 + 1) % 8})}/>
                                     </svg>
                                 </div>
+                                <div style={{paddingBottom: "15px"}}>
                                 <button className="button" onClick={this.check_part1}><h3>Check</h3></button>
+                                </div>
                             </>
                             : <Link to="/xmas/page2">
                                 <button className="button"><h3>Continue</h3></button>
                             </Link> }
+                            </div>}
                     </div>
 
                 </div>

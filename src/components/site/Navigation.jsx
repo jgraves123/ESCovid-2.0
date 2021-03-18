@@ -8,7 +8,7 @@ import Headroom from "react-headroom";
 
 function Navigation() {
   return (
-    <div className="navigation">
+    <div className="navigation" style={{zIndex: "1"}}>
           {/*"#72EA80", "#15b40d", "#fcc81a", "0fd145", "#673AB7*/}
       {/*<Navbar className={"navbar"} style={{backgroundColor: "#f6f6f6"}} expand="lg">*/}
       <Navbar className={"navbar"} style={{backgroundColor: "#e9e9e9"}} expand="lg">
@@ -29,7 +29,7 @@ function Navigation() {
         <Navbar.Toggle/>
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown">
+            <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown" style={{zIndex: "1000"}}>
               <NavDropdown.Item href="/escovid">ESCovid</NavDropdown.Item>
               <NavDropdown.Item href="/xmas">XMAS</NavDropdown.Item>
               <NavDropdown.Item href="/escovid/final">Other</NavDropdown.Item>

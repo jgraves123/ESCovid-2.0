@@ -209,7 +209,9 @@ export default class Page2 extends Component {
                                 </svg>
                             </div>
                             {!this.state.slides ?
+                                <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
+                                </div>
                                 : <Link to="/xmas/page3">
                                     <button className="button"><h3>Continue</h3></button>
                                 </Link>}

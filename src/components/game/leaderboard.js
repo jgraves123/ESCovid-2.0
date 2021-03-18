@@ -70,11 +70,23 @@ class Leader extends Component {
                     <h1>Leaderboards</h1>
                     <div style={{float: "left"}}>
                     <h2>ESCovid-19 Leaderboard</h2>
-                    <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                            <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                                <Filter/>
+                                <Table />
+                                <Pagination/>
+                            </div>
+                        )}} data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     </div>
                     <div style={{float: "right"}}>
                     <h2>ESCovid-20 Leaderboard</h2>
-                    <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                    <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
+                            <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
+                                <Filter/>
+                                <Table />
+                                <Pagination/>
+                            </div>
+                        )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     </div>
                 </div>
             </section>

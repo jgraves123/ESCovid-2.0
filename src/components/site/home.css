@@ -125,3 +125,12 @@ p {
     font-weight: 600;
 }
 
+.carousel-control-next {
+    top: 120px !important;
+    bottom: 120px !important;
+}
+
+.carousel-control-prev {
+    top: 120px !important;
+    bottom: 120px !important;
+}
