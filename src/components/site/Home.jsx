@@ -59,6 +59,19 @@ function Home() {
                 </div>
                 </div>
               </Carousel.Item>
+              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/anonymous.gif?raw=true")', backgroundSize: "cover"}}>
+                  <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
+                    <div className="sideText">
+                      <h1>Anonymous Connections!</h1>
+                      <br/>
+                      <p>Who are they? Where did they come from? Click here to find out.</p>
+                    </div>
+                  </div>
+                  <div style={{width: "70%", float: "left"}}>
+                  </div>
+                </div>
+              </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(6, 97, 32, .8)"}}>
