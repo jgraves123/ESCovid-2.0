@@ -5,6 +5,7 @@ import Griddle, {plugins} from "griddle-react";
 import {dataesc19, dataesc20, sortProperties} from "./leaderdata";
 import Headroom from "react-headroom";
 import {Navigation} from "../index";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
     <div style={{width: "100%"}}>
           <div align={"center"} style={{marginTop: "20px"}}>
             <div style={{width: "90%"}}>
-            <Carousel interval={10000} pause={"false"} style={{height: "100%"}}>
+            <Carousel interval={10000} pause={"true"} style={{height: "100%"}}>
               <Carousel.Item align='center'>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-viper.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
@@ -103,30 +104,21 @@ function Home() {
                     <p>You won't regret it!!!</p>
                   </div>
                 </div>
-                <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "4vw"}}>
-                  <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLSfLVxy056zmmg7RoYSebwya80Iz2rUgpK7YilEK5JWx2KGIxA/viewform?embedded=true"
-                      style={{width: "50vw", height: "32vw"}} frameBorder="0" marginHeight="0"
-                      marginWidth="0">Loading…
-                  </iframe>
-                </div>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .7)"}}>
-                  <div className="sideText black">
-                    <h1>Invite Your Friends!</h1>
-                    <br/>
-                    <p>Help them join the fun!!!</p>
-                  </div>
-                </div>
                 <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
-                  <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLSfVPEhNr03lo9615mIsYnT1RimaFz6e8AmqNN3HAuozlzyhcg/viewform?embedded=true"
-                      style={{width: "50vw", height: "32vw"}} frameBorder="0" marginHeight="0"
-                      marginWidth="0">Loading…
-                  </iframe>
+                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "6vw", padding: "4vw"}}>
+                  <h2>Subscribe to our Email List</h2>
+                  <MailchimpSubscribe
+                      url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
+                      render={({ subscribe, status, message }) => (
+                          <div className={"testing"}>
+                            <MailchimpSubscribe url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"} onSubmitted={formData => subscribe(formData)} />
+                            {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+                            {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
+                            {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
+                          </div>
+                      )}
+                  />
+                  </div>
                 </div>
                 </div>
               </Carousel.Item>

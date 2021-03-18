@@ -134,3 +134,32 @@ p {
     top: 120px !important;
     bottom: 120px !important;
 }
+
+
+.testing button {
+    background-color: #0fd145; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 40%;
+}
+
+.testing input {
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 70%;
+}
