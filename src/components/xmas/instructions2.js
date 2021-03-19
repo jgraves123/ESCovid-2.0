@@ -7,12 +7,17 @@ import Exit from "../game/exit";
 
 export default class Instructions2 extends Component{
 
+    componentDidMount() {
+        if (localStorage.getItem("seconds") !== null) {
+            window.location.assign("/rooms");
+        }
+    }
+
     state = {
         value: "",
         check: false,
         showAlert: this.props.name != null,
         showFailure: false,
-        showPop: this.props.name == null,
     }
 
     handleChange = (event) => {
@@ -109,7 +114,6 @@ export default class Instructions2 extends Component{
                     </form>
                     <h6>* Please only one person per group join the leaderboard!</h6>
                 </div>
-                <Exit show={this.state.showPop}/>
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
                 {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}
                 {/*    <button className="button"><h3>Begin ESCovid-19</h3></button>*/}

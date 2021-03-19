@@ -9,6 +9,7 @@ import {
   Congrats,
   Escovid,
   Leader,
+  Room,
   Game,
   Footer
 } from "./components";
@@ -46,6 +47,7 @@ class App extends Component {
               <Route path="/xmas/page5" exact component={() => <Game />} />
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
+              <Route path="/rooms" exact component={() => <Room />} />
             </Switch>
           </div>
             <Footer/>

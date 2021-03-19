@@ -14,16 +14,9 @@ class Leader extends Component {
         super(props)
         document.title = "Tumblr 2!"
 
-        this.data19 = [
-            { Team: 'Woba Boba Baby Yodas', Time:115, Hints:5 },
-            { Team: 'READ', Time: 60, Hints:0},
-            { Team: 'Galileo', Time: 90, Hints:0},
-        ];
+        this.data19 = dataesc19;
 
-        this.data20 = [
-            { Team: 'The Numbnuts', Time: 90, Hints:0},
-            { Team: 'GROGU', Time: 90, Hints:1},
-        ];
+        this.data20 = dataesc20;
 
         this.sortProperties = [
             { id: 'Time', sortAscending: true },

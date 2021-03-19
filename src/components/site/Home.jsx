@@ -9,7 +9,6 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 
 function Home() {
-  localStorage.clear()
   return (
       <div>
         <Headroom>
@@ -90,24 +89,19 @@ function Home() {
                 </div>
                 </div>
               </Carousel.Item>
-              <Carousel.Item style={{backgroundColor: "#0fd145"}}>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-comic.gif?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
-                  <div className="sideText">
-                    <h1>Coming Soon!</h1>
-                    <br/>
-                    <p>Wouldn't it be funny if were actually trapped in here?</p>
-                  </div>
-                </div>
-                <div style={{width: "70%", float: "left"}}>
-                  {/*<img*/}
-                  {/*    className="d-block w-100"*/}
-                  {/*    src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/comic12.png?raw=true"*/}
-                  {/*    alt="dropped comic"*/}
-                  {/*/>*/}
-                </div>
-                </div>
-              </Carousel.Item>
+              {/*<Carousel.Item style={{backgroundColor: "#0fd145"}}>*/}
+              {/*  <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-comic.gif?raw=true")', backgroundSize: "cover"}}>*/}
+              {/*  <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>*/}
+              {/*    <div className="sideText">*/}
+              {/*      <h1>Coming Soon!</h1>*/}
+              {/*      <br/>*/}
+              {/*      <p>Wouldn't it be funny if were actually trapped in here?</p>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*  <div style={{width: "70%", float: "left"}}>*/}
+              {/*  </div>*/}
+              {/*  </div>*/}
+              {/*</Carousel.Item>*/}
               <Carousel.Item>
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .7)"}}>
@@ -118,8 +112,8 @@ function Home() {
                   </div>
                 </div>
                 <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
-                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "6vw", padding: "4vw"}}>
-                  <h2>Subscribe to our Email List</h2>
+                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "8vw", padding: "4vw"}}>
+                  <h1>Subscribe to our Email List</h1>
                   <MailchimpSubscribe
                       url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
                       render={({ subscribe, status, message }) => (

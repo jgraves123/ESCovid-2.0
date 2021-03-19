@@ -20,7 +20,7 @@ export default function Exit(showPop) {
 
                 <Modal show={show}>
                     <Modal.Header>
-                        <Modal.Title>Losing Previous Progress</Modal.Title>
+                        <Modal.Title>You have a game in progress!</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div style={{width: "100%", paddingBottom: 5}} align={"center"}> Preceding will clear any games you currently have in progress. Do you want to continue?</div>
