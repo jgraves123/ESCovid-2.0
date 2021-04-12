@@ -3,6 +3,10 @@ import Text from "./text";
 
 export default class Gform extends Component {
 
+    //This page contains two puzzles in the style of a messaging app. Players can switch between conversations and send texts to check answers.
+    
+    //Sets game components for the first stage
+
     constructor(props){
         super(props);
         document.title = "Step 1!";
@@ -13,6 +17,8 @@ export default class Gform extends Component {
             this.props.stage(0)
         }
     }
+
+    //Set basic values and state
 
     sent = "chat-message-right pb-4";
     received = "chat-message-left pb-4";
@@ -27,11 +33,24 @@ export default class Gform extends Component {
         minute: 40,
     };
 
+    //Handles change when someone types
+
     handleChange = (event) => {
         console.log(event);
         this.setState({
             value: event.target.value
         });
+    };
+
+    //Functions called to switch between chat conversations
+    //Ideally should be generalized but ... this works
+
+    changeConvo0 = (event) => {
+        event.preventDefault();
+        this.setState({
+            chat: 0
+        });
+        console.log(this.state.chat)
     };
 
     changeConvo1 = (event) => {
@@ -50,36 +69,38 @@ export default class Gform extends Component {
         console.log(this.state.chat)
     };
 
-    changeConvo0 = (event) => {
-        event.preventDefault();
-        this.setState({
-            chat: 0
-        });
-        console.log(this.state.chat)
-    };
-
+    //Responds to password attempts
 
     check = (event) => {
         event.preventDefault();
         this.temp = ("spaceship" === this.state.value);
-        if (!this.temp) {
+        if ("spaceship" === this.state.value) {
+            window.location.assign("/escovid/tumblr");
+        }
+        else if ("space" === this.state.value | "ship" === this.state.value){
             this.setState({
                 wrong: this.state.chat
             });
         }
         else {
-            window.location.assign("/escovid/tumblr");
+            this.setState({
+                wrong: 3
+            });
         }
         this.setState({
             attempt: this.state.value,
             value: "",
         });
-        setTimeout(this.deletemsg, 15000)
+        setTimeout(this.deletemsg, 10000)
     };
 
+    //Clears message sent by user (called above)
+
     deletemsg = () => {
-        this.setState({wrong: false, attempt: ""})
+        this.setState({wrong: -1, attempt: ""})
     }
+
+    //Renders the conversations / texting app
 
     render(){
         return(
@@ -98,6 +119,7 @@ export default class Gform extends Component {
                                         </div>
                                     </div>
 
+                                    {/* Left side shows conversations available */}
                                     <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo0}>
                                         <div className="d-flex align-items-start">
                                             <img src={this.avatars[0]}
@@ -136,6 +158,8 @@ export default class Gform extends Component {
                                     </a>
                                     <hr className="d-block d-lg-none mt-1 mb-0"/>
                                 </div>
+
+                                {/* Conversations */}
                                 <div className="col-12 col-lg-7 col-xl-9">
                                     <div className="py-2 px-4 border-bottom d-none d-lg-block">
                                         <div className="d-flex align-items-center py-1">
@@ -166,7 +190,7 @@ export default class Gform extends Component {
                                                 <Text myclass={this.received} character="Mission Control" timesent="2:37 am" myavatar={this.avatars[this.state.chat]}>
                                                         Reply with the password to move forward.
                                                 </Text>
-                                                {this.state.wrong===0 ?
+                                                {this.state.wrong===3 ?
                                                     <div>
                                                         <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
                                                             {this.state.attempt}
@@ -176,6 +200,16 @@ export default class Gform extends Component {
                                                     </div>
                                                     : null
                                                 }
+                                                {this.state.wrong===0 ?
+                                                        <div>
+                                                            <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                                {this.state.attempt}
+                                                            </Text>
+                                                            <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                                Partial solution verified. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                        </div>
+                                                        : null
+                                                    }
                                             </div>
                                             <div className="flex-grow-0 py-3 px-4 border-top">
                                                 <div className="input-group">
@@ -199,7 +233,7 @@ export default class Gform extends Component {
                                                 <Text myclass={this.received} character={this.chatNames[1]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
-                                                {this.state.wrong===1 ?
+                                                {this.state.wrong===3 ?
                                                     <div>
                                                         <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
                                                             {this.state.attempt}
@@ -209,6 +243,16 @@ export default class Gform extends Component {
                                                     </div>
                                                     : null
                                                 }
+                                                {this.state.wrong===1 ?
+                                                        <div>
+                                                            <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                                {this.state.attempt}
+                                                            </Text>
+                                                            <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                                Partial solution verified. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                        </div>
+                                                        : null
+                                                    }
                                             </div>
                                             <div className="flex-grow-0 py-3 px-4 border-top">
                                                 <div className="input-group">
@@ -232,7 +276,7 @@ export default class Gform extends Component {
                                                 <Text myclass={this.received} character={this.chatNames[2]} timesent="2:39 am" myavatar={this.avatars[this.state.chat]}>
                                                     You may reply to check your solution.
                                                 </Text>
-                                                {this.state.wrong===2 ?
+                                                {this.state.wrong===3 ?
                                                     <div>
                                                         <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
                                                             {this.state.attempt}
@@ -242,6 +286,16 @@ export default class Gform extends Component {
                                                     </div>
                                                     : null
                                                 }
+                                                {this.state.wrong===2 ?
+                                                        <div>
+                                                            <Text myclass={this.sent} character="You" timesent="3:49 pm" myavatar={this.avatars[3]}>
+                                                                {this.state.attempt}
+                                                            </Text>
+                                                            <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent={this.state.hr + ":" + this.state.minute + "am"} myavatar={this.avatars[this.state.chat]}>
+                                                                Partial solution verified. Deleting records for security in 10 ... 9 ... 8...</Text>
+                                                        </div>
+                                                        : null
+                                                    }
                                                 <div className="flex-grow-0 py-3 px-4 border-top">
                                                     <div className="input-group">
                                                         <input type="text" className="form-control" placeholder="Type your message" onChange={this.handleChange}/>

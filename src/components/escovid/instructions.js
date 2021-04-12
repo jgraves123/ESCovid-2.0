@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Carousel, Alert} from "react-bootstrap";
+import {Jumbotron, Button, Alert} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "../index.css";
 import "../game/posts.css";
@@ -18,6 +18,7 @@ export default class Instructions extends Component{
         check: false,
         showAlert: this.props.name != null,
         showFailure: false,
+        intro: true
     }
 
     handleChange = (event) => {
@@ -39,6 +40,12 @@ export default class Instructions extends Component{
         this.props.gameName("escovid20")
     }
 
+    byebyeIntro = () => {
+        this.setState({
+            intro: false
+        })
+    }
+
     check = (event) => {
         event.preventDefault();
         if (this.state.value === "") {
@@ -55,8 +62,21 @@ export default class Instructions extends Component{
     render(){
         return(
             <div align="center" style={{backgroundColor: "#f2d3d0", paddingBottom: "10px"}}>
+                {this.state.intro===true?
+                    <div align="left" style={{width: "60%", padding: "50px"}}>
+                        <Jumbotron>
+                        <p>If you have received a link to this page, it means you have been selected as a candidate for the Highly Prestigious and Supremely Important Emergency Mission known as ESCovid.
+                            Your analytical and problem-solving skills have impressed us so far (yes, we’ve been watching you).
+                            However, to truly prove yourself worthy, you must collaborate with your mission partner(s) to make your way to the departure location.
+                        </p>
+                        <button className="button" onClick={this.byebyeIntro}>Recieve Instructions</button>
+                        </Jumbotron>
+                    </div>
+                : null}
+                {this.state.intro===false ?
+                <div>
                 <h1>Welcome to ESCovid</h1>
-                <h2>A space-and-math-themed escape game!</h2>
+                <h3>A space-and-math-themed escape game!</h3>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Overview</h3>
                     <div className = "para">
@@ -81,23 +101,23 @@ export default class Instructions extends Component{
                         <p><strong>Urgent Questions: </strong>Email us at mlagerq@emory.edu and john_graves@brown.edu.</p>
                     </div>
                 </div>
-                <div className="content-section container" align="left" style={{width: "60%"}}>
+                {/* <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>The Story...</h3>
                     <p>If you have received a link to this page, it means you have been selected as a candidate for the Highly Prestigious and Supremely Important Emergency Mission known as ESCovid.
                         Your analytical and problem-solving skills have impressed us so far (yes, we’ve been watching you).
                         However, to truly prove yourself worthy, you must collaborate with your mission partner(s) to make your way to the departure location.
                     </p>
-                </div>
+                </div> */}
                 <div className="content-section container" align="left" style={{width: "60%"}}>
-                    <h3>Your Instructions...</h3>
-                    <ul>
-                        <li>Read EVERYTHING. Click around and explore every page. Do not use outside sources (aka Google) unless we denote that you may. You will not need to look at the source code and may spoil the game if you do (you know who you are).</li>
-                        <li>Something about the timer?</li>
-                        <li>Hints can be found in the top right corner. You will be able to choose which puzzle you'd like a hint for, and these will be tracked, so only use the ones you need!
-                        </li>
-                        <li>If you are really stuck, answers can be found at the bottom of <a href={"https://docs.google.com/document/d/1PuleKLz8PV2NoXICFf5su6HzEAWOWaHcazZ_P-CRQl0/edit?usp=sharing"}>this</a> document (in normal text and may include photos, so only scroll as far as you need to).</li>
-                    </ul>
-                    <strong>Good luck!</strong>
+                    <h3>More instructions...</h3>
+                    <p style={{paddingLeft: "25px"}}>
+                        <p>Read EVERYTHING. Click around and explore every page. Do not use outside sources (aka Google) unless we denote that you may. You will not need to look at the source code and may spoil the game if you do (you know who you are).</p>
+                        <p>Something about the timer?</p>
+                        <p>Hints can be found in the top right corner. You will be able to choose which puzzle you'd like a hint for, and these will be tracked, so only use the ones you need!
+                        </p>
+                        <p>If you are really stuck, answers can be found at the bottom of <a href={"https://docs.google.com/document/d/1PuleKLz8PV2NoXICFf5su6HzEAWOWaHcazZ_P-CRQl0/edit?usp=sharing"}>this</a> document (in normal text and may include photos, so only scroll as far as you need to).</p>
+                    </p>
+                    <p><strong>Good luck!</strong></p>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
                 <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
@@ -118,6 +138,8 @@ export default class Instructions extends Component{
                     </form>
                     <h6>* Please only one person per group join the leaderboard!</h6>
                 </div>
+                </div>
+                : null}
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
                 {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}
                 {/*    <button className="button"><h3>Begin ESCovid-19</h3></button>*/}
