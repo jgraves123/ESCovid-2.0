@@ -95,7 +95,7 @@ export default class Page2 extends Component {
 
 
     check_slides = () => {
-        this.temp = (this.state.slide1 === 4) && (this.state.slide2 === 2) && (this.state.slide3 === 6) && (this.state.slide4 === 7) && (this.state.slide5 === 3) && (this.state.slide6 === 8) && (this.state.slide7 === 1) && (this.state.slide8 === 5)
+        this.temp = (this.state.slide1 === 3) && (this.state.slide2 === 1) && (this.state.slide3 === 5) && (this.state.slide4 === 6) && (this.state.slide5 === 2) && (this.state.slide6 === 7) && (this.state.slide7 === 0) && (this.state.slide8 === 4)
         if (!this.temp) {
             alert("Incorrect Code")
         }

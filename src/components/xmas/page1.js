@@ -38,7 +38,7 @@ export default class Page1 extends Component {
     };
 
     check_part1 = () => {
-        this.temp = (this.state.cir1 === 6) && (this.state.cir2 === 4) && (this.state.cir3 === 2) && (this.state.cir4 === 1)
+        this.temp = (this.state.cir1 === 2) && (this.state.cir2 === 7) && (this.state.cir3 === 6) && (this.state.cir4 === 0)
         if (!this.temp) {
             alert("Incorrect Code")
         }
@@ -97,9 +97,9 @@ export default class Page1 extends Component {
                                 <button className="button" onClick={this.check_part1}><h3>Check</h3></button>
                                 </div>
                             </>
-                            : <Link to="/anon/office">
+                            : <div style={{paddingBottom: "20px"}}><Link to="/anon/office">
                                 <button className="button"><h3>Continue</h3></button>
-                            </Link> }
+                                </Link></div> }
                             </div>}
                     </div>
 

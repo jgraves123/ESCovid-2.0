@@ -103,7 +103,7 @@ export default class PhonePopUp extends Component {
                     <span className="close" onClick={this.handleClick}>
                         &times;
                     </span>
-                    <h2 align="center">Hello</h2>
+                    <h2 align="center">iPhone</h2>
                     {this.state.correct_pass ?
                         <div>
                             <div className="card" >
@@ -267,7 +267,7 @@ export default class PhonePopUp extends Component {
                         <div className={"inner"}>
 
                             <form id="path-answer" onSubmit={this.check_email_pass}>
-                                <h3>Log in</h3>
+                                <h3>Phone Number</h3>
                                 <div className={"form-group"}>
                                     <input type="text" ref="val"
                                            placeholder={"Enter Password"}

@@ -7,10 +7,6 @@ export default class CompPopUp extends Component {
         password: "",
         user: "SIBLING_NAME",
         correct_pass: false,
-        password_hint: false,
-        email: "SIBLING@email.com",
-        email_password: "",
-        correct_email: false,
     };
 
     handleClick = () => {
@@ -29,23 +25,7 @@ export default class CompPopUp extends Component {
         });
     }
 
-    passwordHint = () => {
-        this.setState({
-            password_hint: true
-        });
-    }
 
-    handleChangeEmailPass = (event) => {
-        this.setState({
-            email_password: event.target.value
-        });
-    }
-
-    handleChangeEmail = (event) => {
-        this.setState({
-            email: event.target.value
-        });
-    }
 
     check_pass = (event) => {
         event.preventDefault();
@@ -58,16 +38,7 @@ export default class CompPopUp extends Component {
         });
     }
 
-    check_email_pass = (event) => {
-        event.preventDefault();
-        this.temp = this.state.email_password === "524" && (this.state.email === "SIBLING@email.com")
-        if (!this.temp) {
-            alert("Incorrect Code")
-        }
-        this.setState({
-            correct_email: this.temp,
-        });
-    }
+
 
     val = (1 - (parseFloat(this.props.width) / 100.0))/2
 
@@ -116,8 +87,6 @@ export default class CompPopUp extends Component {
                             padding: "0px",
                             backgroundColor: "pink"
                         }}>
-                        {this.state.correct_email ?
-                            // <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>
                             <div className="inner">
                                 <h2>Contact List</h2>
                                 <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
@@ -128,39 +97,6 @@ export default class CompPopUp extends Component {
                                         </div>
                                     )}} data={contacts} plugins={[plugins.LocalPlugin]} useGriddleStyles={"false"} enableInfiniteScroll={true}/>
                             </div>
-                            :
-                                    <div className={"inner"}>
-
-                                        <form id="path-answer" onSubmit={this.check_email_pass}>
-                                            <h3>Log in</h3>
-                                            <div className={"form-group"}>
-                                                <label>Email</label>
-                                                <input type="text" ref="val"
-                                                       value={this.state.email}
-                                                       onChange={this.handleChangeEmail}
-                                                       style={{width: "100%"}}/>
-                                            </div>
-                                            <div className={"form-group"}>
-                                                <label width={"100%"}>Password</label>
-                                                <input type="text" ref="val"
-                                                       placeholder={"Enter Password"}
-                                                       onChange={this.handleChangeEmailPass}
-                                                       style={{width: "100%"}}/>
-                                            </div>
-                                            <input type="submit" value="Submit"
-                                                   style={{width: "100%"}}/>
-                                            {this.state.password_hint ?
-                                                <p>How many paths are there?</p> :
-                                                <p className="forgot-password text-right"
-                                                   onClick={this.passwordHint}>
-                                                    Forgot password?
-                                                </p>
-                                            }
-                                        </form>
-
-                                    </div>
-
-                        }
 
                         </div>
 
