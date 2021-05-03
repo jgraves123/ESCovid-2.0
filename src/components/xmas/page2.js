@@ -12,13 +12,9 @@ import PhonePopUp from "./PhonePopUp";
 
 export default class Page2 extends Component {
     state = {
-        map_open: false,
         cs_pass_open: false,
-        map_math_open: false,
         comp_open: false,
-        cell_open: false,
         pics_open: false,
-        paths_open: false,
         map: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/map.jpeg?raw=true",
         cs_pass: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/password.png?raw=true",
         map_math: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/map-math.png?raw=true",
@@ -45,23 +41,12 @@ export default class Page2 extends Component {
     };
 
 
-    mapPop = () => {
-        this.setState({
-            map_open: !this.state.map_open
-        });
-    };
-
     csPassPop = () => {
         this.setState({
             cs_pass_open: !this.state.cs_pass_open
         });
     };
 
-    mapMathPop = () => {
-        this.setState({
-            map_math_open: !this.state.map_math_open
-        });
-    };
 
     picsPop = () => {
         this.setState({
@@ -80,19 +65,6 @@ export default class Page2 extends Component {
             pics_open: !this.state.pics_open
         });
     };
-
-    cellPop = () => {
-        this.setState({
-            cell_open: !this.state.cell_open
-        });
-    };
-
-    pathsPop = () => {
-        this.setState({
-            paths_open: !this.state.paths_open
-        });
-    };
-
 
     check_slides = () => {
         this.temp = (this.state.slide1 === 3) && (this.state.slide2 === 1) && (this.state.slide3 === 5) && (this.state.slide4 === 6) && (this.state.slide5 === 2) && (this.state.slide6 === 7) && (this.state.slide7 === 0) && (this.state.slide8 === 4)
@@ -166,12 +138,8 @@ export default class Page2 extends Component {
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
                     <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/office.png?raw=true"/>
-                    <rect x="1450" y="35" width="250" height="70" className="clickable-done" onClick={this.mapMathPop}/>
-                    <rect x="2630" y="0" width="370" height="270" className="clickable-done" onClick={this.mapPop}/>
                     <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.picsPop}/>
                     <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.csPassPop}/>
-                    <polygon points="1740,1425 1940,1348 2010,1430 1825,1520" className="clickable-done" onClick={this.pathsPop}/>
-                    <polygon points="2040,1705 2195,1588 2272,1642 2130,1770" className="clickable-done" onClick={this.cellPop}/>
                     <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.compPop}/>
 
                 </svg>
@@ -212,7 +180,7 @@ export default class Page2 extends Component {
                                 <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                                 </div>
-                                : <Link to="/anon/home">
+                                : <Link to="/anon/office">
                                     <button className="button"><h3>Continue</h3></button>
                                 </Link>}
                         </>

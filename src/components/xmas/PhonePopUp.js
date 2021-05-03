@@ -270,7 +270,7 @@ export default class PhonePopUp extends Component {
                                 <h3>Phone Number</h3>
                                 <div className={"form-group"}>
                                     <input type="text" ref="val"
-                                           placeholder={"Enter Password"}
+                                           placeholder={"Enter Number"}
                                            onChange={this.handleChangeEmailPass}
                                            style={{width: "100%"}}/>
                                 </div>

@@ -97,7 +97,7 @@ export default class Page1 extends Component {
                                 <button className="button" onClick={this.check_part1}><h3>Check</h3></button>
                                 </div>
                             </>
-                            : <div style={{paddingBottom: "20px"}}><Link to="/anon/office">
+                            : <div style={{paddingBottom: "20px"}}><Link to="/anon/cubicle">
                                 <button className="button"><h3>Continue</h3></button>
                                 </Link></div> }
                             </div>}

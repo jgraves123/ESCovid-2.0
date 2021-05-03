@@ -148,7 +148,8 @@ class Game extends Component {
                         <Route path="/anon" exact component={() => <Instructions2 setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
                         <Route path="/anon/page1" exact component={() => <Page1 counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/anon/office" exact component={() => <Page2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/anon/cubicle" exact component={() => <Page2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/anon/office" exact component={() => <Page3 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/anon/home" exact
                                component={() => <Page3 curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
                         <Route path="/anon/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>

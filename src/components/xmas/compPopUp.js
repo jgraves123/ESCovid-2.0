@@ -5,7 +5,7 @@ import {contacts} from "./contacts";
 export default class CompPopUp extends Component {
     state = {
         password: "",
-        user: "SIBLING_NAME",
+        user: "Julia",
         correct_pass: false,
     };
 
@@ -29,7 +29,7 @@ export default class CompPopUp extends Component {
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = (("FAMILY" === this.state.password) || ("family" === this.state.password) || ("Family" === this.state.password)) && (this.state.user === "SIBLING_NAME")
+        this.temp = (("FAMILY" === this.state.password) || ("family" === this.state.password) || ("Family" === this.state.password)) && (this.state.user === "Julia")
         if (!this.temp) {
             alert("Incorrect Code")
         }
