@@ -52,18 +52,18 @@ export default class Tumblr1 extends Component {
                     <Overlay>Video from your fearless leader</Overlay>
                     <div align={"center"}>
                     <div align={"center"} className={"middle"}>
+                        {this.props.game_name === "escovid19" ?
+                            <Post title={""} caption={"Someone seems to have left a few clues behind"}>
+                                <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
+                            </Post> :
+                                <img width="100%" style={{padding: "20px"}} src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
+                        }
                         <form id="path-answer" onSubmit={this.check}>
                             <label>
                                 <input type="text" placeholder="Password" onChange={this.handleChange} />
                             </label>
                             <input type="submit" value="Submit"/>
                         </form>
-                        {this.props.game_name === "escovid19" ?
-                            <Post title={""} caption={"Someone seems to have left a few clues behind"}>
-                                <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
-                            </Post> :
-                                <img width="100%" style={{padding: "50px"}} src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clue20.png?raw=true"/>
-                        }
                         <Post title={""} caption={"Promising news from one of our top researchers..."}>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gliese-intro.png?raw=true"/>
                         </Post>
@@ -88,7 +88,7 @@ export default class Tumblr1 extends Component {
                                     <p style={{color: "white"}}>What has no beginning or end, never eats, but is always growing?</p>
                                 </Post>
                                 <Post title={""} caption={"Astronauts must not only be physically tough, but mentally sharp, too. Think you’re up to it?"}>
-                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.JPG?raw=true"/>
+                                    <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/mod.png?raw=true"/>
                                 </Post>
                             </div> :
                             null}

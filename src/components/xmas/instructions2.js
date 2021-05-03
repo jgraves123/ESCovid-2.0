@@ -36,7 +36,7 @@ export default class Instructions2 extends Component{
 
     changeName = () => {
         console.log("i didn't press it");
-        this.props.gameName("escovid20")
+        this.props.gameName("anonymous")
     }
 
     check = (event) => {
@@ -100,8 +100,8 @@ export default class Instructions2 extends Component{
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
                 <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
-                    <Link to="/xmas/page1">
-                        <button className="button"><h3>Begin XMAS</h3></button>
+                    <Link to="/anon/page1">
+                        <button className="button" onClick={this.changeName}><h3>Begin Anonymous Connections</h3></button>
                     </Link></Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>

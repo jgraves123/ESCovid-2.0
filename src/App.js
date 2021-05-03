@@ -39,12 +39,11 @@ class App extends Component {
               <Route path="/escovid/trappist" exact component={() => <Game />} />
               <Route path="/escovid/gliese" exact component={() => <Game />} />
               <Route path="/escovid/leaderboard" exact component={() => <Game />} />
-              <Route path="/xmas" exact component={() => <Game />} />
-              <Route path="/xmas/page1" exact component={() => <Game />} />
-              <Route path="/xmas/page2" exact component={() => <Game />} />
-              <Route path="/xmas/page3" exact component={() => <Game />} />
-              <Route path="/xmas/page4" exact component={() => <Game />} />
-              <Route path="/xmas/page5" exact component={() => <Game />} />
+              <Route path="/anon" exact component={() => <Game />} />
+              <Route path="/anon/page1" exact component={() => <Game />} />
+              <Route path="/anon/office" exact component={() => <Game />} />
+              <Route path="/anon/home" exact component={() => <Game />} />
+              <Route path="/anon/leaderboard" exact component={() => <Game />} />
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
               <Route path="/rooms" exact component={() => <Room />} />

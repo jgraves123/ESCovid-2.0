@@ -212,7 +212,7 @@ export default class Page2 extends Component {
                                 <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                                 </div>
-                                : <Link to="/xmas/page3">
+                                : <Link to="/anon/home">
                                     <button className="button"><h3>Continue</h3></button>
                                 </Link>}
                         </>

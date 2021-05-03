@@ -59,7 +59,7 @@ togglePopB = () => {
           <span className="close" onClick={this.handleClick}>
             &times;
           </span>
-                    <h2 align="center" className="greytext">Gliese 876</h2>
+                    <h1 align="center" className="greytext">Gliese 876</h1>
                     <p align="center" className="popUpP">Gliese 876 is one of the closest known stars to possess a planetary system. Located 15 lightyears away, it has at least four orbiting planets, two of which are in the habitable zone.</p>
                     <div className="scaling-svg-container" style={{paddingBottom: "33%"}}>
                         <svg className="scaling-svg" viewBox="0 0 8830 2884"> {/* Needs auto
@@ -74,7 +74,7 @@ togglePopB = () => {
                         </svg>
                     </div>
                     <div>
-                        <h3 align="center">{this.state.text}</h3>
+                        <p align="center">{this.state.text}</p>
                     </div>
                 </div>
             </div>

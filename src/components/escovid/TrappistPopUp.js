@@ -77,7 +77,7 @@ export default class TrappistPopUp extends Component {
           <span className="close" onClick={this.handleClick}>
             &times;
           </span>
-                    <h2 align="center" className="greytext">TRAPPIST-1</h2>
+                    <h1 align="center" className="greytext">TRAPPIST-1</h1>
                     <p align="center" className="popUpP">TRAPPIST-1 is a star located  40 lightyears away with seven terrestrial planets (composed primarily of silicate rocks or metals), which is the most of any known planetary system. Three of these planets are in the habitable zone with a fourth right on the edge.</p>
                     <div className="scaling-svg-container" style={{paddingBottom: "38%"}}>
                         <svg className="scaling-svg"viewBox="0 0 1190 554"> {/* Needs
@@ -96,7 +96,7 @@ export default class TrappistPopUp extends Component {
                         </svg>
                     </div>
                     <div>
-                        <h3 align="center">{this.state.text}</h3>
+                        <p align="center">{this.state.text}</p>
                     </div>
                 </div>
             </div>

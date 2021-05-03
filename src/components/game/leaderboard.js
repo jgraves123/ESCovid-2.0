@@ -3,7 +3,7 @@ import "../index.css";
 import "./leaderboard.css";
 import Griddle, {plugins} from 'griddle-react';
 import emailjs from "emailjs-com";
-import {dataesc19, dataesc20} from "../site/leaderdata";
+import {dataesc19, dataesc20, dataanon} from "../site/leaderdata";
 
 //npm install --save griddle-react, http://griddlegriddle.github.io/Griddle/
 
@@ -14,22 +14,28 @@ class Leader extends Component {
         super(props)
         document.title = "Tumblr 2!"
 
-        this.data19 = dataesc19;
-
-        this.data20 = dataesc20;
-
         this.sortProperties = [
             { id: 'Time', sortAscending: true },
             { id: 'Hints', sortAscending: true }
         ];
 
+        this.data = [];
+
+        const sec =  parseInt(localStorage.getItem('seconds'));
+        const min =  parseInt(localStorage.getItem('minutes'));
+        const hrs = parseInt(localStorage.getItem('hours'));
+
         if (this.props.track) {
-            const sec =  parseInt(localStorage.getItem('seconds'));
-            const min =  parseInt(localStorage.getItem('minutes'));
-            const hrs = parseInt(localStorage.getItem('hours'));
 
             const templateId = 'template_2ggiung';
-            const templateParams = {team_name: this.props.team, game_name: this.props.game, hours: hrs, minutes: min, seconds: sec, hints: this.props.hints}
+            const templateParams = {
+                team_name: this.props.team,
+                game_name: this.props.game,
+                hours: hrs,
+                minutes: min,
+                seconds: sec,
+                hints: this.props.hints
+            }
             emailjs.init("user_oJTXXccIGB7j0VtXCQBjm");
             emailjs.send(
                 'default_service', templateId, templateParams).then(res => {
@@ -38,13 +44,20 @@ class Leader extends Component {
                 // Handle errors here however you like, or use a React error boundary
                 .catch(err => console.error('Oh well, you failed. Here some thoughts on the error' +
                     ' that occured:', err))
+        }
+        if (this.props.game === "escovid19") {
+            this.data = dataesc19;
+            this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
+        }
 
-            if (this.props.game === "escovid19") {
-                this.data19.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
-            }
-            if (this.props.game === "escovid20") {
-                this.data20.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
-            }
+        if (this.props.game === "escovid20") {
+            this.data = dataesc20;
+            this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
+        }
+
+        if (this.props.game === "anonymous") {
+            this.data = dataanon;
+            this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
         }
 
 
@@ -59,27 +72,16 @@ class Leader extends Component {
     render() {
         return(
             <section>
-                <div className="container" align={"center"} style={{width: "70%"}}>
-                    <h1>Leaderboards</h1>
-                    <div style={{float: "left"}}>
-                    <h2>ESCovid-19 Leaderboard</h2>
+                <div className="container" align={"center"} style={{margin: "20px"}}>
+                    <h1>Leaderboard</h1>
+                    <div>
                     <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
                             <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
                                 <Filter/>
                                 <Table />
                                 <Pagination/>
                             </div>
-                        )}} data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
-                    </div>
-                    <div style={{float: "right"}}>
-                    <h2>ESCovid-20 Leaderboard</h2>
-                    <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
-                            <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
-                                <Filter/>
-                                <Table />
-                                <Pagination/>
-                            </div>
-                        )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
+                        )}} data={this.data.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={this.sortProperties}/>
                     </div>
                 </div>
             </section>

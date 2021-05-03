@@ -11,6 +11,9 @@ export const dataesc20 = [
     { Team: 'GROGU', Time: 90, Hints:1},
 ];
 
+export const dataanon = [
+];
+
 export const sortProperties = [
     { id: 'Time', sortAscending: true },
     { id: 'Hints', sortAscending: true }

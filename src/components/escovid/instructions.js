@@ -8,7 +8,7 @@ import Exit from "../game/exit";
 export default class Instructions extends Component{
 
     componentDidMount() {
-        if (localStorage.getItem("seconds") !== null) {
+        if (localStorage.getItem("team_name") !== null) {
             window.location.assign("/rooms");
         }
     }
@@ -18,7 +18,7 @@ export default class Instructions extends Component{
         check: false,
         showAlert: this.props.name != null,
         showFailure: false,
-        intro: true
+        intro: this.props.name == null,
     }
 
     handleChange = (event) => {
@@ -54,7 +54,6 @@ export default class Instructions extends Component{
             });
         }
         else {
-            this.setState({showPop: false})
             this.props.setName(this.state.value, this.state.check)
         }
     }

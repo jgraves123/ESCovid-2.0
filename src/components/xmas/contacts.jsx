@@ -438,7 +438,7 @@ export const contacts = [
         "Phone": "(525) 556-4209"
     },
     {
-        "Name": "Caleb Alston",
+        "Name": "Benjamin Alston",
         "Phone": "(237) 709-6720"
     },
     {

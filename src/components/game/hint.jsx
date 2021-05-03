@@ -39,5 +39,7 @@ export const hints = {"escovid19":
                 " 2nd letter in \"pie\"! The letters will need to be rearranged to form a space" +
                 " word!"]},
             2: {},
-            3: {}}
+            3: {}},
+    "anonymous":
+        {}
 };
