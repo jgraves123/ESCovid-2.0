@@ -20,10 +20,9 @@ function Room() {
                     <Card.Body>
                         <Card.Title>ESCovid</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            Covid-19 has sent the world into a tailspin. Can you help save it?
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" href={"/escovid"}>Begin</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -33,10 +32,9 @@ function Room() {
                     <Card.Body>
                         <Card.Title>Anonymous Connections</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            One strange email and encrypted attachment later, and you are on the hunt for answers!
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" href={"/anon"}>Begin</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -46,10 +44,9 @@ function Room() {
                     <Card.Body>
                         <Card.Title>Dreamscape</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            Coming Soon!
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary">Be on the lookout!</Button>
                     </Card.Body>
                 </Card>
             </div>

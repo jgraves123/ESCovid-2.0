@@ -2,7 +2,7 @@ import React from "react";
 import Leader from "../game/leaderboard";
 import {Carousel, Navbar, Image, Container, Row, Col, Accordion, Card, Button} from 'react-bootstrap';
 import Griddle, {plugins} from "griddle-react";
-import {dataesc19, dataesc20, sortProperties} from "./leaderdata";
+import {dataanon, dataesc19, dataesc20, sortProperties} from "./leaderdata";
 import Headroom from "react-headroom";
 import {Navigation} from "../index";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
@@ -139,7 +139,7 @@ function Home() {
         <h4>+Hover to read more+</h4>
       </div>
       <div align='left' style={{padding: "2vw"}} >
-        <h3>A sentence or two overview.</h3>
+        {/*<h3>A sentence or two overview.</h3>*/}
         <Row style={{padding: "2vw 0"}}>
           <Col xs={6}>
             <Image src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/password.gif?raw=true" thumbnail />
@@ -207,7 +207,7 @@ function Home() {
                         <Table />
                         <Pagination/>
                       </div>
-                  )}}  data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                  )}}  data={dataesc19} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
               <Carousel.Item align='center'>
                 <h2>ESCovid-20 Leaderboard</h2>
@@ -217,36 +217,20 @@ function Home() {
                         <Table />
                         <Pagination/>
                       </div>
-                  )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                  )}} data={dataesc20} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
               <Carousel.Item align='center'>
-                <h2>Imaginary other Leaderboard</h2>
+                <h2>Anonymous Connections</h2>
                 <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
                       <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
                         <Filter/>
                         <Table />
                         <Pagination/>
                       </div>
-                  )}} data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
+                  )}} data={dataanon} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>
               </Carousel.Item>
             </Carousel>
             </div>
-            {/*<div style={{margin: "0 2vw"}}>*/}
-            {/*  <Row align='center'>*/}
-            {/*    <Col sm>*/}
-            {/*      <h2>ESCovid-19 Leaderboard</h2>*/}
-            {/*      <Griddle data={dataesc19.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
-            {/*    </Col>*/}
-            {/*    <Col sm>*/}
-            {/*      <h2>ESCovid-20 Leaderboard</h2>*/}
-            {/*      <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
-            {/*    </Col>*/}
-            {/*    <Col sm>*/}
-            {/*      <h2>Imaginary other Leaderboard</h2>*/}
-            {/*      <Griddle data={dataesc20.slice(0,5)} plugins={[plugins.LocalPlugin]} sortProperties={sortProperties} style={{padding: "2vw"}}/>*/}
-            {/*    </Col>*/}
-            {/*  </Row>*/}
-            {/*</div>*/}
           </div>
         </div>
       {/*<Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>*/}

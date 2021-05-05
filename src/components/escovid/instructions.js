@@ -8,7 +8,7 @@ import Exit from "../game/exit";
 export default class Instructions extends Component{
 
     componentDidMount() {
-        if (localStorage.getItem("team_name") !== null) {
+        if (localStorage.getItem("seconds") !== null) {
             window.location.assign("/rooms");
         }
     }
@@ -60,7 +60,7 @@ export default class Instructions extends Component{
 
     render(){
         return(
-            <div align="center" style={{backgroundColor: "#f2d3d0", paddingBottom: "10px"}}>
+            <div align="center" style={{backgroundColor: "#fcdf86", paddingBottom: "10px"}}>
                 {this.state.intro===true?
                     <div align="left" style={{width: "60%", padding: "50px"}}>
                         <Jumbotron>
