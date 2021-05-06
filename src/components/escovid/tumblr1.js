@@ -53,8 +53,8 @@ export default class Tumblr1 extends Component {
                     {/*</header>*/}
                     <div align={"center"}>
                         <div style={{margin: "30px"}}>
-                            <ReactPlayer playing url={video} controls={true} style={{padding: "10px", backgroundColor: "#aea9f5"}}/>
-                            <div style={{backgroundColor: "#aea9f5", width: "640px", padding: "10px"}}>
+                            <ReactPlayer playing url={video} controls={true} style={{padding: "10px", backgroundColor: "#fd0e35"}}/>
+                            <div style={{backgroundColor: "#fd0e35", width: "640px", padding: "10px"}}>
                                 <h5>Subj: URGENT UPDATE -- From: MSNCTRL</h5>
                             </div>
                         </div>

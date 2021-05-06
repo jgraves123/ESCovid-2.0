@@ -54,6 +54,7 @@ export default class Tumblr2 extends Component{
                 </form>
                 <div style={{padding: "20px"}}>
                 <ReactAudioPlayer src={audio} controls/>
+                <li>If you cannot hear the audio, click <a href={'https://docs.google.com/document/d/1XlJ2Vn84SUlez2LFZd2pQSAU7JMGhH_zTBjskACm2WQ/edit?usp=sharing'}>here</a> for the script (otherwise, no cheating!!)</li>
                 </div>
                 <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/stargridpuzzle.jpg?raw=true"/>
@@ -64,7 +65,7 @@ export default class Tumblr2 extends Component{
                 <Post title={""} caption={""}>
                     <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/constellations.jpg?raw=true"/>
                 </Post>
-            </div>
+                </div>
             </div>
             </body>
         )
