@@ -3,6 +3,8 @@ import "../index.css";
 import "../game/posts.css";
 import {Post} from "../game";
 import Overlay from "../game/overlay";
+import ReactPlayer from 'react-player';
+import video from "./IMG-1332.mp4";
 import Exit from "../game/exit";
 import {Prompt} from 'react-router'
 
@@ -49,9 +51,17 @@ export default class Tumblr1 extends Component {
                     {/*<header style={{overflow: "hidden", zIndex: 0}}>*/}
                     {/*    <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>*/}
                     {/*</header>*/}
-                    <Overlay>Video from your fearless leader</Overlay>
                     <div align={"center"}>
-                    <div align={"center"} className={"middle"}>
+                        <div style={{margin: "30px"}}>
+                            <ReactPlayer playing url={video} controls={true} style={{padding: "10px", backgroundColor: "#aea9f5"}}/>
+                            <div style={{backgroundColor: "#aea9f5", width: "640px", padding: "10px"}}>
+                                <h5>Subj: URGENT UPDATE -- From: MSNCTRL</h5>
+                            </div>
+                        </div>
+                        <h1>|</h1>
+                        <h1>|</h1>
+                        <h1>V</h1>
+                        <div align={"center"} className={"middle"}>
                         {this.props.game_name === "escovid19" ?
                             <Post title={""} caption={"Someone seems to have left a few clues behind"}>
                                 <img width="100%"src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/clues_esc19.jpg?raw=true"/>
