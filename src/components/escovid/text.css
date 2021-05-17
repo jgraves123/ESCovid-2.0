@@ -1,0 +1,11 @@
+
+.sent .message {
+    background-color: #167bff !important;
+    color: white !important;
+}
+
+.small-gap {
+    padding-bottom: 0 !important;
+    margin-bottom: 4px !important;
+}
+

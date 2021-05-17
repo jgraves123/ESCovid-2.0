@@ -70,7 +70,7 @@ export const hints = {
             },
             3: {"Not a puzzle!": ["You've already escaped - but now you have to choose where you want to escape to. Click around to learn more about your options."]},
         },
-    "anonymous": {
+    "anon": {
         0: {}
     }
 };

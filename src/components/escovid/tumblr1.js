@@ -13,8 +13,10 @@ let rand = () => Math.floor(Math.random() * 20) - 10;
 export default class Tumblr1 extends Component {
 
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
+        document.title = "ESCovid";
+        console.log(this.props.curr_stage);
         if (this.props.curr_stage != 1) {
+            console.log("jdklfjal;ksdfasdjk;lfdsfjkl")
             this.props.stage(1)
         }
     }

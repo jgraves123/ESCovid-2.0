@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TimerNav from "./timerNav";
 import Leader from "./leaderboard";
 import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "../escovid";
-import {Page1, Page2, Page3, Instructions2} from "../xmas";
+import {Page1, Page2, Page3, Page4, Page5, Instructions2} from "../xmas";
 import Headroom from 'react-headroom';
 import {Navigation} from "../index";
 
@@ -30,7 +30,7 @@ function getState(props) {
     let track = localStorage.getItem('track');
 
     if (game_name == null) {
-        game_name = "escovid19"//props.game_name;
+        game_name = props.game_name;
     }
     if (hints == null) {
         hints = 0;
@@ -39,9 +39,9 @@ function getState(props) {
         stage = 0;
     }
     if (total_stages == null) {
-        total_stages = 3;//props.total_stages;
+        total_stages = props.total_stages;
     }
-    if (timing == "true") {
+    if (timing === "true") {
         timing = true;
     } else {
         timing = false;
@@ -49,10 +49,9 @@ function getState(props) {
     if (used_hints == null) {
         used_hints = [];
     } else {
-        console.log(used_hints)
         used_hints = JSON.parse(used_hints)
     }
-    if (track == "true") {
+    if (track === "true") {
         track = true;
     } else {
         track = false;
@@ -92,11 +91,9 @@ class Game extends Component {
         }
     }
 
-    set_game_name = (name) => {
-        if (this.state.game_name !== name) {
-            this.setState({game_name: name});
-            localStorage.setItem('game_name', name);
-        }
+    set_game_name = (name, stages) => {
+        localStorage.setItem('game_name', name);
+        localStorage.setItem('total_stages', stages);
         console.log(this.state.team_name);
     }
 
@@ -111,6 +108,7 @@ class Game extends Component {
     }
 
     update_stage(stage) {
+        console.log(stage);
         this.state.stage = stage;
         // this.setState({stage: stage});
         localStorage.setItem('stage', stage)
@@ -124,6 +122,8 @@ class Game extends Component {
 
 
     render() {
+        console.log(this.saved)
+        console.log(this.state.game_name)
         return (
             <div className="App">
                 <Router>
@@ -146,12 +146,13 @@ class Game extends Component {
                         <Route path="/escovid/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
 
                         <Route path="/anon" exact component={() => <Instructions2 setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
-                        {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
                         <Route path="/anon/page1" exact component={() => <Page1 counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/anon/cubicle" exact component={() => <Page2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/anon/office" exact component={() => <Page3 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/anon/home" exact
-                               component={() => <Page3 curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
+                        <Route path="/anon/backhome" exact
+                               component={() => <Page4 curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
+                        <Route path="/anon/onward" exact
+                               component={() => <Page5 />}/>
                         <Route path="/anon/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
 
                     </Switch>

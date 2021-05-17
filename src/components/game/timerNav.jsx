@@ -74,6 +74,10 @@ function DefaultPop(props) {
 
 class TimerNav extends Component {
 
+    componentDidMount() {
+        console.log(this.props.game);
+    }
+
     time = getTime();
 
 
@@ -144,7 +148,7 @@ class TimerNav extends Component {
                     Hints Used: {this.props.num_hint}
                 </div>
                 <Nav>
-                    <NavDropdown title="Hint" menuAlign="right" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
+                    <NavDropdown id="hint-nav" title="Hint" menuAlign="right" drop={'left'} onClick={this.showDropdown} show={this.state.showDrop}>
                         <DefaultDropdown closeMenu={this.closeMenu} hints={this.state.hint[this.props.game][this.props.stage]} take_hint={this.props.use_hint}/>
                     </NavDropdown>
                 </Nav>

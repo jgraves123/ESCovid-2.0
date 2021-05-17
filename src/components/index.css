@@ -229,7 +229,6 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .rocket {
@@ -258,7 +257,28 @@ button:hover {
   cursor: pointer;
 }
 
+.spaced {
+  margin: 10px;
+  width: 40%;
+}
+
 
 .timer .navbar-light .navbar-nav .nav-link {
   color: #0fd145;
 }
+
+.navigation {
+  z-index: 1000 !important;
+}
+
+.headroom {
+  z-index: 100 !important;
+}
+
+/*.dropdown-menu {*/
+/*  z-index: 1000 !important;*/
+/*}*/
+
+/*.dropdown-menu {*/
+/*  z-index: 1000 !important;*/
+/*}*/

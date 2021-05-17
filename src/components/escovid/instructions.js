@@ -35,9 +35,12 @@ export default class Instructions extends Component{
         })
     }
 
-    changeName = () => {
-        console.log("i didn't press it");
-        this.props.gameName("escovid20")
+    changeName1 = () => {
+        this.props.gameName("escovid19", 3)
+    }
+
+    changeName2 = () => {
+        this.props.gameName("escovid20", 3)
     }
 
     byebyeIntro = () => {
@@ -111,20 +114,20 @@ export default class Instructions extends Component{
                     <h3>More instructions...</h3>
                     <p style={{paddingLeft: "25px"}}>
                         <p>Read EVERYTHING. Click around and explore every page. Do not use outside sources (aka Google) unless we denote that you may. You will not need to look at the source code and may spoil the game if you do (you know who you are).</p>
-                        <p>Something about the timer?</p>
-                        <p>Hints can be found in the top right corner. You will be able to choose which puzzle you'd like a hint for, and these will be tracked, so only use the ones you need!
-                        </p>
-                        <p>If you are really stuck, answers can be found at the bottom of <a href={"https://docs.google.com/document/d/1PuleKLz8PV2NoXICFf5su6HzEAWOWaHcazZ_P-CRQl0/edit?usp=sharing"}>this</a> document (in normal text and may include photos, so only scroll as far as you need to).</p>
+                        <p>Your time will be tacked from the time you start. If you think there was an error (it's very possible) feel free to put it in your feedback form!</p>
+                        <p>Hints can be found in the top right corner. You will be able to choose which puzzle you'd like a hint for, and these will be tracked, so only use the ones you need!</p>
+                        <p>If you check "Join Leaderboard" your score will be added (hopefully within the week!)</p>
+
                     </p>
                     <p><strong>Good luck!</strong></p>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "50%"}}>Invalid group name.</Alert>
                 <Alert show={this.state.showAlert} variant="success" style={{width: "50%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
                     <Link to="/escovid/gform">
-                        <button className="button"><h3>Begin ESCovid-19</h3></button>
+                        <button className="button" onClick={this.changeName1}><h3>Begin ESCovid-19</h3></button>
                     </Link>
                     <Link to="/escovid/gform">
-                        <button className="button" onClick={this.changeName}><h3>Begin ESCovid-20</h3></button>
+                        <button className="button" onClick={this.changeName2}><h3>Begin ESCovid-20</h3></button>
                     </Link></Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>

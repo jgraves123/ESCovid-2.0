@@ -169,12 +169,12 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height:89%;
     background-color: rgba(0, 0, 0, 0.25);
 }
 
 .modal_content2 {
-    background-color: #6a8dad;
+    background-color: #FDE38C;
     position: absolute;
     top: 1%;
     left: 10%;

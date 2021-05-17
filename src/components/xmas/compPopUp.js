@@ -85,14 +85,14 @@ export default class CompPopUp extends Component {
                             display: "inline-block",
                             width: "50%",
                             padding: "0px",
-                            backgroundColor: "pink"
+                            backgroundColor: "#FDE38C"
                         }}>
                             <div className="inner">
                                 <h2>Contact List</h2>
                                 <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
                                         <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
                                             <Filter/>
-                                            <Table />
+                                            <Table class={"simple"}/>
                                             <Pagination/>
                                         </div>
                                     )}} data={contacts} plugins={[plugins.LocalPlugin]} useGriddleStyles={"false"} enableInfiniteScroll={true}/>

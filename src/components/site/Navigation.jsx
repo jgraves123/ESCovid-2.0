@@ -8,7 +8,7 @@ import Headroom from "react-headroom";
 
 function Navigation() {
   return (
-    <div className="navigation" style={{zIndex: "1"}}>
+    <div className="navigation" style={{zIndex: "10000"}}>
           {/*"#72EA80", "#15b40d", "#fcc81a", "0fd145", "#673AB7*/}
       {/*<Navbar className={"navbar"} style={{backgroundColor: "#f6f6f6"}} expand="lg">*/}
       <Navbar className={"navbar"} style={{backgroundColor: "#e9e9e9"}} expand="lg">

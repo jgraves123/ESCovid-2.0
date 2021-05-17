@@ -13,7 +13,7 @@ function FancyBorder(props) {
 //Post has the basic structure, generic component
 export default function Post(props){
     return(
-            <div className = "container content-section" style={{width: "80%"}} tabindex="0">
+            <div className = "container content-section" style={{width: "80%"}}>
                 <h2>{props.title}</h2>
                 {props.children}
                 <p className="article-content">{props.caption}</p>

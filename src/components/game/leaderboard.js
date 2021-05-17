@@ -14,6 +14,8 @@ class Leader extends Component {
         super(props)
         document.title = "Tumblr 2!"
 
+        console.log(this.props.game);
+
         this.sortProperties = [
             { id: 'Time', sortAscending: true },
             { id: 'Hints', sortAscending: true }
@@ -55,7 +57,7 @@ class Leader extends Component {
             this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
         }
 
-        if (this.props.game === "anonymous") {
+        if (this.props.game === "anon") {
             this.data = dataanon;
             this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
         }

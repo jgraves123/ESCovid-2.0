@@ -1,16 +1,24 @@
 import React, {Component} from 'react';
-import PopUp from "./PopUp";
+import PopUp from "../game/PopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
 import CompPopUp from "./compPopUp";
 import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
+import TextPop from "../game/textPop";
 
 
 
 
 export default class Page2 extends Component {
+    componentDidMount() {
+        document.title = "ESCovid: Last Step!"
+        if (this.props.curr_stage != 1) {
+            this.props.stage(1)
+        }
+    }
+
     state = {
         cs_pass_open: false,
         comp_open: false,
@@ -180,12 +188,16 @@ export default class Page2 extends Component {
                                 <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                                 </div>
-                                : <Link to="/anon/office">
+                                : <div style={{padding: "20px"}}>
+                                    <p>Aha! It all clicks into place. This is the life story of a couple! But who??</p>
+                                    <p> You remember a hint from the computer and your eyes turn to the map...</p>
+                                    <Link to="/anon/office">
                                     <button className="button"><h3>Continue</h3></button>
-                                </Link>}
+                                </Link></div>}
                         </>
                     {/*}*/}
                 </div>
+                <TextPop title={"No one is Home..."} content={"Caleb arrives at 16 East Pine to find no one home. The front door is ajar and he moves forward to get a better look. Peering inside he sees an office area that is a huge mess. Papers are thrown about and a chair on it's side. It looks as though someone left in quite a hurry! He decides to go inside to have a better look."}/>
 
                 </body>
             </div>

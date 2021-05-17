@@ -31,18 +31,20 @@ class App extends Component {
             <div style={{paddingBottom: "50px"}}>
             <Switch>
               <Route path="/" exact component={() => <Home />} />
-              <Route path="/escovid" exact component={() => <Game />} />
+              <Route path="/escovid" exact component={() => <Game game_name={"escovid19"} total_stages={3}/>} />
               <Route path="/escovid/gform" exact component={() => <Game />} />
-              <Route path="/escovid/auth" exact component={() => <Game />} />
+              <Route path="/escovid/auth" exact component={() => <Game  />} />
               <Route path="/escovid/tumblr" exact component={() => <Game />} />
-              <Route path="/escovid/final" exact component={() => <Game />} />
-              <Route path="/escovid/trappist" exact component={() => <Game />} />
-              <Route path="/escovid/gliese" exact component={() => <Game />} />
+              <Route path="/escovid/final" exact component={() => <Game  />} />
+              <Route path="/escovid/trappist" exact component={() => <Game  />} />
+              <Route path="/escovid/gliese" exact component={() => <Game  />} />
               <Route path="/escovid/leaderboard" exact component={() => <Game />} />
-              <Route path="/anon" exact component={() => <Game />} />
+              <Route path="/anon" exact component={() => <Game game_name={"anon"} total_stages={3}/>} />
               <Route path="/anon/page1" exact component={() => <Game />} />
+              <Route path="/anon/cubicle" exact component={() => <Game />} />
               <Route path="/anon/office" exact component={() => <Game />} />
-              <Route path="/anon/home" exact component={() => <Game />} />
+              <Route path="/anon/backhome" exact component={() => <Game />} />
+              <Route path="/anon/onward" exact component={() => <Game />} />
               <Route path="/anon/leaderboard" exact component={() => <Game />} />
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />

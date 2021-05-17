@@ -1,4 +1,5 @@
 import React from "react";
+import "./text.css";
 
 export default function Text(props){
     return(
@@ -9,8 +10,7 @@ export default function Text(props){
                      height="40"/>
                 <div className="text-muted small text-nowrap mt-2">{props.timesent}</div>
             </div>
-            <div className="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
-                <div className="font-weight-bold mb-1">{props.character}</div>
+            <div className="flex-shrink-1 bg-light rounded py-2 px-3 ml-3 message">
                 {props.children}
             </div>
         </div>

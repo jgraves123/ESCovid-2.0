@@ -6,7 +6,7 @@ import Exit from "../game/exit";
 
 
 function Room() {
-    let showPop = localStorage.getItem('team_name') !== null;
+    let showPop = localStorage.getItem('seconds') !== null;
 
     return (
         <div>

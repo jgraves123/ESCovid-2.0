@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PopUp from "./PopUp";
+import PopUp from "../game/PopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
@@ -98,7 +98,7 @@ export default class Page1 extends Component {
                                 </div>
                             </>
                             : <div style={{paddingBottom: "20px"}}><Link to="/anon/cubicle">
-                                <button className="button"><h3>Continue</h3></button>
+                                <button className="button"><h3>Visit 16 East Pine St.</h3></button>
                                 </Link></div> }
                             </div>}
                     </div>
