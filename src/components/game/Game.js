@@ -36,7 +36,7 @@ function getState(props) {
         hints = 0;
     }
     if (stage == null) {
-        stage = 0;
+        stage = 99;
     }
     if (total_stages == null) {
         total_stages = props.total_stages;

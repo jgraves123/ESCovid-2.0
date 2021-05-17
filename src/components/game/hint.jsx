@@ -3,6 +3,7 @@ import React, {Component} from "react";
 export const hints = {
     "escovid19":
         {
+            99: {},
             0: {
                 "Missive I": ["All the letters in NORTH are incorrect, so cross those out" +
                 " everywhere. What does that tell you about the word ASTER? Use a similar" +
@@ -33,6 +34,7 @@ export const hints = {
         },
     "escovid20":
         {
+            99: {},
             0: {
                 "Missive I": ["All the letters in NORTH are incorrect, so cross those out" +
                 " everywhere. What does that tell you about the word ASTER? Use a similar" +
@@ -71,6 +73,29 @@ export const hints = {
             3: {"Not a puzzle!": ["You've already escaped - but now you have to choose where you want to escape to. Click around to learn more about your options."]},
         },
     "anon": {
-        0: {}
+        99: {},
+        0: {
+            "Attachment": ["Look for colors in the letter"]
+        },
+        1: {
+            "Computer Password": ["4 letters in ANIMAL are in the answer but only 1 in BANANA..." +
+                    " What does this mean? Use this information to consider CIRCLE, and AFRICA",
+                "Once you have all the letters (Using elimination and finding what's left, figure out" +
+                    " where F goes, then where I goes and so on."],
+            "Slide Order": ["Figure out pictures 3 and 8 first. Then find when they" +
+                    " started/ended dating",
+                "Given hint 1, Find when they skied. Then figure out when surfing and summer" +
+                    " camp could have been."],
+        },
+        2: {
+            "Map Arithmetic": ["Look at the digits by themselves. What math works to get the" +
+                    " answer?"],
+            "Red Letters": ["Figure out how every letter can be given a number. It uses a shift!"],
+            "Map": ["Use the order of the cities on the pictures. How can a city give you a" +
+            " letter? City -> Highways -> Map Arithmetic -> Red Letter Code"],
+            "Contacts": ["Look up the word from the map in the contact list"],
+            "iPhone": ["Use the phone number you found in the contact list"],
+            "Location": ["Enter the location found on the phone into the box with the map."],
+        }
     }
 };
