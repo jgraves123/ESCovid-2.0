@@ -49,7 +49,7 @@ export default class PhonePopUp extends Component {
 
     check_email_pass = (event) => {
         event.preventDefault();
-        this.temp = this.state.pass === "phone"
+        this.temp = this.state.pass === "2377096720"
         if (!this.temp) {
             alert("Incorrect Code")
         }
@@ -161,7 +161,7 @@ export default class PhonePopUp extends Component {
                                 <h3>Phone Number</h3>
                                 <div className={"form-group"}>
                                     <input type="text" ref="val"
-                                           placeholder={"Enter Number"}
+                                           placeholder={"Enter Phone Number (digits only, no spaces)"}
                                            onChange={this.handleChangeEmailPass}
                                            style={{width: "100%"}}/>
                                 </div>

@@ -23,7 +23,7 @@ function Contact() {
             <p>
               Email us at <strong>mlagerq@emory.edu</strong> and <strong>john_graves@brown.edu.</strong> We are happy to answer any questions!
             </p>
-            <p>Tried one of our escape games? Fill out the feedback form here: <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>ESCovid</a></p>
+            <p>Tried one of our escape games? Fill out the feedback form here: <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>Form</a></p>
           </div>
         </div>
       </div>

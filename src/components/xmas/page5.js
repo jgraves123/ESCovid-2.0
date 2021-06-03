@@ -40,7 +40,7 @@ export default class Page5 extends Component {
                         </div>
 
                         <div align="center">
-                            <h2>You have successfully helped Caleb identify the sender of his anonymous, and helped introduce him to his step sister!</h2>
+                            <h2>You have successfully helped Caleb identify the sender of his anonymous email, and helped introduce him to his step sister!</h2>
                         </div>
                         <div align={"center"}>
                             <div align={"center"} style={{margin: "10", maxHeight: "400px", overflow: "auto", width: "95%"}}>

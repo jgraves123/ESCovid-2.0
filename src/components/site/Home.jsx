@@ -286,7 +286,7 @@ function Home() {
                 </Accordion.Toggle>
 
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body>Everything on our site is <strong>free!</strong> If you'd like to support our work, you can donate here.</Card.Body>
+                  <Card.Body>Everything on our site is <strong>free!</strong> If you'd like to support our work, you can donate to our venmo <em>Megan-Lagerquist</em>.</Card.Body>
                 </Accordion.Collapse>
               </Card>
 

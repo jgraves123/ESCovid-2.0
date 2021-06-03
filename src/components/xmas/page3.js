@@ -102,7 +102,7 @@ export default class Page3 extends Component {
                 <body>
                 <div>
                     {/*if state is true, do this pop-up*/}
-                    {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} bottom={<Password alert={"This address will not help you in your quest :("} command={"Visit Location"} input={"Location"} correct={<Continue url={"/anan/backhome"} text={"Visit 289 Center St."}/>} answers={["289 Center St."]}/>} padding="62%" toggle={this.mapPop} /> : null}
+                    {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} bottom={<Password alert={"This address will not help you in your quest :("} command={"Visit Location"} input={"Location"} correct={<Continue url={"/anon/backhome"} text={"Visit 289 Center St."}/>} answers={["289 Center St.", "289 Center St", "289 Center Street", "289 center street", "289 center st"]}/>} padding="62%" toggle={this.mapPop} /> : null}
                     {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
                     {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
                     {this.state.cell_open ? <PhonePopUp toggle={this.cellPop} /> : null}
