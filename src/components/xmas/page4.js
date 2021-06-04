@@ -49,7 +49,7 @@ export default class Page4 extends Component {
     render() {
         return(
             <div>
-                <body align={"center"} className="bg" style={{backgroundImage: 'url("/images/xmas/house.png")'}}>
+                <body align={"center"} className="bg" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/house.png?raw=true")'}}>
                 <div align={"center"}>
                     <div align={"center"} className={"middle"}>
                         <Post title={"30 minutes later..."} caption={""}>

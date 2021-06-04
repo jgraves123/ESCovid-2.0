@@ -20,12 +20,6 @@ export default class Page1 extends Component {
     }
 
     state = {
-        cal: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/calendar.png?raw=true",
-        contacts: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/contacts.png?raw=true",
-        notes: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/notes.png?raw=true",
-        intro: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/email.png?raw=true",
-        path: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/path.jpeg?raw=true",
-        help: "https://raw.githubusercontent.com/jgraves123/happy-xmas-chris/master/images/help.png?raw=true",
         colors: ["red", "blue", "green", "yellow", "orange", "purple", "white", "black"],
         cir1: 0,
         cir2: 0,
