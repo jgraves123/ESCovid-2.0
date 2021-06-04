@@ -20,6 +20,7 @@ export default class Page1 extends Component {
     }
 
     state = {
+        intro: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/email.png?raw=true",
         colors: ["red", "blue", "green", "yellow", "orange", "purple", "white", "black"],
         cir1: 0,
         cir2: 0,
