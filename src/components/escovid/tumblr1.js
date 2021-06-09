@@ -4,7 +4,6 @@ import "../game/posts.css";
 import {Post} from "../game";
 import Overlay from "../game/overlay";
 import ReactPlayer from 'react-player';
-import video from "./IMG-1332.mp4";
 import Exit from "../game/exit";
 import {Prompt} from 'react-router'
 
@@ -13,7 +12,7 @@ let rand = () => Math.floor(Math.random() * 20) - 10;
 export default class Tumblr1 extends Component {
 
     componentDidMount() {
-        document.title = "ESCovid";
+        document.title = "Step 2";
         console.log(this.props.curr_stage);
         if (this.props.curr_stage != 1) {
             console.log("jdklfjal;ksdfasdjk;lfdsfjkl")

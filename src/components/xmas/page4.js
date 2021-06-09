@@ -18,10 +18,13 @@ import Delayed from "../game/delayed";
 export default class Page4 extends Component {
 
     componentDidMount(){
-        document.title = "ESCovid: Last Step!"
+        document.title = "Coming Home"
         console.log(this.props.curr_stage)
         if (this.props.curr_stage != 3) {
             this.props.stage(3)
+        }
+        if (this.props.timing) {
+            this.props.stop(false)
         }
     }
 

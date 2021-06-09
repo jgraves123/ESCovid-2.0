@@ -15,7 +15,7 @@ import emailjs from "emailjs-com";
 
 class Congrats extends Component {
     componentDidMount(){
-        document.title = "ESCovid: Last Step!"
+        document.title = "Congrats"
         console.log("hello my fine fellow")
     }
 

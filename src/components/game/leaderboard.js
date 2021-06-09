@@ -12,7 +12,7 @@ class Leader extends Component {
 
     constructor(props){
         super(props)
-        document.title = "Tumblr 2!"
+        document.title = "Leaderboard"
 
         console.log(this.props.game);
 

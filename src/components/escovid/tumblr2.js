@@ -10,7 +10,7 @@ import ReactAudioPlayer from "react-audio-player";
 export default class Tumblr2 extends Component{
 
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
+        document.title = "Step 3"
         if (this.props.curr_stage != 2) {
             this.props.stage(2)
         }

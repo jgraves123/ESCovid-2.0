@@ -12,8 +12,7 @@ import {Link} from "react-router-dom";
 
 export default class Page5 extends Component {
     componentDidMount(){
-        document.title = "ESCovid: Last Step!"
-        console.log("hello my fine fellow")
+        document.title = "Congrats"
     }
 
     state = {

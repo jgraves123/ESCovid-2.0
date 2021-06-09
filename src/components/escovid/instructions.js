@@ -8,6 +8,7 @@ import Exit from "../game/exit";
 export default class Instructions extends Component{
 
     componentDidMount() {
+        document.title = "ESCovid"
         if (localStorage.getItem("seconds") !== null) {
             window.location.assign("/rooms");
         }

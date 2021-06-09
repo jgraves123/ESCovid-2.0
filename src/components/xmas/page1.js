@@ -10,7 +10,7 @@ export default class Page1 extends Component {
 
     constructor(props){
         super(props);
-        document.title = "Christmas Escape Room!";
+        document.title = "An Anonymous Message!";
         if (!this.props.counting) {
             this.props.start(true)
         }

@@ -8,6 +8,7 @@ import Exit from "../game/exit";
 export default class Instructions2 extends Component{
 
     componentDidMount() {
+        document.title = "Anonymous Connections"
         if (localStorage.getItem("seconds") !== null) {
             window.location.assign("/rooms");
         }

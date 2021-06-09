@@ -13,7 +13,7 @@ import TextPop from "../game/textPop";
 
 export default class Page2 extends Component {
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
+        document.title = "The House Pt 1."
         if (this.props.curr_stage != 1) {
             this.props.stage(1)
         }
