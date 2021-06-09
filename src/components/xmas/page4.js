@@ -1,15 +1,7 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
 import './xmas.css';
-import CompPopUp from "./compPopUp";
-import CarouselPopUp from "./CarouselPopUp";
-import PhonePopUp from "./PhonePopUp";
-import Password from "../game/password";
 import Continue from "../game/continueButton";
-import ReactPlayer from "react-player";
-import video from "../escovid/IMG-1332.mp4";
 import {Post} from "../game";
-import pic from "../../cards.png";
 import Delayed from "../game/delayed";
 
 
