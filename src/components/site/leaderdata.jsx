@@ -19,6 +19,9 @@ export const dataesc20 = [
 export const dataanon = [
 ];
 
+export const dataReality = [
+];
+
 export const sortProperties = [
     { id: 'Time', sortAscending: true },
     { id: 'Hints', sortAscending: true }

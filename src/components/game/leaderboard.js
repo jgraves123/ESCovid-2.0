@@ -3,7 +3,7 @@ import "../index.css";
 import "./leaderboard.css";
 import Griddle, {plugins} from 'griddle-react';
 import emailjs from "emailjs-com";
-import {dataesc19, dataesc20, dataanon} from "../site/leaderdata";
+import {dataesc19, dataesc20, dataanon, dataReality} from "../site/leaderdata";
 
 //npm install --save griddle-react, http://griddlegriddle.github.io/Griddle/
 
@@ -59,6 +59,11 @@ class Leader extends Component {
 
         if (this.props.game === "anon") {
             this.data = dataanon;
+            this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
+        }
+
+        if (this.props.game === "reality") {
+            this.data = dataReality;
             this.data.push({ Team: this.props.team, Time: (hrs*60) + min + (sec/60.0), Hints: this.props.hints})
         }
 
