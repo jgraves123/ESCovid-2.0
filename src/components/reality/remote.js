@@ -1,6 +1,7 @@
 
 
 import React, { Component } from "react";
+import {Button} from "react-bootstrap";
 import Griddle, {plugins} from "griddle-react";
 import {contacts} from "./contacts";
 
@@ -63,7 +64,8 @@ export default class Remote extends Component {
             this.setDirectory(4);
             window.location.href = '/reality/bakeoff';
         } else {
-
+            this.handleReset();
+            alert("Channel Not Found");
         }
     }
 
@@ -88,28 +90,30 @@ export default class Remote extends Component {
                         padding: "0px",
                         backgroundColor: "#FDE38C"
                     }}>
-                        <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
-                            <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
+                        <div className="scaling-svg-container inner" style={{paddingBottom: "85%"}}>
+                            <svg className="scaling-svg" viewBox="0 0 940 1106"> {/* Needs auto
                          updating*/}
-                                <image width="100%" href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/office.png?raw=true"/>
-                                <rect x="1450" y="35" width="250" height="70" className="clickable-done" onClick={this.mapMathPop}/>
-                                <rect x="2630" y="0" width="370" height="270" className="clickable-done" onClick={this.mapPop}/>
-                                <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.picsPop}/>
-                                <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.csPassPop}/>
-                                <polygon points="2040,1705 2195,1588 2272,1642 2130,1770" className="clickable-done" onClick={this.cellPop}/>
-                                <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.compPop}/>
+                                <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/reality/public/reality/remote.png?raw=true"/>
+                                <rect x="160" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(1)}/>
+                                <rect x="260" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(2)}/>
+                                <rect x="570" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(3)}/>
+                                <rect x="670" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(4)}/>
+                                <rect x="370" y="370" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(5)}/>
+                                <rect x="470" y="370" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(6)}/>
+                                <rect x="160" y="570" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(7)}/>
+                                <rect x="260" y="570" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(8)}/>
+                                <rect x="570" y="570" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(9)}/>
+                                <rect x="670" y="570" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(0)}/>
 
                             </svg>
                         </div>
-
+                        Channel Number: {this.state.channel}
+                        <button className={"button"} onClick={this.handleGo}>Select</button>
+                        <Button onClick={this.handleReset}>Reset</Button>
                     </div>
 
                     <div style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "45%", height: "50vw", overflow: "auto"}}>
-                        {/*   <svg className="scaling-svg" viewBox="0 0 1000 3860"> /!* Needs auto*/}
-                        {/*updating*!/*/}
-                        {/*       <image x="0" width="100%" href={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>*/}
-                        {/*   </svg>*/}
-                        <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/notes.png?raw=true"}/>
+                        Put Directory Here
                     </div>
 
                 </div>
