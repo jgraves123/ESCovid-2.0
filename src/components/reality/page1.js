@@ -10,12 +10,9 @@ export default class Page1 extends Component {
 
     constructor(props){
         super(props);
-        document.title = "Christmas Escape Room!";
-        if (!this.props.counting) {
-            this.props.start(true)
-        }
-        if (this.props.curr_stage !== 0) {
-            this.props.stage(0)
+        document.title = "Bakeoff!";
+        if (this.props.curr_stage !== 1) {
+            this.props.stage(1)
         }
     }
 

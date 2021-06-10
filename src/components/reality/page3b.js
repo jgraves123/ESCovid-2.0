@@ -10,7 +10,7 @@ import Continue from "../game/continueButton";
 
 
 
-export default class Page3 extends Component {
+export default class Page3b extends Component {
     componentDidMount() {
         document.title = "ESCovid: Last Step!"
         if (this.props.curr_stage != 2) {

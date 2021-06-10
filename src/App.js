@@ -47,9 +47,11 @@ class App extends Component {
               <Route path="/anon/onward" exact component={() => <Game />} />
               <Route path="/anon/leaderboard" exact component={() => <Game />} />
               <Route path="/reality" exact component={() => <Game game_name={"reality"} total_stages={4}/>} />
+              <Route path="/reality/start" exact component={() => <Game />} />
               <Route path="/reality/bakeoff" exact component={() => <Game />} />
               <Route path="/reality/survivor" exact component={() => <Game />} />
-              <Route path="/reality/bachelorgt" exact component={() => <Game />} />
+              <Route path="/reality/agt" exact component={() => <Game />} />
+              <Route path="/reality/bachelor" exact component={() => <Game />} />
               <Route path="/reality/sofa" exact component={() => <Game />} />
               <Route path="/reality/givtime" exact component={() => <Game />} />
               <Route path="/reality/leaderboard" exact component={() => <Game />} />

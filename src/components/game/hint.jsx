@@ -97,5 +97,12 @@ export const hints = {
             "iPhone": ["Use the phone number you found in the contact list"],
             "Location": ["Enter the location found on the phone into the box with the map."],
         }
+    },
+    "reality": {
+        99: {},
+        0: {},
+        1: {},
+        2: {},
+        3: {}
     }
 };

@@ -36,7 +36,7 @@ export default class Instructions2 extends Component{
 
     changeName = () => {
         console.log("i didn't press it");
-        this.props.gameName("anon", 3)
+        this.props.gameName("reality", 4)
     }
 
     check = (event) => {
@@ -54,20 +54,20 @@ export default class Instructions2 extends Component{
     render(){
         return(
             <div align="center" style={{backgroundColor: "#FDE38C", paddingBottom: "10px"}}>
-                <h1>Welcome to Anonymous Connections</h1>
-                <h2>The Mystery of a Strange Email and a Hidden Identity</h2>
+                <h1>Welcome to Escape From Reality</h1>
+                <h2>The race to escape the grasp of reality television before it completely sucks your sole.</h2>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Overview</h3>
                     <div className = "para">
                         <p><strong>Levels and Estimated Time: </strong>
-                            <br/><em>Moderate:</em> Anonymous Connections is no piece of cake. It is meant to challenge people with any amount of experience, but it recommended as an intro puzzle for those less experienced with escape rooms. Estimated Time: 30-90 minutes.
+                            <br/><em>Moderate:</em> Estimated Time:  minutes.
                         </p>
                     </div>
                     <div className = "para">
-                        <p><strong>Intended Audience: </strong>teens and adults who are excited about trying a virtual escape room. The only prerequisite is a desire give it a shot!</p>
+                        <p><strong>Intended Audience: </strong></p>
                     </div>
                     <div className = "para">
-                        <p><strong>Group size: </strong>2-6 players recommended.</p>
+                        <p><strong>Group size: </strong> players recommended.</p>
                     </div>
                     <div className = "para">
                         <p><strong>Other recommendations: </strong>computer >>> smartphone, COMMUNICATE and share screens.</p>
@@ -82,7 +82,7 @@ export default class Instructions2 extends Component{
                 </div>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>The Story...</h3>
-                    <p>Caleb Alston is minding his business one day when he receives a strange email from someone he's never met before. They have encrypted their address and ask him to come visit. Your job is help Caleb figure out the identity of this anonymous sender. Your first question, should you go to the address?</p>
+                    <p></p>
                 </div>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Your Instructions...</h3>
@@ -96,8 +96,8 @@ export default class Instructions2 extends Component{
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
                 <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
-                    <Link to="/anon/page1">
-                        <button className="button" onClick={this.changeName}><h3>Begin Anonymous Connections</h3></button>
+                    <Link to="/reality/page1">
+                        <button className="button" onClick={this.changeName}><h3>Begin Escape From Reality</h3></button>
                     </Link></Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>
