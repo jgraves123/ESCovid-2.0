@@ -5,5 +5,7 @@ export { default as Bachelor } from "./page3a";
 export { default as AGT } from "./page3b";
 export { default as Sofa } from "./page4";
 export { default as GIV } from "./page5";
-export { default as RealityInstructions} from "./instructions2"
+export { default as RealityInstructions} from "./instructions2";
+export { default as Remote} from "./remote";
+
 

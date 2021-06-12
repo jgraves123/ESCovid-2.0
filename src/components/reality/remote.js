@@ -1,5 +1,3 @@
-
-
 import React, { Component } from "react";
 import {Button} from "react-bootstrap";
 import Griddle, {plugins} from "griddle-react";
