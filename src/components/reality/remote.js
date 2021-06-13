@@ -7,14 +7,17 @@ export default class Remote extends Component {
 
 
     componentDidMount() {
-        let curr = parseInt(localStorage.getItem("remote"))
+        let curr = localStorage.getItem("remote")
         if (curr == null) {
             localStorage.setItem("remote", "0");
             curr = 0;
+        } else {
+            curr = parseInt(curr);
         }
         this.setState({
             directory: curr
         })
+        console.log(curr)
     }
 
 
@@ -61,7 +64,7 @@ export default class Remote extends Component {
             window.location.href = '/reality/bachelor';
         } else if (curr === this.state.escCode) {
             this.setDirectory(4);
-            window.location.href = '/reality/bakeoff';
+            window.location.href = '/reality/sofa';
         } else {
             this.handleReset();
             alert("Channel Not Found");
@@ -82,12 +85,14 @@ export default class Remote extends Component {
                         &times;
                     </span>
 
-
+                    <div align={"center"}>
+                        <h1>TV Remote</h1>
+                    </div>
                     <div className="scaling-svg-container outer" align="center" style={{
                         display: "inline-block",
                         width: "50%",
                         padding: "0px",
-                        backgroundColor: "#FDE38C"
+                        backgroundColor: "#FDE38C",
                     }}>
                         <div className="scaling-svg-container inner" style={{paddingBottom: "85%"}}>
                             <svg className="scaling-svg" viewBox="0 0 940 1106"> {/* Needs auto
@@ -106,13 +111,26 @@ export default class Remote extends Component {
 
                             </svg>
                         </div>
+                        <div align={"center"}>
                         Channel Number: {this.state.channel}
+                        <br/>
+                        <br/>
                         <button className={"button"} onClick={this.handleGo}>Select</button>
                         <Button onClick={this.handleReset}>Reset</Button>
+                        </div>
                     </div>
 
-                    <div style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "45%", height: "50vw", overflow: "auto"}}>
-                        Put Directory Here
+                    <div align={"center"} style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "45%", height: "50vw", overflow: "auto"}}>
+                        <h3>TV Guide</h3>
+                        <table>
+                            <tr><th>Channel</th><th>Code</th></tr>
+                            <tr><td>British Bakeoff</td><td>0</td></tr>
+                            {this.state.directory >= 2 ? <tr><td>Survivor</td><td>1</td></tr> : null}
+                            {this.state.directory >= 3 ? <tr><td>Bachelor (BGT)</td><td>2</td></tr> : null}
+                            {this.state.directory >= 3 ? <tr><td>America's Got Talent (BGT)</td><td>3</td></tr> : null}
+                            {this.state.directory >= 4 ? <tr><td>ESC</td><td>4</td></tr> : null}
+
+                        </table>
                     </div>
 
                 </div>

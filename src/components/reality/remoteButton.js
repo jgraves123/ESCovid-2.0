@@ -24,16 +24,13 @@ export default class RemoteButton extends Component {
 
     render() {
         return(
-            <div style={{marginBottom: "10"}}>
-                <body>
+            <div style={{margin: "10px", marginTop: "10px", position: "absolute", width: "80%", zIndex: "10"}}>
                 <div>
                     {/*if state is true, do this pop-up*/}
                     {this.state.remote_open ? <Remote toggle={this.openRemote}/> : null}
 
                 </div>
                 <Button onClick={this.openRemote}>Remote</Button>
-
-                </body>
             </div>
         );
     }

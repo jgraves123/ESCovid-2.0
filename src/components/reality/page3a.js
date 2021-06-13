@@ -6,6 +6,7 @@ import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
 import Password from "../game/password";
 import Continue from "../game/continueButton";
+import {RemoteButton} from "./index";
 
 
 
@@ -26,7 +27,8 @@ export default class Page3a extends Component {
     render() {
         return(
             <div>
-                Bachelor
+                <RemoteButton/>
+                Bachelor page goes here
             </div>
         );
     }

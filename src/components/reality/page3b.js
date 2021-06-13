@@ -6,6 +6,7 @@ import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
 import Password from "../game/password";
 import Continue from "../game/continueButton";
+import {RemoteButton} from "./index";
 
 
 
@@ -26,6 +27,7 @@ export default class Page3b extends Component {
     render() {
         return(
             <div>
+                <RemoteButton/>
                 AGT
             </div>
         );

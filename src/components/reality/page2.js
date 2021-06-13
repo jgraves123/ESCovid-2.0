@@ -7,6 +7,7 @@ import CompPopUp from "./compPopUp";
 import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
 import TextPop from "../game/textPop";
+import RemoteButton from "./remoteButton";
 
 
 
@@ -78,6 +79,7 @@ export default class Page2 extends Component {
         return(
             <div style={{marginBottom: "10"}}>
                 <body>
+                <RemoteButton/>
 
                 <div height="400">
                     {/*if state is true, do this pop-up*/}

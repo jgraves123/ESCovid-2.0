@@ -11,7 +11,16 @@ import {Link} from "react-router-dom";
 
 class Home extends Component {
 
-
+    componentDidMount(){
+        document.title = "ESCovid: Last Step!"
+        console.log(this.props.curr_stage)
+        if (this.props.curr_stage != 3) {
+            this.props.stage(3)
+        }
+        if (this.props.timing) {
+            this.props.stop(false)
+        }
+    }
 
     state = {
         gliese: false,

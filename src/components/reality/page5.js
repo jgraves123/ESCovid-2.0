@@ -6,14 +6,18 @@ import {Link} from "react-router-dom";
 //...
 
 
-// Render a YouTube video player
-
 
 
 export default class Page5 extends Component {
     componentDidMount(){
         document.title = "ESCovid: Last Step!"
         console.log("hello my fine fellow")
+        if (this.props.curr_stage != 4) {
+            this.props.stage(4)
+        }
+        if (this.props.timing) {
+            this.props.stop(false)
+        }
     }
 
     state = {

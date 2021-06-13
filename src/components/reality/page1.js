@@ -47,8 +47,8 @@ export default class Page1 extends Component {
             <div>
                 <body>
                 <RemoteButton/>
-                <section>
-                    <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw"}}>
+                <section style={{zIndex: "1"}}>
+                    <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw", zIndex: "1"}}>
                         <h3>Great British Bake Off</h3>
                         <p style={{paddingLeft: "25px"}}>
                             <p>The theme for this weekend’s show is “throwback” and you’ve been tasked with preparing a dessert that was made during one episode of the pilot season of Bake-Off.
