@@ -61,7 +61,7 @@ export default class Page2 extends Component {
         });
     };
 
-    compPop = () => {
+    mapPop = () => {
         this.setState({
             comp_open: !this.state.comp_open
         });
@@ -72,18 +72,6 @@ export default class Page2 extends Component {
             pics_open: !this.state.pics_open
         });
     };
-
-    check_slides = () => {
-        this.temp = (this.state.slide1 === 3) && (this.state.slide2 === 1) && (this.state.slide3 === 5) && (this.state.slide4 === 6) && (this.state.slide5 === 2) && (this.state.slide6 === 7) && (this.state.slide7 === 0) && (this.state.slide8 === 4)
-        if (!this.temp) {
-            alert("Incorrect Code")
-        }
-        this.setState({
-            slides: this.temp
-        });
-    };
-
-
 
 
     render() {
@@ -97,7 +85,7 @@ export default class Page2 extends Component {
                     {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
                     {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
                     {this.state.cell_open ? <PhonePopUp toggle={this.cellPop} /> : null}
-                    {this.state.comp_open ? <CompPopUp toggle={this.compPop} /> : null}
+                    {this.state.comp_open ? <CompPopUp toggle={this.mapPop} /> : null}
                     {this.state.pics_open ? <CarouselPopUp toggle={this.carouselPop} /> : null}
 
                 </div>
@@ -107,8 +95,8 @@ export default class Page2 extends Component {
                     <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/basecamp.jpg?raw=true"/>
                     <rect x="210" y="1320" width="490" height="320" className="clickable-done" onClick={this.picsPop}/>
                     <rect x="895" y="800" width="240" height="220" className="clickable-done" onClick={this.csPassPop}/>
-                    <polygon points="1520,645 1640,598 1690,420 1960,430 1910,630 1830,680" className="clickable-done" onClick={this.compPop}/>
-
+                    <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.mapPop}/>
+                    <polygon points="1040,1505 1350,1420 1672,1542 1280,1620" className="clickable-done" onClick={this.csPassPop}/>
                 </svg>
                 </div>
 
