@@ -3,6 +3,7 @@ import PopUp from "../game/PopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
+import {RemoteButton} from "./index";
 
 
 export default class Page1 extends Component {
@@ -45,6 +46,7 @@ export default class Page1 extends Component {
         return(
             <div>
                 <body>
+                <RemoteButton/>
                 <section>
                     <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw"}}>
                         <h3>Great British Bake Off</h3>

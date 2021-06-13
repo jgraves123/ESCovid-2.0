@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './xmas.css';
 import {Link} from "react-router-dom";
-import Remote from "./remote";
 import RemoteButton from "./remoteButton";
 
 

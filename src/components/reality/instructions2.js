@@ -96,7 +96,7 @@ export default class Instructions2 extends Component{
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
                 <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
-                    <Link to="/reality/page1">
+                    <Link to="/reality/start">
                         <button className="button" onClick={this.changeName}><h3>Begin Escape From Reality</h3></button>
                     </Link></Alert>
                 <div style={{margin: "20px"}}>

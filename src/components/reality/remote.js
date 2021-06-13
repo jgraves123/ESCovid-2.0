@@ -45,7 +45,8 @@ export default class Remote extends Component {
     }
 
     handleGo = () => {
-        let curr = this.state.channel;
+        let curr = parseInt(this.state.channel);
+        console.log(curr)
         if (curr === this.state.bakeCode) {
             this.setDirectory(1);
             window.location.href = '/reality/bakeoff';
