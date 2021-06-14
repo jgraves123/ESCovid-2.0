@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Griddle, {plugins} from "griddle-react";
 import {contacts} from "./contacts";
+import {Carousel} from 'react-bootstrap';
 
-export default class CompPopUp extends Component {
+export default class SpeedPopUp extends Component {
     state = {
         password: "",
-        user: "Julia",
         correct_pass: false,
     };
 
@@ -19,17 +19,10 @@ export default class CompPopUp extends Component {
         });
     }
 
-    handleChangeUser = (event) => {
-        this.setState({
-            user: event.target.value
-        });
-    }
-
-
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = (("FAMILY" === this.state.password) || ("family" === this.state.password) || ("Family" === this.state.password)) && (this.state.user === "Julia")
+        this.temp = ("FAMILY" === this.state.password)
         if (!this.temp) {
             alert("Incorrect Code")
         }
@@ -53,21 +46,31 @@ export default class CompPopUp extends Component {
                 {!this.state.correct_pass ?
                     <div align="center">
                         <div align="center" style={{width: "100%"}}>
-                            <img width={"100%"} src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/login.png?raw=true"} />
-                         {/*   <div className="scaling-svg-container" style={{paddingBottom: this.props.padding}}>*/}
-                         {/*       <svg className="scaling-svg" viewBox={"0 0 " + this.props.x + " " + this.props.y}> /!* Needs*/}
-                         {/*auto*/}
-                         {/*updating*!/*/}
-                         {/*           <image x={this.val*this.props.x} width={this.props.width} href="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/login.png?raw=true"/>*/}
-                         {/*       </svg>*/}
-                         {/*   </div>*/}
+                            <div className="container">
+                                <div className="row align-items-center my-5">
+                                    <div className="col-lg-7">
+                                        <img
+                                            className="img-fluid rounded mb-4 mb-lg-0"
+                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/set.png?raw=true"
+                                            alt="3D Set Game"
+                                        />
+                                    </div>
+                                    <div className="col-lg-5">
+                                        <Carousel pause={false} style={{height: "100%"}}>
+                                            <Carousel.Item align='center'>
+                                                <img src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
+                                            </Carousel.Item>
+                                            <Carousel.Item align='center'>
+                                                <img src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules2.png?raw=true"} alt={"Instructions part 2"}/>
+                                            </Carousel.Item>
+                                        </Carousel>
+                                    </div>
+                                </div>
+                            </div>
                             <form id="path-answer" onSubmit={this.check_pass}>
                                 <label width={"80%"}>
-                                    <input type="text" ref="val" value={this.state.user}
-                                           onChange={this.handleChangeUser}
-                                           style={{marginRight: 10, width: "45%"}}/>
                                     <input type="text" ref="val"
-                                           placeholder={"Enter Password"}
+                                           placeholder={"XXX"}
                                            onChange={this.handleChangePass}
                                            style={{marginRight: 10, width: "45%"}}/>
                                 </label>
