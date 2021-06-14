@@ -3,6 +3,7 @@ import PopUp from "../game/PopUp";
 import './xmas.css';
 import TextPop from "../game/textPop";
 import RemoteButton from "./remoteButton";
+import {Link} from "react-router-dom";
 
 //TO DO:
 // instructions
@@ -15,31 +16,114 @@ export default class Page2b extends Component {
     }
 
     state = {
-        speech_open: false
+        pass: false,
+        remap: {'z': 'x'},
+        //{'w':'d', 'e': 'r', 'r': 'w', 't': 'b'},
+        password: "",
+        speech: "Good evening, Council. It goes without saying that I have outlasted all of you, despite the worthy competition."
+            // + "I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
+            // "Most importantly, I was a trusted leader of the *team name* tribe and it was an honor to successfully outwit them all to find the idol under great suspicion. " +
+            // "If you crown me champion, I make this unprecedented promise as a mark of respect and gratitude: each and every one of you will receive a portion of my million dollar prize." +
+            // "Now...I believe you have a decision to make."
     };
 
-    speechPop = () => {
+    checkPass = (event) => {
+        event.preventDefault();
+        this.temp = (this.state.speech === this.state.password)
+        if (!this.temp) {
+            alert("Unfortunately, the delivery of your speech was a bit off...")
+        }
         this.setState({
-            speech_open: !this.state.speech_open
+            pass: this.temp,
         });
-    };
+    }
 
+    handleChangePass = (event) => {
+        let input = event.target.value;
+        if (input.length > this.state.password.length){
+            let letter = input.charAt(input.length - 1);
+            let newLetter = letter;
+            let toShow = this.state.password;
+            if (letter in this.state.remap){
+                newLetter = this.state.remap[letter];
+            }
+            toShow = toShow + newLetter;
+            document.getElementById("typing").value = toShow;
+            this.setState({
+                    password: toShow
+                });
+        } else{
+            this.setState({
+                password: event.target.value
+            });
+        }
+
+        // let input = event.target.value;
+        // let letter = "";
+        // let newLetter = "";
+        // let arr = input.split("");
+        // let toShow = "";
+        // for (let i=0; i<arr.length; i++){
+        //     letter = arr[i];
+        //     newLetter = letter;
+        //     if (letter in this.state.remap){
+        //         newLetter = this.state.remap[letter];
+        //     }
+        //     toShow = toShow + newLetter;
+        // }
+        // document.getElementById("typing").value = toShow;
+        // this.setState({
+        //     password: toShow
+        // });
+    }
 
     render() {
         return(
-            <div style={{marginBottom: "10"}}>
+            <div>
                 <body>
                 <RemoteButton/>
+                <section style={{zIndex: "1"}}>
+                    <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw", zIndex: "1"}}>
+                        <h3>The Final Defense</h3>
+                        <img
+                            className="img-fluid rounded mb-4 mb-lg-0"
+                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/council.jpg?raw=true"
+                            alt="survivor council"
+                        />
+                    </div>
+                    <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw"}}>
+                        <h3>Your Speech</h3>
+                            <p>{this.state.speech}
+                            </p>
+                    </div>
 
-                <div height="400">
-                    {/*if state is true, do this pop-up*/}
-                    {this.state.speech_open ? <PopUp toggle={this.speechPop} /> : null}
-                </div>
-                <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
-                <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
-                         updating*/}
-                         <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/survivor/council.jpg?raw=true"/>
-                </svg>
+                </section>
+
+                <div align="center" >
+                    <>
+                        <h2>Give your speech to Council. The clock is ticking...</h2>
+                        {!this.state.pass ?
+                            <div style={{padding: "10px", paddingBottom: "20px"}}>
+                                <form id="path-answer" onSubmit={this.checkPass}>
+                                    <label width={"80%"}>
+                                        <input type="text" ref="val" id="typing"
+                                               placeholder={"Type your speech here!"}
+                                               onChange={this.handleChangePass}
+                                               style={{marginRight: 10, width: "100%"}}/>
+                                    </label>
+                                    <input type="submit" value="Submit"
+                                           style={{marginLeft: 10, width: "20%"}}/>
+                                </form>
+                            </div>
+                            : <div style={{padding: "20px"}}>
+                                <p>congrats you did it
+                                </p>
+                                <Link to="/reality/agt">
+                                    <button className="button"><h3>Continue</h3></button>
+                                </Link>
+                                <br/>
+                            </div>}
+                    </>
                 </div>
 
                 <TextPop title={"Go before tribal council..."} content={"You've made it to the final three. Now, it is up to the council (your previous competitors) to decide who deserves to win. Can you convince them with an eloquent speech? The pressure's on, and so is the timer."}/>
