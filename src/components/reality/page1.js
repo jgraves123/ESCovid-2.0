@@ -60,7 +60,7 @@ export default class Page1 extends Component {
                         </p>
                         <img
                             className="img-fluid rounded mb-4 mb-lg-0"
-                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/Mille-Crepe.jpg?raw=true"
+                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/cassettetape.png?raw=true"
                             alt="old cassette tape"
                         />
                     </div>
