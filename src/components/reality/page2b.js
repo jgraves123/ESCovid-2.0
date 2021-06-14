@@ -31,7 +31,7 @@ export default class Page2b extends Component {
         event.preventDefault();
         this.temp = (this.state.speech === this.state.password)
         if (!this.temp) {
-            alert("Unfortunately, the delivery of your speech was a bit off...")
+            alert("Unfortunately, the delivery of your speech was a bit off. However, Council has decided to let you try again.")
         }
         this.setState({
             pass: this.temp,
@@ -92,7 +92,7 @@ export default class Page2b extends Component {
                         />
                     </div>
                     <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw"}}>
-                        <h3>Your Speech</h3>
+                        <h3>Winning Speech:</h3>
                             <p>{this.state.speech}
                             </p>
                     </div>
@@ -101,7 +101,8 @@ export default class Page2b extends Component {
 
                 <div align="center" >
                     <>
-                        <h2>Give your speech to Council. The clock is ticking...</h2>
+                    <h3>All you have to do now is deliver your prepared remarks to Tribal Council.</h3>
+                    <h3>Easy, right?</h3>
                         {!this.state.pass ?
                             <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <form id="path-answer" onSubmit={this.checkPass}>
@@ -116,7 +117,7 @@ export default class Page2b extends Component {
                                 </form>
                             </div>
                             : <div style={{padding: "20px"}}>
-                                <p>congrats you did it
+                                <p>You win Survivor. Now, you'd better get out of here before the other contestants start demanding their money.
                                 </p>
                                 <Link to="/reality/agt">
                                     <button className="button"><h3>Continue</h3></button>
