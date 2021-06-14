@@ -66,11 +66,13 @@ export default class SpeedPopUp extends Component {
                     </div>
                     :
                     <div align="center" style={{width: "100%"}}>
-                    <img
-                        className="img-fluid rounded mb-4 mb-lg-0"
-                        src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/idol.png?raw=true"
-                        alt=""
-                    />
+                        <div align="center" style={{width: "40vw"}}>
+                            <img
+                                className="img-fluid rounded mb-4 mb-lg-0"
+                                src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/idol.png?raw=true"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 }
                 </div>

@@ -50,6 +50,7 @@ class App extends Component {
               <Route path="/reality/start" exact component={() => <Game />} />
               <Route path="/reality/bakeoff" exact component={() => <Game />} />
               <Route path="/reality/survivor" exact component={() => <Game />} />
+              <Route path="/reality/council" exact component={() => <Game />} />
               <Route path="/reality/agt" exact component={() => <Game />} />
               <Route path="/reality/bachelor" exact component={() => <Game />} />
               <Route path="/reality/sofa" exact component={() => <Game />} />

@@ -4,7 +4,7 @@ import TimerNav from "./timerNav";
 import Leader from "./leaderboard";
 import { Gform, Tumblr1, Tumblr2, Final, Congrats, Instructions, Escovid} from "../escovid";
 import {Page1, Page2, Page3, Page4, Page5, Instructions2} from "../xmas";
-import {Bakeoff, Survivor, Bachelor, AGT, Sofa, GIV, RealityInstructions, Start} from "../reality";
+import {Bakeoff, Survivor, Council, Bachelor, AGT, Sofa, GIV, RealityInstructions, Start} from "../reality";
 import Headroom from 'react-headroom';
 import {Navigation} from "../index";
 
@@ -159,6 +159,7 @@ class Game extends Component {
                         <Route path="/reality/start" exact component={() => <Start counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/bakeoff" exact component={() => <Bakeoff game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/survivor" exact component={() => <Survivor game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
+                        <Route path="/reality/council" exact component={() => <Council game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/bachelor" exact component={() => <Bachelor game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/agt" exact component={() => <AGT game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/sofa" exact component={() => <Sofa game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
