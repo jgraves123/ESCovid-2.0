@@ -2,11 +2,21 @@ import React, { Component } from "react";
 import Griddle, {plugins} from "griddle-react";
 import {contacts} from "./contacts";
 import {Carousel} from 'react-bootstrap';
+import {evaluate} from "mathjs";
+
+//TO DO:
+//Krypto:
+//  Update the krypto reqs for each puzzle
+//  Krypto cards pics
+//  Last krypto screen
+//  Give the password transform (shift 5 and reverse)
 
 export default class SpeedPopUp extends Component {
     state = {
         password: "",
-        correct_pass: false,
+        correct_pws: [false,false,false,false],
+        part: 0,
+        krypto_reqs: ["2", "6", "3", "5", "13"]
     };
 
     handleClick = () => {
@@ -17,23 +27,32 @@ export default class SpeedPopUp extends Component {
         this.setState({
             password: event.target.value
         });
-    }
-
+    };
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = ("FAMILY" === this.state.password)
-        if (!this.temp) {
-            alert("Incorrect Code")
+        if (this.state.part > 0){
+            this.answer = evaluate(this.state.password);
+            let exp = this.state.password;
+            this.arr = exp.split(new RegExp("[\\D]"));
+            this.arrfiltered = this.arr.filter(i => i!="");
+            this.isValid = this.arr.includes(this.state.krypto_reqs[0]) && this.arr.includes(this.state.krypto_reqs[1]) && this.arr.includes(this.state.krypto_reqs[2]) && this.arr.includes(this.state.krypto_reqs[3]) && this.arr.includes(this.state.krypto_reqs[4]) && (this.arrfiltered.length === 5);
+            console.log(this.isValid);
         }
-        this.setState({
-            correct_pass: this.temp,
-        });
-    }
+        this.temp = [("266" === this.state.password), (12 === this.answer), (5 === this.answer), (12 === this.answer)];
+        if (!this.temp[this.state.part]) {
+            alert("Incorrect Code: " + this.state.password)
+        } else{
+            this.pw = this.state.correct_pws.slice(); //creates the clone of the state
+            this.pw[this.state.part] = this.temp[this.state.part];
+            this.setState({correct_pws: this.pw});
+            this.setState({part: this.state.part + 1})
+        }
+    };
 
 
 
-    val = (1 - (parseFloat(this.props.width) / 100.0))/2
+    val = (1 - (parseFloat(this.props.width) / 100.0))/2;
 
     render() {
         return (
@@ -43,9 +62,9 @@ export default class SpeedPopUp extends Component {
                         &times;
                     </span>
 
-                {!this.state.correct_pass ?
+                {!this.state.correct_pws[0] ?
                     <div align="center">
-                        <div align="center" style={{width: "100%"}}>
+                        <div align="center" style={{width: "50vw"}}>
                             <div className="container">
                                 <div className="row align-items-center my-5">
                                     <div className="col-lg-7">
@@ -56,12 +75,12 @@ export default class SpeedPopUp extends Component {
                                         />
                                     </div>
                                     <div className="col-lg-5">
-                                        <Carousel pause={false} style={{height: "100%"}}>
+                                        <Carousel pause={'hover'}>
                                             <Carousel.Item align='center'>
-                                                <img src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
+                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
                                             </Carousel.Item>
                                             <Carousel.Item align='center'>
-                                                <img src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules2.png?raw=true"} alt={"Instructions part 2"}/>
+                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules2.png?raw=true"} alt={"Instructions part 2"}/>
                                             </Carousel.Item>
                                         </Carousel>
                                     </div>
@@ -80,37 +99,52 @@ export default class SpeedPopUp extends Component {
                         </div>
                     </div>
                     :
-                    <div className={"bg"} align="center" style={{paddingBottom: "4%", paddingTop: "2.5vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/computer.png?raw=true")'}}>
-                        {/*<div className="scaling-svg-container" style={{display: "inline-block", width: "1.9%"}}>*/}
-                        {/*    /!*resizing*!/*/}
-                        {/*</div>*/}
-                        <div className="scaling-svg-container outer" align="center" style={{
-                            display: "inline-block",
-                            width: "50%",
-                            padding: "0px",
-                            backgroundColor: "#FDE38C"
-                        }}>
-                            <div className="inner">
-                                <h2>Contact List</h2>
-                                <Griddle components={{Layout: ({ Table, Pagination, Filter, SettingsWrapper }) => (
-                                        <div style={{width: "60%", display: "inline-block", verticalAlign: "top"}}>
-                                            <Filter/>
-                                            <Table class={"simple"}/>
-                                            <Pagination/>
-                                        </div>
-                                    )}} data={contacts} plugins={[plugins.LocalPlugin]} useGriddleStyles={"false"} enableInfiniteScroll={true}/>
+                    <div>
+                        {!this.state.correct_pws[1] ?
+                            <div align="center">
+                                <div align="center" style={{width: "50vw"}}>
+                                    <div className="container">
+                                        <img
+                                            className="img-fluid rounded"
+                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto.png?raw=true"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <form id="path-answer" onSubmit={this.check_pass}>
+                                        <label width={"80%"}>
+                                            <input type="text" ref="val"
+                                                   placeholder={"(a+b)*c"}
+                                                   onChange={this.handleChangePass}
+                                                   style={{marginRight: 10, width: "45%"}}/>
+                                        </label>
+                                        <input type="submit" value="Submit"
+                                               style={{marginLeft: 10, width: "40%"}}/>
+                                    </form>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "45%", height: "50vw", overflow: "auto"}}>
-                         {/*   <svg className="scaling-svg" viewBox="0 0 1000 3860"> /!* Needs auto*/}
-                         {/*updating*!/*/}
-                         {/*       <image x="0" width="100%" href={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/contacts.png?raw=true"}/>*/}
-                         {/*   </svg>*/}
-                            <img width="100%" src={"https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/notes.png?raw=true"}/>
-                        </div>
-
+                            :
+                            <div align="center">
+                                <div align="center" style={{width: "50vw"}}>
+                                    <div className="container">
+                                        <img
+                                            className="img-fluid rounded"
+                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto.png?raw=true"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <form id="path-answer" onSubmit={this.check_pass}>
+                                        <label width={"80%"}>
+                                            <input type="text" ref="val"
+                                                   placeholder={"(a+b)*c"}
+                                                   onChange={this.handleChangePass}
+                                                   style={{marginRight: 10, width: "45%"}}/>
+                                        </label>
+                                        <input type="submit" value="Submit"
+                                               style={{marginLeft: 10, width: "40%"}}/>
+                                    </form>
+                                </div>
+                            </div>
+                            }
                     </div>
                 }
 

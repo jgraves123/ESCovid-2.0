@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import PopUp from "../game/PopUp";
-import ReactDOM from 'react-dom';
 import './xmas.css';
-import {Link} from "react-router-dom";
 import SpeedPopUp from "./speedPopUp";
-import CarouselPopUp from "./CarouselPopUp";
-import PhonePopUp from "./PhonePopUp";
+import ImmunityPopUp from "./immunityPopUp";
 import TextPop from "../game/textPop";
 import RemoteButton from "./remoteButton";
 
 
-
+//TO DO:
+// finish Krypto (speedPopUp)
+// click something for riddle for idol search
+// password input box to go to council (new page)
 
 export default class Page2 extends Component {
     componentDidMount() {
@@ -21,24 +21,21 @@ export default class Page2 extends Component {
     }
 
     state = {
-        cs_pass_open: false,
-        comp_open: false,
-        map: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/map.jpeg?raw=true",
-        cs_pass: "https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/xmas/password.png?raw=true",
+        map_open: false,
+        coconut_open: false,
         pass: "",
         computer: false,
     };
-
-
-    csPassPop = () => {
+    
+    immunityPop = () => {
         this.setState({
-            cs_pass_open: !this.state.cs_pass_open
+            map_open: !this.state.map_open
         });
     };
 
-    mapPop = () => {
+    speedPop = () => {
         this.setState({
-            comp_open: !this.state.comp_open
+            coconut_open: !this.state.coconut_open
         });
     };
 
@@ -50,18 +47,16 @@ export default class Page2 extends Component {
 
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
-                    {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} padding="62%" toggle={this.mapPop} /> : null}
-                    {this.state.cs_pass_open ? <PopUp title="Computer Password" x="718" y="644" width="80%" image={this.state.cs_pass} padding="75%" toggle={this.csPassPop} /> : null}
-                    {this.state.cell_open ? <PhonePopUp toggle={this.cellPop} /> : null}
-                    {this.state.comp_open ? <SpeedPopUp toggle={this.mapPop} /> : null}
+                    {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
+                    {this.state.coconut_open ? <SpeedPopUp toggle={this.speedPop} /> : null}
 
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
                     <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/basecamp.jpg?raw=true"/>
-                    <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.mapPop}/>
-                    <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.mapPop}/>
+                    <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.speedPop}/>
+                    <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>
                 </svg>
                 </div>
 
