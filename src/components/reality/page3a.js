@@ -6,6 +6,8 @@ import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
 import Password from "../game/password";
 import Continue from "../game/continueButton";
+import CompPopUp from "../xmas/compPopUp";
+import TextPop from "../game/textPop";
 import {RemoteButton} from "./index";
 
 
