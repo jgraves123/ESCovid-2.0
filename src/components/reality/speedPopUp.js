@@ -16,7 +16,7 @@ export default class SpeedPopUp extends Component {
         password: "",
         correct_pws: [false,false,false,false],
         part: 0,
-        krypto_reqs: ["2", "6", "3", "5", "13"]
+        krypto_reqs: {1: ["2", "6", "3", "5", "13"], 2: ["18","9","3","5","7"], 3:["16","15","9","14","2"]}
     };
 
     handleClick = () => {
@@ -36,11 +36,13 @@ export default class SpeedPopUp extends Component {
             let exp = this.state.password;
             this.arr = exp.split(new RegExp("[\\D]"));
             this.arrfiltered = this.arr.filter(i => i!="");
-            this.isValid = this.arr.includes(this.state.krypto_reqs[0]) && this.arr.includes(this.state.krypto_reqs[1]) && this.arr.includes(this.state.krypto_reqs[2]) && this.arr.includes(this.state.krypto_reqs[3]) && this.arr.includes(this.state.krypto_reqs[4]) && (this.arrfiltered.length === 5);
-            console.log(this.isValid);
+            this.isValid = this.arr.includes(this.state.krypto_reqs[this.state.part][0]) && this.arr.includes(this.state.krypto_reqs[this.state.part][1]) && this.arr.includes(this.state.krypto_reqs[this.state.part][2]) && this.arr.includes(this.state.krypto_reqs[this.state.part][3]) && this.arr.includes(this.state.krypto_reqs[this.state.part][4])
+                && (this.arrfiltered.length === 5);
+        } else{
+            this.isValid = true;
         }
-        this.temp = [("266" === this.state.password), (12 === this.answer), (5 === this.answer), (12 === this.answer)];
-        if (!this.temp[this.state.part]) {
+        this.temp = [("266" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
+        if (!this.temp[this.state.part] | !this.isValid) {
             alert("Incorrect Code: " + this.state.password)
         } else{
             this.pw = this.state.correct_pws.slice(); //creates the clone of the state
@@ -106,7 +108,7 @@ export default class SpeedPopUp extends Component {
                                     <div className="container">
                                         <img
                                             className="img-fluid rounded"
-                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto.png?raw=true"
+                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto1.png?raw=true"
                                             alt=""
                                         />
                                     </div>
@@ -123,27 +125,71 @@ export default class SpeedPopUp extends Component {
                                 </div>
                             </div>
                             :
-                            <div align="center">
-                                <div align="center" style={{width: "50vw"}}>
-                                    <div className="container">
-                                        <img
-                                            className="img-fluid rounded"
-                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto.png?raw=true"
-                                            alt=""
-                                        />
+                            <div>
+                                {!this.state.correct_pws[2] ?
+                                <div align="center">
+                                    <div align="center" style={{width: "50vw"}}>
+                                        <div className="container">
+                                            <img
+                                                className="img-fluid rounded"
+                                                src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto2.png?raw=true"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <form id="path-answer" onSubmit={this.check_pass}>
+                                            <label width={"80%"}>
+                                                <input type="text" ref="val"
+                                                       placeholder={"(a+b)*c"}
+                                                       onChange={this.handleChangePass}
+                                                       style={{marginRight: 10, width: "45%"}}/>
+                                            </label>
+                                            <input type="submit" value="Submit"
+                                                   style={{marginLeft: 10, width: "40%"}}/>
+                                        </form>
                                     </div>
-                                    <form id="path-answer" onSubmit={this.check_pass}>
-                                        <label width={"80%"}>
-                                            <input type="text" ref="val"
-                                                   placeholder={"(a+b)*c"}
-                                                   onChange={this.handleChangePass}
-                                                   style={{marginRight: 10, width: "45%"}}/>
-                                        </label>
-                                        <input type="submit" value="Submit"
-                                               style={{marginLeft: 10, width: "40%"}}/>
-                                    </form>
                                 </div>
-                            </div>
+                                    :
+                                    <div>
+                                        {!this.state.correct_pws[3] ?
+                                            <div align="center">
+                                                <div align="center" style={{width: "50vw"}}>
+                                                    <div className="container">
+                                                        <img
+                                                            className="img-fluid rounded"
+                                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto3.png?raw=true"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <form id="path-answer" onSubmit={this.check_pass}>
+                                                        <label width={"80%"}>
+                                                            <input type="text" ref="val"
+                                                                   placeholder={"(a+b)*c"}
+                                                                   onChange={this.handleChangePass}
+                                                                   style={{marginRight: 10, width: "45%"}}/>
+                                                        </label>
+                                                        <input type="submit" value="Submit"
+                                                               style={{marginLeft: 10, width: "40%"}}/>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            :
+                                            <div align="center">
+                                                <div align="center" style={{width: "50vw"}}>
+                                                    <h3>so speedy in those challenges...</h3>
+                                                    <div className="container">
+                                                        <img
+                                                            className="img-fluid rounded"
+                                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/shift.png?raw=true"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <p>...but it only counts if council was impressed, too.</p>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                    }
+                                </div>
                             }
                     </div>
                 }

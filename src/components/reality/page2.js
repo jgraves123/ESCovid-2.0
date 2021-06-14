@@ -26,7 +26,7 @@ export default class Page2 extends Component {
         pass: "",
         computer: false,
     };
-    
+
     immunityPop = () => {
         this.setState({
             map_open: !this.state.map_open
