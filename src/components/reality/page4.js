@@ -24,7 +24,7 @@ export default class Page4 extends Component {
     state = {
         sofa: false,
         note_open: false,
-        text: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/textMe.png?raw=true"
+        text: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/textMe.jpg?raw=true"
     };
 
 
@@ -43,7 +43,7 @@ export default class Page4 extends Component {
                 {this.state.sofa ?
                 <body align={"center"}>
                 <RemoteButton/>
-                {this.state.note_open ? <PopUp title="Text Me" x="679" y="451" width="100%" image={this.state.text} bottom={<Password alert={"Incorrect Code"} command={"Enter Code"} input={"xxx-xxx"} correct={<Continue url={"/reality/givtime"} text={"Continue"}/>} answers={["zy7-B4e"]}/>} padding="62%" toggle={this.notePop} /> : null}
+                {this.state.note_open ? <PopUp title="Text Me" x="679" y="251" width="100%" image={this.state.text} bottom={<Password alert={"Incorrect Code"} command={"Enter Code"} input={"xxx~xxx"} correct={<Continue url={"/reality/givtime"} text={"Continue"}/>} answers={["zy7-B4e"]}/>} padding="42%" toggle={this.notePop} /> : null}
                 <div className="scaling-svg-container" style={{paddingBottom: "45%"}}>
                     <svg className="scaling-svg" viewBox="0 0 1866 800"> {/* Needs auto
                          updating*/}
