@@ -52,7 +52,7 @@ export default class Page2a extends Component {
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
                     {this.state.coconut_open ? <SpeedPopUp toggle={this.speedPop} /> : null}
-                    {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="6500" y="4000" width="100%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
+                    {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto

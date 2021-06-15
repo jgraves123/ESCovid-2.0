@@ -61,9 +61,9 @@ export default class SpeedPopUp extends Component {
 
                 {!this.state.correct_pws[0] ?
                     <div align="center">
-                        <div align="center" style={{width: "50vw"}}>
-                            <div className="container">
-                                <div className="row align-items-center my-5">
+                        <div align="center" style={{width: "75vw"}}>
+                            <div className="container" >
+                                <div className="row align-items-center" style={{paddingBottom: "5px"}}>
                                     <div className="col-lg-7">
                                         <img
                                             className="img-fluid rounded mb-4 mb-lg-0"
@@ -71,7 +71,7 @@ export default class SpeedPopUp extends Component {
                                             alt="3D Set Game"
                                         />
                                     </div>
-                                    <div className="col-lg-5">
+                                    <div className="col-lg-5" >
                                         <Carousel pause={'hover'}>
                                             <Carousel.Item align='center'>
                                                 <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
