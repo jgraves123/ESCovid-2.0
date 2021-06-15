@@ -8,23 +8,19 @@ import RemoteButton from "./remoteButton";
 
 
 //TO DO:
-// finish Krypto (speedPopUp)
-// click something for riddle for idol search
 // password input box to go to council (new page)
 
-export default class Page2 extends Component {
+export default class Page2a extends Component {
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
-        if (this.props.curr_stage != 1) {
-            this.props.stage(1)
-        }
+        document.title = "Survivor!"
     }
 
     state = {
+        riddle: "https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/mapRiddle.png?raw=true",
         map_open: false,
         coconut_open: false,
         pass: "",
-        computer: false,
+        bamboo_open: false
     };
 
     immunityPop = () => {
@@ -39,6 +35,13 @@ export default class Page2 extends Component {
         });
     };
 
+    riddlePop = () => {
+        this.setState({
+            bamboo_open: !this.state.bamboo_open
+        });
+    };
+
+
     render() {
         return(
             <div style={{marginBottom: "10"}}>
@@ -49,12 +52,13 @@ export default class Page2 extends Component {
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
                     {this.state.coconut_open ? <SpeedPopUp toggle={this.speedPop} /> : null}
-
+                    {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="6500" y="4000" width="100%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
                     <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/basecamp.jpg?raw=true"/>
+                    <circle cx="910" cy="520" r="20" className="clickable-done" onClick={this.riddlePop}/>
                     <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.speedPop}/>
                     <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>
                 </svg>

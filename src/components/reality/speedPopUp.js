@@ -4,12 +4,7 @@ import {contacts} from "./contacts";
 import {Carousel} from 'react-bootstrap';
 import {evaluate} from "mathjs";
 
-//TO DO:
-//Krypto:
-//  Update the krypto reqs for each puzzle
-//  Krypto cards pics
-//  Last krypto screen
-//  Give the password transform (shift 5 and reverse)
+//DONE
 
 export default class SpeedPopUp extends Component {
     state = {
