@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 
 export default class Page5 extends Component {
     componentDidMount(){
-        document.title = "ESCovid: Last Step!"
+        document.title = "Final Reality"
         console.log("hello my fine fellow")
         if (this.props.curr_stage != 4) {
             this.props.stage(4)
@@ -38,13 +38,19 @@ export default class Page5 extends Component {
                     <div align={"center"} className={"middle"} style={{width: "70%"}}>
                         <div align="center">
                             <h1>Congratulations!!</h1>
-                            <ReactPlayer url='https://www.youtube.com/watch?v=oMVe_HcyP9Y' playing="true" loop="true" volume={0.3} width="95%"/>
+                            <ReactPlayer url='https://www.youtube.com/watch?v=FNsCzGhGbyk' playing="true" loop="true" volume={0.3} width="95%" config={{
+                                youtube: {
+                                    playerVars: {
+                                        start: 200,
+                                    }
+                                }
+                            }}/>
                         </div>
                         <div height="400">
                         </div>
 
                         <div align="center">
-                            <h2>You have successfully helped Caleb identify the sender of his anonymous email, and helped introduce him to his step sister!</h2>
+                            <h2>You've escaped the television and made it to GIV!! Except you were kind of here all along ...</h2>
                         </div>
                         <div align={"center"}>
                             <div align={"center"} style={{margin: "10", maxHeight: "400px", overflow: "auto", width: "95%"}}>
@@ -55,7 +61,7 @@ export default class Page5 extends Component {
                                 </iframe>
                             </div>
                             <div style={{paddingBottom: 10}}>
-                                <Link to="/anon/leaderboard">
+                                <Link to="/reality/leaderboard">
                                     <button className="button"><h2>Join the Leaderboard</h2></button>
                                 </Link>
                             </div>

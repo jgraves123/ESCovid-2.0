@@ -17,7 +17,6 @@ export default class Page3b extends Component {
         if (this.props.curr_stage != 2) {
             this.props.stage(2)
         }
-        console.log(evaluate("12 /3") );
     }
 
 

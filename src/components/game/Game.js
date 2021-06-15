@@ -164,7 +164,7 @@ class Game extends Component {
                         <Route path="/reality/sofa" exact component={() => <Sofa game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/givtime" exact
                                component={() => <GIV curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
-                        <Route path="/anon/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
+                        <Route path="/reality/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
 
                     </Switch>
                 </Router>
