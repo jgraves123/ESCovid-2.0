@@ -96,10 +96,7 @@ export default class Instructions2 extends Component{
                     <p><strong>Good luck!</strong></p>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>
-                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
-                    <Link to="/anon/page1">
-                        <button className="button" onClick={this.changeName}><h3>Begin Anonymous Connections</h3></button>
-                    </Link></Alert>
+                <Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Unfortunately, this Escape Room is temporarily unavailable. Please check back June, 25th! We are sorry for the inconvenience.</Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>
                         <label style={{margin: "5px"}}>

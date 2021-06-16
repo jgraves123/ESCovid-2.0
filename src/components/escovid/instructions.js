@@ -123,13 +123,8 @@ export default class Instructions extends Component{
                     <p><strong>Good luck!</strong></p>
                 </div>
                 <Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "50%"}}>Invalid group name.</Alert>
-                <Alert show={this.state.showAlert} variant="success" style={{width: "50%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<br/>
-                    <Link to="/escovid/gform">
-                        <button className="button" onClick={this.changeName1}><h3>Begin ESCovid-19</h3></button>
-                    </Link>
-                    <Link to="/escovid/gform">
-                        <button className="button" onClick={this.changeName2}><h3>Begin ESCovid-20</h3></button>
-                    </Link></Alert>
+                <Alert show={this.state.showAlert} variant="success" style={{width: "50%"}}>
+                    Unfortunately, this Escape Room is temporarily unavailable. Please check back June, 25th! We are sorry for the inconvenience.</Alert>
                 <div style={{margin: "20px"}}>
                     <form id="group-name" onSubmit={this.check}>
                         <label style={{margin: "5px"}}>
