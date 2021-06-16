@@ -101,6 +101,7 @@ export default class SpeedPopUp extends Component {
                             <div align="center">
                                 <div align="center" style={{width: "50vw"}}>
                                     <div className="container">
+                                        <p>Rules: Use each of the top cards exactly once to make the bottom card.</p>
                                         <img
                                             className="img-fluid rounded"
                                             src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto1.png?raw=true"

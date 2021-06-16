@@ -6,6 +6,7 @@ import PopUp from "../game/PopUp";
 import Password from "../game/password";
 import Continue from "../game/continueButton";
 import Remote from "./remote";
+import TextPop from "../game/textPop";
 
 
 
@@ -48,7 +49,7 @@ export default class Start extends Component {
                             <rect x="950" y="250" width="350" height="190" className="clickable-done" onClick={this.notePop}/>
                         </svg>
                     </div>
-                    <p>You want to go to math camp but you don't think you're good enough so you decided to watch television instead</p>
+                    <TextPop title={"You want to go to math camp, but..."} content={"...you don't think you're smart enough to do all the lectures, problem-solving, and other activities. You decide to stay home and watch TV all summer instead!"}/>
                     </body>
             </div>
         );

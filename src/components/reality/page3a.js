@@ -6,13 +6,14 @@ import TextPopUp from "./TextPopUp";
 import {RemoteButton} from "./index";
 import ReactAudioPlayer from "react-audio-player";
 import knock from "./knocks.m4a"
+import TextPop from "../game/textPop";
 
 
 
 
 export default class Page3a extends Component {
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
+        document.title = "Bachelor"
         if (this.props.curr_stage != 2) {
             this.props.stage(2)
         }
@@ -78,9 +79,7 @@ export default class Page3a extends Component {
                         <polygon points="1930,380 1955,380 2000,542 1930,540" className="clickable-done" onClick={this.notePop}/>
                     </svg>
                 </div>
-                <p>
-                    The bachelor really likes you, but isn't supposed to have favorites, so you must discuss covertly.
-                </p>
+                <TextPop title={"The bachelor really likes you, but..."} content={"...unfortunately, his opinion doesn't count for much in this new mash-up. He isn't supposed to have favorites, so you have to communicate covertly."}/>
                 </body>
             </div>
         );

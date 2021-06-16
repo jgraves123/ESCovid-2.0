@@ -19,11 +19,11 @@ export default class Page2b extends Component {
         pass: false,
         remap: {'w':'d', 'e': 'r', 'r': 'w', 't': 'b', 'y': 'j', 'u': 'f', 'i': 'u', 'o': 'p', 'p': ';', 'd': 'h', 'f': 't', 'h': 'y', 'j': 'n', 'k': 'e', 'l': 'o', ';': 'i', 'c': 'm', 'v': 'c', 'b': 'v', 'n': 'k', 'm': 'l'},
         password: "",
-        speech: "Good evening, Council. It goes without saying that I have outlasted all of you, despite the worthy competition."
-            // + "I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
-            // "Most importantly, I was a trusted leader of the *team name* tribe and it was an honor to successfully outwit them all to find the idol under great suspicion. " +
-            // "If you crown me champion, I make this unprecedented promise as a mark of respect and gratitude: each and every one of you will receive a portion of my million dollar prize." +
-            // "Now...I believe you have a decision to make."
+        speech: "Good evening, Council. It goes without saying that I have outlasted all of you, despite the worthy competition.",
+        fullSpeech: "I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
+            "Most importantly, I was a trusted leader of the *team name* tribe and it was an honor to successfully outwit them all to find the idol under great suspicion. " +
+            "If you crown me champion, I make this unprecedented promise as a mark of respect and gratitude: each and every one of you will receive a portion of my million dollar prize." +
+            "Now...I believe you have a decision to make."
     };
 
     checkPass = (event) => {
@@ -58,24 +58,6 @@ export default class Page2b extends Component {
         }
 
         console.log(this.state.password)
-
-        // let input = event.target.value;
-        // let letter = "";
-        // let newLetter = "";
-        // let arr = input.split("");
-        // let toShow = "";
-        // for (let i=0; i<arr.length; i++){
-        //     letter = arr[i];
-        //     newLetter = letter;
-        //     if (letter in this.state.remap){
-        //         newLetter = this.state.remap[letter];
-        //     }
-        //     toShow = toShow + newLetter;
-        // }
-        // document.getElementById("typing").value = toShow;
-        // this.setState({
-        //     password: toShow
-        // });
     }
 
     render() {
@@ -93,7 +75,7 @@ export default class Page2b extends Component {
                         />
                     </div>
                     <div className="content-section container" align="left" style={{width: "60%", marginTop: "2vw"}}>
-                        <h3>Winning Speech:</h3>
+                        <h3>1st Flashcard:</h3>
                             <p>{this.state.speech}
                             </p>
                     </div>
@@ -117,10 +99,14 @@ export default class Page2b extends Component {
                                            style={{marginLeft: 10, width: "20%"}}/>
                                 </form>
                             </div>
-                            : <div style={{padding: "20px"}}>
-                                <p>You win Survivor. Now, you'd better get out of here before the other contestants start demanding their money.</p>
-                                <p>Next Channel: 5237</p>
-                            </div>}
+                            : <div><div style={{padding: "20px"}}>
+                                <p>You've got the hang of it now, so you finish your speech without a hitch:</p>
+                                <p>{this.state.fullSpeech}</p>
+                            </div>
+                                <div style={{padding: "20px"}}>
+                                    <p>Congrats, you won Survivor! Now, you'd better get out of here before the other contestants start demanding their money.</p>
+                                    <p>Next Channel: 5237</p>
+                            </div></div>}
                     </>
                 </div>
 
