@@ -136,25 +136,7 @@ class Game extends Component {
                     <Switch>
                         <Route path="/escovid" exact component={() => <Instructions setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
                         {/*<Route path="/escovid" exact component={() => <Escovid  page={"start"} setName = {this.set_team_name} name={this.team_name}/>} />*/}
-                        <Route path="/escovid/gform" exact component={() => <Gform counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/escovid/tumblr" exact component={() => <Tumblr1 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/escovid/auth" exact component={() => <Tumblr2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/escovid/final" exact component={() => <Final curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
-                        <Route path="/escovid/trappist" exact
-                               component={() => <Congrats planet="TRAPPIST-1" />}/>
-                        <Route path="/escovid/gliese" exact
-                               component={() => <Congrats planet="Gliese 876"/>}/>
-                        <Route path="/escovid/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
-
                         <Route path="/anon" exact component={() => <Instructions2 setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
-                        <Route path="/anon/page1" exact component={() => <Page1 counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/anon/cubicle" exact component={() => <Page2 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/anon/office" exact component={() => <Page3 game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
-                        <Route path="/anon/backhome" exact
-                               component={() => <Page4 curr_stage={this.state.stage} stage={this.update_stage} timing={this.state.timing} stop={this.change_time}/>}/>
-                        <Route path="/anon/onward" exact
-                               component={() => <Page5 />}/>
-                        <Route path="/anon/leaderboard" exact component={() => <Leader track={this.state.track} game={this.state.game_name} team={this.state.team_name} hints={this.state.hints}/>}/>
                         <Route path="/reality" exact component={() => <RealityInstructions setName = {this.set_team_name} name={this.state.team_name} gameName={this.set_game_name}/>} />
                         <Route path="/reality/start" exact component={() => <Start counting={this.state.timing} start={this.change_time} name={this.state.team_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />
                         <Route path="/reality/bakeoff" exact component={() => <Bakeoff game_name={this.state.game_name} curr_stage={this.state.stage} stage={this.update_stage}/>} />

@@ -1,5 +1,4 @@
 import React from "react";
-import GliesePopUp from "../escovid/GliesePopUp";
 import {Navigation} from "../index";
 import Headroom from "react-headroom";
 
