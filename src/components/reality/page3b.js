@@ -14,8 +14,8 @@ import BuzzerPopUp from "./BuzzerPopUp";
 export default class Page3b extends Component {
     componentDidMount() {
         document.title = "ESCovid: Last Step!"
-        if (this.props.curr_stage != 2) {
-            this.props.stage(2)
+        if (this.props.curr_stage != 3) {
+            this.props.stage(3)
         }
     }
 

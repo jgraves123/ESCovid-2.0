@@ -13,8 +13,8 @@ import knock from "./knocks.m4a"
 export default class Page3a extends Component {
     componentDidMount() {
         document.title = "ESCovid: Last Step!"
-        if (this.props.curr_stage != 2) {
-            this.props.stage(2)
+        if (this.props.curr_stage != 3) {
+            this.props.stage(3)
         }
     }
 
