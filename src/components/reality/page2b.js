@@ -17,8 +17,7 @@ export default class Page2b extends Component {
 
     state = {
         pass: false,
-        remap: {'z': 'x'},
-        //{'w':'d', 'e': 'r', 'r': 'w', 't': 'b'},
+        remap: {'w':'d', 'e': 'r', 'r': 'w', 't': 'b', 'y': 'j', 'u': 'f', 'i': 'u', 'o': 'p', 'p': ';', 'd': 'h', 'f': 't', 'h': 'y', 'j': 'n', 'k': 'e', 'l': 'o', ';': 'i', 'c': 'm', 'v': 'c', 'b': 'v', 'n': 'k', 'm': 'l'},
         password: "",
         speech: "Good evening, Council. It goes without saying that I have outlasted all of you, despite the worthy competition."
             // + "I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
@@ -57,6 +56,8 @@ export default class Page2b extends Component {
                 password: event.target.value
             });
         }
+
+        console.log(this.state.password)
 
         // let input = event.target.value;
         // let letter = "";
@@ -117,12 +118,8 @@ export default class Page2b extends Component {
                                 </form>
                             </div>
                             : <div style={{padding: "20px"}}>
-                                <p>You win Survivor. Now, you'd better get out of here before the other contestants start demanding their money.
-                                </p>
-                                <Link to="/reality/agt">
-                                    <button className="button"><h3>Continue</h3></button>
-                                </Link>
-                                <br/>
+                                <p>You win Survivor. Now, you'd better get out of here before the other contestants start demanding their money.</p>
+                                <p>Next Channel: 5237</p>
                             </div>}
                     </>
                 </div>

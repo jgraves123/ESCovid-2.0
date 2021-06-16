@@ -18,7 +18,8 @@ export default class Page4 extends Component {
         if (this.props.curr_stage != 4) {
             this.props.stage(4)
         }
-        setTimeout(() => this.setState({sofa: true}), 500);
+        localStorage.setItem("remote", "5");
+        setTimeout(() => this.setState({sofa: true}), 5000);
     }
 
     state = {

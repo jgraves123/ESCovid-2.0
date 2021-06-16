@@ -88,12 +88,8 @@ export default class Page1 extends Component {
                             </div>
                             : <div style={{padding: "20px"}}>
                                 <p>You track down Marcus Mille and get the <a href={"https://thegreatbritishbakeoff.co.uk/recipes/all/paul-hollywood-twice-baked-stilton-souffles-with-lavash-crackers/"}>recipe</a>.
-                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand. In fact, it's YOUR remote...
+                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand. In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
                                 </p>
-                                <Link to="/reality/page2">
-                                <button className="button"><h3>Continue</h3></button>
-                                </Link>
-                                <br/>
                             </div>}
                         <div className="scaling-svg-container" style={{paddingBottom: "20%"}}>
                             <svg className="scaling-svg" viewBox="-20 -20 400 100">

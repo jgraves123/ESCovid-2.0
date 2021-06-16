@@ -23,11 +23,11 @@ export default class Remote extends Component {
 
     state = {
         channel: "",
-        bakeCode: 0,
-        survivorCode: 1,
-        agtCode: 2,
-        bachelorCode: 3,
-        escCode: 4,
+        bakeCode: 174,
+        survivorCode: 389,
+        agtCode: 5237,
+        bachelorCode: 1765,
+        escCode: 98989,
         directory: 0,
     };
 
@@ -60,10 +60,10 @@ export default class Remote extends Component {
             this.setDirectory(3);
             window.location.href = '/reality/agt';
         } else if (curr === this.state.bachelorCode) {
-            this.setDirectory(3);
+            this.setDirectory(4);
             window.location.href = '/reality/bachelor';
         } else if (curr === this.state.escCode) {
-            this.setDirectory(4);
+            this.setDirectory(5);
             window.location.href = '/reality/sofa';
         } else {
             this.handleReset();
@@ -124,11 +124,11 @@ export default class Remote extends Component {
                         <h3>TV Guide</h3>
                         <table>
                             <tr><th>Channel</th><th>Code</th></tr>
-                            <tr><td>British Bakeoff</td><td>0</td></tr>
-                            {this.state.directory >= 2 ? <tr><td>Survivor</td><td>1</td></tr> : null}
-                            {this.state.directory >= 3 ? <tr><td>Bachelor (BGT)</td><td>2</td></tr> : null}
-                            {this.state.directory >= 3 ? <tr><td>America's Got Talent (BGT)</td><td>3</td></tr> : null}
-                            {this.state.directory >= 4 ? <tr><td>ESC</td><td>4</td></tr> : null}
+                            <tr><td>British Bakeoff</td><td>{this.state.bakeCode}</td></tr>
+                            {this.state.directory >= 2 ? <tr><td>Survivor</td><td>{this.state.survivorCode}</td></tr> : null}
+                            {this.state.directory >= 3 ? <tr><td>America's Got Talent (BGT)</td><td>{this.state.agtCode}</td></tr> : null}
+                            {this.state.directory >= 4 ? <tr><td>Bachelor (BGT)</td><td>{this.state.bachelorCode}</td></tr> : null}
+                            {this.state.directory >= 5 ? <tr><td>ESC</td><td>{this.state.escCode}</td></tr> : null}
 
                         </table>
                     </div>

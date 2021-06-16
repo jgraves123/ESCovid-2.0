@@ -5,6 +5,7 @@ import SpeedPopUp from "./speedPopUp";
 import ImmunityPopUp from "./immunityPopUp";
 import TextPop from "../game/textPop";
 import RemoteButton from "./remoteButton";
+import {Link} from "react-router-dom";
 
 
 //TO DO:
@@ -20,7 +21,9 @@ export default class Page2a extends Component {
         map_open: false,
         coconut_open: false,
         pass: "",
-        bamboo_open: false
+        bamboo_open: false,
+        password: "",
+        finished: false,
     };
 
     immunityPop = () => {
@@ -41,6 +44,25 @@ export default class Page2a extends Component {
         });
     };
 
+    handleChange = (event) => {
+        this.setState({
+            password: event.target.value
+        });
+    }
+
+
+
+    check_pass = (event) => {
+        event.preventDefault();
+        this.temp = ("outwit" === this.state.password)
+        if (!this.temp) {
+            alert("Incorrect Code")
+        }
+        this.setState({
+            finished: this.temp,
+        });
+    }
+
 
     render() {
         return(
@@ -54,7 +76,7 @@ export default class Page2a extends Component {
                     {this.state.coconut_open ? <SpeedPopUp toggle={this.speedPop} /> : null}
                     {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
                 </div>
-                <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
+                <div className="scaling-svg-container" style={{paddingBottom: "62%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
                     <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/basecamp.jpg?raw=true"/>
@@ -63,9 +85,25 @@ export default class Page2a extends Component {
                     <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>
                 </svg>
                 </div>
+                {!this.state.finished ? <div align={"center"} style={{paddingBottom: "20px"}}>
+                    <form id="path-answer" onSubmit={this.check_pass}>
+                        <label width={"80%"}>
+                            <input type="text" ref="val"
+                                   placeholder={"Decoded Password"}
+                                   onChange={this.handleChange}
+                                   style={{marginRight: 10, width: "100%"}}/>
+                        </label>
+                        <input type="submit" value="Submit"
+                               style={{marginLeft: 10, width: "10%"}}/>
+                    </form>
+                </div> :
+                <div align={"center"} style={{paddingBottom: "20px"}}>
+                    <Link to="/reality/council">
+                        <button className="button"><h3>Continue to Tribal Council</h3></button>
+                    </Link>
+                </div>}
 
                 <TextPop title={"You find yourself on a remote island..."} content={"You seem to be in some sort of temporary shelter in the wooded area near a body of water. You're not alone - in fact, you're surrounded by people who smell like they haven't showered for days. Then you see the camera crew, and know - you haven't escaped the TV after all; you've just traded an oven for a campfire. This is Survivor."}/>
-
                 </body>
             </div>
         );
