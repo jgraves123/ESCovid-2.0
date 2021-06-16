@@ -25,7 +25,7 @@ export default class Page4 extends Component {
     state = {
         sofa: false,
         note_open: false,
-        text: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/textMe.jpg?raw=true"
+        text: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/textMe.jpg?raw=true"
     };
 
 
@@ -48,7 +48,7 @@ export default class Page4 extends Component {
                 <div className="scaling-svg-container" style={{paddingBottom: "45%"}}>
                     <svg className="scaling-svg" viewBox="0 0 1866 800"> {/* Needs auto
                          updating*/}
-                        <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/livingRoom.png?raw=true"/>
+                        <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/livingRoom.png?raw=true"/>
                         <rect x="870" y="645" width="50" height="25" className="clickable-done" onClick={this.notePop}/>
                     </svg>
                 </div>

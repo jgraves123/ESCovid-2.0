@@ -105,7 +105,7 @@ export default class Page3b extends Component {
                             <text x="530" y="15" fill="black" font-size=".6em" textAnchor="middle" alignmentBaseline="central">H</text>
                         </svg>
                     </div>
-                    <img src={"https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/buzzers.png?raw=true"} width={"70%"}/>
+                    <img src={"https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/buzzers.png?raw=true"} width={"70%"}/>
                     <div align={"center"} style={{padding: "20px"}}>
                         <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                     </div>

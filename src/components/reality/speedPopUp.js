@@ -67,17 +67,17 @@ export default class SpeedPopUp extends Component {
                                     <div className="col-lg-7">
                                         <img
                                             className="img-fluid rounded mb-4 mb-lg-0"
-                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/set.png?raw=true"
+                                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/set.png?raw=true"
                                             alt="3D Set Game"
                                         />
                                     </div>
                                     <div className="col-lg-5" >
                                         <Carousel pause={'hover'}>
                                             <Carousel.Item align='center'>
-                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
+                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/setRules1.png?raw=true"} alt={"Instructions part 1"}/>
                                             </Carousel.Item>
                                             <Carousel.Item align='center'>
-                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/setRules2.png?raw=true"} alt={"Instructions part 2"}/>
+                                                <img style={{width: "100%"}} src={"https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/setRules2.png?raw=true"} alt={"Instructions part 2"}/>
                                             </Carousel.Item>
                                         </Carousel>
                                     </div>
@@ -104,7 +104,7 @@ export default class SpeedPopUp extends Component {
                                         <p>Rules: Use each of the top cards exactly once to make the bottom card.</p>
                                         <img
                                             className="img-fluid rounded"
-                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto1.png?raw=true"
+                                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/krypto1.png?raw=true"
                                             alt=""
                                         />
                                     </div>
@@ -128,7 +128,7 @@ export default class SpeedPopUp extends Component {
                                         <div className="container">
                                             <img
                                                 className="img-fluid rounded"
-                                                src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto2.png?raw=true"
+                                                src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/krypto2.png?raw=true"
                                                 alt=""
                                             />
                                         </div>
@@ -152,7 +152,7 @@ export default class SpeedPopUp extends Component {
                                                     <div className="container">
                                                         <img
                                                             className="img-fluid rounded"
-                                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/krypto3.png?raw=true"
+                                                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/krypto3.png?raw=true"
                                                             alt=""
                                                         />
                                                     </div>
@@ -175,7 +175,7 @@ export default class SpeedPopUp extends Component {
                                                     <div className="container">
                                                         <img
                                                             className="img-fluid rounded"
-                                                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/shift.png?raw=true"
+                                                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/shift.png?raw=true"
                                                             alt=""
                                                         />
                                                     </div>

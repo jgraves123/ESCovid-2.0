@@ -24,8 +24,8 @@ export default class Page3a extends Component {
         texts_open: false,
         note_open: false,
         morse_open: false,
-        note: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/note.png?raw=true",
-        morse: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/morse.png?raw=true",
+        note: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/note.png?raw=true",
+        morse: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/morse.png?raw=true",
     };
 
 
@@ -72,7 +72,7 @@ export default class Page3a extends Component {
                 <div className="scaling-svg-container" style={{paddingBottom: "68%"}}>
                     <svg className="scaling-svg" viewBox="0 0 3000 2000"> {/* Needs auto
                          updating*/}
-                        <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/bachelor.png?raw=true"/>
+                        <image width="100%" href="https://github.com/jgraves123/escovid2/blob/main/images/reality/bachelor.png?raw=true"/>
                         <rect x="1270" y="460" width="50" height="130" className="clickable-done" onClick={this.knockPop}/>
                         <rect x="2450" y="400" width="100" height="300" className="clickable-done" onClick={this.morsePop}/>
                         <circle cx="2790" cy="840" r="20" className="clickable-done" onClick={this.textsPop}/>

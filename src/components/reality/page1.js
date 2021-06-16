@@ -17,11 +17,11 @@ export default class Page1 extends Component {
     }
 
     state = {
-        desserts: ["https://github.com/jgraves123/escovid2/blob/reality/images/reality/Mille-Crepe.jpg?raw=true",
-            "https://github.com/jgraves123/escovid2/blob/reality/images/reality/OrangeCannoli.jpg?raw=true",
-            "https://github.com/jgraves123/escovid2/blob/reality/images/reality/biscuittower.jpg?raw=true",
-            "https://github.com/jgraves123/escovid2/blob/reality/images/reality/deco-roll.jpg?raw=true",
-            "https://github.com/jgraves123/escovid2/blob/reality/images/reality/souffles.png?raw=true"],
+        desserts: ["https://github.com/jgraves123/escovid2/blob/main/images/reality/Mille-Crepe.jpg?raw=true",
+            "https://github.com/jgraves123/escovid2/blob/main/images/reality/OrangeCannoli.jpg?raw=true",
+            "https://github.com/jgraves123/escovid2/blob/main/images/reality/biscuittower.jpg?raw=true",
+            "https://github.com/jgraves123/escovid2/blob/main/images/reality/deco-roll.jpg?raw=true",
+            "https://github.com/jgraves123/escovid2/blob/main/images/reality/souffles.png?raw=true"],
         slides: false,
         slide1: 0,
         slide2: 1,
@@ -60,7 +60,7 @@ export default class Page1 extends Component {
                         </p>
                         <img
                             className="img-fluid rounded mb-4 mb-lg-0"
-                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/cassettetape.png?raw=true"
+                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/cassettetape.png?raw=true"
                             alt="old cassette tape"
                         />
                     </div>

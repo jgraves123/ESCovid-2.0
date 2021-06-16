@@ -70,7 +70,7 @@ export default class Page2b extends Component {
                         <h3>The Final Defense</h3>
                         <img
                             className="img-fluid rounded mb-4 mb-lg-0"
-                            src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/council.jpg?raw=true"
+                            src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/council.jpg?raw=true"
                             alt="survivor council"
                         />
                     </div>

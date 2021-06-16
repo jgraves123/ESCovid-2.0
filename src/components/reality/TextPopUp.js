@@ -129,7 +129,7 @@ export default class TextPopUp extends Component {
                                                         I can prove our love is possible. There’s always a solution.
                                                     </Text>
                                                     <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent="1:38 am" myavatar={this.avatars[this.state.chat]}>
-                                                        <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/exampleNote.png?raw=true"/>
+                                                        <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/exampleNote.png?raw=true"/>
                                                     </Text>
                                                     <Text myclass={this.sent} character="You" timesent="1:38 am" myavatar={this.avatars[3]}>
                                                         You’re such a nerd :)

@@ -48,7 +48,7 @@ export default class SpeedPopUp extends Component {
                             <div className="container">
                                 <img
                                     className="img-fluid rounded mb-4 mb-lg-0"
-                                    src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/map.png?raw=true"
+                                    src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/map.png?raw=true"
                                     alt=""
                                 />
                             </div>
@@ -69,7 +69,7 @@ export default class SpeedPopUp extends Component {
                         <div align="center" style={{width: "40vw"}}>
                             <img
                                 className="img-fluid rounded mb-4 mb-lg-0"
-                                src="https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/idol.png?raw=true"
+                                src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/idol.png?raw=true"
                                 alt=""
                             />
                         </div>

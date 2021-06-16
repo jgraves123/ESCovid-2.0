@@ -20,7 +20,7 @@ export default class Page2a extends Component {
     }
 
     state = {
-        riddle: "https://github.com/jgraves123/escovid2/blob/reality/images/reality/survivor/mapRiddle.png?raw=true",
+        riddle: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/mapRiddle.png?raw=true",
         map_open: false,
         coconut_open: false,
         pass: "",
@@ -82,7 +82,7 @@ export default class Page2a extends Component {
                 <div className="scaling-svg-container" style={{paddingBottom: "62%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
                          updating*/}
-                    <image width="100%" href="https://github.com/jgraves123/escovid2/blob/reality/images/reality/basecamp.jpg?raw=true"/>
+                    <image width="100%" href="https://github.com/jgraves123/escovid2/blob/main/images/reality/basecamp.jpg?raw=true"/>
                     <circle cx="910" cy="520" r="20" className="clickable-done" onClick={this.riddlePop}/>
                     <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.speedPop}/>
                     <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>

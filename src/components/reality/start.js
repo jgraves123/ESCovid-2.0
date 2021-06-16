@@ -24,7 +24,7 @@ export default class Start extends Component {
 
     state = {
         tv_open: false,
-        text: "https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/textMe.png?raw=true"
+        text: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/textMe.png?raw=true"
     };
 
 
@@ -45,7 +45,7 @@ export default class Start extends Component {
                     <div className="scaling-svg-container" style={{paddingBottom: "45%"}}>
                         <svg className="scaling-svg" viewBox="0 0 1866 800"> {/* Needs auto
                          updating*/}
-                            <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/reality/images/reality/livingRoom.png?raw=true"/>
+                            <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/livingRoom.png?raw=true"/>
                             <rect x="950" y="250" width="350" height="190" className="clickable-done" onClick={this.notePop}/>
                         </svg>
                     </div>
