@@ -22,8 +22,6 @@ class Home extends Component {
         }
     }
 
-
-
     state = {
         gliese: false,
         trappist: false,

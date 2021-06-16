@@ -130,7 +130,7 @@ export default class Page2 extends Component {
                 {/*    <div align={"center"} style={{paddingTop: "2%"}}>*/}
                 {/*        <button className="dull-button"><h3>Success</h3></button>*/}
                 {/*    </div>}*/}
-                <div height="400">
+                <div>
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <PopUp title="Highways" x="6500" y="4000" width="100%" image={this.state.map} padding="62%" toggle={this.mapPop} /> : null}
                     {this.state.map_math_open ? <PopUp title="Arithmetic" x="1672" y="422" width="90%" image={this.state.map_math} padding="25%" toggle={this.mapMathPop} /> : null}
@@ -138,8 +138,6 @@ export default class Page2 extends Component {
                     {this.state.cell_open ? <PhonePopUp toggle={this.cellPop} /> : null}
                     {this.state.comp_open ? <CompPopUp toggle={this.compPop} /> : null}
                     {this.state.pics_open ? <CarouselPopUp toggle={this.carouselPop} /> : null}
-                    {this.state.paths_open ? <PopUp title="Help" x="3024" y="3860" width="70%" image={this.state.paths} padding="90%" toggle={this.pathsPop} /> : null}
-
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "65%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto

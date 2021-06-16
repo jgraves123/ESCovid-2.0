@@ -15,7 +15,6 @@ export default class Tumblr1 extends Component {
         document.title = "Step 2";
         console.log(this.props.curr_stage);
         if (this.props.curr_stage != 1) {
-            console.log("jdklfjal;ksdfasdjk;lfdsfjkl")
             this.props.stage(1)
         }
     }
