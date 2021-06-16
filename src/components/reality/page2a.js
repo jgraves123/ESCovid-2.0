@@ -57,7 +57,7 @@ export default class Page2a extends Component {
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = ("outwit" === this.state.password)
+        this.temp = ("outwit" === this.state.password | "Outwit" === this.state.password)
         if (!this.temp) {
             alert("Incorrect Code")
         }
