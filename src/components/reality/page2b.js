@@ -19,8 +19,8 @@ export default class Page2b extends Component {
         pass: false,
         remap: {'w':'d', 'e': 'r', 'r': 'w', 't': 'b', 'y': 'j', 'u': 'f', 'i': 'u', 'o': 'p', 'p': ';', 'd': 'h', 'f': 't', 'h': 'y', 'j': 'n', 'k': 'e', 'l': 'o', ';': 'i', 'c': 'm', 'v': 'c', 'b': 'v', 'n': 'k', 'm': 'l'},
         password: "",
-        speech: "Good evening, Council. It goes without saying that I have outlasted all of you, despite the worthy competition.",
-        fullSpeech: "I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
+        speech: "I have outlasted, outwitted, and outplayed.",
+        fullSpeech: "It goes without saying that I have outlasted all of you, despite the worthy competition. I have also outplayed the competition, solving the 4D SET and Krypto puzzles in record time. " +
             "Most importantly, I was a trusted leader of the *team name* tribe and it was an honor to successfully outwit them all to find the idol under great suspicion. " +
             "If you crown me champion, I make this unprecedented promise as a mark of respect and gratitude: each and every one of you will receive a portion of my million dollar prize." +
             "Now...I believe you have a decision to make."

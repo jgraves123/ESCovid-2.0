@@ -14,7 +14,7 @@ import Continue from "../game/continueButton";
 export default class Page4 extends Component {
 
     componentDidMount() {
-        document.title = "ESCovid: Last Step!"
+        document.title = "Sofa"
         if (this.props.curr_stage != 4) {
             this.props.stage(4)
         }

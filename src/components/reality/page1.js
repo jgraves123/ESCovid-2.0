@@ -69,8 +69,8 @@ export default class Page1 extends Component {
                         <p style={{paddingLeft: "25px"}}>
                             <p>After calling all your friends, you can’t find anyone with the tape - but they all remember something about the show. Use this information to match each person with their dessert, quote, and how they ranked that week.</p>
                             <li>None of the contestants baked their namesake.</li>
-                            <li>Mary Berry’s cherry was not popped by Brad’s deco roll, despite the announcer’s prediction.</li>
-                            <li>The crepe cake was delightfully non-soggy and ranked higher than the disastrous card tower and the rock-hard cannolis.</li>
+                            <li>Brad’s deco roll popped Mary Berry's Cherry right on schedule!</li>
+                            <li>The crepe cake had a soggy bottom but still ranked higher than the disastrous card tower and the rock-hard cannolis.</li>
                             <li>Susie was the worst-ranked going into the next episode, but she did better than Carol, who was eliminated.</li>
                             <li>Due to its extraordinary flavor or the lack of competition, the dropped dessert “took the cake” this week.</li>
                             <li>The deco roll was not ranked second.</li>
@@ -81,7 +81,7 @@ export default class Page1 extends Component {
 
                 <div align="center" >
                     <>
-                        <h2>Set the true ranking of desserts:</h2>
+                        <h2>Set the true <a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}>ranking</a> of desserts:</h2>
                         {!this.state.slides ?
                             <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>

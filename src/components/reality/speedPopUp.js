@@ -45,6 +45,10 @@ export default class SpeedPopUp extends Component {
             this.setState({correct_pws: this.pw});
             this.setState({part: this.state.part + 1})
         }
+        console.log(this.state.part);
+        if (this.state.part > 2){
+            localStorage.setItem("solved", "t")
+        }
     };
 
 
@@ -171,7 +175,7 @@ export default class SpeedPopUp extends Component {
                                             :
                                             <div align="center">
                                                 <div align="center" style={{width: "50vw"}}>
-                                                    <h3>so speedy in those challenges...</h3>
+                                                    <h3>so speedy in those challenges,  like a stick shift lambo...</h3>
                                                     <div className="container">
                                                         <img
                                                             className="img-fluid rounded"

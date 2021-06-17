@@ -13,16 +13,23 @@ import {Link} from "react-router-dom";
 
 export default class Page2a extends Component {
     componentDidMount() {
-        document.title = "Survivor!"
+        document.title = "Survivor!";
         if (this.props.curr_stage !== 2) {
             this.props.stage(2)
+        }
+        let curr = localStorage.getItem("solved")
+        if (curr == null) {
+            localStorage.setItem("solved", false);
+            curr = 0;
         }
     }
 
     state = {
         riddle: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/mapRiddle.png?raw=true",
+        shift: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/shift.png?raw=true",
         map_open: false,
         coconut_open: false,
+        coconut_solved: localStorage.getItem("solved")==="t",
         pass: "",
         bamboo_open: false,
         password: "",
@@ -39,6 +46,11 @@ export default class Page2a extends Component {
         this.setState({
             coconut_open: !this.state.coconut_open
         });
+        this.setState({
+            coconut_solved: localStorage.getItem("solved")==="t"
+        });
+        console.log(this.state.coconut_solved);
+        console.log(localStorage.getItem("solved"))
     };
 
     riddlePop = () => {
@@ -76,7 +88,8 @@ export default class Page2a extends Component {
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
-                    {this.state.coconut_open ? <SpeedPopUp toggle={this.speedPop} /> : null}
+                    {(this.state.coconut_open && this.state.coconut_solved) ? <PopUp title="I'm here for you" x="1500" y="1510" width="80%" image={this.state.shift} toggle={this.speedPop} padding="60%"/> : null}
+                    {(this.state.coconut_open && !this.state.coconut_solved) ? <SpeedPopUp toggle={this.speedPop} /> : null}
                     {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "62%"}}>
