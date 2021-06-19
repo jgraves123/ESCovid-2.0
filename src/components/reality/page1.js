@@ -82,7 +82,7 @@ export default class Page1 extends Component {
 
                 <div align="center" >
                     <>
-                        <h2>Set the true <a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}  rel="noreferrer" target="_blank">ranking</a> of desserts:</h2>
+                        <h2>Set the true ranking of desserts (<a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}  rel="noreferrer" target="_blank">this</a> form might help):</h2>
                         {!this.state.slides ?
                             <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>

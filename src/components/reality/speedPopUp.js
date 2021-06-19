@@ -34,11 +34,10 @@ export default class SpeedPopUp extends Component {
             this.arr = exp.split(new RegExp("[\\D]"));
             this.arrfiltered = this.arr.filter(i => i!="");
             this.isValid = this.arr.includes(this.state.krypto_reqs[this.state.part][0]) && this.arr.includes(this.state.krypto_reqs[this.state.part][1]) && this.arr.includes(this.state.krypto_reqs[this.state.part][2]) && this.arr.includes(this.state.krypto_reqs[this.state.part][3]) && this.arr.includes(this.state.krypto_reqs[this.state.part][4])
-                && (this.arrfiltered.length === 5);
         } else{
             this.isValid = true;
         }
-        this.temp = [("288" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
+        this.temp = [("188" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
         if (!this.temp[this.state.part] | !this.isValid) {
             alert("Incorrect Code: " + this.state.password)
         } else{
