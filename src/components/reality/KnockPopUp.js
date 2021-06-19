@@ -30,7 +30,7 @@ export default class KnockPopUp extends Component {
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = ("stage" === this.state.location || "Stage" === this.state.location) && (this.state.time === "23:34")
+        this.temp = ("stage" === this.state.location || "Stage" === this.state.location) && (this.state.time === "23:39")
         if (!this.temp) {
             alert("Incorrect Code")
         }

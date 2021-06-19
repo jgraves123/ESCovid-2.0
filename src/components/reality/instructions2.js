@@ -55,7 +55,7 @@ export default class Instructions2 extends Component{
         return(
             <div align="center" style={{backgroundColor: "#FDE38C", paddingBottom: "10px"}}>
                 <h1>Welcome to Escape From Reality</h1>
-                <h2>The race to escape the grasp of reality television before it completely sucks your sole.</h2>
+                <h2>The race to escape the grasp of reality television before it completely sucks your soul.</h2>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Overview</h3>
                     <div className = "para">
