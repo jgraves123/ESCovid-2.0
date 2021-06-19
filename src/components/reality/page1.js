@@ -81,13 +81,13 @@ export default class Page1 extends Component {
 
                 <div align="center" >
                     <>
-                        <h2>Set the true <a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}>ranking</a> of desserts:</h2>
+                        <h2>Set the true <a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}  rel="noreferrer" target="_blank">ranking</a> of desserts:</h2>
                         {!this.state.slides ?
                             <div style={{padding: "10px", paddingBottom: "20px"}}>
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                             </div>
                             : <div style={{padding: "20px"}}>
-                                <p>You track down Marcus Mille and get the <a href={"https://thegreatbritishbakeoff.co.uk/recipes/all/paul-hollywood-twice-baked-stilton-souffles-with-lavash-crackers/"}>recipe</a>.
+                                <p>You track down Marcus Mille and get the <a href={"https://thegreatbritishbakeoff.co.uk/recipes/all/paul-hollywood-twice-baked-stilton-souffles-with-lavash-crackers/"} rel="noreferrer" target="_blank">recipe</a>.
                                     It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand. In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
                                 </p>
                             </div>}

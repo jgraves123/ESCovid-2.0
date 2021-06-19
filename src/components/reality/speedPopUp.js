@@ -9,9 +9,11 @@ import {evaluate} from "mathjs";
 export default class SpeedPopUp extends Component {
     state = {
         password: "",
+        password2: "",
         correct_pws: [false,false,false,false],
         part: 0,
-        krypto_reqs: {1: ["2", "6", "3", "5", "13"], 2: ["18","9","3","5","7"], 3:["16","15","9","14","2"]}
+        krypto_reqs: {1: ["2", "6", "3", "5", "13"], 2: ["18","9","3","5","7"], 3:["16","15","9","14","2"]},
+        bypass: false,
     };
 
     handleClick = () => {
@@ -50,6 +52,31 @@ export default class SpeedPopUp extends Component {
             localStorage.setItem("solved", "t")
         }
     };
+
+
+    handleChangePass2 = (event) => {
+        this.setState({
+            password2: event.target.value
+        });
+    };
+
+    check_pass2 = (event) => {
+        event.preventDefault();
+        this.temp = this.state.password2 === 'j7548';
+        if (this.temp) {
+            localStorage.setItem('solved', "t")
+            window.location.reload()
+        } else {
+            alert("Incorrect Code: " + this.state.password2)
+        }
+    };
+
+    openBypass = () => {
+        this.setState({
+            bypass: true,
+        })
+
+    }
 
 
 
@@ -92,11 +119,22 @@ export default class SpeedPopUp extends Component {
                                     <input type="text" ref="val"
                                            placeholder={"XXX"}
                                            onChange={this.handleChangePass}
-                                           style={{marginRight: 10, width: "45%"}}/>
+                                           style={{marginRight: 10, width: "75%"}}/>
                                 </label>
                                 <input type="submit" value="Submit"
-                                       style={{marginLeft: 10, width: "40%"}}/>
+                                       style={{marginLeft: 10, width: "20%"}}/>
                             </form>
+                            <h5 onClick={this.openBypass}>Teammate already Solved?</h5>
+                            {this.state.bypass ? <form id="path-answer" onSubmit={this.check_pass2}>
+                                <label width={"80%"}>
+                                    <input type="text" ref="val"
+                                           placeholder={"Bypass Code"}
+                                           onChange={this.handleChangePass2}
+                                           style={{marginRight: 10, width: "100%"}}/>
+                                </label>
+                                <input type="submit" value="Submit"
+                                       style={{marginLeft: 10, width: "20%"}}/>
+                            </form> : null}
                         </div>
                     </div>
                     :
