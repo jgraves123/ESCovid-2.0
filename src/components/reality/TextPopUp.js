@@ -132,6 +132,12 @@ export default class TextPopUp extends Component {
                                                     <Text myclass={this.received} character={this.chatNames[0]} timesent="1:38" myavatar={this.avatars[0]}>
                                                         <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/exampleNote.png?raw=true"/>
                                                     </Text>
+                                                    <Text myclass={this.sent} character="You" timesent="1:33" myavatar={this.avatars[3]}>
+                                                        What does this mean?? Is A always zero?
+                                                    </Text>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:34" myavatar={this.avatars[0]}>
+                                                        No, the number, letter pairings will change each time to make the math work and get a valid equation.
+                                                    </Text>
                                                     <Text myclass={this.sent} character="You" timesent="1:38" myavatar={this.avatars[3]}>
                                                         You’re such a nerd :)
                                                     </Text>

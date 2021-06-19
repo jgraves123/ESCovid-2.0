@@ -73,7 +73,8 @@ export default class KnockPopUp extends Component {
                         </div> :
                         <div align={"center"}>
                             <h2>Bachelor Private Meet Up</h2>
-                            <p>Shh, don't be too loud we don't have much time! I really like you, but I've been watching you in the Talent competitions and you don't stand a chance. The only way for you to win is to rig the competition. The judges buzzers are connected to a circuit board back stage, and I think you should try to adjust the power so that none of them work when you are about to preform. Then none of them can buzz you! I found this key to help you figure out the circuits but you'll have to figure this out on your own! Just try to turn off power to all 4 buzzers at the same time!</p>
+                            <p>Shh, don't be too loud we don't have much time! The only way for you to win is to rig the competition. <strong>Turn off the power to the judges buzzers so they can't buzz you!</strong> </p>
+                            <p>I found this key to help you figure out the circuits! <strong>Just turn off all 4 buzzers at the same time.</strong></p>
                             <p>*** He gives you a kiss on the cheek and sneaks away ***</p>
                             <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/table.png?raw=true"/>
                         </div>
