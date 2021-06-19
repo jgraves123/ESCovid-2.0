@@ -38,7 +38,7 @@ export default class SpeedPopUp extends Component {
         } else{
             this.isValid = true;
         }
-        this.temp = [("266" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
+        this.temp = [("288" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
         if (!this.temp[this.state.part] | !this.isValid) {
             alert("Incorrect Code: " + this.state.password)
         } else{

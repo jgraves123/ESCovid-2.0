@@ -22,7 +22,7 @@ export default class SpeedPopUp extends Component {
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = ("142" === this.state.password)
+        this.temp = ("90" === this.state.password)
         if (!this.temp) {
             alert("Incorrect Code")
         }
