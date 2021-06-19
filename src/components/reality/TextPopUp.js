@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Text from "../escovid/text";
+import "../escovid/text.css"
+import "../escovid/gform.css"
 
 export default class TextPopUp extends Component {
     state = {
