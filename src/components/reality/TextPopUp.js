@@ -14,10 +14,10 @@ export default class TextPopUp extends Component {
     received = "chat-message-left pb-4";
     receivedSmall = "chat-message-left pb-4 small-gap";
     chatNames = ["Jake"];
-    avatars = ["https://bootdey.com/img/Content/avatar/avatar4.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar1.png", "https://bootdey.com/img/Content/avatar/avatar3.png"];
+    avatars = ["https://bootdey.com/img/Content/avatar/avatar1.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar4.png", "https://bootdey.com/img/Content/avatar/avatar3.png"];
     state = {
         value: "",
-        chat: 2,
+        chat: true,
         wrong:-1,
         attempt: "",
         hr: 2,
@@ -33,12 +33,11 @@ export default class TextPopUp extends Component {
         });
     };
 
-    changeConvo0 = (event) => {
+    giveHint = (event) => {
         event.preventDefault();
         this.setState({
-            chat: 0
+            chat: !this.state.chat
         });
-        console.log(this.state.chat)
     };
 
 
@@ -86,10 +85,10 @@ export default class TextPopUp extends Component {
                                             </div>
                                         </div>
 
-                                        <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.changeConvo0}>
+                                        <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.giveHint}>
                                             <div className="badge bg-success float-right"/>
                                             <div className="d-flex align-items-start">
-                                                <img src={this.avatars[2]}
+                                                <img src={this.avatars[0]}
                                                      className="rounded-circle mr-1" alt="Sharon Lessman" width="40"
                                                      height="40"/>
                                                 <div className="flex-grow-1 ml-3">
@@ -104,7 +103,7 @@ export default class TextPopUp extends Component {
                                         <div className="py-2 px-4 border-bottom d-none d-lg-block">
                                             <div className="d-flex align-items-center py-1">
                                                 <div className="position-relative">
-                                                    <img src={this.avatars[this.state.chat]}
+                                                    <img src={this.avatars[0]}
                                                          className="rounded-circle mr-1" alt="Character" width="40"
                                                          height="40"/>
                                                 </div>
@@ -113,39 +112,39 @@ export default class TextPopUp extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        {this.state.chat===2 ?
+                                        {this.state.chat ===true ?
                                             <div className="position-relative">
                                                 <div className="chat-messages p-4">
-                                                    <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent="1:32 am" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.received} character={this.chatNames[0]} timesent="1:32" myavatar={this.avatars[0]}>
                                                         Don’t worry, babe. I’ll make sure you’re the one the judges pick.
                                                     </Text>
-                                                    <Text myclass={this.sentSmall} character="You" timesent="1:33 am" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sentSmall} character="You" timesent="1:33" myavatar={this.avatars[3]}>
                                                         I want to believe you, but how can you be so sure?
                                                     </Text>
-                                                    <Text myclass={this.sent} character="You" timesent="1:33 am" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sent} character="You" timesent="1:33" myavatar={this.avatars[3]}>
                                                         Sometimes it feels like our love is impossible.
                                                     </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[this.state.chat]} timesent="1:34 am" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:34" myavatar={this.avatars[0]}>
                                                         I can prove our love is possible. There’s always a solution.
                                                     </Text>
-                                                    <Text myclass={this.received} character={this.chatNames[this.state.chat]} timesent="1:38 am" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.received} character={this.chatNames[0]} timesent="1:38" myavatar={this.avatars[0]}>
                                                         <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/exampleNote.png?raw=true"/>
                                                     </Text>
-                                                    <Text myclass={this.sent} character="You" timesent="1:38 am" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sent} character="You" timesent="1:38" myavatar={this.avatars[3]}>
                                                         You’re such a nerd :)
                                                     </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[this.state.chat]} timesent="3:12 pm" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:12" myavatar={this.avatars[0]}>
                                                         I think someone is onto us...
                                                     </Text>
-                                                    <Text myclass={this.sentSmall} character="You" timesent="3:12 pm" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sentSmall} character="You" timesent="15:13" myavatar={this.avatars[3]}>
                                                         But we’ve been so careful!
                                                     </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[this.state.chat]} timesent="3:13 pm" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:13 " myavatar={this.avatars[0]}>
                                                         Not careful enough. I think they might be tapping my phone. We’ll have to find a new way to communicate.
                                                     </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[this.state.chat]} timesent="3:13 pm" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:13" myavatar={this.avatars[0]}>
                                                         Don’t reply to this. I’m deleting the conversation.                                                    </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[this.state.chat]} timesent="3:14 pm" myavatar={this.avatars[this.state.chat]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:14" myavatar={this.avatars[0]}>
                                                         But I’m not giving up on you, Vera                                                    </Text>
                                                 </div>
                                                 <div className="flex-grow-0 py-3 px-4 border-top">
@@ -155,7 +154,15 @@ export default class TextPopUp extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            : null
+                                            :
+                                            <div className="position-relative">
+                                                <div className="chat-messages p-4">
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="18:05" myavatar={this.avatars[0]}>
+                                                        One more thing: every word must be in valid military time. You'll know what I mean very SOON.</Text>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="18:05" myavatar={this.avatars[0]}>
+                                                        And every letter must be unique.</Text>
+                                                </div>
+                                            </div>
                                         }
                                     </div>
                                 </div>

@@ -63,7 +63,7 @@ export default class Page3a extends Component {
 
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
-                    {this.state.note_open ? <PopUp title="Secret Note" x="374" y="314" width="80%" image={this.state.note} padding="70%" toggle={this.notePop} /> : null}
+                    {this.state.note_open ? <PopUp title="A secret note" x="374" y="314" width="80%" image={this.state.note} padding="70%" toggle={this.notePop} /> : null}
                     {this.state.morse_open ? <PopUp title="Hmmmm..." x="1600" y="885" width="80%" image={this.state.morse} padding="50%" toggle={this.morsePop} /> : null}
                     {this.state.texts_open ? <TextPopUp toggle={this.textsPop} /> : null}
                     {this.state.knock_open ? <KnockPopUp toggle={this.knockPop} /> : null}
