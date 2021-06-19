@@ -6,6 +6,7 @@ import ImmunityPopUp from "./immunityPopUp";
 import TextPop from "../game/textPop";
 import RemoteButton from "./remoteButton";
 import {Link} from "react-router-dom";
+import HintPop from "../game/HintPop";
 
 
 //TO DO:
@@ -28,6 +29,7 @@ export default class Page2a extends Component {
         riddle: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/mapRiddle.png?raw=true",
         shift: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/shift.png?raw=true",
         map_open: false,
+        shoe_open: false,
         coconut_open: false,
         coconut_solved: localStorage.getItem("solved")==="t",
         pass: "",
@@ -59,13 +61,16 @@ export default class Page2a extends Component {
         });
     };
 
+    setHint = () => {
+        this.setState({
+            shoe_open: !this.state.shoe_open
+        });
+    };
     handleChange = (event) => {
         this.setState({
             password: event.target.value
         });
     }
-
-
 
     check_pass = (event) => {
         event.preventDefault();
@@ -88,9 +93,10 @@ export default class Page2a extends Component {
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
-                    {(this.state.coconut_open && this.state.coconut_solved) ? <PopUp title="I'm here for you" x="1500" y="1510" width="80%" image={this.state.shift} toggle={this.speedPop} padding="60%"/> : null}
+                    {(this.state.coconut_open && this.state.coconut_solved) ? <PopUp title="Shift 5 and reverse order to speed outta here" x="1500" y="1510" width="80%" image={this.state.shift} toggle={this.speedPop} padding="60%"/> : null}
                     {(this.state.coconut_open && !this.state.coconut_solved) ? <SpeedPopUp toggle={this.speedPop} /> : null}
                     {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
+                    {this.state.shoe_open ? <HintPop text="You found a bonus hint! Solve for the black cards in 3D set." marginTop="35vw" marginLeft="30vw" toggle={this.setHint} /> : null}
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "62%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
@@ -98,6 +104,7 @@ export default class Page2a extends Component {
                     <image width="100%" href="https://github.com/jgraves123/escovid2/blob/main/images/reality/basecamp.jpg?raw=true"/>
                     <circle cx="910" cy="520" r="20" className="clickable-done" onClick={this.riddlePop}/>
                     <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.speedPop}/>
+                    <rect x="2525" y="1470" width="20" height="20" className="clickable-done" onClick={this.setHint}/>
                     <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>
                 </svg>
                 </div>
@@ -105,18 +112,19 @@ export default class Page2a extends Component {
                     <form id="path-answer" onSubmit={this.check_pass}>
                         <label width={"80%"}>
                             <input type="text" ref="val"
-                                   placeholder={"Decoded Password"}
+                                   placeholder={"Password (a real word)"}
                                    onChange={this.handleChange}
                                    style={{marginRight: 10, width: "100%"}}/>
                         </label>
-                        <input type="submit" value="Submit"
+                        <input type="submit" value="Onward!"
                                style={{marginLeft: 10, width: "10%"}}/>
                     </form>
                 </div> :
                 <div align={"center"} style={{paddingBottom: "20px"}}>
-                    <Link to="/reality/council">
-                        <button className="button"><h3>Continue to Tribal Council</h3></button>
-                    </Link>
+                    <p>Congrats, you won Survivor! Now, you'd better get out of here before they change their minds.</p>
+                    <p>Next Channel: 5237</p>{/*<Link to="/reality/council">*/}
+                    {/*    <button className="button"><h3>Continue to Tribal Council</h3></button>*/}
+                    {/*</Link>*/}
                 </div>}
 
                 <TextPop title={"You find yourself on a remote island..."} content={"You seem to be in some sort of temporary shelter in the wooded area near a body of water. You're not alone - in fact, you're surrounded by people who smell like they haven't showered for days. Then you see the camera crew, and know - you haven't escaped the TV after all; you've just traded an oven for a campfire. This is Survivor."}/>

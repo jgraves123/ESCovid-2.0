@@ -75,7 +75,6 @@ export default class SpeedPopUp extends Component {
         this.setState({
             bypass: true,
         })
-
     }
 
 
@@ -213,7 +212,7 @@ export default class SpeedPopUp extends Component {
                                             :
                                             <div align="center">
                                                 <div align="center" style={{width: "50vw"}}>
-                                                    <h3>so speedy in those challenges,  like a stick shift lambo...</h3>
+                                                    <h3>Shift 5 and reverse order to speed outta here</h3>
                                                     <div className="container">
                                                         <img
                                                             className="img-fluid rounded"

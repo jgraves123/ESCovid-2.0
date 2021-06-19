@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
 import {RemoteButton} from "./index";
+import TextPop from "../game/textPop";
 
 
 export default class Page1 extends Component {
@@ -56,7 +57,7 @@ export default class Page1 extends Component {
                             </p>
                             <li>The names of the 5 contestants: Marcus Mille, Rufus Roll, Carol Cannoli, Susie Souffle, and Brad Biscuit.</li>
                             <li>Their desserts: Biscuit Card Tower, Cherry & Almond Deco Roll, Matcha Mille Crepe Cake, Orange & Ginger Cannoli, and Twice-Baked Stilton Souffle.</li>
-                            <li>One comment from the judges or commentators: “Time to pop Mary’s cherry!”, “To say it was a disaster would be a humiliation to disaster.”, “You could wedge a door with it.”, “No soggy bottom!”, and “It looks like it was dropped on the floor.” </li>
+                            <li>One comment from the judges or commentators: “Time to pop Mary’s cherry!”, “To say it was a disaster would be a humiliation to disaster.”, “You could wedge a door with it.”, “A soggy bottom!”, and “It looks like it was dropped on the floor.” </li>
                         </p>
                         <img
                             className="img-fluid rounded mb-4 mb-lg-0"
@@ -87,8 +88,9 @@ export default class Page1 extends Component {
                                 <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
                             </div>
                             : <div style={{padding: "20px"}}>
-                                <p>You track down Marcus Mille and get the <a href={"https://thegreatbritishbakeoff.co.uk/recipes/all/paul-hollywood-twice-baked-stilton-souffles-with-lavash-crackers/"} rel="noreferrer" target="_blank">recipe</a>.
-                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand. In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
+                                <p>You track down Marcus Mille and get the recipe.
+                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand.
+                                    In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
                                 </p>
                             </div>}
                         <div className="scaling-svg-container" style={{paddingBottom: "20%"}}>
@@ -107,6 +109,8 @@ export default class Page1 extends Component {
                         </div>
                     </>
                 </div>
+                <TextPop title={"Something goes wrong..."} content={"...as you type in the channel number, you feel the show sucking you in, as it always does. But this time, it is literally pulling you in!! " +
+                "After all these years of binging reality TV, you wonder if you've poured too much of yourself into it, because you realize: you're not just watching the bake-off. You're a contestant in it."}/>
                 </body>
             </div>
         );
