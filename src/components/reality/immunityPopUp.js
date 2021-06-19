@@ -46,6 +46,7 @@ export default class SpeedPopUp extends Component {
                     <div align="center">
                         <div align="center" style={{width: "50vw"}}>
                             <div className="container">
+                                <h6>***You can't walk through the pictures on the map***</h6>
                                 <img
                                     className="img-fluid rounded mb-4 mb-lg-0"
                                     src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/map.png?raw=true"

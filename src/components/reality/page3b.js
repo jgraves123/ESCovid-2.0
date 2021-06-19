@@ -108,6 +108,7 @@ export default class Page3b extends Component {
                     <img src={"https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/buzzers.png?raw=true"} width={"70%"}/>
                     <div align={"center"} style={{padding: "20px"}}>
                         <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
+                        <h6>*There are a few possible solutions</h6>
                     </div>
                 </div>
             </div>
