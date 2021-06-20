@@ -54,42 +54,43 @@ export default class Instructions2 extends Component{
     render(){
         return(
             <div align="center" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/camerabg.png")', paddingBottom: "10px"}}>
-                <h1>Welcome to Escape From Reality</h1>
-                <h2>The race to escape the grasp of reality television before it completely sucks your soul.</h2>
+                <h1 style={{color: "white"}}>Welcome to Escape From Reality</h1>
+                <h2 style={{color: "white"}}>The race to escape the grasp of reality television before it completely sucks your soul.</h2>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Overview</h3>
                     <div className = "para">
-                        <p><strong>Levels and Estimated Time: </strong>
-                            <br/><em>Moderate:</em> Estimated Time:  minutes.
+                        <p><strong>Estimated Time:</strong> 1.5-2 hours
                         </p>
                     </div>
                     <div className = "para">
-                        <p><strong>Intended Audience: </strong></p>
+                        <p><strong>Intended Audience: </strong>GIV Math students!</p>
                     </div>
                     <div className = "para">
-                        <p><strong>Group size: </strong> players recommended.</p>
+                        <p><strong>Group size: </strong> 4-6 players recommended.</p>
                     </div>
                     <div className = "para">
                         <p><strong>Other recommendations: </strong>computer >>> smartphone, COMMUNICATE and share screens.</p>
-                        <p><em>USE HINTS!!!</em> They are there for a reason. It's no fun to be stuck and the puzzles are designed to expect that you might need one here or there :)</p>
+                        <p><em>USE HINTS!!!</em> Your counselor is there for a reason. It's no fun to be stuck and the puzzles are designed to expect that you might need one here or there :)</p>
+                        <p>Some puzzles can be solved at the same time - divide up the clues among your group members.</p>
+                        <p>Send answers in the chat so others can get caught up if they're working on something else.</p>
                     </div>
                     <div className = "para">
                         <p><strong>Feedback: </strong>We'd love to hear from you, even if you do not "escape" the game! <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>Feedback</a></p>
                     </div>
-                    <div className = "para">
-                        <p><strong>Urgent Questions: </strong>Email us at mlagerq@emory.edu and john_graves@brown.edu.</p>
-                    </div>
+                    {/*<div className = "para">*/}
+                    {/*    <p><strong>Urgent Questions: </strong>Email us at mlagerq@emory.edu and john_graves@brown.edu.</p>*/}
+                    {/*</div>*/}
                 </div>
-                <div className="content-section container" align="left" style={{width: "60%"}}>
-                    <h3>The Story...</h3>
-                    <p></p>
-                </div>
+                {/*<div className="content-section container" align="left" style={{width: "60%"}}>*/}
+                {/*    <h3>The Story...</h3>*/}
+                {/*    <p></p>*/}
+                {/*</div>*/}
                 <div className="content-section container" align="left" style={{width: "60%"}}>
                     <h3>Your Instructions...</h3>
                     <p style={{paddingLeft: "25px"}}>
-                        <p>Read EVERYTHING. Click around and explore every page. Do not use outside sources (aka Google) unless we denote that you may. You will not need to look at the source code and may spoil the game if you do (you know who you are).</p>
-                        <p>Your time will be tacked from the time you start. If you think there was an error (it's very possible) feel free to put it in your feedback form!</p>
-                        <p>Hints can be found in the top right corner. You will be able to choose which puzzle you'd like a hint for, and these will be tracked, so only use the ones you need!</p>
+                        <p>One person from your group should click join the leaderboard, but everyone should follow along on their own device.</p>
+                        <p>Read EVERYTHING - clues and storyline are mixed in. Click around and explore every page. You may use outside sources (aka Google) but you should not need to.</p>
+                        <p>Your time will be tracked once you start. If you think there was an error (it's very possible) feel free to put it in your feedback form!</p>
                         <p>If you check "Join Leaderboard" your score will be added (hopefully within the week!)</p>
                     </p>
                     <p><strong>Good luck!</strong></p>
