@@ -26,7 +26,7 @@ export default class Page3a extends Component {
         morse_open: false,
         camera_open: false,
         scepter_open: false,
-        note: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/note.png?raw=true",
+        note: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/note.jpg?raw=true",
         morse: "https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/morse.png?raw=true",
     };
 
@@ -81,8 +81,8 @@ export default class Page3a extends Component {
                     {this.state.morse_open ? <PopUp title="Hmmmm..." x="1600" y="885" width="80%" image={this.state.morse} padding="50%" toggle={this.morsePop} /> : null}
                     {this.state.texts_open ? <TextPopUp toggle={this.textsPop} /> : null}
                     {this.state.knock_open ? <KnockPopUp toggle={this.knockPop} /> : null}
-                    {this.state.camera_open ? <HintPop text="The cameraman thinks A has to be 6 or 7, and T is probably 1." marginTop="10vw" marginLeft="5vw" toggle={this.noteHint} /> : null}
-                    {this.state.scepter_open ? <HintPop text="Did you see that Jake's online? And when is soon? Something isn't adding up." marginTop="15vw" marginLeft="30vw" toggle={this.scepterHint} /> : null}
+                    {this.state.camera_open ? <HintPop text="The cameraman thinks A has to be either 6 or 7, and T is probably 1." marginTop="10vw" marginLeft="5vw" toggle={this.noteHint} /> : null}
+                    {this.state.scepter_open ? <HintPop text="Jake keeps checking his watch and looking out the window. It's so weird, like, does he have to be somewhere SOON?? We're in the middle of filming." marginTop="15vw" marginLeft="30vw" toggle={this.scepterHint} /> : null}
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "68%"}}>
                     <svg className="scaling-svg" viewBox="0 0 3000 2000"> {/* Needs auto
@@ -90,9 +90,9 @@ export default class Page3a extends Component {
                         <image width="100%" href="https://github.com/jgraves123/escovid2/blob/main/images/reality/bachelor.png?raw=true"/>
                         <rect x="1270" y="460" width="50" height="130" className="clickable-done" onClick={this.knockPop}/>
                         <rect x="2450" y="400" width="100" height="300" className="clickable-done" onClick={this.morsePop}/>
-                        <circle cx="2790" cy="840" r="25" className="clickable-done" onClick={this.textsPop}/>
-                        <circle cx="1918" cy="588" r="25" className="clickable-done" onClick={this.noteHint}/>
-                        <polygon points="1180,640 1200,640, 1210,670 1200,680, 1180,680 1170,660" className="clickable-done" onClick={this.scepterHint}/>
+                        <circle cx="2790" cy="840" r="30" className="clickable-done" onClick={this.textsPop}/>
+                        <circle cx="1918" cy="588" r="35" className="clickable-done" onClick={this.noteHint}/>
+                        <polygon points="1180,640 1200,640, 1220,660 1200,680, 1180,680 1160,660" className="clickable-done" onClick={this.scepterHint}/>
                         <polygon points="1930,380 1955,380 2000,542 1930,540" className="clickable-done" onClick={this.notePop}/>
                     </svg>
                 </div>

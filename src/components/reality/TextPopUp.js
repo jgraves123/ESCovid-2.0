@@ -16,7 +16,7 @@ export default class TextPopUp extends Component {
     received = "chat-message-left pb-4";
     receivedSmall = "chat-message-left pb-4 small-gap";
     chatNames = ["Jake"];
-    avatars = ["https://bootdey.com/img/Content/avatar/avatar1.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar4.png", "https://bootdey.com/img/Content/avatar/avatar3.png"];
+    avatars = ["https://bootdey.com/img/Content/avatar/avatar1.png", "https://bootdey.com/img/Content/avatar/avatar2.png", "https://bootdey.com/img/Content/avatar/avatar4.png", "https://www.shareicon.net/data/128x128/2015/09/18/103159_user_512x512.png"];
     state = {
         value: "",
         chat: true,
@@ -86,7 +86,6 @@ export default class TextPopUp extends Component {
                                                 </div>
                                             </div>
                                         </div>
-
                                         <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.giveHint}>
                                             <div className="badge bg-success float-right"/>
                                             <div className="d-flex align-items-start">
@@ -95,6 +94,18 @@ export default class TextPopUp extends Component {
                                                      height="40"/>
                                                 <div className="flex-grow-1 ml-3">
                                                     {this.chatNames[0]}
+                                                    <div className="small"><span className="fas fa-circle chat-online">Offline</span> </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" className="list-group-item list-group-item-action border-0" onClick={this.giveHint}>
+                                            <div className="badge bg-success float-right"/>
+                                            <div className="d-flex align-items-start">
+                                                <img src={this.avatars[3]}
+                                                     className="rounded-circle mr-1" alt="unknown" width="40"
+                                                     height="40"/>
+                                                <div className="flex-grow-1 ml-3">
+                                                    Unknown
                                                     <div className="small"><span className="fas fa-circle chat-online">Online</span> </div>
                                                 </div>
                                             </div>
@@ -104,14 +115,6 @@ export default class TextPopUp extends Component {
                                     <div className="col-12 col-lg-7 col-xl-9">
                                         <div className="py-2 px-4 border-bottom d-none d-lg-block">
                                             <div className="d-flex align-items-center py-1">
-                                                <div className="position-relative">
-                                                    <img src={this.avatars[0]}
-                                                         className="rounded-circle mr-1" alt="Character" width="40"
-                                                         height="40"/>
-                                                </div>
-                                                <div className="flex-grow-1 pl-3">
-                                                    <strong>{this.chatNames[0]}</strong>
-                                                </div>
                                             </div>
                                         </div>
                                         {this.state.chat ===true ?
@@ -132,13 +135,13 @@ export default class TextPopUp extends Component {
                                                     <Text myclass={this.received} character={this.chatNames[0]} timesent="1:38" myavatar={this.avatars[0]}>
                                                         <img width="100%"src="https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/exampleNote.png?raw=true"/>
                                                     </Text>
-                                                    <Text myclass={this.sent} character="You" timesent="1:33" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sent} character="You" timesent="1:42" myavatar={this.avatars[3]}>
                                                         What does this mean?? Is A always zero?
                                                     </Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:34" myavatar={this.avatars[0]}>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:43" myavatar={this.avatars[0]}>
                                                         No, the number, letter pairings will change each time to make the math work and get a valid equation.
                                                     </Text>
-                                                    <Text myclass={this.sent} character="You" timesent="1:38" myavatar={this.avatars[3]}>
+                                                    <Text myclass={this.sent} character="You" timesent="1:43" myavatar={this.avatars[3]}>
                                                         You’re such a nerd :)
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:12" myavatar={this.avatars[0]}>
@@ -165,9 +168,9 @@ export default class TextPopUp extends Component {
                                             :
                                             <div className="position-relative">
                                                 <div className="chat-messages p-4">
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="18:05" myavatar={this.avatars[0]}>
+                                                    <Text myclass={this.receivedSmall} character="Unknown" timesent="18:05" myavatar={this.avatars[3]}>
                                                         One more thing: every word must be in valid military time. You'll know what I mean very SOON.</Text>
-                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="18:05" myavatar={this.avatars[0]}>
+                                                    <Text myclass={this.receivedSmall} character="Unknown" timesent="18:05" myavatar={this.avatars[3]}>
                                                         And every letter must be unique.</Text>
                                                 </div>
                                             </div>
