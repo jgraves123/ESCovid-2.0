@@ -73,7 +73,7 @@ export default class Page1 extends Component {
                             <li>Brad’s deco roll popped Mary Berry's Cherry right on schedule!</li>
                             <li>The crepe cake had a soggy bottom but still ranked higher than the disastrous card tower and the rock-hard cannolis.</li>
                             <li>Susie was the worst-ranked going into the next episode, but she did better than Carol, who was eliminated.</li>
-                            <li>Due to its extraordinary flavor or the lack of competition, the dropped dessert “took the cake” this week.</li>
+                            <li>Due to its extraordinary flavor or the lack of competition, the souffle “took the cake” this week.</li>
                             <li>The deco roll was not ranked second.</li>
                         </p>
                     </div>

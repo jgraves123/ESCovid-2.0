@@ -53,7 +53,7 @@ export default class Instructions2 extends Component{
 
     render(){
         return(
-            <div align="center" style={{backgroundColor: "#FDE38C", paddingBottom: "10px"}}>
+            <div align="center" style={{backgroundImage: "https://github.com/jgraves123/escovid2/blob/main/images/reality/redcarpet.jpg?raw=true", paddingBottom: "10px"}}>
                 <h1>Welcome to Escape From Reality</h1>
                 <h2>The race to escape the grasp of reality television before it completely sucks your soul.</h2>
                 <div className="content-section container" align="left" style={{width: "60%"}}>
