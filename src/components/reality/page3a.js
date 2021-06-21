@@ -96,6 +96,7 @@ export default class Page3a extends Component {
                         <polygon points="1930,380 1955,380 2000,542 1930,540" className="clickable-done" onClick={this.notePop}/>
                     </svg>
                 </div>
+                <p>Number of Hidden Clues to Find: 6</p>
                 <TextPop title={"The bachelor really likes you, but..."} content={"...unfortunately, his opinion doesn't count for much in this new mash-up. He isn't supposed to have favorites, so you have to communicate covertly."}/>
                 </body>
             </div>

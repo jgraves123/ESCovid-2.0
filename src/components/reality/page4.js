@@ -51,7 +51,7 @@ export default class Page4 extends Component {
                 {this.state.sofa ?
                 <body align={"center"}>
                 <RemoteButton/>
-                {this.state.note_open ? <PopUp title="Text Me" x="679" y="251" width="100%" image={this.state.text} bottom={<Password alert={"Incorrect Code"} command={"Enter Code"} input={"xxx-xxx-xxxx"} correct={<Continue url={"/reality/givtime"} text={"Continue"}/>} answers={["802-881-7590", "8028817590"]}/>} padding="42%" toggle={this.notePop} /> : null}
+                {this.state.note_open ? <PopUp x="690" y="211" width="100%" image={"https://docs.google.com/drawings/d/e/2PACX-1vTIqoOQIlMJb7Sw1-r1EDPDUSFr8nsrcsGJgKQ-HBdIj3ZrS66RC-_-mcxKC5RsJrPCZiB5CfZvtfis/pub?w=960&h=211"} bottom={<Password alert={"Incorrect Code"} command={"Enter Code"} input={"xxx-xxx-xxxx"} correct={<button className="button" onClick={this.KevinPop}><h3>Send Message</h3></button>} answers={["802-555-1629", "8025551629"]}/>} padding="30%" toggle={this.notePop} /> : null}
                 {this.state.texted ? <KevinPopUp toggle={this.KevinPop} /> : null}
                 <div className="scaling-svg-container" style={{paddingBottom: "45%"}}>
                     <svg className="scaling-svg" viewBox="0 0 1866 800"> {/* Needs auto

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Text from "../escovid/text";
 import "../escovid/text.css"
 import "../escovid/gform.css"
+import Continue from "../game/continueButton";
 
 export default class TextPopUp extends Component {
     state = {
@@ -137,6 +138,7 @@ export default class TextPopUp extends Component {
                                             </div>
                                             : null
                                         }
+                                        <Continue url={"/reality/givtime"} text={"Continue"}/>
                                     </div>
                                 </div>
                             </div>

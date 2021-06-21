@@ -132,6 +132,7 @@ export default class Page2a extends Component {
                                style={{marginLeft: 10, width: "10%"}}/>
                     </form>
                     <h6>***Your answer will be a real word***</h6>
+                    <p>Number of Clues to Find: 5</p>
                 </div> :
                 <div align={"center"} style={{paddingBottom: "20px"}}>
                     <p>Congrats, you won Survivor! Now, you'd better get out of here before they change their minds.</p>
