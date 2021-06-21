@@ -30,6 +30,7 @@ export default class Page2a extends Component {
         shift: "https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/shift.png?raw=true",
         map_open: false,
         shoe_open: false,
+        count_map_open: false,
         coconut_open: false,
         coconut_solved: localStorage.getItem("solved")==="t",
         pass: "",
@@ -66,6 +67,14 @@ export default class Page2a extends Component {
             shoe_open: !this.state.shoe_open
         });
     };
+
+    setHint2 = () => {
+        this.setState({
+            count_map_open: !this.state.count_map_open
+        });
+    };
+
+
     handleChange = (event) => {
         this.setState({
             password: event.target.value
@@ -97,6 +106,8 @@ export default class Page2a extends Component {
                     {(this.state.coconut_open && !this.state.coconut_solved) ? <SpeedPopUp toggle={this.speedPop} /> : null}
                     {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
                     {this.state.shoe_open ? <HintPop text="You found a bonus hint! Solve for the black cards in 4D set by figuring out what card is necessary to create a set along a straight line." marginTop="35vw" marginLeft="30vw" toggle={this.setHint} /> : null}
+                    {this.state.count_map_open ? <PopUp title={"Counting Hint"} image={"https://docs.google.com/drawings/d/e/2PACX-1vTgCiA0sbOSUzNATA1kjnGJZfyM5twnllDI5hrmHVT1nkQwm9qmLrUxkiVQLLzfcUiu_1bG4MvWVXmF/pub?w=480&h=720"} x="480" y="720" padding="140%" width="90%" modal_w="45%" toggle={this.setHint2} /> : null}
+
                 </div>
                 <div className="scaling-svg-container" style={{paddingBottom: "62%"}}>
                 <svg className="scaling-svg" viewBox="0 0 3000 1821"> {/* Needs auto
@@ -105,6 +116,7 @@ export default class Page2a extends Component {
                     <circle cx="910" cy="520" r="30" className="clickable-done" onClick={this.riddlePop}/>
                     <circle cx="2050" cy="1090" r="45" className="clickable-done" onClick={this.speedPop}/>
                     <rect x="2515" y="1460" width="50" height="35" className="clickable-done" onClick={this.setHint}/>
+                    <rect x="1950" y="1360" width="150" height="50" className="clickable-done" onClick={this.setHint2}/>
                     <polygon points="1035,1520 1360,1430 1672,1542 1280,1620" className="clickable-done" onClick={this.immunityPop}/>
                 </svg>
                 </div>

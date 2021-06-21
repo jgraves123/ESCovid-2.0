@@ -83,18 +83,9 @@ export default class Page1 extends Component {
                 <div align="center" >
                     <>
                         <h2>Set the true ranking of desserts by clicking the images, (<a href={"https://docs.google.com/spreadsheets/d/1_5N4lULX9CD6nXrrJgI6PEyKOM3Pgr5jCi7Ms5IfAco/edit?usp=sharing"}  rel="noreferrer" target="_blank">this</a> form might help):</h2>
-                        {!this.state.slides ?
-                            <div style={{padding: "10px", paddingBottom: "20px"}}>
-                                <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
-                            </div>
-                            : <div style={{padding: "20px"}}>
-                                <p>You track down Marcus Mille and get the recipe.
-                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand.
-                                    In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
-                                </p>
-                            </div>}
-                        <div className="scaling-svg-container" style={{paddingBottom: "20%"}}>
-                            <svg className="scaling-svg" viewBox="-20 -20 400 100">
+
+                        <div className="scaling-svg-container" style={{paddingBottom: "14%"}}>
+                            <svg className="scaling-svg" viewBox="-20 -20 400 50">
                                 <image width="60" height="60" x="1" y="-20" style={{opacity: "0.8"}} onClick={() => this.setState({slide1: (this.state.slide1 + 1) % 5})} href={this.state.desserts[this.state.slide1]}/>
                                 <text x="30" y="10" fill="black" font-size="1.25em" textAnchor="middle" alignmentBaseline="central">1</text>
                                 <image width="60" height="60" x="75" y="-20" style={{opacity: "0.8"}} onClick={() => this.setState({slide2: (this.state.slide2 + 1) % 5})} href={this.state.desserts[this.state.slide2]}/>
@@ -107,6 +98,16 @@ export default class Page1 extends Component {
                                 <text x="327" y="10" fill="black" font-size="1.25em" textAnchor="middle" alignmentBaseline="central">5</text>
                             </svg>
                         </div>
+                        {!this.state.slides ?
+                            <div style={{padding: "10px", paddingBottom: "20px"}}>
+                                <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
+                            </div>
+                            : <div style={{padding: "20px"}}>
+                                <p>You track down Marcus Mille and get the recipe.
+                                    It's all you need to ace the challenge and win Bake-Off! As the show ends, you find a remote in your hand.
+                                    In fact, it's YOUR remote... Suddenly a new channel pops into your head: 389
+                                </p>
+                            </div>}
                     </>
                 </div>
                 <TextPop title={"Something goes wrong..."} content={"...as you type in the channel number, you feel the show sucking you in, as it always does. But this time, it is literally pulling you in!! " +

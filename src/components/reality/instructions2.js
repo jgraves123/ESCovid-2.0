@@ -107,10 +107,10 @@ export default class Instructions2 extends Component{
                             <input type="text" placeholder="Group Name" onChange={this.handleChange}/>
                         </label>
                         <input type="checkbox" id="scales" name="scales" onChange={this.handleCheck}/>
-                        <label htmlFor="scales" style={{margin: "5px"}}> Join Leaderboard? </label>
+                        <label htmlFor="scales" style={{margin: "5px", color: "white"}}> Join Leaderboard? </label>
                         <input type="submit" value="Submit" style={{margin: "5px"}}/>
                     </form>
-                    <h6>* Please only one person per group join the leaderboard!</h6>
+                    <h6 style={{color: "white"}}>* Please only one person per group join the leaderboard!</h6>
                 </div>
                 {/*<Alert show={!this.state.showAlert && this.state.showFailure} variant="danger" style={{width: "60%"}}>Invalid group name.</Alert>*/}
                 {/*<Alert show={this.state.showAlert} variant="success" style={{width: "60%"}}>Welcome aboard, {this.props.name}. You may now begin your mission.<Link to="/escovid/gform">*/}

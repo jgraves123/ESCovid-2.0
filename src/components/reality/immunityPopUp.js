@@ -58,7 +58,7 @@ export default class SpeedPopUp extends Component {
                                     <input type="text" ref="val"
                                            placeholder={"Insert Number here"}
                                            onChange={this.handleChangePass}
-                                           style={{marginRight: 10, width: "45%"}}/>
+                                           style={{marginRight: 10, width: "100%"}}/>
                                 </label>
                                 <input type="submit" value="Submit"
                                        style={{marginLeft: 10, width: "40%"}}/>

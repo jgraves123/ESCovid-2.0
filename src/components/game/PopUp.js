@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export default class PopUp extends Component {
     state = {
+        modal_w: this.props.modal_w === undefined ? "80%" : this.props.modal_w
     };
 
     handleClick = () => {
@@ -12,8 +13,8 @@ export default class PopUp extends Component {
 
     render() {
         return (
-            <div className="modal2">
-                <div className="modal_content2">
+            <div className="modal2" align={"center"}>
+                <div className="modal_content2" style={{width: this.state.modal_w}}>
                     <span className="close" onClick={this.handleClick}>
                         &times;
                     </span>
