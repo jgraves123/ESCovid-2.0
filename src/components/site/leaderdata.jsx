@@ -20,6 +20,7 @@ export const dataanon = [
 ];
 
 export const dataReality = [
+    { Team: 'GIV Counselors', Time: 112, Hints:2},
 ];
 
 export const sortProperties = [
