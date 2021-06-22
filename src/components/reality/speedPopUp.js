@@ -10,7 +10,7 @@ export default class SpeedPopUp extends Component {
     state = {
         password: "",
         password2: "",
-        correct_pws: [true,true,true,true],
+        correct_pws: [false,false,false,false],
         part: 0,
         krypto_reqs: {1: ["2", "6", "3", "5", "13"], 2: ["18","9","3","5","7"], 3:["16","15","9","14","2"]},
         bypass: false,
