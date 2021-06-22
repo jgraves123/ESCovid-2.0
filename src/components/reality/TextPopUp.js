@@ -121,7 +121,7 @@ export default class TextPopUp extends Component {
                                             <div className="position-relative">
                                                 <div className="chat-messages p-4">
                                                     <Text myclass={this.received} character={this.chatNames[0]} timesent="1:32" myavatar={this.avatars[0]}>
-                                                        Don’t worry, babe. I’ll make sure you’re the one the judges pick.
+                                                        Don’t worry, babe. I’ll make sure you’re the one the judges pick. Just keep smiling for the Camera while I figure this out.
                                                     </Text>
                                                     <Text myclass={this.sentSmall} character="You" timesent="1:33" myavatar={this.avatars[3]}>
                                                         I want to believe you, but how can you be so sure?
@@ -143,6 +143,15 @@ export default class TextPopUp extends Component {
                                                     </Text>
                                                     <Text myclass={this.sent} character="You" timesent="1:43" myavatar={this.avatars[3]}>
                                                         You’re such a nerd :)
+                                                    </Text>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:43" myavatar={this.avatars[0]}>
+                                                        Better you know that about me now.
+                                                    </Text>
+                                                    <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="1:43" myavatar={this.avatars[0]}>
+                                                        BTW, you looked stunning last night. And so much screen time! Keep chatting up the Cameraman, it's totally working.
+                                                    </Text>
+                                                    <Text myclass={this.sent} character="You" timesent="1:43" myavatar={this.avatars[3]}>
+                                                        I'm on it!
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]} timesent="15:12" myavatar={this.avatars[0]}>
                                                         I think someone is onto us...
@@ -169,7 +178,7 @@ export default class TextPopUp extends Component {
                                             <div className="position-relative">
                                                 <div className="chat-messages p-4">
                                                     <Text myclass={this.receivedSmall} character="Unknown" timesent="18:05" myavatar={this.avatars[3]}>
-                                                        One more thing: every word must be in valid military time. You'll know what I mean very SOON.</Text>
+                                                        One more thing: every word must be in valid military time. You know, 0500 is 5AM, and 2130 would be 9:30pm. You'll get what I mean very SOON.</Text>
                                                     <Text myclass={this.receivedSmall} character="Unknown" timesent="18:05" myavatar={this.avatars[3]}>
                                                         And every letter must be unique.</Text>
                                                 </div>

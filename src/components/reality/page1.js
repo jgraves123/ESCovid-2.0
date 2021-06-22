@@ -71,7 +71,7 @@ export default class Page1 extends Component {
                             <p>After calling all your friends, you can’t find anyone with the tape - but they all remember something about the show. Use this information to match each person with their dessert, quote, and how they ranked that week.</p>
                             <li>None of the contestants baked their namesake.</li>
                             <li>Brad’s deco roll popped Mary Berry's Cherry right on schedule!</li>
-                            <li>The crepe cake had a soggy bottom but still ranked higher than the disastrous card tower and the rock-hard cannolis.</li>
+                            <li>The crepe cake had a soggy bottom but still ranked higher than the rock-hard cannolis, which beat the disastrous card tower.</li>
                             <li>Susie was the worst-ranked going into the next episode, but she did better than Carol, who was eliminated.</li>
                             <li>Due to its extraordinary flavor or the lack of competition, the souffle “took the cake” this week.</li>
                             <li>The deco roll was not ranked second.</li>
