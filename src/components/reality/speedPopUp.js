@@ -10,7 +10,7 @@ export default class SpeedPopUp extends Component {
     state = {
         password: "",
         password2: "",
-        correct_pws: [false,false,false,false],
+        correct_pws: [true,true,true,true],
         part: 0,
         krypto_reqs: {1: ["2", "6", "3", "5", "13"], 2: ["18","9","3","5","7"], 3:["16","15","9","14","2"]},
         bypass: false,
@@ -37,7 +37,7 @@ export default class SpeedPopUp extends Component {
         } else{
             this.isValid = true;
         }
-        this.temp = [("188" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
+        this.temp = [("174" === this.state.password), (13 === this.answer), (5 === this.answer), (12 === this.answer)];
         if (!this.temp[this.state.part] | !this.isValid) {
             alert("Incorrect Code: " + this.state.password)
         } else{
@@ -219,7 +219,7 @@ export default class SpeedPopUp extends Component {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <p>...but it only counts if council was impressed, too.</p>
+                                                    <h5>Bypass code: j7548</h5>
                                                 </div>
                                             </div>
                                         }

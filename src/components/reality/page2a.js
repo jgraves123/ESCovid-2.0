@@ -102,10 +102,10 @@ export default class Page2a extends Component {
                 <div height="400">
                     {/*if state is true, do this pop-up*/}
                     {this.state.map_open ? <ImmunityPopUp toggle={this.immunityPop} /> : null}
-                    {(this.state.coconut_open && this.state.coconut_solved) ? <PopUp title="Shift 5 and reverse order to speed outta here" x="1500" y="1510" width="80%" image={this.state.shift} toggle={this.speedPop} padding="60%"/> : null}
+                    {(this.state.coconut_open && this.state.coconut_solved) ? <PopUp title="Shift 5 and reverse order to speed outta here" x="1500" y="1510" width="80%" image={this.state.shift} bottom={<h5>By Pass Code: j7548</h5>} toggle={this.speedPop} padding="60%"/> : null}
                     {(this.state.coconut_open && !this.state.coconut_solved) ? <SpeedPopUp toggle={this.speedPop} /> : null}
                     {this.state.bamboo_open ? <PopUp title="This could give you a leg up! Best to keep it a secret from your tribe." x="1574" y="1210" width="80%" image={this.state.riddle} padding="64%" toggle={this.riddlePop} /> : null}
-                    {this.state.shoe_open ? <HintPop text="You found a bonus hint! Solve for the black cards in 4D set by figuring out what card is necessary to create a set along a straight line." marginTop="35vw" marginLeft="30vw" toggle={this.setHint} /> : null}
+                    {this.state.shoe_open ? <HintPop text="1) find coordinate 2) solve for card at coordinate 3) find card value" marginTop="35vw" marginLeft="30vw" toggle={this.setHint} /> : null}
                     {this.state.count_map_open ? <PopUp title={"Counting Hint"} image={"https://docs.google.com/drawings/d/e/2PACX-1vTgCiA0sbOSUzNATA1kjnGJZfyM5twnllDI5hrmHVT1nkQwm9qmLrUxkiVQLLzfcUiu_1bG4MvWVXmF/pub?w=480&h=720"} x="480" y="720" padding="140%" width="90%" modal_w="45%" toggle={this.setHint2} /> : null}
 
                 </div>
