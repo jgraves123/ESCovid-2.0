@@ -32,6 +32,7 @@ function Navigation() {
             <NavDropdown title="Games" menuAlign="right" id="basic-nav-dropdown" style={{zIndex: "1000"}}>
               <NavDropdown.Item href="/escovid">ESCovid</NavDropdown.Item>
               <NavDropdown.Item href="/anon">Anonymous Connections</NavDropdown.Item>
+              <NavDropdown.Item href="/reality">Escaping Reality</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/rooms">All</NavDropdown.Item>
               <NavDropdown.Divider />

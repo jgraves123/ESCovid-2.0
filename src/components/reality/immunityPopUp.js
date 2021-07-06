@@ -22,7 +22,7 @@ export default class SpeedPopUp extends Component {
 
     check_pass = (event) => {
         event.preventDefault();
-        this.temp = ("142" === this.state.password)
+        this.temp = ("77" === this.state.password)
         if (!this.temp) {
             alert("Incorrect Code")
         }
@@ -46,6 +46,7 @@ export default class SpeedPopUp extends Component {
                     <div align="center">
                         <div align="center" style={{width: "50vw"}}>
                             <div className="container">
+                                <h6>***You can't walk through the pictures on the map***</h6>
                                 <img
                                     className="img-fluid rounded mb-4 mb-lg-0"
                                     src="https://github.com/jgraves123/escovid2/blob/main/images/reality/survivor/map.png?raw=true"
@@ -55,9 +56,9 @@ export default class SpeedPopUp extends Component {
                             <form id="path-answer" onSubmit={this.check_pass}>
                                 <label width={"80%"}>
                                     <input type="text" ref="val"
-                                           placeholder={"XXX"}
+                                           placeholder={"Insert Number here"}
                                            onChange={this.handleChangePass}
-                                           style={{marginRight: 10, width: "45%"}}/>
+                                           style={{marginRight: 10, width: "100%"}}/>
                                 </label>
                                 <input type="submit" value="Submit"
                                        style={{marginLeft: 10, width: "40%"}}/>

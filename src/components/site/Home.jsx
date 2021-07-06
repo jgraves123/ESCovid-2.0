@@ -75,9 +75,9 @@ function Home() {
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(6, 97, 32, .8)"}}>
                   <div className="sideText">
-                    <h1>Coming Soon!</h1>
+                    <h1>Escaping Reality</h1>
                     <br/>
-                    <p>See if you can *dream* a way out of this one!</p>
+                    <p>You are stuck in a reality TV Show. How will you escape?!</p>
                   </div>
                 </div>
                 <div style={{width: "70%", float: "left"}}>

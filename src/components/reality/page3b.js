@@ -7,6 +7,7 @@ import sound from "./knocks.m4a";
 import {evaluate} from "mathjs";
 import PopUp from "../game/PopUp";
 import BuzzerPopUp from "./BuzzerPopUp";
+import promo from "./agtaudio.m4a"
 
 
 
@@ -70,20 +71,9 @@ export default class Page3b extends Component {
                 {/*    }*/}
                 {/*}}/>*/}
                 {/*<ReactAudioPlayer src={sound} autoPlay="true" controls/>*/}
-                <div style={{width: "80%"}} align={"center"}>
+                <div style={{width: "80%", paddingBottom: "5%"}} align={"center"}>
                     <h1>America's Got Talent</h1>
-                    <h6>This next part will eventually be an audio recording</h6>
-                    <p>
-                        <br/>Person 1: Hello, and welcome back to a new season of America’s Got Talent and we’ve got a surprise for you.
-                        <br/>Person 2: Yes, this year we have a new and improved crossover show that will keep you all on the edge of your seats.
-                        <br/>Person 1: Our good friends over at the bachelor have a problem on their hands. Their contestants keep getting divorced! Can you believe that?!
-                        <br/>Person 2: We got to thinking, you know, they just aren’t picking the right final couples. They are letting emotions get in the way, and it’s cloudying their thought proces.
-                        <br/>Person 1: Over here at America’s Got Talent we know how to find the best contestants: A good old talent show
-                        <br/>Person 2: Instead of following their heart, this year’s bachelor will be matched with a prospective spouse through a comprehensive series of contests to determine their soul mate.
-                        <br/>Person 1: So be sure to tune in Monday’s on your very local America’s Got Talent station to follow along slowly thin the herd
-                        <br/>Person 2: And don’t miss Thursday’s on channel 1765 where the Bachelor will catch you up on all of the drama going on behind the scenes.
-                        <br/> Person 1: You won’t want to miss it!<br/><br/>
-                    </p>
+                    <ReactAudioPlayer src={promo} controls/>
                 </div>
                     <div className="scaling-svg-container" style={{width: "80%", paddingBottom: "6%"}}>
                         <svg className="scaling-svg" viewBox="0 0 570 40">
@@ -108,6 +98,7 @@ export default class Page3b extends Component {
                     <img src={"https://raw.githubusercontent.com/jgraves123/escovid2/main/images/reality/buzzers.png?raw=true"} width={"70%"}/>
                     <div align={"center"} style={{padding: "20px"}}>
                         <button className="button" onClick={this.check_slides}><h3>Check Order</h3></button>
+                        <h6>*There are a few possible solutions</h6>
                     </div>
                 </div>
             </div>

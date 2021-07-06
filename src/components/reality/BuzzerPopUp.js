@@ -10,10 +10,10 @@ export default class BuzzerPopUp extends Component {
         return (
             <div className="modal2">
                 <div className="modal_content2" style={{backgroundColor: "white", padding: "1vw"}}>
-                    <ReactPlayer url={"https://www.youtube.com/watch?v=YTgNrxgsjMI"} onStart={setTimeout(() => window.location = "/reality/sofa", 52000)} config={{
+                    <ReactPlayer url={"https://www.youtube.com/watch?v=YTgNrxgsjMI"} onStart={setTimeout(() => window.location = "/reality/sofa", 29000)} config={{
                         youtube: {
                             playerVars: {
-                                start: 33,
+                                start: 58,
                                 end: 84,
                             }
                         }

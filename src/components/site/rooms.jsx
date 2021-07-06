@@ -42,11 +42,11 @@ function Room() {
             <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true" />
                     <Card.Body>
-                        <Card.Title>Dreamscape</Card.Title>
+                        <Card.Title>Escaping Reality</Card.Title>
                         <Card.Text>
-                            Coming Soon!
+                            You are stuck in a reality TV Show. How will you escape?!
                         </Card.Text>
-                        <Button variant="primary">Be on the lookout!</Button>
+                        <Button variant="primary" href={"/reality"}>Begin</Button>
                     </Card.Body>
                 </Card>
             </div>

@@ -80,7 +80,7 @@ export default class Remote extends Component {
     render() {
         return (
             <div className="modal2">
-                <div className="modal_content2" style={{backgroundColor: "white", padding: "1vw"}}>
+                <div className="modal_content2" style={{backgroundColor: "white", padding: "1vw", height: "52vw"}}>
                     <span className="close" onClick={this.handleClick}>
                         &times;
                     </span>
@@ -90,14 +90,15 @@ export default class Remote extends Component {
                     </div>
                     <div className="scaling-svg-container outer" align="center" style={{
                         display: "inline-block",
-                        width: "50%",
+                        width: "40%",
                         padding: "0px",
                         backgroundColor: "#FDE38C",
+                        height: "45vw"
                     }}>
                         <div className="scaling-svg-container inner" style={{paddingBottom: "85%"}}>
                             <svg className="scaling-svg" viewBox="0 0 940 1106"> {/* Needs auto
                          updating*/}
-                                <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/reality/public/reality/remote.png?raw=true"/>
+                                <image width="100%" href="https://raw.githubusercontent.com/jgraves123/escovid2/main/public/reality/remote.png?raw=true"/>
                                 <rect x="160" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(1)}/>
                                 <rect x="260" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(2)}/>
                                 <rect x="570" y="170" width="90" height="140" className="clickable-done" onClick={() => this.handleSelect(3)}/>
@@ -120,9 +121,9 @@ export default class Remote extends Component {
                         </div>
                     </div>
 
-                    <div align={"center"} style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "45%", height: "50vw", overflow: "auto"}}>
+                    <div align={"center"} style={{display: "inline-block", verticalAlign: "top", paddingBottom: "0%", width: "55%", height: "50vw", overflow: "auto"}}>
                         <h3>TV Guide</h3>
-                        <table>
+                        <table style={{width: "90%"}}>
                             <tr><th>Channel</th><th>Code</th></tr>
                             <tr><td>British Bakeoff</td><td>{this.state.bakeCode}</td></tr>
                             {this.state.directory >= 2 ? <tr><td>Survivor</td><td>{this.state.survivorCode}</td></tr> : null}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export default class PopUp extends Component {
     state = {
+        modal_w: this.props.modal_w === undefined ? "80%" : this.props.modal_w
     };
 
     handleClick = () => {
