@@ -15,8 +15,8 @@ export default class Page4 extends Component {
 
     componentDidMount() {
         document.title = "Sofa"
-        if (this.props.curr_stage != 4) {
-            this.props.stage(4)
+        if (this.props.curr_stage != 6) {
+            this.props.stage(6)
         }
         localStorage.setItem("remote", "5");
         setTimeout(() => this.setState({sofa: true}), 5000);

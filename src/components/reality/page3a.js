@@ -14,8 +14,8 @@ import HintPop from "../game/HintPop";
 export default class Page3a extends Component {
     componentDidMount() {
         document.title = "Bachelor"
-        if (this.props.curr_stage != 3) {
-            this.props.stage(3)
+        if (this.props.curr_stage != 4) {
+            this.props.stage(4)
         }
     }
 

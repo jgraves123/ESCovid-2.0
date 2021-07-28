@@ -12,8 +12,8 @@ export default class Page5 extends Component {
     componentDidMount(){
         document.title = "Final Reality"
         console.log("hello my fine fellow")
-        if (this.props.curr_stage != 5) {
-            this.props.stage(5)
+        if (this.props.curr_stage != 7) {
+            this.props.stage(7)
         }
         if (this.props.timing) {
             this.props.stop(false)

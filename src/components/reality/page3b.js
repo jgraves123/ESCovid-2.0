@@ -15,8 +15,10 @@ import promo from "./agtaudio.m4a"
 export default class Page3b extends Component {
     componentDidMount() {
         document.title = "AGT"
-        if (this.props.curr_stage != 3) {
+        if (this.props.curr_stage <= 2) {
             this.props.stage(3)
+        } else if (this.props.curr_stage == 4 || this.props.curr_stage > 5) {
+            this.props.stage(5)
         }
     }
 

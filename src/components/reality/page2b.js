@@ -13,6 +13,9 @@ import {Link} from "react-router-dom";
 export default class Page2b extends Component {
     componentDidMount() {
         document.title = "Council!"
+        if (this.props.curr_stage !== 2) {
+            this.props.stage(2)
+        }
     }
 
     state = {

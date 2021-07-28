@@ -64,14 +64,14 @@ export default class Instructions2 extends Component{
                         </p>
                     </div>
                     <div className = "para">
-                        <p><strong>Intended Audience: </strong>GIV Math students!</p>
+                        <p><strong>Intended Audience: </strong>Escape Room Enthusiasts!</p>
                     </div>
                     <div className = "para">
                         <p><strong>Group size: </strong> 4-6 players recommended.</p>
                     </div>
                     <div className = "para">
                         <p><strong>Other recommendations: </strong>computer >>> smartphone, COMMUNICATE and share screens.</p>
-                        <p><em>USE HINTS!!!</em> Your counselor is there for a reason. It's no fun to be stuck and the puzzles are designed to expect that you might need a few :)</p>
+                        <p><em>USE HINTS!!!</em> It's no fun to be stuck and the puzzles are designed to expect that you might need a few :)</p>
                         <p>Some puzzles can be solved at the same time - divide up the clues among your group members.</p>
                         <p>Send answers in the chat so others can get caught up if they're working on something else.</p>
                     </div>
@@ -91,7 +91,7 @@ export default class Instructions2 extends Component{
                     <p style={{paddingLeft: "25px"}}>
                         <p>One person from your group should click join the leaderboard, but everyone should follow along on their own device.</p>
                         <p>Read EVERYTHING - clues and storyline are mixed in. Click around and explore every page. You may use outside sources (aka Google) but you should not need to.</p>
-                        <p>Your time will be tracked once you start. If you think there was an error (it's very possible) feel free to tell your counselor!</p>
+                        <p>Your time will be tracked once you start.</p>
                         {/*<p>If you check "Join Leaderboard" your score will be added (hopefully within the week!)</p>*/}
                     </p>
                     <p><strong>Good luck!</strong></p>

@@ -100,11 +100,38 @@ export const hints = {
     },
     "reality": {
         99: {},
-        0: {},
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        0: {
+            "Living Room": ["Click on the television. Use the remote buttons to enter the channel number (make sure to click Select)"]
+        },
+        1: {
+            "Bakeoff": []
+        },
+        2: {
+            "Where to Click": ["Map in the dirt, End of bamboo roofing, Guy's shoe, Coconut, Base of table"],
+            "Set - Dimensions": ["Figure out which coordinate is which dimension (row, column, stack, cube). eg. Using (0, 0, 0, 0) and (0, 2, 0, 2) find which dimensions they have in common.", "(cube, column, row, stack)."],
+            "Set - Finding Cards": ["The first card is shown (three purple solid ovals). Where can you draw lines similar to the green and red ones to find the other pairings?", "Use the cards at (0, 0, 0, 0) and (0, 2, 0, 2), what third card would complete the set (Green Line). Do the same for (0, 1, 2, 0) and (1, 1, 2, 1).", "One Red Empty Squiggle and Two Red Empty Oval"],
+            "Set - Card Value": ["What could 'sum attributes' mean? Try adding up the value of each feature in a card", "20, 9, 6"],
+            "Krypto A": ["Combine 6, 2, and 3 to get 0. This zero can be used to cancel out other unwanted values.", "Try: 13+(6-(2*3))*5"],
+            "Krypto B": ["An intermediate solution yeilds the numbers 5, 6, 7", "Try: (7-(18/9)*3)*5"],
+            "Krypto C": ["An intermediate solution yeilds the numbers, 2, 8, and 16", "Try: 16-(14-(15-9))/2"],
+            "Map Puzzle": ["The idol must be 6 steps or less from palm 3. Try extending the path counting example starting at palm 3", "How many paths would a 4x2 grid generate?? Try walking this far from plam 3", "The idol is at (7, 11)"],
+            "Decode Password": ["Shift 1 mean A -> B, B -> C, etc. What would 'shift 5 then reverse' mean?", "ANSWER: outwit"]
+        },
+        3: {"Audio": ["Listen to the audio... what channel???"]},
+        4: {"Where to Click": ["Door window pane, Sceptre in woman's hand, Camera lens, Portrait, Statue, Bachelor's watch"],
+            "Location": ["First of five letters is ***", "*** - *- --* *", "stage"],
+            "Time": ["READ EVERY TEXT (in both conversations). Solve for soon. Don't be afraid to guess and check. S and T must each be 0, 1, or 2 but they can't be equal. Go from there.", "L and O are both 5 or less so L+O(+1) < 10, meaning L=0. Therefore, K+U < 10. What else can you infer given L=0?", "S=2, T=1, so O=3. Find N", "17:04 + 6:35 = 23:39"]
+        },
+        5: {"General Hints": ["Work from the bottom up. Solve the sides first (such as gate H). Your goal is to turn all the buzzers off (aka false). Do trial and error."],
+            "Solve for H":["The output of *)(* gate above output 4 has to be off so both inputs to that gate must be on, meaning H is on. What does this mean about F and G?"],
+            "Key Gate": ["The output of @=@ gate between 1 and 2 is True."],
+            "Inputs for C, F, and G": ["The value of C, F and G is off;"],
+            "Solution": ["B, C, F, and G are off. H is on. At least one of D or E is on. Try one of these options."]
+        },
+        6: {"General": ["Click on the cards on the table. Use the remote to decode the message."],
+            "Example": ["Box opening to the right and up with no dot equals three (see remote)"],
+            "Answer": ["802-555-1629"]
+        },
+        7: {}
     }
 };
