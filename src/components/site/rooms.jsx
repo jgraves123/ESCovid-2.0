@@ -16,7 +16,7 @@ function Room() {
             <div align={"center"}>
             <div style={{padding: "2vw", display: "inline-block", verticalAlign: "top", }}>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid-gif3.gif?raw=true"/>
+                    <Card.Img variant="top" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.gif?raw=true"/>
                     <Card.Body>
                         <Card.Title>ESCovid</Card.Title>
                         <Card.Text>

@@ -22,7 +22,7 @@ function Home() {
             <div style={{width: "90%"}}>
             <Carousel interval={10000} pause={"true"} style={{height: "100%"}}>
               <Carousel.Item align='center'>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-viper.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/viper.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Welcome</h1>
@@ -41,7 +41,7 @@ function Home() {
                 </div>
               </Carousel.Item>
               <Carousel.Item align='center'>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid-gif3.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
                     <h1 style={{color: "white"}}>Play now!</h1>
@@ -102,36 +102,38 @@ function Home() {
               {/*  </div>*/}
               {/*  </div>*/}
               {/*</Carousel.Item>*/}
-              <Carousel.Item>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
-                <div className="sideContent" style={{backgroundColor: "rgb(252, 200, 26, .7)"}}>
-                  <div className="sideText black">
-                    <h1>Sign up for our Mailing List!</h1>
-                    <br/>
-                    <p>You won't regret it!!!</p>
-                  </div>
-                </div>
-                <div style={{paddingLeft: "100", width: "70%", float: "left", height: "47.32vw", paddingTop: "5vw", overflow: "hidden"}}>
-                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "8vw", padding: "4vw"}}>
-                  <h1>Subscribe to our Email List</h1>
-                  <MailchimpSubscribe
-                      url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
-                      render={({ subscribe, status, message }) => (
-                          <div className={"testing"}>
-                            <MailchimpSubscribe url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"} onSubmitted={formData => subscribe(formData)} />
-                            {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-                            {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-                            {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-                          </div>
-                      )}
-                  />
-                  </div>
-                </div>
-                </div>
-              </Carousel.Item>
             </Carousel>
             </div>
           </div>
+      <div align='right'>
+        <div style={{width: "90%"}}>
+          <div align='left' className="sectiontitle">
+            <h1>Sign Up For Our Mailing List!</h1>
+            <h4>+Hover to read more+</h4>
+          </div>
+          <div align='left' style={{padding: "2vw"}} >
+            {/*<h3>A sentence or two overview.</h3>*/}
+              <div style={{width: "80%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
+                <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden"}}>
+                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "8vw", padding: "4vw"}}>
+                    <h1>Subscribe to our Email List</h1>
+                    <MailchimpSubscribe
+                        url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
+                        render={({ subscribe, status, message }) => (
+                            <div className={"testing"}>
+                              <MailchimpSubscribe url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"} onSubmitted={formData => subscribe(formData)} />
+                              {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+                              {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
+                              {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
+                            </div>
+                        )}
+                    />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
       <div align='left'>
         <div style={{width: "90%"}}>
       <div align='left' className="sectiontitle">
