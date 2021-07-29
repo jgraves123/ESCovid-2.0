@@ -64,7 +64,7 @@ export default class Instructions extends Component{
 
     render(){
         return(
-            <div align="center" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/7.png?raw=true")', paddingBottom: "10px"}}>
+            <div align="center" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/7.jpg?raw=true")', paddingBottom: "10px"}}>
                 {this.state.intro===true?
                     <div align="left" style={{width: "60%", padding: "50px"}}>
                         <Jumbotron style={{backgroundColor: "white", opacity: "80%"}}>

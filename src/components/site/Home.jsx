@@ -108,15 +108,13 @@ function Home() {
       <div align='right'>
         <div style={{width: "90%"}}>
           <div align='left' className="sectiontitle">
-            <h1>Sign Up For Our Mailing List!</h1>
-            <h4>+Hover to read more+</h4>
+            <h1>Subscribe to our email list!</h1>
           </div>
-          <div align='left' style={{padding: "2vw"}} >
+          <div align='center' style={{padding: "2vw"}} >
             {/*<h3>A sentence or two overview.</h3>*/}
-              <div style={{width: "80%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
-                <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden"}}>
-                  <div style={{backgroundColor: "rgb(255,255,255, .5)", marginTop: "8vw", padding: "4vw"}}>
-                    <h1>Subscribe to our Email List</h1>
+              <div style={{width: "80%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
+                <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden", align: "center"}}>
+                  <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "4vw", align: "center"}}>
                     <MailchimpSubscribe
                         url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
                         render={({ subscribe, status, message }) => (

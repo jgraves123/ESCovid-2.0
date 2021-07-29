@@ -47,7 +47,7 @@ export default class Tumblr1 extends Component {
     render() {
                 return (
                     <div>
-                    <body align={"center"} className="bg" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/4.png?raw=true")'}}>
+                    <body align={"center"} className="bg" style={{backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/space/4.jpg?raw=true")'}}>
                     {/*<header style={{overflow: "hidden", zIndex: 0}}>*/}
                     {/*    <img width="100%" height="100%" src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/galaxy.jpg?raw=true"/>*/}
                     {/*</header>*/}
