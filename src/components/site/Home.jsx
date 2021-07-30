@@ -72,7 +72,7 @@ function Home() {
                 </div>
               </Carousel.Item>
               <Carousel.Item style={{backgroundColor: "#fcc81a"}}>
-                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/new-dream.gif?raw=true")', backgroundSize: "cover"}}>
+                <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/reality.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(6, 97, 32, .8)"}}>
                   <div className="sideText">
                     <h1>Escaping Reality</h1>
