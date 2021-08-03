@@ -14,7 +14,7 @@ export default class TextPopUp extends Component {
 
     sentSmall = "chat-message-right pb-4 sent small-gap";
     receivedSmall = "chat-message-left pb-4 small-gap";
-    chatNames = ["Kevin"];
+    chatNames = ["Unknown"];
     avatars = ["https://bootdey.com/img/Content/avatar/avatar8.png", "https://bootdey.com/img/Content/avatar/avatar6.png"];
     state = {
         value: "",
@@ -97,9 +97,7 @@ export default class TextPopUp extends Component {
                                                 <div className="chat-messages p-4">
                                                     <Text myclass={this.sentSmall} character="You"
                                                           myavatar={this.avatars[0]}>
-                                                        Hi Kevin, it's me. I changed my mind about going to GIV this
-                                                        summer. I know started today, but is there any way I can still
-                                                        join?
+                                                        Hello
                                                     </Text>
                                                     <Text myclass={this.sentSmall} character="You"
                                                           myavatar={this.avatars[0]}>
