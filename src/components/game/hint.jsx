@@ -103,9 +103,14 @@ export const hints = {
         0: {
             "Living Room": ["Click on the television. Use the remote buttons to enter the channel number (make sure to click Select)"]
         },
+        //Bakeoff
         1: {
-            "Bakeoff": []
+            "Tips - using the template": ["Eliminate and match pairings in the fillable chart as you read each clue. Go here for an example of what your chart may look like after the first 2 clues: https://docs.google.com/spreadsheets/d/1Kg_f1Bz7QNeJl4AmNyzGBRQwp-Jv7720i1HaiaKSXZ8/edit?usp=sharing"],
+            "Dessert X Quote": ["The descriptions in the third clue correspond to quotes - e.g. wedging a door suggests something quite firm...you might even say 'rock hard'. Don't forget you have a separate clue about the deco roll."],
+            "Baker X Dessert": ["Always make sure to cross-reference! Carole did not bake the souffle because the souffle is in first, and she got fourth. You should also know the Mille Cake got 2nd, her name has 'Cannoli', and Brad made the deco roll...that only leaves one option."],
+            "Final answer": ["Double check that you squeezed info out of all the clues! You can check your entire chart here, then click the photos to input the order: https://docs.google.com/spreadsheets/d/1Xkvx3kPh3wAN3Vf0Ck3o2VbcAFnB1UN9ZZGvwX03NOQ/edit?usp=sharing"]
         },
+        //Survivor
         2: {
             "Where to Click": ["Map in the dirt, End of bamboo roofing, Guy's shoe, Coconut, Base of table"],
             "Set - Dimensions": ["Figure out which coordinate is which dimension (row, column, stack, cube). eg. Using (0, 0, 0, 0) and (0, 2, 0, 2) find which dimensions they have in common.", "(cube, column, row, stack)."],
@@ -117,17 +122,20 @@ export const hints = {
             "Map Puzzle": ["The idol must be 6 steps or less from palm 3. Try extending the path counting example starting at palm 3", "How many paths would a 4x2 grid generate?? Try walking this far from plam 3", "The idol is at (7, 11)"],
             "Decode Password": ["Shift 1 mean A -> B, B -> C, etc. What would 'shift 5 then reverse' mean?", "ANSWER: outwit"]
         },
+        //AGT
         3: {"Audio": ["Listen to the audio... what channel???"]},
         4: {"Where to Click": ["Door window pane, Sceptre in woman's hand, Camera lens, Portrait, Statue, Bachelor's watch"],
             "Location": ["First of five letters is ***", "*** - *- --* *", "stage"],
             "Time": ["READ EVERY TEXT (in both conversations). Solve for soon. Don't be afraid to guess and check. S and T must each be 0, 1, or 2 but they can't be equal. Go from there.", "L and O are both 5 or less so L+O(+1) < 10, meaning L=0. Therefore, K+U < 10. What else can you infer given L=0?", "S=2, T=1, so O=3. Find N", "17:04 + 6:35 = 23:39"]
         },
+        //Bachelor
         5: {"General Hints": ["Work from the bottom up. Solve the sides first (such as gate H). Your goal is to turn all the buzzers off (aka false). Do trial and error."],
             "Solve for H":["The output of *)(* gate above output 4 has to be off so both inputs to that gate must be on, meaning H is on. What does this mean about F and G?"],
             "Key Gate": ["The output of @=@ gate between 1 and 2 is True."],
             "Inputs for C, F, and G": ["The value of C, F and G is off;"],
             "Solution": ["B, C, F, and G are off. H is on. At least one of D or E is on. Try one of these options."]
         },
+        //Living room pt 2
         6: {"General": ["Click on the cards on the table. Use the remote to decode the message."],
             "Example": ["Box opening to the right and up with no dot equals three (see remote)"],
             "Answer": ["802-555-1629"]
