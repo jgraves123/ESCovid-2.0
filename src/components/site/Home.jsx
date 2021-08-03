@@ -6,6 +6,7 @@ import {dataanon, dataesc19, dataesc20, sortProperties} from "./leaderdata";
 import Headroom from "react-headroom";
 import {Navigation} from "../index";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import {Link} from "react-router-dom";
 
 
 function Home() {
@@ -44,7 +45,7 @@ function Home() {
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/escovid.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                   <div className="sideText" style={{color: "white"}}>
-                    <h1 style={{color: "white"}}>Play now!</h1>
+                    <h1 style={{color: "white"}}><Link to="/escovid" style={{color: "white"}}>ESCovid</Link></h1>
                     <br/>
                     <p>Space + math + world crisis. <br/>What more do you need?</p>
                   </div>
@@ -62,7 +63,7 @@ function Home() {
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/anonymous.gif?raw=true")', backgroundSize: "cover"}}>
                   <div className="sideContent" style={{backgroundColor: "rgb(15, 209, 69, .5)"}}>
                     <div className="sideText">
-                      <h1>Anonymous Connections!</h1>
+                      <h1><Link to="/anon" style={{color: "white"}}>Anonymous Connections</Link></h1>
                       <br/>
                       <p>Who are they? Where did they come from? Click here to find out.</p>
                     </div>
@@ -75,7 +76,7 @@ function Home() {
                 <div style={{width: "100%", height: "47.32vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/reality.gif?raw=true")', backgroundSize: "cover"}}>
                 <div className="sideContent" style={{backgroundColor: "rgb(6, 97, 32, .8)"}}>
                   <div className="sideText">
-                    <h1>Escaping Reality</h1>
+                    <h1><Link to="/reality" style={{color: "white"}}>Escaping Reality</Link></h1>
                     <br/>
                     <p>You are stuck in a reality TV Show. How will you escape?!</p>
                   </div>
@@ -105,38 +106,6 @@ function Home() {
             </Carousel>
             </div>
           </div>
-      <div align='right'>
-        <div style={{width: "90%"}}>
-          <div align='left' className="sectiontitle">
-            <h1>Outreach</h1>
-          </div>
-          <div align='center' style={{padding: "2vw"}} >
-            {/*<h3>A sentence or two overview.</h3>*/}
-              <div style={{display: "inline-block", marginRight: "4vw",
-                width: "40%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
-                <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden", align: "center"}}>
-                  <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "4vw", align: "center"}}>
-                    <MailchimpSubscribe
-                        url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
-                        render={({ subscribe, status, message }) => (
-                            <div className={"testing"}>
-                              <MailchimpSubscribe url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"} onSubmitted={formData => subscribe(formData)} />
-                              {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-                              {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-                              {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-                            </div>
-                        )}
-                    />
-                  </div>
-                </div>
-              </div>
-            <div style={{display: "inline-block", marginLeft: "4vw",
-              width: "40%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
-              <img src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/venmo.JPG?raw=true"/>
-            </div>
-          </div>
-        </div>
-      </div>
       <div align='left'>
         <div style={{width: "90%"}}>
       <div align='left' className="sectiontitle">
@@ -196,8 +165,44 @@ function Home() {
         </Row>
       </div>
       </div>
-      </div>
         <div align='right'>
+          <div style={{width: "90%"}}>
+            <div align='left' className="sectiontitle">
+              <h1>Outreach</h1>
+            </div>
+            <div align='center' style={{padding: "2vw"}} >
+              {/*<h3>A sentence or two overview.</h3>*/}
+              <div style={{display: "inline-block", marginRight: "4vw",
+                width: "50%", height: "30vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
+                <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden", align: "center"}}>
+                  <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "4vw", align: "center"}}>
+                    <h1>Email Sign Up</h1>
+                    <MailchimpSubscribe
+                        url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
+                        render={({ subscribe, status, message }) => (
+                            <div className={"testing"}>
+                              <MailchimpSubscribe url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"} onSubmitted={formData => subscribe(formData)} />
+                              {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+                              {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
+                              {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
+                            </div>
+                        )}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div style={{display: "inline-block", marginLeft: "4vw", padding: "1vw",
+                width: "30%", height: "30vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover", verticalAlign: "top"}}>
+                <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "1vw", align: "center"}}>
+                  <h2>Support VIPER</h2>
+                  <img src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/venmo.JPG?raw=true" width={"65%"}/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div align='left'>
           <div style={{width: "90%"}}>
             <div align='left' className="sectiontitle">
               <h1>Leaderboards</h1>
@@ -239,7 +244,7 @@ function Home() {
           </div>
         </div>
       {/*<Leader track={false} game={"escovid-19"} team={"no team"} hints={0}/>*/}
-      <div align='left'>
+      <div align='right'>
         <div style={{width: "90%"}}>
           <div align='left' className="sectiontitle">
             <h1>FAQs</h1>
@@ -291,7 +296,7 @@ function Home() {
                 </Accordion.Toggle>
 
                 <Accordion.Collapse eventKey="1">
-                  <Card.Body>Everything on our site is <strong>free!</strong> If you'd like to support our work, you can donate to our venmo <em>Megan-Lagerquist</em>.</Card.Body>
+                  <Card.Body>Everything on our site is <strong>free!</strong> If you'd like to support our work, you can donate to our venmo <em>@VIPER-GAMES</em>.</Card.Body>
                 </Accordion.Collapse>
               </Card>
 

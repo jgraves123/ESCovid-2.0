@@ -136,10 +136,10 @@ export default class Instructions extends Component{
                             <input type="text" placeholder="Group Name" onChange={this.handleChange}/>
                         </label>
                         <input type="checkbox" id="scales" name="scales" onChange={this.handleCheck}/>
-                            <label htmlFor="scales" style={{margin: "5px"}}> Join Leaderboard? </label>
+                            <label htmlFor="scales" style={{margin: "5px", color: "white"}}> Join Leaderboard? </label>
                         <input type="submit" value="Submit" style={{margin: "5px"}}/>
                     </form>
-                    <h6>* Please only one person per group join the leaderboard!</h6>
+                    <h6 style={{color: "white"}}>* Please only one person per group join the leaderboard!</h6>
                 </div>
                 </div>
                 : null}
