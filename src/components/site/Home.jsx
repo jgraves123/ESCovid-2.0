@@ -108,11 +108,12 @@ function Home() {
       <div align='right'>
         <div style={{width: "90%"}}>
           <div align='left' className="sectiontitle">
-            <h1>Subscribe to our email list!</h1>
+            <h1>Outreach</h1>
           </div>
           <div align='center' style={{padding: "2vw"}} >
             {/*<h3>A sentence or two overview.</h3>*/}
-              <div style={{width: "80%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
+              <div style={{display: "inline-block", marginRight: "4vw",
+                width: "40%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
                 <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden", align: "center"}}>
                   <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "4vw", align: "center"}}>
                     <MailchimpSubscribe
@@ -129,6 +130,10 @@ function Home() {
                   </div>
                 </div>
               </div>
+            <div style={{display: "inline-block", marginLeft: "4vw",
+              width: "40%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
+              <img src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/venmo.JPG?raw=true"/>
+            </div>
           </div>
         </div>
       </div>
