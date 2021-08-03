@@ -97,28 +97,27 @@ export default class TextPopUp extends Component {
                                                 <div className="chat-messages p-4">
                                                     <Text myclass={this.sentSmall} character="You"
                                                           myavatar={this.avatars[0]}>
-                                                        Hello
+                                                        This is going to sound strange but...I just woke up holding your phone number.
                                                     </Text>
                                                     <Text myclass={this.sentSmall} character="You"
                                                           myavatar={this.avatars[0]}>
-                                                        I thought I couldn't handle all the math, but I realize now that
-                                                        I can!
+                                                        Who are you? What's going on here??
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]}
                                                           myavatar={this.avatars[1]}>
-                                                        What are you talking about? You're already here.
+                                                        I'm so glad you reached out! Corporate was very impressed with your interview.
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]}
                                                           myavatar={this.avatars[1]}>
-                                                        Though you're right, you're very capable!
+                                                        In fact, we would like to offer you a job at Virtually Impossible Extreme RealiTV, inc.
                                                     </Text>
                                                     <Text myclass={this.sentSmall} character="You"
                                                           myavatar={this.avatars[0]}>
-                                                        Um, no, I'm pretty sure I'm at my house...
+                                                        Um, that's very generous of you, but I haven't interviewed. I haven't even gotten a call back about my application.
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]}
                                                           myavatar={this.avatars[1]}>
-                                                        Everyone is - it's virtual again. We just did the escape room.
+                                                        Here at VIPER we have a bit of an unorthodox hiring process, so I'm not surprised you didn't get a call. But you certainly completed the interview.
                                                     </Text>
                                                     <Text myclass={this.receivedSmall} character={this.chatNames[0]}
                                                           myavatar={this.avatars[1]}>

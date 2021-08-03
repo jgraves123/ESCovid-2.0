@@ -51,7 +51,7 @@ export default class Page5 extends Component {
                         </div>
 
                         <div align="center">
-                            <h2>You've escaped the television and made it to GIV!! Except you were kind of here all along ...</h2>
+                            <h2>You've escaped the television and landed your dream job as a writer for a reality show conglomerate!! If the job is anything like the interview, you're in for a wild ride.</h2>
                         </div>
                         <div align={"center"}>
                             <div align={"center"} style={{margin: "10", maxHeight: "400px", overflow: "auto", width: "95%"}}>

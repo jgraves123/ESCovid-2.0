@@ -49,7 +49,7 @@ export default class Start extends Component {
                             <rect x="950" y="250" width="350" height="190" className="clickable-done" onClick={this.notePop}/>
                         </svg>
                     </div>
-                    <TextPop title={"You want to go to math camp, but..."} content={"...you don't think you're smart enough to do all the lectures, problem-solving, and other activities. You decide to stay home and watch TV all summer instead!"}/>
+                    <TextPop title={"You applied to hundreds of jobs, but..."} content={"...no one has gotten back to you. Even a rejection would have been better than the silence! Your theater and creative writing degrees don't seem to count for much at all in the professional world. You decide to take a break and watch reality TV for a while to dull the pain. Just a few episodes can't hurt, right?"}/>
                     </body>
             </div>
         );
