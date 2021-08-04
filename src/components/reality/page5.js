@@ -72,7 +72,7 @@ export default class Page5 extends Component {
                                             width: "50%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover"}}>
                                             <div style={{paddingLeft: "200", width: "100%", float: "left", height: "40vw", paddingTop: "5vw", overflow: "hidden", align: "center"}}>
                                                 <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "2vw", align: "center"}}>
-                                                    <h2>Email Sign Up</h2>
+                                                    <h2 style={{fontSize: "2vw"}}>Email Sign Up</h2>
                                                     <MailchimpSubscribe
                                                         url={"https://brown.us1.list-manage.com/subscribe/post?u=8c01bb38ebee3297a0d1b426e&amp;id=2b76c51e11"}
                                                         render={({ subscribe, status, message }) => (
@@ -84,13 +84,14 @@ export default class Page5 extends Component {
                                                             </div>
                                                         )}
                                                     />
+                                                    <Link to="https://www.facebook.com/VIPEREscapeGames/?__cft__[0]=AZW6r2kwJlftt0gFsjclZPdmMSO5wa93cwN1hnksgD7rTE56kVeO4B_elw9so-IUS9pDpxA_kLuf_kW55pfpCmta7wA5mZ5hp9pJAF_47BF7CzDCRyl6GdS_Zc8e8MzD31JRqFQbU12c_NPt58eEbKoC&__tn__=H-R"  style={{color: "navy"}}><strong>Facebook Page</strong></Link>
                                                 </div>
                                             </div>
                                         </div>
                                         <div style={{display: "inline-block", marginLeft: "4vw", padding: "1vw",
                                             width: "30%", height: "24vw", backgroundImage: 'url("https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/snake-eyes.png?raw=true")', backgroundSize: "cover", verticalAlign: "top"}}>
                                             <div style={{backgroundColor: "rgb(255,255,255, .5)", padding: "1vw", align: "center"}}>
-                                                <h2>Support VIPER</h2>
+                                                <h2 style={{fontSize: "2vw"}}>Support VIPER</h2>
                                                 <img src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/venmo.JPG?raw=true" width={"65%"}/>
                                             </div>
                                         </div>

@@ -20,9 +20,9 @@ function Contact() {
           <div class="col-lg-5">
             <h1 class="font-weight-light"><strong>Contact Us</strong></h1>
             <p>
-              Email us at <strong>mlagerq@emory.edu</strong> and <strong>john_graves@brown.edu.</strong> We are happy to answer any questions!
+              Email us at <strong>mlagerq@emory.edu</strong> and <strong>john_graves@brown.edu</strong> or at our escape room address, <strong>viperescapegames@gmail.com</strong>. We are happy to answer any questions!
             </p>
-            <p>Tried one of our escape games? Fill out the feedback form here: <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>Form</a></p>
+            <p>Tried one of our escape games? Fill out the feedback form here: <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdORxBBH4uy6OKIPYm7cu4sD9XbqbibUWIMciLRUI_k7mxc1g/viewform?usp=sf_link"}>Form</a></p>
           </div>
         </div>
       </div>
