@@ -16,6 +16,10 @@ import {
 import "./components/site/home.css";
 import "./components/escovid/gform.css"
 import moment from "moment";
+import Login from "./components/authorization/Login";
+import Register from "./components/authorization/Register";
+import Reset from "./components/authorization/Reset";
+import Dashboard from "./components/authorization/Dashboard";
 
 class App extends Component {
   time = moment().format('h:mm:ss a');
@@ -59,6 +63,10 @@ class App extends Component {
               <Route path="/contact" exact component={() => <Contact />} />
               <Route path="/about" exact component={() => <About />} />
               <Route path="/rooms" exact component={() => <Room />} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/reset" component={Reset} />
+              <Route exact path="/dashboard" component={Dashboard} />
             </Switch>
           </div>
             <Footer/>
