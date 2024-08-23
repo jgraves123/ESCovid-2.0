@@ -28,7 +28,7 @@
     "react-portal-overlay": "^1.1.0",
     "react-router": "^5.3.3",
     "react-router-dom": "^5.3.3",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "react-stopwatch": "^2.0.4",
     "react-super-responsive-table": "^5.2.1",
     "react-timer-hook": "^2.0.7",
