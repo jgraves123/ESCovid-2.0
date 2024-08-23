@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
+import PopUp from "../PopUp";
 import './xmas.css';
 import SpeedPopUp from "./speedPopUp";
 import ImmunityPopUp from "./immunityPopUp";
-import TextPop from "../game/textPop";
+import TextPop from "../textPop";
 import RemoteButton from "./remoteButton";
-import {Link} from "react-router-dom";
-import HintPop from "../game/HintPop";
+import HintPop from "../HintPop";
 
 
 //TO DO:

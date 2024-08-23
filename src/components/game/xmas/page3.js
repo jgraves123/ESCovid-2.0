@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
+import PopUp from "../PopUp";
 import './xmas.css';
 import CompPopUp from "./compPopUp";
 import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
-import Password from "../game/password";
-import Continue from "../game/continueButton";
+import Password from "../password";
+import Continue from "../continueButton";
 
 
 

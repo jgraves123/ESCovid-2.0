@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Text from "../escovid/text";
 import "../escovid/text.css"
 import "../escovid/gform.css"
-import Continue from "../game/continueButton";
+import Continue from "../continueButton";
 
 export default class TextPopUp extends Component {
     state = {

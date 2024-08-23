@@ -1,9 +1,7 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
-import "../index.css";
-import "../game/posts.css";
-import emailjs from 'emailjs-com';
-import {Post} from "../game";
+import "../../index.css";
+import "../posts.css";
+import {Post} from "../../index";
 import audio from "./Escape_1.mp3";
 import ReactAudioPlayer from "react-audio-player";
 

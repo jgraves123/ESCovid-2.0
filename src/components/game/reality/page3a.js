@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
+import PopUp from "../PopUp";
 import './xmas.css';
 import KnockPopUp from "./KnockPopUp";
 import TextPopUp from "./TextPopUp";
 import {RemoteButton} from "./index";
-import ReactAudioPlayer from "react-audio-player";
-import knock from "./knocks.m4a"
-import TextPop from "../game/textPop";
-import HintPop from "../game/HintPop";
+import TextPop from "../textPop";
+import HintPop from "../HintPop";
 
 
 

@@ -1,20 +1,15 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
-  Navigation,
   Home,
-  Final,
   About,
   Contact,
-  Congrats,
-  Escovid,
-  Leader,
-  Room,
-  Game,
-  Footer
+  Footer,
+  Room
 } from "./components";
+import { Game} from "./components/game"
 import "./components/site/home.css";
-import "./components/escovid/gform.css"
+import "./components/game/escovid/gform.css"
 import moment from "moment";
 
 class App extends Component {

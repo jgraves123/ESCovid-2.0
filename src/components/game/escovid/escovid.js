@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import "../index.css";
+import "../../index.css";
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
 import Instructions from "./instructions";
