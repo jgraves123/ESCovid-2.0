@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";

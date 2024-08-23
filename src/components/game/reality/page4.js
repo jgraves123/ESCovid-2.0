@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import './xmas.css';
 import {RemoteButton} from "./index";
-import "../game/posts.css";
-import "../index.css";
-import PopUp from "../game/PopUp";
-import Password from "../game/password";
-import Continue from "../game/continueButton";
+import "../posts.css";
+import "../../index.css";
+import PopUp from "../PopUp";
+import Password from "../password";
 import KevinPopUp from "./KevinPopUp";
 
 

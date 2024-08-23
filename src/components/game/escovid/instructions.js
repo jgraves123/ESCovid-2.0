@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import {Jumbotron, Button, Alert} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import "../index.css";
-import "../game/posts.css";
-import Exit from "../game/exit";
+import "../../index.css";
+import "../posts.css";
 
 export default class Instructions extends Component{
 
@@ -95,7 +94,7 @@ export default class Instructions extends Component{
                         <p><strong>Group size: </strong>4-6 players recommended, but can be done with less.</p>
                     </div>
                     <div className = "para">
-                        <p><strong>Other recommendations: </strong>computer >>> smartphone, utilize our hints (especially if you think you might need to (re)learn math concepts), COMMUNICATE and share screens.</p>
+                        <p><strong>Other recommendations: </strong>computer &gt;&gt;&gt; smartphone, utilize our hints (especially if you think you might need to (re)learn math concepts), COMMUNICATE and share screens.</p>
                     </div>
                     <div className = "para">
                         <p><strong>Feedback: </strong>We'd love to hear from you, even if you do not "escape" the game! <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>ESCovid Feedback</a></p>

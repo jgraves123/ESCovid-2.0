@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
 import './xmas.css';
-import TextPop from "../game/textPop";
+import TextPop from "../textPop";
 import RemoteButton from "./remoteButton";
-import {Link} from "react-router-dom";
 
 //TO DO:
 // instructions

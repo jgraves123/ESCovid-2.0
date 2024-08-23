@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import './xmas.css';
 import {RemoteButton} from "./index";
 import ReactAudioPlayer from "react-audio-player";
-import ReactPlayer from "react-player";
-import sound from "./knocks.m4a";
-import {evaluate} from "mathjs";
-import PopUp from "../game/PopUp";
 import BuzzerPopUp from "./BuzzerPopUp";
 import promo from "./agtaudio.m4a"
 

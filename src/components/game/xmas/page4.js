@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './xmas.css';
-import Continue from "../game/continueButton";
-import {Post} from "../game";
-import Delayed from "../game/delayed";
+import Continue from "../continueButton";
+import {Post} from "../../index";
+import Delayed from "../delayed";
 
 
 

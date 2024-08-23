@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "../index.css";
+import "../../index.css";
 import Confetti from 'react-confetti'
 import ReactPlayer from 'react-player';
 import ReactAudioPlayer from 'react-audio-player';

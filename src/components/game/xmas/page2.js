@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import PopUp from "../game/PopUp";
+import PopUp from "../PopUp";
 import ReactDOM from 'react-dom';
 import './xmas.css';
 import {Link} from "react-router-dom";
 import CompPopUp from "./compPopUp";
 import CarouselPopUp from "./CarouselPopUp";
 import PhonePopUp from "./PhonePopUp";
-import TextPop from "../game/textPop";
+import TextPop from "../textPop";
 
 
 

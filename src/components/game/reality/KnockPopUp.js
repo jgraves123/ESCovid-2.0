@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactAudioPlayer from "react-audio-player";
 import knock from "./knocks.m4a";
-import {Post} from "../game";
 
 export default class KnockPopUp extends Component {
     state = {

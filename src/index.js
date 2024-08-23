@@ -1,4 +1,5 @@
 import React from "react";
+import process from "process";
 import ReactDOM from "react-dom";
 import "./components/index.css";
 import App from "./App";

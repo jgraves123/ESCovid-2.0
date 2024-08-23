@@ -1,11 +1,8 @@
 import React, {Component} from "react";
-import "../index.css";
-import "../game/posts.css";
-import {Post} from "../game";
-import Overlay from "../game/overlay";
+import "../../index.css";
+import "../posts.css";
+import {Post} from "../../index";
 import ReactPlayer from 'react-player';
-import Exit from "../game/exit";
-import {Prompt} from 'react-router'
 
 let rand = () => Math.floor(Math.random() * 20) - 10;
 

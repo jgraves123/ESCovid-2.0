@@ -1,5 +1,4 @@
 import React from "react";
-import Leader from "../game/leaderboard";
 import {Carousel, Navbar, Image, Container, Row, Col, Accordion, Card, Button} from 'react-bootstrap';
 import Griddle, {plugins} from "griddle-react";
 import {dataanon, dataesc19, dataesc20, sortProperties} from "./leaderdata";

@@ -1,12 +1,7 @@
 import React, {Component} from 'react';
 import './xmas.css';
-import {Link} from "react-router-dom";
-import RemoteButton from "./remoteButton";
-import PopUp from "../game/PopUp";
-import Password from "../game/password";
-import Continue from "../game/continueButton";
 import Remote from "./remote";
-import TextPop from "../game/textPop";
+import TextPop from "../textPop";
 
 
 
