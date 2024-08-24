@@ -77,7 +77,7 @@ export default class Instructions2 extends Component{
                         <p><strong>Feedback: </strong>We'd love to hear from you, even if you do not "escape" the game! <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdRNn2uICAC4WlS4blWU4G07OpPJJU_M5NPN17GlNVfWP7Z2A/viewform"}>Feedback</a></p>
                     </div>
                     <div className = "para">
-                        <p><strong>Urgent Questions: </strong>Email us at mlagerq@emory.edu and john_graves@brown.edu.</p>
+                        <p><strong>Urgent Questions: </strong>Email us at viperescapegames@gmail.com.</p>
                     </div>
                 </div>
                 <div className="content-section container" align="left" style={{width: "60%"}}>

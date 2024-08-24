@@ -13,15 +13,15 @@ function About() {
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/gaudi.JPG?raw=true"
-              alt="Young woman and man in front of Gaudi building"
+              src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/niagrafalls.jpeg?raw=true"
+              alt="Megan and John under a rainbow at Niagra Falls."
             />
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light">About</h1>
             <p>
               Hello! Or, as we Trappers like to say, .... . .-..! (iykyk)
-              We humbly welcome you to our page. This escape game site was created by Megan (left) and John (right).
+              We humbly welcome you to our page. This escape game site was created by Megan (right) and John (left).
               Our first game, ESCovid, was made in June 2020 for the Governor's Institute of Vermont (GIV) mathematics program, and for a long time was hosted on Google forms and Tumblr.
               It has been such a journey (many lightyears, you might say) rebuilding it here, but we hope that this format leaves room for growth and greater creative control to keep innovating our puzzles!
             </p>
@@ -46,17 +46,17 @@ function About() {
           <div className="col-lg-5">
             <img
                 className="img-fluid rounded mb-4 mb-lg-0"
-                src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/map_about.PNG?raw=true"
+                src="https://raw.githubusercontent.com/jgraves123/ESCovid-2.0/master/images/kara.jpeg?raw=true"
                 alt="Map with pins in VT, RI, GA"
             />
           </div>
           <div className="col-lg-7">
             <h1 className="font-weight-light">Our background</h1>
-            <p>John is majoring in Computer Science and Applied Math at Brown University in Providence, RI (class of 2022). He dreams of designing an elaborate escape room for an anonymous villain and Megan being the President Elect. His actual dream is to be a statistical analyst for the Boston Red Sox.
+            <p>John majored in Computer Science and Applied Math at Brown University in Providence, RI. After making his hit travel podcast, Talk the Camino, he settled down in Wisconsin, where he works for the Milwaukee Brewers.
               </p>
-            <p>Megan is majoring in Neuroscience and Behavioral Biology at Emory University in Atlanta, GA (class of 2022). She dreams of eating muddy tofu (for the culture!) and being a real-life Among Us alien. Her actual dream is to drive a mobile therapy clinic / food truck cross-country.
+            <p>Megan majored in Neuroscience at Emory University in Atlanta, GA. She has since moved to Madison, Wisconsin to pursue a career in (club) ultimate frisbee and works in healthcare IT on the side.
               </p>
-            <p>We met at math camp (shocking, I know) and love to travel! Our favorite analog games are Secret Hitler, Mao, and Settlers of Catan.</p>
+            <p>Kara is our newest and cutest member of the team. Her favorite board games to disrupt are Innovation, Pandemic Legacy, and Spirit Island.</p>
           </div>
         </div>
         <div className="row align-items-center my-5">

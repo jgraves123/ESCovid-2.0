@@ -6,7 +6,7 @@ function Footer() {
             <footer class="bg-dark" style={{padding: 15, position: "absolute", bottom: 0, width: "100%"}}>
                 <div>
                     <p class="m-0 text-center text-white">
-                        VIPER 2021
+                        VIPER 2024
                     </p>
                 </div>
             </footer>
