@@ -109,7 +109,6 @@ function Home() {
         <div style={{width: "90%"}}>
       <div align='left' className="sectiontitle">
         <h1>What is a virtual escape room?</h1>
-        <h4>+Hover to read more+</h4>
       </div>
       <div align='left' style={{padding: "2vw"}} >
         {/*<h3>A sentence or two overview.</h3>*/}
@@ -248,7 +247,6 @@ function Home() {
         <div style={{width: "90%"}}>
           <div align='left' className="sectiontitle">
             <h1>FAQs</h1>
-            <h4>+Click to expand+</h4>
           </div>
           <div align='left' style={{padding: "2vw"}} >
             <Accordion>
